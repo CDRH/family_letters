@@ -1,0 +1,29 @@
+<div class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse"
+        data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="<%= active?(home_path) %>">
+          <%= link_to t("home.title", default: "Home"), home_path %>
+        </li>
+        <li class="<%= active?(/^#{config.relative_url_root}\/browse/,
+          request.path) %>">
+          <%= link_to t("explore.title", default: "Explore"), explore_path %>
+        </li>
+        <li class="<%= active?(search_path) %>">
+          <%= link_to t("research.title", default: "Research"), research_path %>
+        </li>
+        <li class="<%= active?(about_path) %>">
+          <%= link_to t("teach.title", default: "Teach and Learn"), teach_path %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div><!-- /navbar -->
