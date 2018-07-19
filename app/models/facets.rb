@@ -3,10 +3,6 @@ module Facets
 
   Facets.facet_info = {
     "en" => {
-      "project" => {
-        "label" => "Collection",
-        "display" => true
-      },
       "category" => {
         "label" => "Category",
         "display" => true
@@ -41,12 +37,40 @@ module Facets
       },
     },
     # add fields for other languages with their language code
-    # "es" => {
-    #   "category" => {
-    #     "label" => "Categoría",
-    #     "display" => true
-    #   }
-    # }
+    "es" => {
+      "category" => {
+        "label" => "Categoría",
+        "display" => true
+      },
+      "date.year" => {
+        "label" => "Año",
+        "display" => true
+      },
+      "person.name" => {
+        "label" => "Gente",
+        "display" => true
+      },
+      "languages" => {
+        "label" => "Idioma",
+        "display" => true
+      },
+      "subcategory" => {
+        "label" => "Subcategoría",
+        "display" => true
+      },
+      "creator.name" => {
+        "label" => "Autor",
+        "display" => true,
+      },
+      "format" => {
+        "label" => "Formato",
+        "display" => true
+      },
+      "places" => {
+        "label" => "Sitio",
+        "display" => true
+      }
+    }
   }
 
 end
