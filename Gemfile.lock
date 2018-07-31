@@ -8,10 +8,11 @@ GIT
       rake (~> 12.0)
       rest-client
 
-PATH
-  remote: /Users/jdussault2/Desktop/repos/orchid
+GIT
+  remote: https://github.com/CDRH/orchid
+  revision: 10a875d465ebdc5cc2558ae6097a3c2e8111e908
   specs:
-    orchid (1.2.0)
+    orchid (2.0.0)
       rails (~> 5.2.0)
 
 GEM
