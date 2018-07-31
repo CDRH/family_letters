@@ -16,10 +16,7 @@
 # TODO Comment out these rules if you are OK with secrets being uploaded to the repo
 config/initializers/secret_token.rb
 config/secrets.yml
-<<<<<<< HEAD
-=======
 config/master.key
->>>>>>> fa2b8b2b39fffa537b651504baffd474afaac21a
 
 # Ignore configuration files
 config/config.yml
