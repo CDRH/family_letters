@@ -1,3 +1,5 @@
+
+
 .search_results_info {
   border-bottom: solid #aaa 1px;
   margin-bottom: .6em
@@ -6,4 +8,21 @@
 .search_results_info img {
   float: right;
   clear: right;
+}
+
+.main_content img {
+  max-width: 100%
+}
+
+/* Language rules */
+// Clean up, then move into orchid
+
+.language_link {
+  padding-bottom: .3em;
+  display: inline-block
+}
+
+.language_link .active {
+  border: solid #aaa 1px;
+  padding: .3em;
 }
