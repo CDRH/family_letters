@@ -1,4 +1,4 @@
-
+// Search
 
 .search_results_info {
   border-bottom: solid #aaa 1px;
@@ -6,20 +6,45 @@
 }
 
 .search_results_info img {
-  float: right;
   clear: right;
+  float: right;
 }
+
+// Content Page
 
 .main_content img {
   max-width: 100%
+}
+
+// Page images
+
+span.pageimage {
+  border-bottom: 2px solid #aaa;
+  border-left: 2px solid #aaa;
+  border-right: 2px solid #aaa;
+  clear: both;
+  float: right;
+  margin: 0 0 10px 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.hr {
+  border-top: 2px solid #aaa; 
+  clear: right;
+  display: block;
+  height: 0px;
+  margin: 10px 0 0 0;
+  padding: 0px 0 0 0;
+  width: 100%;
 }
 
 /* Language rules */
 // Clean up, then move into orchid
 
 .language_link {
-  padding-bottom: .3em;
   display: inline-block
+  padding-bottom: .3em;
 }
 
 .language_link .active {
