@@ -6,7 +6,7 @@
       <div class="row">
         <div class="col-md-12 search_results_info">
           <% if item["image_id"] %>
-            <img src="<%= item["image_id"] %>"/>
+            <img src="https://cdrhmedia.unl.edu/iiif/2/family_letters%2F<%= item["image_id"] %>/full/!150,150/0/default.jpg"/>
           <% end %>
           <% title_display = item["title"].present? ? item["title"] : t("search.results.item.no_title", default: "Untitled") %>
           <%= link_to title_display, item_path(id: item["identifier"]) %>

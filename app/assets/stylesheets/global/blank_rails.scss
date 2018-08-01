@@ -1,33 +1,9 @@
-// Language
-// ========
-
-.language_link .active {
-  font-weight: 800;
-  border: solid #aaa 1px;
+.search_results_info {
+  border-bottom: solid #aaa 1px;
+  margin-bottom: .6em
 }
 
-.language_link a {
-  padding: .2em;
-  display: inline-block;
-}
-
-span.pageimage {
-  border-bottom: 3px solid #aaa;
-  border-right: 3px solid #aaa;
-  border-left: 3px solid #aaa;
-  margin: 0;
-  padding: 0;
+.search_results_info img {
   float: right;
-  clear: both;
-  margin: 0 0 10px 10px;
-}
-
-.hr {
-  border-top: 3px solid #aaa; 
   clear: right;
-  width: 100%;
-  margin: 10px 0 0 0;
-  padding: 0px 0 0 0;
-  display: block;
-  height: 0px;
 }
