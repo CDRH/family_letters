@@ -10,9 +10,10 @@ GIT
 
 GIT
   remote: https://github.com/CDRH/orchid
-  revision: 10a875d465ebdc5cc2558ae6097a3c2e8111e908
+  revision: b37dcd7ccf99c4c14e9fe5d8a416b1f50c6d8805
+  tag: v2.1.0
   specs:
-    orchid (2.0.0)
+    orchid (2.1.0)
       rails (~> 5.2.0)
 
 GEM
