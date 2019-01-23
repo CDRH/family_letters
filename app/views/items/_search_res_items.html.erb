@@ -1,0 +1,47 @@
+<%# OVERRIDE FROM ORCHID %>
+
+<% if @res.count > 0 %>
+  <% @res.items.each do |item| %>
+    <div class="searchResults">
+      <div class="row">
+        <div class="col-md-12 search_results_info">
+          <% if item["image_id"] %>
+            <img src="<%= item["image_id"] %>"/>
+          <% end %>
+          <% title_display = item["title"].present? ? item["title"] : t("search.results.item.no_title", default: "Untitled") %>
+          <%= link_to title_display, item_path(id: item["identifier"]) %>
+          <ul>
+            <% if item["date_display"] %>
+              <li>
+                <strong><%= t "search.results.item.date", default: "Date" %></strong>:
+                <%= link_to item["date_display"], search_path({ "f[]" => "date|#{item['date']}" }) %>
+              </li>
+            <% end %>
+            <% if item["format"] %>
+              <li>
+                <strong><%= t "search.results.item.format", default: "Format" %></strong>:
+                <%= link_to item["format"], search_path({ "f[]" => "format|#{item['format']}" }) %>
+              </li>
+            <% end %>
+            <% if item["source"] %>
+              <li>
+                <strong><%= t "search.results.item.source", default: "Source" %></strong>:
+                <%= link_to item["source"], search_path({ "f[]" => "source|#{item['source']}" }) %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+        <div class="col-md-8 search_results_text">
+          <% item["highlight"].each do |key, hls| %>
+            <div class="search_results_highlights well">
+              <strong><%= key.titleize %>:</strong>
+              <% hls.each do |hl| %>
+                <p><%= hl.html_safe %></p>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+<% end %>
