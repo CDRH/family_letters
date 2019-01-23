@@ -2,12 +2,6 @@ default: &default
 
   app_options:
     version: 0.1.0
-    # Header <h1>
-    project_name: Cartas a la familia
-    # <title>, meta application-name
-    project_shortname: Cartas
-    # Header <h2>
-    project_subtitle: De la migración de Jesusita a Jane
     # defaults to "en" (english) if no default language set
     language_default: es
     # defaults to "en" if nothing passed in, pipe delineated values (en|es|de)
@@ -27,7 +21,7 @@ default: &default
     # facet info on browse page
     browse_sort: term|asc
     # highlighting
-    hl_fl: annotations_text, transcription_t, text
+    hl_fl: text
     hl_num: 5
 
   date_range:

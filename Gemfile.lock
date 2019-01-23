@@ -10,9 +10,10 @@ GIT
 
 GIT
   remote: https://github.com/CDRH/orchid
-  revision: 10a875d465ebdc5cc2558ae6097a3c2e8111e908
+  revision: b37dcd7ccf99c4c14e9fe5d8a416b1f50c6d8805
+  tag: v2.1.0
   specs:
-    orchid (2.0.0)
+    orchid (2.1.0)
       rails (~> 5.2.0)
 
 GEM
@@ -131,14 +132,14 @@ GEM
     mime-types-data (3.2016.0521)
     mimemagic (0.3.2)
     mini_mime (1.0.0)
-    mini_portile2 (2.3.0)
+    mini_portile2 (2.4.0)
     minitest (5.11.3)
     msgpack (1.2.4)
     multi_json (1.13.1)
     netrc (0.11.0)
     nio4r (2.3.1)
-    nokogiri (1.8.4)
-      mini_portile2 (~> 2.3.0)
+    nokogiri (1.10.1)
+      mini_portile2 (~> 2.4.0)
     public_suffix (3.0.2)
     puma (3.12.0)
     rack (2.0.5)
@@ -253,7 +254,7 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 RUBY VERSION
-   ruby 2.5.1p57
+   ruby 2.6.0p0
 
 BUNDLED WITH
-   1.16.2
+   1.17.2
