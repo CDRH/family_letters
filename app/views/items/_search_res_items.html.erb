@@ -17,14 +17,6 @@
                 <%= link_to item["date_display"], search_path({ "f[]" => "date|#{item['date']}" }) %>
               </li>
             <% end %>
-            <% if item["creator"] %>
-              <li>
-                <strong><%= t "search.results.item.creator", default: "Creator(s)" %></strong>:
-                <% item["creator"].each do |c| %>
-                  <%= link_to c["name"], search_path({ "f[]" => "creator.name|#{c['name']}" }) %>
-                <% end %>
-              </li>
-            <% end %>
             <% if item["format"] %>
               <li>
                 <strong><%= t "search.results.item.format", default: "Format" %></strong>:
