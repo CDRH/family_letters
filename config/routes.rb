@@ -8,7 +8,10 @@ Rails.application.routes.draw do
   scope "(:locale)", locale: locales do
 
     # about
-    get '/about/people', to: 'general#about_people', as: 'about_people'
+    get '/about/team', to: 'general#about_team', as: 'about_team'
+    get '/about/technical', to: 'general#about_technical', as: 'about_technical'
+    get '/about/acknowledgements', to: 'general#about_acknowledgements', as: 'about_acknowledgements'
+    get '/about/faq', to: 'general#about_faq', as: 'about_faq'
 
     # explore / explora
     get '/explore', to: 'explore#index', as: 'explore'

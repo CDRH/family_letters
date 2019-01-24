@@ -23,14 +23,161 @@ es:
   #########
   about:
     # page title
-    title: About
-    # placeholder "riker ipsum" for about page. If about page has few contents,
-    # it's recommended that you override it in your config/locales files. If your about
-    # page is more involved, please override the about.html.erb template entirely
-    contents_html: |-
-      <p>To edit the contents of this page, please open config/locales/en.yml and alter "contents_html",
-      or override about.html.erb in your local application.</p>
-
+    title: ¿Quiénes somos?
+    html:
+    # CUSTOM FAMILY LETTERS
+    team:
+      title: Nuestro equipo de trabajo
+      director:
+        title: Directora de este proyecto
+        desc: Profesora Asociada, Departamento de Lenguas y Literaturas Modernas, UNL
+      cdrh:
+        title: Personal del Centro de Investigación Digital en las Humanidades
+        greg: Programador
+        jess: Programadora
+        karin: Diseñadora de Recursos Digitales
+        kay: Codirectora, CDRH
+        laura: Especialista en Metadata
+      grads:
+        title: Asistentes de investigación-posgrado
+        language: Depto. de Lenguas
+        history: Depto. de Historia
+      undergrads:
+        title: Asistentes de investigación-licenciatura
+    technical:
+      title: Información técnica
+    acknowledgements:
+      title: Agradecimientos
+      html: |-
+        <p>El trabajo y entrenamiento de los estudiantes de posgrado que han
+        participado en este proyecto ha sido posible gracias a los fondos de
+        investigación otorgados por Humanities Nebraska, y al generoso apoyo
+        de la familia Shanahan, de Davey, Nebraska.</p>
+        <p>La participación de los estudiantes de licenciatura que han formado
+        parte de nuestro equipo de trabajo ha sido posible gracias a la
+        subvención del programa Undergraduate Creative Activities and Research
+        Experience Program, de la Universidad de Nebraska. El Centro de
+        Investigación Digital en las Humanidades ha contribuido considerables
+        recursos técnicos y financieros a este esfuerzo.</p>
+    faq:
+      title: Preguntas frecuentes
+      cite_project_q: ¿Cómo citar este proyecto?
+      cite_project_a_html: |-
+        Velázquez, Isabel. <em>Cartas a la familia: De la migración de
+        Jesusita a Jane.</em> [Insertar www aquí]. Accesado 10 Mayo 2020.
+      cite_letter_q: ¿Cómo citar una carta?
+      cite_letter_a_html: |-
+        Baros Torres, J. (1961, 7 de Abril). Correspondencia. “Querida hija”.
+        [L198] <em>Cartas a la familia: De la migración de Jesusita a
+        Jane.</em> I. Velázquez, Ed. Universidad de Nebraska, Lincoln.
+        [Insertar www aquí]. Accesado 10 Mayo 2020.
+      cite_doc_q: ¿Cómo citar un documento?
+      cite_doc_a_html: |-
+        Baros Torres, J. Documento. 1941. The Constitution. Citizenship Study
+        Guide. Manual mecanografiado con notas escritas a mano. [D5]
+        <em>Cartas a la familia: De la migración de Jesusita a Jane.</em>
+        I. Velázquez, Ed. Universidad de Nebraska, Lincoln.
+        [Insertar www aquí]. Accesado 10 Mayo 2020.
+      cite_photo_q: ¿Cómo citar una fotografía?
+      cite_photo_a_html: |-
+        Retrato de Santos Baros Schubert. 1946. [shan_p.013, shan_p.014]
+        <em>Hispanic-Latina/o Heritage Collection</em>. Colecciones Especiales,
+        Universidad de Nebraska, Lincoln.
+        <a href="https://mediacommons.unl.edu/luna/servlet/UNL~111~111">
+        https://mediacommons.unl.edu/luna/servlet/UNL~111~111</a>.
+        Accesado 10 May 2020.
+      cite_transcript_q: ¿Cómo citar una transcripción?
+      cite_transcript_a_html: |-
+        Baros Torres, J. “Querida hija”. 7 Abril 1961.Transcripción. [L198]
+        <em>Cartas a la familia: De la migración de Jesusita a Jane.</em>
+        I. Velázquez, Ed. Universidad de Nebraska, Lincoln.
+        [Insertar www aquí]. Accesado 10 Mayo 2020.
+      cite_translate_q: ¿Cómo citar una traducción?
+      cite_translate_a_html: |-
+        Baros Torres, J. “Querida hija”. 7 Abril 1961.Traducción. [L198]
+        <em>Cartas a la familia: De la migración de Jesusita a Jane.</em>
+        I. Velázquez, Ed. Universidad de Nebraska, Lincoln.
+        [Insertar www aquí]. Accesado 10 Mayo 2020.
+      cite_article_q_html:
+        ¿Cómo citar un artículo académico incluido en
+        <em>Cartas a la familia</em>?
+      cite_article_a_html: |-
+        Velasco, Jennifer Isasi, Isabel Velázquez, y Janette Avelar.
+        "From Jesusita to Jane: Personal names, self-presentation and digital
+        preservation of Mexican American experience in the US Midwest."
+        <em>Revista de Humanidades Digitales</em> 2 (2018): 49-76.
+      collaboration_q: ¿Cómo puedo colaborar con este proyecto?
+      types_q: ¿Qué tipo de materiales forman esta colección?
+      types_a: |-
+        Esta colección se compone de 713 objetos digitales fechados entre los
+        años 1835 y 1986. Éstos incluyen 225 cartas, 199 documentos, 19 textos
+        misceláneos y 270 fotografías. Ciento cuarenta y nueve cartas de esta
+        colección fueron escritas totalmente en español o incluyen escritura en
+        español. Setenta y tres documentos fueron escritos totalmente en
+        español o incluyen escritura en español. La correspondencia personal
+        incluida en esta colección fue enviada desde diez localidades mexicanas
+        y 28 localidades en los Estados Unidos, a tres localidades en México y
+        once localidades en los Estados Unidos. Esta colección incluye también
+        la transcripción y traducción de cartas y otros documentos escritos
+        parcial o totalmente en español, así como la transcripción y traducción
+        de alguna correspondencia personal escrita originalmente en inglés.
+      access_q: ¿Cómo puedo tener acceso a estos materiales?
+      access_a_html: |-
+        <p>Los materiales de esta colección se encuentran a disposición de la
+        comunidad académica para propósitos de investigación. Toda solicitud de
+        acceso deberá dirigirse por escrito a la directora de este proyecto y
+        deberá incluir la siguiente información:</p>
+        <ul>
+        <li>Nombre, puesto e institución del(a) solicitante</li>
+        <li>Descripción de objetivos y proyecto de investigación</li>
+        <li>Enumeración del material que necesita</li>
+        <li>Descripción de cómo planea usar estos materiales</li>
+        </ul>
+        <p>Como la principal institución de educación superior del estado de
+        Nebraska, uno de los valores centrales de UNL es que el conocimiento
+        generado por nuestra universidad beneficie a las comunidades de nuestro
+        estado. Con esto en mente, los materiales de esta colección también
+        están a disposición de escuelas y de organizaciones cívicas y
+        culturales interesadas en saber más sobre la experiencia latina en
+        nuestra región. Toda solicitud de este tipo deberá dirigirse por
+        escrito a la directora de este proyecto.</p>
+      conventions_q: |-
+        ¿Qué convenciones ortográficas siguieron en transcripciones y
+        traducciones?
+      conventions_a: |-
+        Tomando en cuenta los objetivos de investigación y preservación de
+        estos materiales, la ortografía en las cartas y documentos de esta
+        colección fue preservada en transcripción fiel. En el caso de las
+        traducciones seguimos la ortografía estándar de la lengua meta,
+        obedeciendo el criterio de máxima inteligibilidad.
+      rights_q: Derechos y uso
+      rights_a_html: |-
+        <p>El proyecto <em>Cartas a la familia: De la migración de Jesusita a
+        Jane, </em>de Isabel Velázquez, Karin Dalziel y Laura Weakly, funciona
+        bajo licencia
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative
+        Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.
+        Dicha licencia permite a terceros distribuir y adaptar nuestro trabajo
+        siempre y cuando reconozcan nuestra autoría, pongan a disposición del
+        público su propio trabajo de manera no comercial y distribuyan este
+        trabajo bajo los mismos términos de esta licencia.</p>
+        <p>Se prohíbe expresamente el uso comercial de estos materiales sin la
+        autorización escrita de la Universidad de Nebraska. Toda propuesta para
+        usar o publicar estos materiales para fines de lucro deberá enviarse
+        por correo electrónico a Isabel Velázquez, directora de este proyecto.</p>
+      spirit_q: Sobre el espíritu de nuestro proyecto
+      spirit_a_html: |-
+        <p>Nuestro equipo de trabajo considera como valor central la
+        colaboración interdisciplinaria e interinstitucional. Buscamos alentar
+        esta colaboración mediante el intercambio de datos, metodología y
+        herramientas de investigación y otros productos derivados del esfuerzo
+        intelectual. Deseamos que nuestro trabajo contribuya a la conversación
+        académica entre investigadores en ambos lados de la frontera entre
+        Estados Unidos y México, y en cualquier otra comunidad académica
+        interesada en la experiencia migratoria.</p>
+        <p>Aspiramos a que todo producto intelectual derivado de este proyecto
+        contribuya al bienestar y el fortalecimiento de las comunidades y
+        familias mexicanoamericanas en donde quiera que estén.</p>
   ##########
   # BROWSE #
   ##########
