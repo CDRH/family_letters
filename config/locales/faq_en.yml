@@ -2,116 +2,115 @@ en:
   about:
     faq:
       title: Frequently Asked Questions
-      cite_project_q: How do I cite this project?
+      cite_project_q: How to cite this project?
       cite_project_a_html: |-
-        Velázquez, Isabel. <em>Family Letters: On the Migration from Jesusita
-        to Jane.</em> [Insert www here]. Access 10 May 2020.
-      cite_letter_q: How do I cite a letter?
+        Velázquez, Isabel.<em> Family Letters: On the Migration from Jesusita
+        to Jane,</em> 28 Nov. 2019, [Insert www here]. Accessed 10 May 2020.
+      cite_letter_q: How to cite a letter?
       cite_letter_a_html: |-
-        Baros Torres, J. (1961, 7 April). Correspondence. “Querida hija”.
-        [L198] <em>Family Letters: On the Migration from Jesusita
-        to Jane.</em> I. Velázquez, Ed. University of Nebraska-Lincoln.
-        [Insert www here]. Accessed 10 May 2020.
-      cite_doc_q: How do I cite a document?
+        Baros Torres, J. Personal Letter “Querida hija”. 7 Apr. 1961. [L198]
+        <em>Family Letters: On the Migration from Jesusita to Jane.</em> Ed. I.
+        Velázquez. University of Nebraska, Lincoln. [Insert www here].
+        Accessed 10 May 2020.
+      cite_doc_q: How to cite a document?
       cite_doc_a_html: |-
         Baros Torres, J. Document. 1941. The Constitution. Citizenship Study
-        Guide. Typewritten with handwritten notes. [D5]
-        <em>Family Letters: On the Migration from Jesusita to Jane.</em>
-        I. Velázquez, Ed. University of Nebraska-Lincoln.
-        [Insert www here]. Accessed 10 May 2020.
-      cite_photo_q: How do I cite a photograph?
+        Guide. Typewritten manual with handwritten personal notes. [D5]
+        <em>Family Letters: On the Migration from Jesusita to Jane.</em> Ed. I.
+        Velázquez, University of Nebraska, Lincoln. [Insert www here].
+        Accessed 10 May 2020.
+      cite_photo_q: How to cite a photograph?
       cite_photo_a_html: |-
-        Portrait of Santos Baros Schubert. 1946. [shan_p.013, shan_p.014]
-        <em>Hispanic-Latina/o Heritage Collection</em>. Special Collections,
-        University of Nebraska-Lincoln.
+        Portrait of Jesusita Baros Torres. ND. [shan_p.001, shan_p.002].
+        Handwritten on the front: "Mrs. J. F. B. Torres"
+        <em>Hispanic-Latina/o Heritage Collection</em>. U of Nebraska-Lincoln,
+        Special Collections.
         <a href="https://mediacommons.unl.edu/luna/servlet/UNL~111~111">
         https://mediacommons.unl.edu/luna/servlet/UNL~111~111</a>.
-        Accesado 10 May 2020.
-      cite_transcript_q: How do I cite a transcription?
+        Accessed 10 May 2020.
+      cite_transcript_q: How to cite a transcript?
       cite_transcript_a_html: |-
-        Baros Torres, J. “Querida hija”. 7 April 1961. Transcription. [L198]
-        <em>Family Letters: On the Migration from Jesusita to Jane.</em>
-        I. Velázquez, Ed. University of Nebraska-Lincoln.
-        [Insert www here]. Accessed 10 May 2020.
-      cite_translate_q: How do I cite a translation?
+        Baros Torres, J. “Querida hija”. 7 Apr. 1961.Transcription. [L198]
+        <em>Family Letters: On the Migration from Jesusita to Jane.</em> Ed. I.
+        Velázquez. University of Nebraska, Lincoln. [Insert www here].
+        Accessed 10 May 2020.
+      cite_translate_q: How to cite a translation?
       cite_translate_a_html: |-
-        Baros Torres, J. “Querida hija”. 7 April 1961. Translation. [L198]
-        <em>Cartas a la familia: De la migración de Jesusita a Jane.</em>
-        I. Velázquez, Ed. University of Nebraska-Lincoln.
-        [Insert www here]. Accessed 10 May 2020.
-      cite_article_q_html:
-        How do I cite an academic article included in <em>Family Letters</em>?
+        Baros Torres, J. “Querida hija”. 7 Apr. 1961.Translation. [L198]
+        <em>Family Letters: On the Migration from Jesusita to Jane.</em> Ed. I.
+        Velázquez. University of Nebraska, Lincoln. [Insert www here].
+        Accessed 10 May 2020.
+      cite_article_q_html: |-
+        How to cite a scholarly article in <em>Family Letters: On the Migration
+        from Jesusita to Jane</em>?
       cite_article_a_html: |-
-        Velasco, Jennifer Isasi, Isabel Velázquez, and Janette Avelar.
-        "From Jesusita to Jane: Personal names, self-presentation and digital
+        Velasco, Jennifer Isasi, Isabel Velázquez, and Janette Avelar. "From
+        Jesusita to Jane: Personal names, self-presentation and digital
         preservation of Mexican American experience in the US Midwest."
-        <em>Digital Humanities Magazine</em> 2 (2018): 49-76.
+        <em>Revista de Humanidades Digitales</em> 2 (2018): 49-76.
       collaboration_q: How can I contribute to this project?
-      types_q: What type of materials make up this collection?
+      types_q: What types of materials are part of this collection?
       types_a: |-
-        This collection is composed of 713 digital objects dated between 1835
-        and 1986. It includes 225 letters, 199 documents, 19 miscellaneous
-        texts, and 270 photographs. 149 letters in this collection were written
-        entirely in Spanish or include writing in Spanish. The personal
-        correspondence in this collection was sent between 10 locations in Mexico
-        and 28 locations in the United States, to 3 locations in Mexico
-        and 11 locations in the United States.  This collection also includes
-        the transcription and translation of cards and other written documents
-        partially or entirely in Spanish, as well as the transcription and
-        translation of some personal correspondence that was originally written
-        in English.
-      access_q: How can I gain access to these materials?
+        This collection includes 713 digital objects dated between the years
+        1835 and 1986. These include 225 personal letters, 199 documents, 19
+        miscellaneous items, and 270 photographs. One hundred and forty nine
+        letters in this collection were written entirely in Spanish or include
+        some writing in Spanish. Seventy three documents in the collection
+        were written entirely in Spanish or contain some writing in Spanish.
+        Personal letters included in this collection were sent from ten
+        locations in Mexico and 28 locations in the United States, to three
+        locations in México and 11 locations in the US. The collection includes
+        transcription and translation of all letters and other documents
+        written partially or wholly in Spanish, as well as transcription and
+        translation of selected correspondence originally written in English.
+      access_q: How can I access these materials?
       access_a_html: |-
-        <p>The materials in this collection are available to the academic
-        community for research purposes. All requests for access should be
-        addressed in writing to the director of this project and must include
-        the following information:</p>
+        <p>The materials in this collection are available to members of the
+        academic community for research purposes. All requests of access to
+        materials should be emailed to the director of this project, and must
+        include the following information:</p>
         <ul>
-        <li>Name, position and institution of the applicant</li>
-        <li>Description of the objectives of the research</li>
-        <li>List of the requested material</li>
-        <li>Description of how you plan to use this material</li>
+        <li>Name, position and institution of the requester</li>
+        <li>Description of research project and goals</li>
+        <li>List of requested materials</li>
+        <li>Description of how materials will be used</li>
         </ul>
-        <p>As the principal institution of higher education in the state of
-        Nebraska, one of the central values of UNL is to share knowledge
-        which benefits the communities of our state. With this in mind, the
-        materials in this collection are also available to schools, civic
-        organizations, and those interested in knowing more about experience
-        of Latinos/as in our region. All requests of this type may be
-        addressed by contacting the director of this project in writing.</p>
+        <p>As the leading institution of higher education in the state of
+        Nebraska, one of UNL’s core values is that the knowledge generated by
+        our university benefit the communities in our state. With this in mind,
+        the materials in this collection are also available to schools, as well
+        as civic and cultural organizations interested in learning more about
+        LatinX experience in our region. All requests of this type must be
+        emailed to the director of this project.</p>
       conventions_q: |-
-        What orthographic conventions do you follow in transcriptions and
-        translations?
+        What orthographic conventions did you use?
       conventions_a: |-
-        Taking into consideration the objects of our research and the
-        preservation of these materials, the spelling in the letters and
-        documents in this collection was transcribed faithfully. In the case
-        of translations we follow the spelling conventions of the target
-        language, aiming for maximum intelligibility.
+        Taking into account the research and preservation goals of this
+        project, the spelling in letters and documents was preserved in close
+        transcription. Translations were rendered in the standard orthography
+        of the target language, obeying the criterion of maximum intelligibility.
       rights_q: Rights and usage
       rights_a_html: |-
-        <p>The project <em>Family Letters: On the Migration from Jesusita
-        to Jane</em>, by Isabel Velázquez, Karin Dalziel and Laura Weakly,
-        functions under a Creative Commons license:
-        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative
-        Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.
-        Said license permits a third party to distribute and adapt our work
-        non-commercially, and requires appropriate credit to our authorship,
-        and for the work to be made publicly available under the same terms
-        of this license</p>
-        <p>It expressly prohibits the commercial use of these materials without
-        written authorization from the University of Nebraska. All requests
-        for use or publication of these materials should be sent to Isabel
-        Velázquez, the director of this project.</p>
+        <p><em>Family Letters: On the Migration from Jesusita to Jane,</em> by
+        Isabel Velázquez, Karin Dalziel and Laura Weakly, is licensed under a
+        <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/">Creative
+        Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>,
+        which allows others to distribute and adapt our work, so long as they
+        credit <em>Family Letters</em>, make their work available
+        non-commercially, and distribute their work under the same terms.</p>
+        <p>Commercial use of these materials without written authorization of
+        the University of Nebraska is expressly prohibited. Requests for
+        permission to publish or otherwise these materials for commercial
+        projects should be emailed to the Isabel Velázquez, project director.</p>
       spirit_q: About the spirit of this project
       spirit_a_html: |-
-        <p>Our team considers interdisciplinary and inter-institutional
-        collaboration to be our central value. We seek to encourage this
-        collaboration through the exchange of data, methodology, tools, and
-        other products derived from our intellectual pursuits. We want our
-        work to contribute to the conversation between researchers on both
-        sides of the border between the United States and Mexico, and in
-        other academic communities interested in the migratory experience.</p>
-        <p>We hope that all the intellectual products derived from this project
-        will contribute to the well-being and health of Mexican-American
-        communities, wherever they may be.</p>
+        <p>We hold inter-disciplinary and inter-institutional collaboration as
+        central values of our research team. We seek to foster this
+        collaboration through the exchange of data, research instruments and
+        methodologies, and other products derived from intellectual effort. We
+        seek to contribute our work to the academic conversation on both sides
+        of the US-Mexico border, and to any other academic community interested
+        on the experience of migration.</p>
+        <p>It is our hope that every intellectual product derived from this
+        project contributes to the wellbeing and strengthening of Mexican
+        American communities and families wherever they may be.</p>

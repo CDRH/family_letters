@@ -18,6 +18,14 @@ en:
     # custom dedication text
     dedication_button: Dedication
     dedication_text: This website is dedicated to Jesusita Baros Torres. Her efforts were not in vain.
+    # Custom Family Letters field
+    footer_html: |-
+      <em>Family Letters: On the Migration from Jesusita to Jane </em> is a
+      project directed by Isabel Velázquez, and published jointly by the Center
+      for Digital Research in the Humanities and the Department of Modern
+      Languages and Literatures at the University of Nebraska, Lincoln, under a
+      <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/">Creative
+      Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.
     # Header <1>
     project_name: Family Letters
     # <title>, meta application-name
@@ -35,37 +43,35 @@ en:
     html:
     # CUSTOM FAMILY LETTERS
     team:
-      title: Our Team
+      title: Our Research Team
       director:
         title: Project Director
-        desc: Associate Professor, Departament of Modern Languages and Literature, UNL
+        desc: Associate Professor, UNL Dept. of Modern Languages and Literatures
       cdrh:
-        title: CDRH Personnel
+        title: CDRH Faculty and Staff
         greg: Programmer
         jess: Programmer
         karin: Digital Development Manager & Designer
-        kay: Co-Director, CDRH
+        kay: Co-director. Chair, Digital Initiatives &amp; Special Collections, UNL Libraries
         laura: Metadata Encoding Specialist
       grads:
-        title: Graduate Students
-        language: Dept. of Modern Languages and Literature
+        title: Graduate Research Assistants
+        language: Dept. of Modern Languages and Literatures
         history: Dept. of History
       undergrads:
-        title: Undergraduate Students
+        title: Undergraduate Research Assistants
     technical:
       title: Technical Information
     acknowledgements:
       title: Acknowledgements
       html: |-
-        <p>The work and training of graduate students who have
-        participated in this project was made possible thanks to Humanities
-        Nebraska, and the generous support from the Shanahan family,
-        from Davey, Nebraska.</p>
-        <p>The participation of the undergraduate students was made possible
-        thanks to the Undergraduate Creative Activities and Research Experience
-        Program, University of Nebraska. The Center for Digital Research in
-        the Humanities has contributed considerable technical and financial
-        resources to this effort. </ p>
+        <p>Graduate student training and work on this project has been funded
+        in part by a grant from Humanities Nebraska, and by the generous
+        support of the Shanahan family, of Davey, Nebraska. Undergraduate
+        research experience in this project was possible with support from the
+        UNL Undergraduate Creative Activities and Research Experience Program.
+        The UNL Center for Digital Research in the Humanities has contributed
+        considerable technical and financial resources to this project.</p>
     # faq is in its own file
 
   ##########
@@ -108,9 +114,24 @@ en:
     greeting: Welcome
     # custom: contents of home page
     html: |-
-      <p>The <em>Family Letters</em> project is an effort to preserve, digitize, analyze and share with the public a collection of the letters and other personal documents of a Mexican American family that migrated from Zacatecas, Mexico, to Western Colorado and Eastern Nebraska, during the first half of the Twentieth Century.</p>
-      <p>The objects in this collection allow us to learn about everyday life for Latinos at the start of last century, and help us to better understand the impact of their experience of migration on their day to day. The writing features and the events narrated in these letters provide us with important clues about the Spanish that was used by Mexican American families during this period, and about their linguistic experience.</p>
-      <p>Despite the fact that Mexican immigrants started to arrive in the Midwest since the end of the Nineteenth Century, their experience and their writing have remained mostly forgotten. This site describes the life trajectory of a family whose members exchanged letters written in Spanish and in English between Mexico and the United States, over the course of several decades. These documents allow us to observe the way in which larger historical events are intertwined with the lives of ordinary people.</p>
+      <p><em>The Family Letters</em> project preserves, digitizes, analyzes and
+      makes public a collection of the correspondence and other personal
+      documents of a Mexican American family that migrated from the state of
+      Zacatecas, Mexico, to the states of Colorado and Nebraska during the first
+      half of the twentieth century.</p>
+      <p>The objects in this collection allow us to learn about the life of
+      Latin@s in the Midwest at the start past century. They also provide us
+      with a better understanding of the impact of migration on their everyday
+      lives. The features of their writing and the events narrated in these
+      letters provide us with important clues about the varieties of Spanish
+      they spoke, and about their overall language experience.</p>
+      <p>Even though Mexican immigrants started to arrive in the Midwest at the
+      end of the nineteenth century, their experience and their writing have
+      remained mostly forgotten. This site outlines the trajectory of a family
+      whose members exchanged personal letters written in Spanish and English
+      over the span of several decades. These documents allow us to observe the
+      ways in which broader historical events intertwine with the lives of
+      ordinary people.</p>
     # page title
     title: Home
 
@@ -286,4 +307,4 @@ en:
   # TEACH #
   #########
   teach:
-    title: Teach and Learn
+    title: Learn
