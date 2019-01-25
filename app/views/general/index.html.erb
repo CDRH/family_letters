@@ -1,6 +1,30 @@
 <h1><%= t "home.greeting", default: "Welcome" %></h1>
 
-<%= t "home.html" %>
+<%# TODO use iiif helper tag %>
+<%= t "home.html", image: image_tag("https://cdrhmedia.unl.edu/iiif/2/family_letters%2Fshan_p.035.jpg/full/!300,300/0/default.jpg", class: "home_image") %>
+
+<%# TODO look at options %>
+<p><strong>Option 2:</strong>  use following photos to illustrate family through time</p>
+<p>shan_p.205, shan_p.035, shan_p.229, Shan_p.233</p>
+
+<p><strong>Option 3</strong>: images of envelopes along the bottom of home page</p>
+<ul>
+  <li>L13 (1937) NM to WY</li>
+  <li>L15 (1937) NM to CO</li>
+  <li>L54 (1952) MICH to CO</li>
+  <li>L56 (1965) CHIH to CO</li>
+  <li>L62 (1939) CA to CO</li>
+  <li>L65 (1939) CO to CA</li>
+  <li>L82 (1957) CO to NE</li>
+  <li>L113 (1964) CO to NE</li>
+  <li>L158 (1966) CO to NE</li>
+  <li>L160 (1974) AZ to NE</li>
+  <li>L161 (1950) CO to NE</li>
+  <li>L168 (1848) MICH to CO</li>
+  <li>L177 (1957) ZAC to CO</li>
+  <li>L190 (1939) ZAC to CO</li>
+  <li>L192 (1970) MT to CO</li>
+</ul>
 
 <!-- Button trigger modal -->
 <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#dedication">
@@ -16,7 +40,9 @@
         <h4 class="modal-title" id="<%= t "general.dedication_button" %>"><%= t "general.dedication_button" %></h4>
       </div>
       <div class="modal-body">
-        <%= t "general.dedication_text" %>
+        <p><%= t "general.dedication_text" %></p>
+        <%# TODO pull with helper method and style %>
+        <%= image_tag "https://cdrhmedia.unl.edu/iiif/2/family_letters%2Fshan_p.001.jpg/full/!150,150/0/default.jpg", class: "dedication_image" %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">

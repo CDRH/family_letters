@@ -20,8 +20,11 @@
         <li class="<%= active?(search_path) %>">
           <%= link_to t("research.title", default: "Research"), research_path %>
         </li>
-        <li class="<%= active?(about_path) %>">
+        <li class="<%= active?(teach_path) %>">
           <%= link_to t("teach.title", default: "Teach and Learn"), teach_path %>
+        </li>
+        <li class="<%= active?(about_path) %>">
+          <%= link_to t("about.title", default: "About"), about_path %>
         </li>
       </ul>
     </div>
