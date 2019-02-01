@@ -5,9 +5,9 @@ es:
   #################
   general:
     # footer content with link to CDRH site
-    cdrh_link_html: Created by the <a href="https://cdrh.unl.edu">Center for Digital Research in the Humanities</a>.
+    cdrh_link_html: (todo es) Created by the <a href="https://cdrh.unl.edu">Center for Digital Research in the Humanities</a>.
     # close a popup window
-    close: Close
+    close: (todo es) Close
     # custom
     dedication_button: Dedicatoria
     dedication_text: Este sitio electrónico está dedicado a Jesusita Baros Torres. Su esfuerzo no fue en vano.
@@ -73,26 +73,26 @@ es:
   ##########
   browse:
     # link to search all items
-    all_link: All Items in the Archive
+    all_link: (todo es) All Items in the Archive
     # label for browsing filters
-    browse_type: Browse by
+    browse_type: (todo es) Browse by
     # how to display specific filters which have no label
-    no_label: No label
+    no_label: (todo es) No label
     # label for browsing sort (sort by: alphabetical descending)
-    sort_by: Sort by
+    sort_by: (todo es) Sort by
     # page title
-    title: Browse
+    title: (todo es) Browse
 
   ##########
   # ERRORS #
   ##########
   errors:
     # general consolation message to the user on an error
-    apology: We're sorry for the inconvenience.
+    apology: (todo es) We're sorry for the inconvenience.
     # page not found (404) explanation
-    not_found: This page was not found!
+    not_found: (todo es) This page was not found!
     # server error (500) explanation
-    server_error: Something went wrong!
+    server_error: (todo es) Something went wrong!
 
   ###########
   # EXPLORE #
@@ -105,7 +105,7 @@ es:
   #############
   home:
     # greeting to the user
-    greeting: Welcome
+    greeting: (todo es) Welcome
     # custom: contents of home page
     html: |-
       <p>El proyecto <em>Cartas de Familia</em> preserva, digitaliza, analiza y
@@ -138,25 +138,25 @@ es:
     # a box of information shown about each item separate from the text and images
     metadata:
       # category of the item, such as "Writings"
-      category: Category
+      category: (todo es) Category
       # the creator or creators of this item
-      creators: Author(s)
+      creators: (todo es) Author(s)
       # the date of this item as it was originally recorded ("display date")
-      date: Date
+      date: (todo es) Date
       # the format of the item, such as "envelope," "photograph," "postcard"
-      format: Format
+      format: (todo es) Format
       # locations referenced by this item
-      places: Place(s)
+      places: (todo es) Place(s)
       # subcategory of the item, such as "Letters"
-      subcategory: Subcategory
+      subcategory: (todo es) Subcategory
       # description of the title of the item
-      title: Title
+      title: (todo es) Title
       # any works (often literary) referenced by this item, such as "O Pioneers!"
-      works: Works
+      works: (todo es) Works
     # description of missing item error
-    no_item: "No item with identifier %{id} found!"
+    no_item: "(todo es) No item with identifier %{id} found!"
     # title for error when item not found
-    not_found: Not Found
+    not_found: (todo es) Not Found
 
   ############
   # RESEARCH #
@@ -169,48 +169,49 @@ es:
   ########################
   search:
     # title text that appears when no search / filters have been applied
-    all_items: All Items
+    all_items: (todo es) All Items
     # clearing all search / filters
-    clear_all: Clear Search
+    clear_all: (todo es) Clear Search
     # clearing only the text search field
-    clear_text: Clear Search Text
+    clear_text: (todo es) Clear Search Text
     dates:
       # clearing the date filter
-      clear_filter: Clear Date Filter
+      clear_filter: (todo es) Clear Date Filter
       # the word "date" singular
-      date: Date
+      date: (todo es) Date
       # label for earliest date in range
-      date_from_label: Date From
+      date_from_label: (todo es) Date From
       # label for latest date in range
-      date_to_label: Date To
+      date_to_label: (todo es) Date To
       # earliest date in range day
-      from_day: From Day
+      from_day: (todo es) From Day
       # earliest date in range month
-      from_month: From Month
+      from_month: (todo es) From Month
       # earliest date in range year
-      from_year: From Year
+      from_year: (todo es) From Year
       # date filter help label
-      help: Date Filter Help
+      help: (todo es) Date Filter Help
       # divider between a range of dates, such as "2012 to 2014"
-      range_divider: to
+      range_divider: (todo es) to
       # hidden label marking section for date search
-      selection: Date Selection
+      selection: (todo es) Date Selection
       # hidden label for date filter dropdown
-      show_filters: Show Date Filters
+      show_filters: (todo es) Show Date Filters
       # label for applying the selected date filters
-      submit: Filter
+      submit: (todo es) Filter
       # latest date in range day
-      to_day: To Day
+      to_day: (todo es) To Day
       # latest date in range month
-      to_month: To Month
+      to_month: (todo es) To Month
       # latest date in range year
-      to_year: To Year
+      to_year: (todo es) To Year
     help:
       # section title
-      title: Search Help
+      title: (todo es) Search Help
       # search help html, this may need to be recreated per language
       # instead of translated literally due to differences with stemming and grammar
       html: |-
+        (todo es)
         <h4>Basic Search</h4>
         <p>Simply enter the word you wish to find and the search engine will search for every instance of the word in the journals. For example: Fight. All instances of the use of the word fight will show up on the results page.</p>
         <h4>Wildcard Searches</h4>
@@ -223,81 +224,81 @@ es:
         <p>Because of the creative spellings used by the journalists, it may be necessary to try your search multiple times. For example: P?ro*. This search brings up numerous variant spellings of the French word pirogue, "a large dugout canoe or open boat." Searching for P?*r*og?* will bring up other variant spellings. Searching for canoe or boat also may be helpful.</p>
     filters:
       # clearing filters (not the text search)
-      clear_all: Clear Filters
+      clear_all: (todo es) Clear Filters
       # label above the filters
-      filter_by: Filter by
+      filter_by: (todo es) Filter by
       # display when a specific filter option is an empty string
-      no_label: No Label
+      no_label: (todo es) No Label
       # link text to view all the possible filter options
-      see_more: See more
+      see_more: (todo es) See more
       # hidden label to expand a filter category
-      show: "Show %{label} Filters"
+      show: "(todo es) Show %{label} Filters"
       # hidden label for filter summary boxes
-      summary_box: "%{specific_filter} Filter"
+      summary_box: "(todo es) %{specific_filter} Filter"
     # placeholder for the text search field
-    placeholder: Search for...
+    placeholder: (todo es) Search for...
     results:
       # how to display number of results when no search / filters have been applied
       # and therefore user is browsing all items
       general:
-        zero: 0 results
-        one: 1 result
-        other: "%{count} results"
+        zero: (todo es) 0 results
+        one: (todo es) 1 result
+        other: "(todo es) %{count} results"
       # labels for individual item descriptions in results
       item:
         # creators of the item
-        creator: Creator(s)
+        creator: (todo es) Creator(s)
         # the date of the item used for search results
-        date: Date
+        date: (todo es) Date
         # the format of the item
-        format: Format
+        format: (todo es) Format
         # label to display if the item itself has no title
-        no_title: Untitled
+        no_title: (todo es) Untitled
         # the source of the item, such as the repository
-        source: Source
+        source: (todo es) Source
       # how to display number of results when a search / filter have been applied
       # and therefore the user is browsing a subset of items
       query:
-        zero: 0 items
-        one: 1 item
-        other: "%{count} items"
+        zero: (todo es) 0 items
+        one: (todo es) 1 item
+        other: "(todo es) %{count} items"
       # summary box of selected search / filters
       summary:
-        query: Search
+        query: (todo es) Search
     # title text that appears when search / filters have been applied
-    search_results: Search Results
+    search_results: (todo es) Search Results
     # hidden label for the text search input
-    search_text: Search Text
+    search_text: (todo es) Search Text
     sort:
       # alphabetically ascending sort
-      alpha_asc: "Alphabetically (A-Z)"
+      alpha_asc: "(todo es) Alphabetically (A-Z)"
       # alphabetically descending sort
-      alpha_desc: "Alphabetically (Z-A)"
+      alpha_desc: "(todo es) Alphabetically (Z-A)"
       # sort by fewest to most items
-      count_asc: "Count (least first)"
+      count_asc: "(todo es) Count (least first)"
       # sort by most to fewest items
-      count_desc: "Count (most first)"
+      count_desc: "(todo es) Count (most first)"
       # creator ascending sort
-      creator_asc: "Creator (A-Z)"
+      creator_asc: "(todo es) Creator (A-Z)"
       # creator descending sort
-      creator_desc: "Creator (Z-A)"
+      creator_desc: "(todo es) Creator (Z-A)"
       # date ascending sort
-      date_asc: "Date (earliest first)"
+      date_asc: "(todo es) Date (earliest first)"
       # date descending sort
-      date_desc: "Date (latest first)"
+      date_desc: "(todo es) Date (latest first)"
       # title ascending sort
-      title_asc: "Title (A-Z)"
+      title_asc: "(todo es) Title (A-Z)"
       # title descending sort
-      title_desc: "Title (Z-A)"
+      title_desc: "(todo es) Title (Z-A)"
       # relevancy (descending), how likely the search results are to be valuable
-      relevancy: "Relevancy"
+      relevancy: "(todo es) Relevancy"
       # label for sorting
     # label for applying text search options ("Go!", "Search", etc)
-    submit: Search
+    submit: (todo es) Search
     # page title
-    title: Search
+    title: (todo es) Search
     # browse items without applying any search / filters
-    view_all: View All Items
+    view_all: (todo es) View All Items
 
   #########
   # TEACH #
