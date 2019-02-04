@@ -7,7 +7,7 @@ es:
     # footer content with link to CDRH site
     cdrh_link_html: (todo es) Created by the <a href="https://cdrh.unl.edu">Center for Digital Research in the Humanities</a>.
     # close a popup window
-    close: (todo es) Close
+    close: Cerrar [SB]
     # custom
     dedication_button: Dedicatoria
     dedication_text: Este sitio electrónico está dedicado a Jesusita Baros Torres. Su esfuerzo no fue en vano.
@@ -77,9 +77,9 @@ es:
     # label for browsing filters
     browse_type: (todo es) Browse by
     # how to display specific filters which have no label
-    no_label: (todo es) No label
+    no_label: Sin Etiqueta [SB]
     # label for browsing sort (sort by: alphabetical descending)
-    sort_by: (todo es) Sort by
+    sort_by: Clasificar por [SB]
     # page title
     title: (todo es) Browse
 
@@ -88,11 +88,11 @@ es:
   ##########
   errors:
     # general consolation message to the user on an error
-    apology: (todo es) We're sorry for the inconvenience.
+    apology: Perdón por la inconveniencia. [SB] 
     # page not found (404) explanation
-    not_found: (todo es) This page was not found!
+    not_found: ¡No se encontro esta pájina! [SB]
     # server error (500) explanation
-    server_error: (todo es) Something went wrong!
+    server_error: ¡Algo salió malo! [SB]
 
   ###########
   # EXPLORE #
@@ -105,7 +105,7 @@ es:
   #############
   home:
     # greeting to the user
-    greeting: (todo es) Welcome
+    greeting: Biendvenidos [SB]
     # custom: contents of home page
     html: |-
       <p>El proyecto <em>Cartas de Familia</em> preserva, digitaliza, analiza y
@@ -138,25 +138,25 @@ es:
     # a box of information shown about each item separate from the text and images
     metadata:
       # category of the item, such as "Writings"
-      category: (todo es) Category
+      category: La Categoria [SB]
       # the creator or creators of this item
-      creators: (todo es) Author(s)
+      creators: Autor(s) [SB]
       # the date of this item as it was originally recorded ("display date")
-      date: (todo es) Date
+      date: Fecha [SB]
       # the format of the item, such as "envelope," "photograph," "postcard"
-      format: (todo es) Format
+      format: El Formato [SB]
       # locations referenced by this item
-      places: (todo es) Place(s)
+      places: Lugare(s) [SB]
       # subcategory of the item, such as "Letters"
       subcategory: (todo es) Subcategory
       # description of the title of the item
-      title: (todo es) Title
+      title: Titulo [SB]
       # any works (often literary) referenced by this item, such as "O Pioneers!"
       works: (todo es) Works
     # description of missing item error
     no_item: "(todo es) No item with identifier %{id} found!"
     # title for error when item not found
-    not_found: (todo es) Not Found
+    not_found: No Encontrado [SB]
 
   ############
   # RESEARCH #
@@ -169,36 +169,36 @@ es:
   ########################
   search:
     # title text that appears when no search / filters have been applied
-    all_items: (todo es) All Items
+    all_items: Todos los articulos [SB]
     # clearing all search / filters
-    clear_all: (todo es) Clear Search
+    clear_all: Borrar Búsqueda [SB]
     # clearing only the text search field
     clear_text: (todo es) Clear Search Text
     dates:
       # clearing the date filter
-      clear_filter: (todo es) Clear Date Filter
+      clear_filter: Borrar Filtro de Fecha [SB]
       # the word "date" singular
-      date: (todo es) Date
+      date: Fecha [SB]
       # label for earliest date in range
-      date_from_label: (todo es) Date From
+      date_from_label: Fecha De [SB]
       # label for latest date in range
       date_to_label: (todo es) Date To
       # earliest date in range day
-      from_day: (todo es) From Day
+      from_day: De Día [SB]
       # earliest date in range month
-      from_month: (todo es) From Month
+      from_month: De Mes [SB]
       # earliest date in range year
-      from_year: (todo es) From Year
+      from_year: De Año [SB]
       # date filter help label
       help: (todo es) Date Filter Help
       # divider between a range of dates, such as "2012 to 2014"
       range_divider: (todo es) to
       # hidden label marking section for date search
-      selection: (todo es) Date Selection
+      selection: Selección de Fecha [SB]
       # hidden label for date filter dropdown
-      show_filters: (todo es) Show Date Filters
+      show_filters: Mostrar Filtros de Fecha [SB]
       # label for applying the selected date filters
-      submit: (todo es) Filter
+      submit: (todo Filtro [SB]
       # latest date in range day
       to_day: (todo es) To Day
       # latest date in range month
@@ -207,7 +207,7 @@ es:
       to_year: (todo es) To Year
     help:
       # section title
-      title: (todo es) Search Help
+      title: (todo es) Search Help 
       # search help html, this may need to be recreated per language
       # instead of translated literally due to differences with stemming and grammar
       html: |-
@@ -224,81 +224,81 @@ es:
         <p>Because of the creative spellings used by the journalists, it may be necessary to try your search multiple times. For example: P?ro*. This search brings up numerous variant spellings of the French word pirogue, "a large dugout canoe or open boat." Searching for P?*r*og?* will bring up other variant spellings. Searching for canoe or boat also may be helpful.</p>
     filters:
       # clearing filters (not the text search)
-      clear_all: (todo es) Clear Filters
+      clear_all: Borrar Filtros [SB]
       # label above the filters
       filter_by: (todo es) Filter by
       # display when a specific filter option is an empty string
       no_label: (todo es) No Label
       # link text to view all the possible filter options
-      see_more: (todo es) See more
+      see_more: Ver mas [SB]
       # hidden label to expand a filter category
-      show: "(todo es) Show %{label} Filters"
+      show: "(todo es) Show %{label} Filters" 
       # hidden label for filter summary boxes
       summary_box: "(todo es) %{specific_filter} Filter"
     # placeholder for the text search field
-    placeholder: (todo es) Search for...
+    placeholder: Buscar por... [SB]
     results:
       # how to display number of results when no search / filters have been applied
       # and therefore user is browsing all items
       general:
-        zero: (todo es) 0 results
-        one: (todo es) 1 result
+        zero: 0 resultados [SB]
+        one: 1 resultado [SB]
         other: "(todo es) %{count} results"
       # labels for individual item descriptions in results
       item:
         # creators of the item
-        creator: (todo es) Creator(s)
+        creator: Creatdore(s) [SB] 
         # the date of the item used for search results
-        date: (todo es) Date
+        date: Fecha [SB]
         # the format of the item
         format: (todo es) Format
         # label to display if the item itself has no title
-        no_title: (todo es) Untitled
+        no_title: Sin Título [SB]
         # the source of the item, such as the repository
         source: (todo es) Source
       # how to display number of results when a search / filter have been applied
       # and therefore the user is browsing a subset of items
       query:
-        zero: (todo es) 0 items
-        one: (todo es) 1 item
+        zero: 0 articulos [SB]
+        one: 1 articulo [SB]
         other: "(todo es) %{count} items"
       # summary box of selected search / filters
       summary:
-        query: (todo es) Search
+        query: Buscar [SB]
     # title text that appears when search / filters have been applied
-    search_results: (todo es) Search Results
+    search_results: Resultados de Búsqueda [SB]
     # hidden label for the text search input
-    search_text: (todo es) Search Text
+    search_text: Buscar Texto [SB]
     sort:
       # alphabetically ascending sort
-      alpha_asc: "(todo es) Alphabetically (A-Z)"
+      alpha_asc: "Alfabéticamente (A-Z)" [SB]
       # alphabetically descending sort
-      alpha_desc: "(todo es) Alphabetically (Z-A)"
+      alpha_desc: "Alfabéticamente (Z-A)" [SB]
       # sort by fewest to most items
       count_asc: "(todo es) Count (least first)"
       # sort by most to fewest items
       count_desc: "(todo es) Count (most first)"
       # creator ascending sort
-      creator_asc: "(todo es) Creator (A-Z)"
+      creator_asc: "Creador (A-Z)" [SB]
       # creator descending sort
-      creator_desc: "(todo es) Creator (Z-A)"
+      creator_desc: "Creador (Z-A)" [SB]
       # date ascending sort
       date_asc: "(todo es) Date (earliest first)"
       # date descending sort
-      date_desc: "(todo es) Date (latest first)"
+      date_desc: "Fecha (lo último primero)" [SB]
       # title ascending sort
-      title_asc: "(todo es) Title (A-Z)"
+      title_asc: "Título (A-Z)" [SB]
       # title descending sort
-      title_desc: "(todo es) Title (Z-A)"
+      title_desc: "Título (Z-A)" [SB]
       # relevancy (descending), how likely the search results are to be valuable
       relevancy: "(todo es) Relevancy"
       # label for sorting
     # label for applying text search options ("Go!", "Search", etc)
-    submit: (todo es) Search
+    submit: Buscar [SB]
     # page title
-    title: (todo es) Search
+    title: Buscar [SB]
     # browse items without applying any search / filters
-    view_all: (todo es) View All Items
+    view_all: Ver Todos Articulos [SB]
 
   #########
   # TEACH #
