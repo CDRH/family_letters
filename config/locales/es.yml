@@ -105,7 +105,7 @@ es:
   #############
   home:
     # greeting to the user
-    greeting: Biendvenidos [SB]
+    greeting: bienvenidos [SB]
     # custom: contents of home page
     html: |-
       <p>El proyecto <em>Cartas de Familia</em> preserva, digitaliza, analiza y
