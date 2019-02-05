@@ -271,25 +271,25 @@ es:
     search_text: Buscar Texto [SB]
     sort:
       # alphabetically ascending sort
-      alpha_asc: "Alfabéticamente (A-Z)" [SB]
+      alpha_asc: "Alfabéticamente (A-Z) [SB]" 
       # alphabetically descending sort
-      alpha_desc: "Alfabéticamente (Z-A)" [SB]
+      alpha_desc: "Alfabéticamente (Z-A) [SB]"
       # sort by fewest to most items
       count_asc: "(todo es) Count (least first)"
       # sort by most to fewest items
       count_desc: "(todo es) Count (most first)"
       # creator ascending sort
-      creator_asc: "Creador (A-Z)" [SB]
+      creator_asc: "Creador (A-Z) [SB]"
       # creator descending sort
-      creator_desc: "Creador (Z-A)" [SB]
+      creator_desc: "Creador (Z-A) [SB]"
       # date ascending sort
       date_asc: "(todo es) Date (earliest first)"
       # date descending sort
-      date_desc: "Fecha (lo último primero)" [SB]
+      date_desc: "Fecha (lo último primero) [SB]"
       # title ascending sort
-      title_asc: "Título (A-Z)" [SB]
+      title_asc: "Título (A-Z) [SB]"
       # title descending sort
-      title_desc: "Título (Z-A)" [SB]
+      title_desc: "Título (Z-A) [SB]"
       # relevancy (descending), how likely the search results are to be valuable
       relevancy: "(todo es) Relevancy"
       # label for sorting
