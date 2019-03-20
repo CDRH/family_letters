@@ -1,0 +1,64 @@
+<div id="header">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3">
+        <!-- Button trigger modal -->
+        <button class="btn btn-link" data-toggle="modal" data-target="#dedication">
+          <%= t "general.dedication_button" %>
+        </button>
+      </div>
+      <div class="col-sm-7 layouts_cell">
+        <%= render "layouts/body/languages" %>
+      </div>
+      <div class="col-sm-2">
+        <%= link_to t("about.title", default: "About"), about_path, class: "btn btn-link" %>
+        </li>
+      </div>
+    </div>
+  </div>
+
+  <div class="letter_top_greeting">
+    <div class="container">
+      <%= image_tag "letter_top_greeting.png" %>
+    </div>
+  </div>
+  <div class="container title_nav">
+    <div id="site-title"> 
+      <% if current_page? home_path %>
+
+        <div class="home-site-title home-site-title-primary">
+          <h1><%= t "general.project_name" %></h1>
+          <h2><%= t "general.project_subtitle" %></h2>
+        </div>
+        
+        <% if I18n.locale == :en %>
+        <%# TODO: I think this could be optimised a bit further still, but leaving it as is for now %>
+
+          <div id="site-title" class="home-site-title home-site-title-secondary">
+            <h1><%= t "general.project_name", locale: :es %></h1>
+            <h2><%= t "general.project_subtitle", locale: :es %></h2>
+          </div>
+
+        <% else %>
+
+          <div id="site-title" class="home-site-title home-site-title-secondary">
+            <h1><%= t "general.project_name", locale: :en %></h1>
+            <h2><%= t "general.project_subtitle", locale: :en %></h2>
+          </div>
+
+        <% end %>
+
+      <% else %>
+        <%= link_to home_path do %>
+          <div id="site-title">
+            <h1><%= t "general.project_name" %></h1>
+            <h2><%= t "general.project_subtitle" %></h2>
+          <% end %>
+        </div>
+      <% end %>
+    </div><!--/site-title -->
+   
+    <%= render "layouts/body/navbar" %>
+    <%= render "layouts/body/breadcrumbs" %>
+  </div><!-- /container -->
+</div><!-- /header -->

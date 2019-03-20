@@ -9,10 +9,7 @@
       </button>
     </div>
     <div class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        <li class="<%= active?(home_path) %>">
-          <%= link_to t("home.title", default: "Home"), home_path %>
-        </li>
+      <ul class="nav navbar-nav navbar-main">
         <li class="<%= active?(/^#{config.relative_url_root}\/browse/,
           request.path) %>">
           <%= link_to t("explore.title", default: "Explore"), explore_path %>
@@ -22,9 +19,6 @@
         </li>
         <li class="<%= active?(teach_path) %>">
           <%= link_to t("teach.title", default: "Teach and Learn"), teach_path %>
-        </li>
-        <li class="<%= active?(about_path) %>">
-          <%= link_to t("about.title", default: "About"), about_path %>
         </li>
       </ul>
     </div>

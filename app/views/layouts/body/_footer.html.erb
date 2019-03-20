@@ -4,10 +4,33 @@
       <%# TODO image for CC license %>
       <p><%= t "general.footer_html" %></p>
       <p><%= t "general.cdrh_link_html" %></p>
-      <p>TODO [UNL LOGO, HUMANITIES NEBRASKA LOGO]</p>
-      <div class="footer_logo">
-        <a href="http://www.unl.edu" rel="external"><%= image_tag 'footer_logo.png' %></a>
+      <div class="row footer_logo">
+        <div class="col-sm-6 text-center">
+          <a href="http://www.unl.edu" rel="external"><%= image_tag 'logo-unl.png', alt: 'University of Nebraska-Lincoln' %></a>
+        </div>
+        <div class="col-sm-6 text-center">
+          <a href="http://www.unl.edu" rel="external"><%= image_tag 'HN_Logo.png', alt: 'Humanities Nebraska' %></a>
+        </div>
       </div>
+      
     </div><!-- /footer_info -->
   </div> <!-- /container -->
 </div><!-- /footer -->
+
+<!-- Modal -->
+<div class="modal fade" id="dedication" tabindex="-1" role="dialog" aria-labelledby="<%= t "general.dedication_button" %>" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="<%= t "general.dedication_button" %>"><%= t "general.dedication_button" %></h4>
+      </div>
+      <div class="modal-body">
+        <p><%= t "general.dedication_text" %></p>
+        <%# TODO pull with helper method and style %>
+        <%= image_tag "https://cdrhmedia.unl.edu/iiif/2/family_letters%2Fshan_p.001.jpg/full/!150,150/0/default.jpg", class: "dedication_image" %>
+      </div>
+      
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

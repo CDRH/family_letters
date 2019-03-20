@@ -1,4 +1,126 @@
+// I thought these would be available from boostraps _variables but apparently not  
+
+$light_blue: #79b1e0;               
+
+$screen-sm-min: 768px !default;
+$screen-md-min: 992px !default;
+$screen-lg-min: 1200px !default;
+
+$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-serif: 'Cormorant', "Times New Roman", Georgia, Times, serif !default;
+$font-family-serif-heads: 'Vollkorn SC', Georgia, "Times New Roman", Times, serif !default;
+
+
+// ----------
+// Text/Gen Styles
+// ----------
+
+body img {
+  max-width: 100%;
+}
+
+// Letter Pre and Postscripts Design Elements
+.letter_top_greeting, .letter_bottom_farewell {
+  border: 2px solid $light_blue;
+  border-left: none;
+  border-right: none;
+  margin-top: 1em;
+}
+
+.letter_bottom_farewell {
+  height: 2vw;
+}
+
+.letter_top_greeting .container img, .letter_bottom_farewell .container img {
+  margin-top: -.9em;
+}
+
+// No media, smallest
+.letter_top_greeting {
+  height: 3.9vw;
+}
+
+@media (min-width: $screen-sm-min) {
+  .letter_top_greeting {
+    height: 1.3em;
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .letter_top_greeting {
+    height: 1.9em;
+  }
+}
+
+@media (min-width: $screen-lg-min) {
+  .letter_top_greeting {
+    height: 2.5em;
+  }
+}
+
+// ----------
+// Header
+// ----------
+
+#header {
+  margin-top: .5em;
+}
+
+// Top Nav
+@media (min-width: $screen-sm-min) {
+  .layouts_cell {text-align: right;}
+}
+
+// Header and Nav
+.title_nav {
+  font-size: 1em;
+  line-height: 1em;
+  margin: 1em auto 0em auto;
+  text-align: center;
+}
+
+// Site Title
+#site-title h2 {
+  font-family: $font-family-serif;
+  font-size: 1.7em;
+  margin-top: -.6em;
+}
+
+#site-title h1, #site-title h2 {}
+
+//Navbar
+.navbar-main {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.3em;
+  justify-content: center;
+  margin-top: 1.1em;
+  width: 100%;
+}
+
+// ----------
+// Footer
+// ----------
+
+#footer {
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+.footer_logo {
+  margin: 2em 0 2em 0;
+}
+
+// ----------
+// Dedication
+// ----------
+
+// ----------
+// Page styles
+// ----------
+
 // Search
+// ------
 
 .search_results_info {
   border-bottom: solid #aaa 1px;
@@ -10,21 +132,16 @@
   float: right;
 }
 
-// Content Page
-
-.main_content img {
-  max-width: 100%;
-}
+// Individual Items
+// ----------------
 
 // Page images
-
 span.pageimage {
   border-bottom: 2px solid #aaa;
   border-left: 2px solid #aaa;
   border-right: 2px solid #aaa;
   clear: both;
   float: right;
-  margin: 0 0 10px 10px;
   margin: 0;
   padding: 0;
 }
@@ -33,8 +150,22 @@ span.pageimage {
   border-top: 2px solid #aaa; 
   clear: right;
   display: block;
-  height: 0px;
+  height: 0;
   margin: 10px 0 0 0;
   padding: 0px 0 0 0;
   width: 100%;
+}
+
+// Home Page
+// ---------
+
+// Header
+
+.home-site-title-primary {
+  font-size: 1.4em;
+  margin-bottom: 1.7em;
+}
+
+.site_home .navbar-main {
+  font-size: 3em;
 }
