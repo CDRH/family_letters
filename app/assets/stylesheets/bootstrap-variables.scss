@@ -16,20 +16,20 @@ $light_blue: #79b1e0; //notebook line
 //
 //## Gray and brand colors for use across Bootstrap.
 
-$gray-base:              darken($warmblack, 100%) !default;
+$gray-base:              darken($warmblack, 10%) !default;
 $gray-darker:            lighten($gray-base, 13.5%) !default; // #222
 $gray-dark:              lighten($gray-base, 20%) !default;   // #333
 $gray:                   lighten($gray-base, 33.5%) !default; // #555
 $gray-light:             lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 
-$light-base:            #fff;
+$light-base:            lighten($greybeige, 17%);
 $light-lighter:         lighten($light-base, 11%);
 
-$brand-primary:         #0f2f87 !default; //dark blue
-$brand-success:         #3c9d64 !default; //green old #5A9D76
-$brand-info:            #447984 !default; //blue
-$brand-warning:         #FAE579 !default; //yellow
+$brand-primary:         $brightrose !default; //dark blue
+$brand-success:         $blue !default; //green old #5A9D76
+$brand-info:            $light_blue !default; //blue
+$brand-warning:         $dustyrose !default; //yellow
 $brand-danger:          #D3D7D8 !default; //gray
 
 $nav-accent:            #f8f8f8 !default;
@@ -397,9 +397,9 @@ $navbar-default-bg:                transparent !default;
 $navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
 
 // Navbar links
-$navbar-default-link-color:                #777 !default;
+$navbar-default-link-color:                #434444 !default;
 $navbar-default-link-hover-color:          #333 !default;
-$navbar-default-link-hover-bg:             transparent !default;
+$navbar-default-link-hover-bg:             lighten($light-blue, 15%) !default;
 $navbar-default-link-active-color:         #555 !default;
 $navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%) !default;
 $navbar-default-link-disabled-color:       #ccc !default;
@@ -730,7 +730,7 @@ $list-group-link-heading-color: #333 !default;
 //
 //##
 
-$panel-bg:                    #fff !default;
+$panel-bg:                    lighten($greybeige, 18%) !default;
 $panel-body-padding:          15px !default;
 $panel-heading-padding:       10px 15px !default;
 $panel-footer-padding:        $panel-heading-padding !default;

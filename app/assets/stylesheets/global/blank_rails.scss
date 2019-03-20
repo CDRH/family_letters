@@ -1,15 +1,22 @@
 // I thought these would be available from boostraps _variables but apparently not  
 
-$light_blue: #79b1e0;               
+$blue: #3c5881;
+$greybeige: #cdcac6;
+$warmbeige: #efe5cc;
+$warmblack: #434444;
+$brightrose: #bd435b;
+$dustyrose: #cf838d;
+$light_blue: #79b1e0; //notebook line              
 
 $screen-sm-min: 768px !default;
 $screen-md-min: 992px !default;
 $screen-lg-min: 1200px !default;
 
-$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$font-family-serif: 'Cormorant', "Times New Roman", Georgia, Times, serif !default;
-$font-family-serif-heads: 'Vollkorn SC', Georgia, "Times New Roman", Times, serif !default;
+$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-serif: 'Cormorant', "Times New Roman", Georgia, Times, serif;
+$font-family-serif-heads: 'Vollkorn SC', Georgia, "Times New Roman", Times, serif;
 
+$light-base: lighten($greybeige, 17%);
 
 // ----------
 // Text/Gen Styles
@@ -17,6 +24,31 @@ $font-family-serif-heads: 'Vollkorn SC', Georgia, "Times New Roman", Times, seri
 
 body img {
   max-width: 100%;
+}
+
+$link-underline: lighten($light-blue, 15%);
+$link-underline-hover: lighten($blue, 15%);
+
+// Using box-shadow for link so I can set the color and get it close to text
+a {
+  -webkit-box-shadow: inset 0 -.15em 0 $link-underline;
+  box-shadow: inset 0 -.15em 0 $link-underline;
+}
+
+a:hover {
+  -webkit-box-shadow: inset 0 -.15em 0 $link-underline-hover;
+  box-shadow: inset 0 -.15em 0 $link-underline-hover;
+  text-decoration: none;
+}
+
+// Remove styles from buttons, etc.
+a.btn, .footer_logo a, .nav a, #site-title a, .pagination a {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.panel-default .panel-heading {
+  background-color: #fff;
 }
 
 // Letter Pre and Postscripts Design Elements
@@ -27,16 +59,16 @@ body img {
   margin-top: 1em;
 }
 
-.letter_bottom_farewell {
-  height: 2vw;
+.letter_top_greeting .container img
+{
+  margin-top: -1.1em;
 }
-
-.letter_top_greeting .container img, .letter_bottom_farewell .container img {
-  margin-top: -.9em;
+.letter_bottom_farewell .container img {
+  margin-top: -1em;
 }
 
 // No media, smallest
-.letter_top_greeting {
+.letter_top_greeting, .letter_bottom_farewell {
   height: 3.9vw;
 }
 
@@ -44,17 +76,33 @@ body img {
   .letter_top_greeting {
     height: 1.3em;
   }
+  .letter_bottom_farewell {
+    height: 1em;
+  }
+  .letter_top_greeting .container img
+  {
+    margin-top: -.9em;
+  }
+  .letter_bottom_farewell .container img {
+    margin-top: -.8em;
+  }
 }
 
 @media (min-width: $screen-md-min) {
   .letter_top_greeting {
     height: 1.9em;
   }
+  .letter_bottom_farewell {
+    
+  }
 }
 
 @media (min-width: $screen-lg-min) {
   .letter_top_greeting {
     height: 2.5em;
+  }
+  .letter_bottom_farewell {
+    height: 1.4em;
   }
 }
 
@@ -64,6 +112,7 @@ body img {
 
 #header {
   margin-top: .5em;
+
 }
 
 // Top Nav
@@ -73,20 +122,45 @@ body img {
 
 // Header and Nav
 .title_nav {
+  //background-attachment: scroll;
+  //background-color: transparent;
+  //background-image:url(../flowers.png);
+  //background-position: left bottom;
+  //background-repeat: no-repeat;
+  
   font-size: 1em;
   line-height: 1em;
   margin: 1em auto 0em auto;
   text-align: center;
+
+  background: url(../flowers.png) no-repeat left bottom;background-size: 17%;
+}
+
+@media (min-width: $screen-md-min) {
+  .title_nav_sub {
+    margin-left: 7em;
+  }
 }
 
 // Site Title
+#site-title a {
+  display: block;
+}
+
+#site-title a, #site-title h1, #site-title h2 {
+  color: $blue;
+  line-height: .8em
+}
+
+#site-title a:hover h1, #site-title a:hover h2 {
+  color: lighten($blue, 20%);
+}
+
 #site-title h2 {
   font-family: $font-family-serif;
   font-size: 1.7em;
-  margin-top: -.6em;
+  margin-top: -.2em;
 }
-
-#site-title h1, #site-title h2 {}
 
 //Navbar
 .navbar-main {
@@ -94,8 +168,18 @@ body img {
   flex-wrap: wrap;
   font-size: 1.3em;
   justify-content: center;
-  margin-top: 1.1em;
+  margin-top: .5em;
   width: 100%;
+  a {
+    -webkit-box-shadow: inset 0 -.55em 0 $link-underline;
+    box-shadow: inset 0 -.55em 0 $link-underline;
+    background-color: $light-base;
+  }
+  // Hover color set in bootstrap variables: 399 // Navbar links
+}
+
+.navbar-main li {
+  margin: 0 .5em;
 }
 
 // ----------
@@ -103,8 +187,11 @@ body img {
 // ----------
 
 #footer {
-  margin-bottom: 2em;
+  margin: 2em 0;
+  padding: 2em 0 0em 0;
   text-align: center;
+  background-color: lighten($greybeige, 28%);
+
 }
 
 .footer_logo {
@@ -161,11 +248,41 @@ span.pageimage {
 
 // Header
 
-.home-site-title-primary {
-  font-size: 1.4em;
-  margin-bottom: 1.7em;
+.site_home {
+  .home-site-title {
+    // Shadow for when title overlaps flowers
+    text-shadow: 2px 2px 3px $light-base,
+                 -2px 2px 3px $light-base,
+                 -2px -2px 3px $light-base,
+                 2px -2px 3px $light-base,
+                 2px 2px 6px $light-base,
+                 -2px 2px 6px $light-base,
+                 -2px -2px 6px $light-base,
+                 2px -2px 6px $light-base;
+  }
+
+  .title_nav {
+    background-size: 25%;
+  }
 }
 
-.site_home .navbar-main {
-  font-size: 3em;
+@media (min-width: $screen-sm-min) {
+  // Enlarge primary title for tablet and larger
+  .home-site-title-primary {
+    font-size: 1.4em;
+    margin-bottom: 1.7em;
+  }
 }
+
+@media (min-width: $screen-md-min) {
+  .site_home {
+    .title_nav_sub {
+      margin-left: 16em;
+    }
+
+    .title_nav {
+      background-size: contain;
+    }
+  }
+}
+
