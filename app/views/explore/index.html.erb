@@ -1,15 +1,20 @@
-<h1><%= t "explore.title", default: "Explore" %></h1>
+<h2><%= t "explore.title", default: "Explore" %></h2>
 
-<p>Introduction</p>
+<% partial = params["locale"] == "es" ? "explore/index/es" : "explore/index/en" %>
+
+<%= render partial do %><% end %>
 
 <ul>
-  <li>Timeline</li>
-  <li>Exhibits</li>
-  <li>Greeting Cards</li>
-  <li>Hairstyles</li>
-  <li>Realia</li>
-  <li>Music</li>
-  <li>Recipe</li>
-  <li>Work</li>
-  <li>Religion</li>
+  <li><%= link_to "Exhibit 1", exhibit_01_path %>
+  </li>
+  <li><%= link_to "Exhibit 2", exhibit_02_path %>
+  </li>
+  <li><%= link_to "Exhibit 3", exhibit_03_path %>
+  </li>
+  <li><%= link_to "Exhibit 4", exhibit_04_path %>
+  </li>
+  <li><%= link_to "Essay 1", essay_01_path %>
+  </li>
 </ul>
+
+
