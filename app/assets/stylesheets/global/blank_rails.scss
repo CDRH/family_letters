@@ -106,6 +106,12 @@ a.btn, .footer_logo a, .nav a, #site-title a, .pagination a {
   }
 }
 
+// Overwriting bootstrap when variables doens't cut it
+
+.modal-footer {
+  text-align: center;
+}
+
 // ----------
 // Header
 // ----------
@@ -208,6 +214,28 @@ a.btn, .footer_logo a, .nav a, #site-title a, .pagination a {
 // ----------
 // Page styles
 // ----------
+
+// Explore
+
+// Galleries
+
+.exhibit_gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.exhibit_gallery_item {
+  flex-basis: 20%;
+  padding: 10px;
+  line-height: 1.1em;
+  font-size: .9em;
+}
+
+.gallery_heading {
+  border-top: solid .5em lighten($greybeige, 28%);
+  padding-top: .5em;
+}
 
 // Search
 // ------

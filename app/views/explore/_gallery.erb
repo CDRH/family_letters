@@ -1,0 +1,18 @@
+<div class="exhibit_gallery">
+  <% photos.each do |key, value| %>
+    <div class="exhibit_gallery_item">
+      <a href="https://cdrhmedia.unl.edu/iiif/2/family_letters%2F<%= key %>.jpg/full/!700,700/0/default.jpg" data-toggle="lightbox" data-footer="<%= value %>" data-gallery="exhibit_gallery">
+        <div class="exhibit_gallery_image">
+          <%= image_tag "https://cdrhmedia.unl.edu/iiif/2/family_letters%2F#{key}.jpg/full/!220,220/0/default.jpg", class: "exhibit_gallery_image"  %>
+        </div>
+      </a>
+      <p class="exhibit_gallery_caption">
+        <%= value %>
+      </p>
+    </div>
+  <% end %>
+</div>
+
+
+
+
