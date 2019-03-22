@@ -55,31 +55,73 @@ welcomebaby = {
 
 <%= render partial do %>
 
-<h4 class="gallery_heading">Birthday</h4>
+<h4 class="gallery_heading">
+  <% if params["locale"] == "es" %>
+    Cumpleaños
+  <% else %>
+    Birthday
+  <% end %>
+</h4>
 
 <%= render "gallery", photos: birthday %>
 
-<h4 class="gallery_heading">Christmas</h4>
+<h4 class="gallery_heading">
+  <% if params["locale"] == "es" %>
+    Navidad
+  <% else %>
+    Christmas
+  <% end %>
+</h4>
 
 <%= render "gallery", photos: christmas %>
 
-<h4 class="gallery_heading">Easter</h4>
+<h4 class="gallery_heading">Easter
+  <% if params["locale"] == "es" %>
+    Pascua de Resurrección
+  <% else %>
+    Easter
+  <% end %>
+</h4>
 
 <%= render "gallery", photos: easter %>
 
-<h4 class="gallery_heading">Postcards</h4>
+<h4 class="gallery_heading">
+  <% if params["locale"] == "es" %>
+    Tarjetas postales
+  <% else %>
+    Postcards
+  <% end %>
+</h4>
 
 <%= render "gallery", photos: postcard %>
 
-<h4 class="gallery_heading">Valentine's Day</h4>
+<h4 class="gallery_heading">
+  <% if params["locale"] == "es" %>
+    día de San Valentín
+  <% else %>
+    Valentine's Day
+  <% end %>
+</h4>
 
 <%= render "gallery", photos: valentines %>
 
-<h4 class="gallery_heading">Mother's Day</h4>
+<h4 class="gallery_heading">Mother's Day
+  <% if params["locale"] == "es" %>
+    Día de la Madre
+  <% else %>
+    Mother's Day
+  <% end %>
+</h4>
 
 <%= render "gallery", photos: mothersday %>
 
-<h4 class="gallery_heading">Welcome Baby</h4>
+<h4 class="gallery_heading">Welcome Baby
+  <% if params["locale"] == "es" %>
+    Bienvenido bebé
+  <% else %>
+    Welcome Baby
+  <% end %>
+</h4>
 
 <%= render "gallery", photos: welcomebaby %>
 
