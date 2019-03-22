@@ -1,12 +1,36 @@
 <% partial = params["locale"] == "es" ? "explore/exhibit_03/es" : "explore/exhibit_03/en" %>
 
+<%
+images = {
+  "shan_p.087" => "Black and white group photograph of eleven people posing in front of tree",
+  "shan_p.117" => "Black and white photograph of Santos Baros Schubert and William F. Schubert on a picnic",
+  "shan_p.185" => "Black and white photograph of women in China Poblana Costumes",
+  "shan_p.455" => "Black and white photograph of Lucy on a bench",
+  "shan_m.047" => "Song lyrics of Amar y vivir",
+  "shan_p.159" => "Black and white photograph of Santos Baros Schubert and William F. Schubert kissing",
+  "shan_p.169" => "Elizabeth J. Shanahan, Rodney Schubert, Gwendoly Schubert and Robert S. Schubert"
+}
+%>
+
+
 <%= render partial do %>
-  <ul>
-  <% @res.items.each do |item| %>
-    <li>
-      <%= link_to item["title"], item_path(params["locale"], item["identifier"]) %><br/>
-      <%= sanitize item["highlight"]["text"].first %>
-    </li>
+
+<h4 class="gallery_heading">
+  <% if params["locale"] == "es" %>
+    Galería
+  <% else %>
+    Gallery
   <% end %>
-</ul>
+</h4>
+
+<%= render "gallery", photos: images %>
+
 <% end %>
+
+<%# TODO: Adding this here so it only shows up on the pages it's needed for now, ask about best way to handle %>
+<script>
+  $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+    event.preventDefault();
+    $(this).ekkoLightbox();
+  });
+</script>

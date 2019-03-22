@@ -4,17 +4,113 @@
 
 <%= render partial do %><% end %>
 
-<ul>
-  <li><%= link_to "Exhibit 1", exhibit_01_path %>
-  </li>
-  <li><%= link_to "Exhibit 2", exhibit_02_path %>
-  </li>
-  <li><%= link_to "Exhibit 3", exhibit_03_path %>
-  </li>
-  <li><%= link_to "Exhibit 4", exhibit_04_path %>
-  </li>
-  <li><%= link_to "Essay 1", essay_01_path %>
-  </li>
-</ul>
+<div class="row">
+    <div class="col-sm-6 explore_search_box">
+      <%= form_tag search_path, method: "get" do %>
+        <h4>Search Materials</h4>
+        <%= text_field_tag "q", nil, placeholder: "(sister OR \"sis\") NOT brother", class: "form-control" %>
+        <div class="pull-left">
+            <%= link_to "Advanced Search", search_path, class: "btn btn-link color_reverse", role: "button" %>
+          </div>
+        <div class="pull-right">
+          <%= submit_tag "Search and Refine", class: "btn btn-primary" %>
+        </div>
+      <% end %>
+    </div><!-- /col -->
+    <div class="col-sm-6 explore_essay_callout">
+      <%= link_to essay_01_path, class: "" do %>
+        <% if params["locale"] == "es" %>
+          Una cuchara, una sazón, un mundo: La historia que cuentan nuestros objetos cotidianos
+        <% else %>
+          A spoon, a taste, a world: The story that our everyday objects tell
+        <% end %>
+      <% end %>  
+    </div><!-- /col -->
+  </div><!-- /row -->
 
+<h3 class="explore_index_headers">Exhibits</h3>
+</div> <%# End container for full width band %>
+<div class="container-fluid explore_band">
 
+  <div class="row">
+    <div class="col-sm-6">
+      <%= link_to exhibit_01_path, class: "content explore_callout1 explore_callout" do %>
+        <div class="explore_inner">
+          <div class="row">
+            <div class="col-md-9 col-md-offset-3">
+              <div class="inner_content">
+                <h4>
+                  <% if params["locale"] == "es" %>
+                    Lengua y vida
+                  <% else %>
+                    Of language and life
+                  <% end %>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %> 
+    </div><!-- /col -->
+    <div class="col-sm-6">
+      <%= link_to exhibit_02_path, class: "content explore_callout2 explore_callout" do %>
+        <div class="explore_inner">
+          <div class="row">
+            <div class="col-md-9 ">
+              <div class="inner_content">
+                <h4>
+                  <% if params["locale"] == "es" %>
+                    Migraciones
+                  <% else %>
+                    Migrations
+                  <% end %>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>  
+    </div><!-- /col -->
+  </div><!-- /row -->
+
+  <div class="row">
+    <div class="col-sm-6">
+      <%= link_to exhibit_03_path, class: "content explore_callout3 explore_callout" do %>
+        <div class="explore_inner">
+          <div class="row">
+            <div class="col-md-9 col-md-offset-3">
+              <div class="inner_content">
+                <h4>
+                  <% if params["locale"] == "es" %>
+                    Somos más que nuestro trabajo
+                  <% else %>
+                    We are more than our work
+                  <% end %>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %> 
+    </div><!-- /col -->
+    <div class="col-sm-6">
+      <%= link_to exhibit_04_path, class: "content explore_callout4 explore_callout" do %>
+        <div class="explore_inner">
+          <div class="row">
+            <div class="col-md-9">
+              <div class="inner_content">
+                <h4>
+                  <% if params["locale"] == "es" %>
+                    Conexiones
+                  <% else %>
+                    Connections
+                  <% end %>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>  
+    </div><!-- /col -->
+  </div><!-- /row -->
+</div>

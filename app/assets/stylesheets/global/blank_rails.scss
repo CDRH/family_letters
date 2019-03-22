@@ -216,6 +216,123 @@ a.btn, .footer_logo a, .nav a, #site-title a, .pagination a {
 // ----------
 
 // Explore
+// -------
+
+.explore_index_headers {
+  border-top: solid .5em lighten($greybeige, 28%);
+  padding-top: .5em;
+  margin-top: 2em;
+  text-align: center;
+}
+
+.explore_essay_callout {
+  background-image:url("https://cdrhmedia.unl.edu/iiif/2/family_letters%2Fshan_d.376.jpg/full/!1000,1000/0/default.jpg");
+  background-position:center;
+  background-size:120%;
+  height:10em;
+}
+.explore_essay_callout a {
+  background-color: rgba($light-base, .85);
+  display: block;
+  font-size: 1.9em;
+  line-height: 1.2;
+  padding: .5em;
+}
+
+.explore_band {
+  margin-top: -2.5em;
+}
+
+// Set images for Exhibit Callouts
+.explore_callout1 {
+  background-image:url("https://cdrhmedia.unl.edu/iiif/2/family_letters%2Fshan_l.242.jpg/pct:9,0,60,30/!1000,1000/0/default.jpg");
+  border-bottom-width:2px
+}
+.explore_callout2 {
+  background-image:url("https://cdrhmedia.unl.edu/iiif/2/family_letters%2Fshan_p.183.jpg/pct:20,15,60,60/!1000,1000/0/default.jpg");
+  border-bottom-width:2px;
+  border-top-width:2px
+}
+.explore_callout3 {
+  background-image:url("https://cdrhmedia.unl.edu/iiif/2/family_letters%2Fshan_p.087.jpg/pct:20,30,60,70/!1000,1000/0/default.jpg");
+  border-bottom-width:2px;
+  border-top-width:2px
+}
+.explore_callout4 {
+  background-image:url("https://cdrhmedia.unl.edu/iiif/2/family_letters%2Fshan_d.481.jpg/pct:20,15,60,60/!1000,1000/0/default.jpg");
+  border-top-width:2px
+}
+
+@media (min-width: 750px) {
+  .explore_callout1 {
+    border-right-width:2px
+  }
+  .explore_callout2 {
+    border-bottom-width:4px;
+    border-right-width:2px
+  }
+  .explore_callout3 {
+    border-left-width:2px;
+    border-top-width:4px
+  }
+  .explore_callout4 {
+    border-left-width:2px
+  }
+}
+
+.explore_callout {
+  border:4px solid $light-base;
+  display:block;
+  font-size:1.2em;
+  height:12em
+}
+.explore_callout .explore_inner {
+  background-color:rgba($light-base, 0.25);
+  height:100%
+}
+.explore_callout:focus .explore_inner,
+.explore_callout:hover .explore_inner {
+  background-color:transparent
+}
+
+a.content {
+  background-position:center;
+  background-size:100%;
+  display:block;
+  margin-left:-15px;
+  margin-right:-15px;
+  overflow:hidden;
+  padding:0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+a.content:focus,
+a.content:hover {
+  background-position:center;
+  background-size:120%;
+  transition:all 0.5s;
+  -webkit-transition:all 0.5s;
+  -o-transition:all 0.5s;
+  -moz-transition:all 0.5s
+}
+a.content:focus .inner_content,
+a.content:hover .inner_content {
+  border-bottom:10px solid $light-blue;
+  padding-top:1.5em
+}
+a.content .row {
+  margin-left:15px;
+  margin-right:15px
+}
+a.content .inner_content {
+  color: $warmblack;
+  background-color:rgba($light-base,0.85);
+  padding:.5em;
+  transition:padding 0.5s;
+  -moz-transition:padding 0.5s;
+  -o-transition:padding 0.5s;
+  -webkit-transition:padding 0.5s
+}
 
 // Galleries
 
@@ -230,6 +347,13 @@ a.btn, .footer_logo a, .nav a, #site-title a, .pagination a {
   padding: 10px;
   line-height: 1.1em;
   font-size: .9em;
+}
+
+.exhibit_gallery_image {
+  margin-bottom: .3em;
+  img {
+    min-width: 150px;
+  }
 }
 
 .gallery_heading {
@@ -316,4 +440,3 @@ span.pageimage {
     }
   }
 }
-
