@@ -20,6 +20,7 @@ Rails.application.routes.draw do
     get '/explore/3', to: 'explore#exhibit_03', as: 'exhibit_03'
     get '/explore/4', to: 'explore#exhibit_04', as: 'exhibit_04'
     get '/explore/5', to: 'explore#essay_01', as: 'essay_01'
+    get '/explore/6', to: 'explore#essay_01_portuguese', as: 'essay_01_port'
 
     # research / investiga
     get '/research', to: 'research#index', as: 'research'

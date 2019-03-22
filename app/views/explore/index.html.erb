@@ -1,8 +1,25 @@
 <h2><%= t "explore.title", default: "Explore" %></h2>
 
-<% partial = params["locale"] == "es" ? "explore/index/es" : "explore/index/en" %>
+<%
+images = {
+  "shan_p.035" => "Black and white photograph of Jesusita Baros Torres with her son Jess Jesús Baros wearing overalls around 1920s",
+  "shan_p.403" => "Family portrait of Jesusita, Jesse and Santos Baros"
+}
+%>
 
-<%= render partial do %><% end %>
+<div class="row">
+  <div class="col-md-8">
+    <% partial = params["locale"] == "es" ? "explore/index/es" : "explore/index/en" %>
+    <%= render partial do %><% end %>
+  </div>
+  <div class="col-md-4">
+    <%= render "gallery", photos: images %>
+  </div>
+</div>
+
+
+
+
 
 <div class="row">
     <div class="col-sm-6 explore_search_box">
@@ -20,9 +37,9 @@
     <div class="col-sm-6 explore_essay_callout">
       <%= link_to essay_01_path, class: "" do %>
         <% if params["locale"] == "es" %>
-          Una cuchara, una sazón, un mundo: La historia que cuentan nuestros objetos cotidianos
+          Una cuchara, una sazón, un mundo: <br/>La historia que cuentan nuestros objetos cotidianos
         <% else %>
-          A spoon, a taste, a world: The story that our everyday objects tell
+          A spoon, a taste, a world: <br/>The story that our everyday objects tell
         <% end %>
       <% end %>  
     </div><!-- /col -->
@@ -34,29 +51,29 @@
 
   <div class="row">
     <div class="col-sm-6">
-      <%= link_to exhibit_01_path, class: "content explore_callout1 explore_callout" do %>
+      <%= link_to exhibit_04_path, class: "content explore_callout1 explore_callout" do %>
         <div class="explore_inner">
           <div class="row">
             <div class="col-md-9 col-md-offset-3">
               <div class="inner_content">
                 <h4>
                   <% if params["locale"] == "es" %>
-                    Lengua y vida
+                    Conexiones
                   <% else %>
-                    Of language and life
+                    Connections
                   <% end %>
                 </h4>
               </div>
             </div>
           </div>
         </div>
-      <% end %> 
+      <% end %>  
     </div><!-- /col -->
     <div class="col-sm-6">
       <%= link_to exhibit_02_path, class: "content explore_callout2 explore_callout" do %>
         <div class="explore_inner">
           <div class="row">
-            <div class="col-md-9 ">
+            <div class="col-md-9">
               <div class="inner_content">
                 <h4>
                   <% if params["locale"] == "es" %>
@@ -94,23 +111,32 @@
       <% end %> 
     </div><!-- /col -->
     <div class="col-sm-6">
-      <%= link_to exhibit_04_path, class: "content explore_callout4 explore_callout" do %>
+      <%= link_to exhibit_01_path, class: "content explore_callout4 explore_callout" do %>
         <div class="explore_inner">
           <div class="row">
             <div class="col-md-9">
               <div class="inner_content">
                 <h4>
                   <% if params["locale"] == "es" %>
-                    Conexiones
+                    Lengua y vida
                   <% else %>
-                    Connections
+                    Of language and life
                   <% end %>
                 </h4>
               </div>
             </div>
           </div>
         </div>
-      <% end %>  
+      <% end %> 
+      
     </div><!-- /col -->
   </div><!-- /row -->
 </div>
+
+<%# TODO: Adding this here so it only shows up on the pages it's needed for now, ask about best way to handle %>
+<script>
+  $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+    event.preventDefault();
+    $(this).ekkoLightbox();
+  });
+</script>
