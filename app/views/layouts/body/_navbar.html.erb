@@ -1,19 +1,17 @@
 <div class="navbar navbar-default">
 
-
-
-      <ul class="nav navbar-nav navbar-main">
-        <li class="<%= active?(/^#{config.relative_url_root}\/browse/,
-          request.path) %>">
-          <%= link_to t("explore.title", default: "Explore"), explore_path %>
-        </li>
-        <li class="<%= active?(search_path) %>">
-          <%= link_to t("research.title", default: "Research"), research_path %>
-        </li>
-        <li class="<%= active?(teach_path) %>">
-          <%= link_to t("teach.title", default: "Teach and Learn"), teach_path %>
-        </li>
-      </ul>
-
+  <ul class="nav navbar-nav navbar-main">
+    <li class="<%= active?(/\/explore\/?.*/, request.path) %>">
+      <%= link_to t("explore.title", default: "Explore"), explore_path %>
+    </li>
+    <%# TODO should browse go here? %>
+    <%# TODO does search fall under research currently? %>
+    <li class="<%= active?(/\/research\/?.*/, request.path) %>">
+      <%= link_to t("research.title", default: "Research"), research_path %>
+    </li>
+    <li class="<%= active?(/\/teach\/?.*/, request.path) %>">
+      <%= link_to t("teach.title", default: "Teach and Learn"), teach_path %>
+    </li>
+  </ul>
 
 </div><!-- /navbar -->
