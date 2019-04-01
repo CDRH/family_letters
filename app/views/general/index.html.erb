@@ -1,7 +1,6 @@
 <h1><%= t "home.greeting", default: "Welcome" %></h1>
 
-<%# TODO use iiif helper tag %>
-<%= t "home.html", image: image_tag("https://cdrhmedia.unl.edu/iiif/2/family_letters%2Fshan_p.035.jpg/full/!300,300/0/default.jpg", class: "home_image") %>
+<%= t "home.html", image: image_tag(iiif("shan_p.035.jpg", size: "!300,300"), class: "home_image") %>
 
 <%# TODO look at options %>
 <p><strong>Option 2:</strong>  use following photos to illustrate family through time</p>
@@ -25,7 +24,3 @@
   <li>L190 (1939) ZAC to CO</li>
   <li>L192 (1970) MT to CO</li>
 </ul>
-
-
-
-

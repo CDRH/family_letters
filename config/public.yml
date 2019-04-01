@@ -6,6 +6,10 @@ default: &default
     language_default: es
     # defaults to "en" if nothing passed in, pipe delineated values (en|es|de)
     languages: en|es
+    # iiif thumbnail default size
+    thumbnail_size: "!150,150"
+    # iiif project directory
+    media_server_dir: family_letters
 
   api_options:
     # example of default filter for all queries

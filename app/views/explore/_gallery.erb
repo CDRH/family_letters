@@ -1,11 +1,12 @@
 <div class="exhibit_gallery">
   <% photos.each do |key, value| %>
     <div class="exhibit_gallery_item">
-      <a href="https://cdrhmedia.unl.edu/iiif/2/family_letters%2F<%= key %>.jpg/full/!700,700/0/default.jpg" data-toggle="lightbox" data-footer="<%= value %>" data-gallery="exhibit_gallery">
+      <%= link_to iiif("#{key}.jpg", size: "!700,700"), "data-footer": value,
+        "data-toggle": "lightbox", "data-gallery": "exhibit_gallery" do %>
         <div class="exhibit_gallery_image">
-          <%= image_tag "https://cdrhmedia.unl.edu/iiif/2/family_letters%2F#{key}.jpg/full/!220,220/0/default.jpg", class: "exhibit_gallery_image"  %>
+          <%= image_tag iiif("#{key}.jpg", size: "!200,200") %>
         </div>
-      </a>
+        <% end %>
       <p class="exhibit_gallery_caption">
         <%= value %>
       </p>
