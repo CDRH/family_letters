@@ -243,19 +243,19 @@ es:
       general:
         zero: 0 resultados [SB]
         one: 1 resultado [SB]
-        other: "(todo es) %{count} results"
+        other: "%{count} resultados [JD]"
       # labels for individual item descriptions in results
       item:
         # creators of the item
-        creator: Creatdore(s) [SB] 
+        creator: Creadore(s) [SB]
         # the date of the item used for search results
         date: Fecha [SB]
         # the format of the item
-        format: (todo es) Format
+        format: El Formato [JD]
         # label to display if the item itself has no title
         no_title: Sin Título [SB]
         # the source of the item, such as the repository
-        source: (todo es) Source
+        source: La Fuente [JD]
         # CUSTOM highlight text field identification (spanish)
         hl_es: El Texto Español [JD]
         # CUSTOM highlight text field identification (english)
