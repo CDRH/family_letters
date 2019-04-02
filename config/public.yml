@@ -25,7 +25,7 @@ default: &default
     # facet info on browse page
     browse_sort: term|asc
     # highlighting
-    hl_fl: text
+    hl_fl: text_t_es,text_t_en
     hl_num: 5
 
   date_range:
