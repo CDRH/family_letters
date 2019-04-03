@@ -4,8 +4,8 @@ default: &default
     version: 0.1.0
     # defaults to "en" (english) if no default language set
     language_default: es
-    # defaults to "en" if nothing passed in, pipe delineated values (en|es|de)
-    languages: en|es
+    # pipe delineated values (es|de) for all non-default languages
+    languages: en
     # iiif thumbnail default size
     thumbnail_size: "!150,150"
     # iiif project directory

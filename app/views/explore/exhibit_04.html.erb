@@ -1,5 +1,3 @@
-<% partial = params["locale"] == "es" ? "explore/exhibit_04/es" : "explore/exhibit_04/en" %>
-
 <%
 birthday = {
   "shan_d.233" => "Beautiful rose design, Writing in Spanish ",
@@ -53,7 +51,7 @@ welcomebaby = {
 
 %>
 
-<%= render partial do %>
+<%= render localized_partial("exhibit_04", "explore/locales") do %>
 
 <h4 class="gallery_heading">
   <% if params["locale"] == "es" %>

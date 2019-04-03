@@ -1,5 +1,3 @@
-<% partial = params["locale"] == "es" ? "explore/exhibit_03/es" : "explore/exhibit_03/en" %>
-
 <%
 images = {
   "shan_p.087" => "Black and white group photograph of eleven people posing in front of tree",
@@ -12,8 +10,7 @@ images = {
 }
 %>
 
-
-<%= render partial do %>
+<%= render localized_partial("exhibit_03", "explore/locales") do %>
 
 <h4 class="gallery_heading">
   <% if params["locale"] == "es" %>

@@ -9,17 +9,12 @@ images = {
 
 <div class="row">
   <div class="col-md-8">
-    <% partial = params["locale"] == "es" ? "explore/index/es" : "explore/index/en" %>
-    <%= render partial do %><% end %>
+    <%= render localized_partial("index", "explore/locales") %>
   </div>
   <div class="col-md-4">
     <%= render "gallery", photos: images %>
   </div>
 </div>
-
-
-
-
 
 <div class="row">
     <div class="col-sm-6 explore_search_box">

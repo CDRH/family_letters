@@ -1,6 +1,4 @@
-<% partial = params["locale"] == "es" ? "explore/exhibit_01/es" : "explore/exhibit_01/en" %>
-
-<%= render partial do %>
+<%= render localized_partial("exhibit_01", "explore/locales") do %>
   <ul>
   <% @res.items.each do |item| %>
     <li>

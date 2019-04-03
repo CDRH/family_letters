@@ -1,5 +1,3 @@
-<% partial = params["locale"] == "es" ? "explore/exhibit_02/es" : "explore/exhibit_02/en" %>
-
 <%
 images = {
   "shan_p.009" => "Black and white photograph of Maximino Torres wearing a coat and smoking",
@@ -12,18 +10,17 @@ images = {
 }
 %>
 
+<%= render localized_partial("exhibit_02", "explore/locales") do %>
 
-<%= render partial do %>
+  <h4 class="gallery_heading">
+    <% if params["locale"] == "es" %>
+      Galería
+    <% else %>
+      Gallery
+    <% end %>
+  </h4>
 
-<h4 class="gallery_heading">
-  <% if params["locale"] == "es" %>
-    Galería
-  <% else %>
-    Gallery
-  <% end %>
-</h4>
-
-<%= render "gallery", photos: images %>
+  <%= render "gallery", photos: images %>
 
 <% end %>
 
