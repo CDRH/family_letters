@@ -1,26 +1,22 @@
 <%
 images = {
-  "shan_p.087" => "Black and white group photograph of eleven people posing in front of tree",
-  "shan_p.117" => "Black and white photograph of Santos Baros Schubert and William F. Schubert on a picnic",
-  "shan_p.185" => "Black and white photograph of women in China Poblana Costumes",
-  "shan_p.455" => "Black and white photograph of Lucy on a bench",
-  "shan_m.047" => "Song lyrics of Amar y vivir",
-  "shan_p.159" => "Black and white photograph of Santos Baros Schubert and William F. Schubert kissing",
-  "shan_p.169" => "Elizabeth J. Shanahan, Rodney Schubert, Gwendoly Schubert and Robert S. Schubert"
+  "shan_p.087" => t("explore.caption.shan_p_087"),
+  "shan_p.117" => t("explore.caption.shan_p_117"),
+  "shan_p.185" => t("explore.caption.shan_p_185"),
+  "shan_p.455" => t("explore.caption.shan_p_455"),
+  "shan_m.047" => t("explore.caption.shan_m_047"),
+  "shan_p.159" => t("explore.caption.shan_p_159"),
+  "shan_p.169" => t("explore.caption.shan_p_169")
 }
 %>
 
 <%= render localized_partial("exhibit_03", "explore/locales") do %>
 
-<h4 class="gallery_heading">
-  <% if params["locale"] == "es" %>
-    Galería
-  <% else %>
-    Gallery
-  <% end %>
-</h4>
+  <h4 class="gallery_heading">
+    <%= t "exhibit.gallery", default: "Gallery" %>
+  </h4>
 
-<%= render "gallery", photos: images %>
+  <%= render "gallery", photos: images %>
 
 <% end %>
 

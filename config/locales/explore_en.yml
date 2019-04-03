@@ -1,0 +1,84 @@
+en:
+  explore:
+    gallery: Gallery
+    home:
+      connections: Connections
+      exhibits: Exhibits
+      language_and_life: Of language and life
+      migrations: Migrations
+      more_than: We are more than our work
+      objects_html: |-
+        A spoon, a taste, a world:
+        <br/>The story that our everyday objects tell
+      search_adv: Advanced Search
+      search_btn: Search and Refine
+      search_label: Search Materials
+    connections:
+      baby: Welcome Baby
+      birthday: Birthday
+      christmas: Christmas
+      easter: Easter
+      mother: Mother's Day
+      postcards: Postcards
+      valentine: Valentine's Day
+    caption:
+      # avoiding period in yaml key because of difficulty selecting it from view
+      # all of these captions may eventually be pulled from the API or another source
+
+      # main explore page
+      shan_p_035: Black and white photograph of Jesusita Baros Torres with her son Jess Jesús Baros wearing overalls around 1920s
+      shan_p_403: Family portrait of Jesusita, Jesse and Santos Baros
+
+      # migrations
+      shan_d_103: Now we have six reasons for making the Constitution
+      shan_d_056: Handwritten notes citizenship exam. The Jeffersonian Tablet.
+      shan_d_138: US Dept. of Labor. Work permit for Jesusita Baros
+      shan_l_019: Letter from Clemente to Maximino Torres, 1927
+      shan_p_009: Black and white photograph of Maximino Torres wearing a coat and smoking
+      shan_p_183: Jess Jesús Baros with farmers
+      shan_p_304: Freddie Baca, Cookie and Lucy
+
+      # more than our work
+      shan_m_047: Song lyrics of Amar y vivir
+      shan_p_087: Black and white group photograph of eleven people posing in front of tree
+      shan_p_117: Black and white photograph of Santos Baros Schubert and William F. Schubert on a picnic
+      shan_p_159: Black and white photograph of Santos Baros Schubert and William F. Schubert kissing
+      shan_p_169: Elizabeth J. Shanahan, Rodney Schubert, Gwendoly Schubert and Robert S. Schubert
+      shan_p_185: Black and white photograph of women in China Poblana Costumes
+      shan_p_455: Black and white photograph of Lucy on a bench
+
+      # connections
+      # birthday
+      shan_d_233: Beautiful rose design, Writing in Spanish
+      shan_d_503: Muchos años de vida Jane Schubert
+      # christmas
+      shan_d_384: EMBROIDERED IN SILVER THREAD 'Feliz año nuevo'
+      shan_d_394: Birds nest artwork & writing in Spanish
+      shan_d_398: Handmade Christmas and New Years Card from E. Jane Shanahan to her parents (1967) 'Spiritual Bouquet'.
+      shan_d_469: Christmas card and envelope from Carmen Gutiérez to Santos Baros Schubert. On the back side of the card, there is letter handwritten in English.
+      shan_d_484: Christmas and New years card. Writing in Spanish.
+      shan_d_538: V-Mail Christmas greetings. Writing in Spanish.
+      # easter
+      shan_d_264: Easter card
+      shan_d_266: Easter card
+      shan_d_455: Easter card. Handwriting in Spanish
+      # postcard
+      shan_d_186: Handwriting in Spanish
+      shan_d_549: Postcard
+      # valentine
+      shan_d_364: Valentines Card 'To my love warm the cockles of my heart'
+      shan_d_368: Valentines day card 'A Tarzan fan'
+      shan_d_492: Valentines Card
+      shan_d_494: Valentines Card (expandable)
+      # mothers day
+      shan_d_480: Mother's Day card and envelope
+      # welcomebaby
+      shan_d_526: Card to congratulate parents on baby's birth
+
+
+# Galería
+# Una cuchara, una sazón, un mundo: <br/>La historia que cuentan nuestros objetos cotidianos
+# Conexiones
+# Migraciones
+# Somos más que nuestro trabajo
+# Lengua y vida

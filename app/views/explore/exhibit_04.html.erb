@@ -1,52 +1,52 @@
 <%
 birthday = {
-  "shan_d.233" => "Beautiful rose design, Writing in Spanish ",
-  "shan_d.503" => "Muchos años de vida Jane Schubert"
+  "shan_d.233" => t("explore.caption.shan_d_233"),
+  "shan_d.503" => t("explore.caption.shan_d_503")
 }
 
 christmas = {
-  "shan_d.384" => "EMBROIDERED IN SILVER THREAD 'Feliz año nuevo'",
-  "shan_d.385" => "EMBROIDERED IN SILVER THREAD 'Feliz año nuevo'",
-  "shan_d.394" => "Birds nest artwork & writing in Spanish",
-  "shan_d.395" => "Birds nest artwork & writing in Spanish",
-  "shan_d.398" => "Handmade Christmas and New Years Card from E. Jane Shanahan to her parents (1967) 'Spiritual Bouquet'.",
-  "shan_d.399" => "Handmade Christmas and New Years Card from E. Jane Shanahan to her parents (1967) 'Spiritual Bouquet'.",
-  "shan_d.469" => "Christmas card and envelope from Carmen Gutiérez to Santos Baros Schubert. On the back side of the card, there is letter handwritten in English.",
-  "shan_d.470" => "Christmas card and envelope from Carmen Gutiérez to Santos Baros Schubert. On the back side of the card, there is letter handwritten in English.",
-  "shan_d.484" => "Christmas and New years card. Writing in Spanish.",
-  "shan_d.485" => "Christmas and New years card. Writing in Spanish.",
-  "shan_d.538" => "V-Mail Christmas greetings. Writing in Spanish."
+  "shan_d.384" => t("explore.caption.shan_d_384"),
+  "shan_d.385" => t("explore.caption.shan_d_384"),
+  "shan_d.394" => t("explore.caption.shan_d_394"),
+  "shan_d.395" => t("explore.caption.shan_d_394"),
+  "shan_d.398" => t("explore.caption.shan_d_398"),
+  "shan_d.399" => t("explore.caption.shan_d_398"),
+  "shan_d.469" => t("explore.caption.shan_d_469"),
+  "shan_d.470" => t("explore.caption.shan_d_469"),
+  "shan_d.484" => t("explore.caption.shan_d_484"),
+  "shan_d.485" => t("explore.caption.shan_d_484"),
+  "shan_d.538" => t("explore.caption.shan_d_538")
 }
 
 easter = {
-  "shan_d.264" => "Easter card",
-  "shan_d.266" => "Easter card",
-  "shan_d.455" => "Easter card. Handwriting in Spanish.",
-  "shan_d.456" => "Easter card. Handwriting in Spanish.",
-  "shan_d.457" => "Easter card. Handwriting in Spanish."
+  "shan_d.264" => t("explore.caption.shan_d_264"),
+  "shan_d.266" => t("explore.caption.shan_d_266"),
+  "shan_d.455" => t("explore.caption.shan_d_455"),
+  "shan_d.456" => t("explore.caption.shan_d_455"),
+  "shan_d.457" => t("explore.caption.shan_d_455")
 }
 
 postcard = {
-  "shan_d.186" => "Handwriting in Spanish",
-  "shan_d.549" => "Postcard"
+  "shan_d.186" => t("explore.caption.shan_d_186"),
+  "shan_d.549" => t("explore.caption.shan_d_549")
 }
 
 valentines = {
-  "shan_d.364" => "Valentines Card 'To my love warm the cockles of my heart'",
-  "shan_d.368" => "Valentines day card 'A Tarzan fan'",
-  "shan_d.369" => "Valentines day card 'A Tarzan fan'",
-  "shan_d.492" => "Valentines Card",
-  "shan_d.494" => "Valentines Card (expandable)"
+  "shan_d.364" => t("explore.caption.shan_d_364"),
+  "shan_d.368" => t("explore.caption.shan_d_368"),
+  "shan_d.369" => t("explore.caption.shan_d_368"),
+  "shan_d.492" => t("explore.caption.shan_d_492"),
+  "shan_d.494" => t("explore.caption.shan_d_494")
 }
 
 mothersday = {
-  "shan_d.481" => "Mother's Day card and envelope",
-  "shan_d.480" => "Mother's Day card and envelope"
+  "shan_d.480" => t("explore.caption.shan_d_480"),
+  "shan_d.481" => t("explore.caption.shan_d_480")
 }
 
 welcomebaby = {
-  "shan_d.526" => "Card to congratulate parents on baby's birth",
-  "shan_d.527" => "Card to congratulate parents on baby's birth"
+  "shan_d.526" => t("explore.caption.shan_d_526"),
+  "shan_d.527" => t("explore.caption.shan_d_526")
 }
 
 %>
@@ -54,71 +54,43 @@ welcomebaby = {
 <%= render localized_partial("exhibit_04", "explore/locales") do %>
 
 <h4 class="gallery_heading">
-  <% if params["locale"] == "es" %>
-    Cumpleaños
-  <% else %>
-    Birthday
-  <% end %>
+  <%= t "explore.connections.birthday", default: "Birthday" %>
 </h4>
 
 <%= render "gallery", photos: birthday %>
 
 <h4 class="gallery_heading">
-  <% if params["locale"] == "es" %>
-    Navidad
-  <% else %>
-    Christmas
-  <% end %>
+  <%= t "explore.connections.christmas", default: "Christmas" %>
 </h4>
 
 <%= render "gallery", photos: christmas %>
 
 <h4 class="gallery_heading">
-  <% if params["locale"] == "es" %>
-    Pascua de Resurrección
-  <% else %>
-    Easter
-  <% end %>
+  <%= t "explore.connections.easter", default: "Easter" %>
 </h4>
 
 <%= render "gallery", photos: easter %>
 
 <h4 class="gallery_heading">
-  <% if params["locale"] == "es" %>
-    Tarjetas postales
-  <% else %>
-    Postcards
-  <% end %>
+  <%= t "explore.connections.postcards", default: "Postcards" %>
 </h4>
 
 <%= render "gallery", photos: postcard %>
 
 <h4 class="gallery_heading">
-  <% if params["locale"] == "es" %>
-    día de San Valentín
-  <% else %>
-    Valentine's Day
-  <% end %>
+  <%= t "explore.connections.valentine", default: "Valentine's Day" %>
 </h4>
 
 <%= render "gallery", photos: valentines %>
 
 <h4 class="gallery_heading">
-  <% if params["locale"] == "es" %>
-    Día de la Madre
-  <% else %>
-    Mother's Day
-  <% end %>
+  <%= t "explore.connections.mother", default: "Mother's Day" %>
 </h4>
 
 <%= render "gallery", photos: mothersday %>
 
 <h4 class="gallery_heading">
-  <% if params["locale"] == "es" %>
-    Bienvenido bebé
-  <% else %>
-    Welcome Baby
-  <% end %>
+  <%= t "explore.connections.baby", default: "Welcome Baby" %>
 </h4>
 
 <%= render "gallery", photos: welcomebaby %>
