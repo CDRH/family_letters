@@ -1,0 +1,56 @@
+<%# TODO translation work needed here %>
+<!-- Search both Spanish and English -->
+<span class="search_options_wrap">
+  <span class="radio search_options">
+    <%= radio_button_tag :text_typex, "all",
+      (!params["text_typex"] || params["text_typex"] == "all"),
+      class: "search_options_input" %>
+    <%= label_tag :text_typex_all,
+      t("search.language.all", default: "All Text"), class: "radio" %>
+    <!-- more info spans -->
+    <span class="glyphicon glyphicon-info-sign" aria-hidden="true"
+      data-toggle="tooltip" data-placement="top" title=""
+      data-original-title="<%= t("search.language.all", default: "Searches all text fields regardless of language") %>">
+      <span class="sr-only">
+        <%= t "search.language.information", default: "Information" %>
+      </span>
+    </span>
+  </span>
+
+  <!-- Searches Spanish text only -->
+  <span class="radio search_options">
+    <%= radio_button_tag :text_typex, "es", (params["text_typex"] == "es"), class: "search_options_input" %>
+    <%= label_tag :text_typex_es,
+      t("search.language.es", default: "Spanish Text Only"), class: "radio" %>
+    <span class="glyphicon glyphicon-info-sign" aria-hidden="true"
+      data-toggle="tooltip" data-placement="top" title=""
+      data-original-title="<%= t("search.language.es_help", default: "Search Spanish text only") %>">
+      <span class="sr-only">
+        <%= t "search.language.information", default: "Information" %>
+      </span>
+    </span>
+  </span>
+
+  <!-- Searches English text only -->
+  <span class="radio search_options">
+    <%= radio_button_tag :text_typex, "en", (params["text_typex"] == "en"), class: "search_options_input" %>
+    <%= label_tag :text_typex_en,
+      t("search.language.en", default: "English Text Only"), class: "radio" %>
+    <span class="glyphicon glyphicon-info-sign" aria-hidden="true"
+      data-toggle="tooltip" data-placement="top" title=""
+      data-original-title="<%= t("search.language.en_help", default: "Search English text only") %>">
+      <span class="sr-only">
+        <%= t "search.language.information", default: "Information" %>
+      </span>
+    </span>
+  </span>
+
+</span><!-- /cather_let_search_options_wrap -->
+
+<%# TODO do we want to move this to something which will be compiled? %>
+<script>
+  $(function() {
+    // Enable tooltips
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+</script>

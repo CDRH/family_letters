@@ -1,0 +1,19 @@
+<div class="exhibit_gallery">
+  <% photos.each do |key, value| %>
+    <div class="exhibit_gallery_item">
+      <%= link_to iiif("#{key}.jpg", size: "!700,700"), "data-footer": value,
+        "data-toggle": "lightbox", "data-gallery": "exhibit_gallery" do %>
+        <div class="exhibit_gallery_image">
+          <%= image_tag iiif("#{key}.jpg", size: "!200,200") %>
+        </div>
+        <% end %>
+      <p class="exhibit_gallery_caption">
+        <%= value %>
+      </p>
+    </div>
+  <% end %>
+</div>
+
+
+
+

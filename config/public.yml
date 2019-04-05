@@ -4,8 +4,12 @@ default: &default
     version: 0.1.0
     # defaults to "en" (english) if no default language set
     language_default: es
-    # defaults to "en" if nothing passed in, pipe delineated values (en|es|de)
-    languages: en|es
+    # pipe delineated values (es|de) for all non-default languages
+    languages: en
+    # iiif thumbnail default size
+    thumbnail_size: "!150,150"
+    # iiif project directory
+    media_server_dir: family_letters
 
   api_options:
     # example of default filter for all queries
@@ -21,7 +25,7 @@ default: &default
     # facet info on browse page
     browse_sort: term|asc
     # highlighting
-    hl_fl: text
+    hl_fl: text_t_es,text_t_en
     hl_num: 5
 
   date_range:

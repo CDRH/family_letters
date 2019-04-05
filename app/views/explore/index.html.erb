@@ -2,50 +2,48 @@
 
 <%
 images = {
-  "shan_p.035" => "Black and white photograph of Jesusita Baros Torres with her son Jess Jesús Baros wearing overalls around 1920s",
-  "shan_p.403" => "Family portrait of Jesusita, Jesse and Santos Baros"
+  "shan_p.035" => t("explore.caption.shan_p_035"),
+  "shan_p.403" => t("explore.caption.shan_p_403")
 }
 %>
 
 <div class="row">
   <div class="col-md-8">
-    <% partial = params["locale"] == "es" ? "explore/index/es" : "explore/index/en" %>
-    <%= render partial do %><% end %>
+    <%= render localized_partial("index", "explore/locales") %>
   </div>
   <div class="col-md-4">
     <%= render "gallery", photos: images %>
   </div>
 </div>
 
-
-
-
-
 <div class="row">
     <div class="col-sm-6 explore_search_box">
       <%= form_tag search_path, method: "get" do %>
-        <h4>Search Materials</h4>
+        <h4>
+          <%= t "explore.home.search_label", default: "Search Materials" %>
+        </h4>
+        <%# TODO figure out an example that would work in spanish as well %>
         <%= text_field_tag "q", nil, placeholder: "(sister OR \"sis\") NOT brother", class: "form-control" %>
         <div class="pull-left">
-            <%= link_to "Advanced Search", search_path, class: "btn btn-link color_reverse", role: "button" %>
+            <%= link_to t("explore.home.search_adv", default: "Advanced Search"),
+              search_path, class: "btn btn-link color_reverse", role: "button" %>
           </div>
         <div class="pull-right">
-          <%= submit_tag "Search and Refine", class: "btn btn-primary" %>
+          <%= submit_tag t("explore.home.search_btn", default: "Search and Refine"),
+            class: "btn btn-primary" %>
         </div>
       <% end %>
     </div><!-- /col -->
     <div class="col-sm-6 explore_essay_callout">
       <%= link_to essay_01_path, class: "" do %>
-        <% if params["locale"] == "es" %>
-          Una cuchara, una sazón, un mundo: <br/>La historia que cuentan nuestros objetos cotidianos
-        <% else %>
-          A spoon, a taste, a world: <br/>The story that our everyday objects tell
-        <% end %>
+        <%= t "explore.home.objects_html" %>
       <% end %>  
     </div><!-- /col -->
   </div><!-- /row -->
 
-<h3 class="explore_index_headers">Exhibits</h3>
+<h3 class="explore_index_headers">
+  <%= t "explore.home.exhibits", default: "Exhibits" %>
+</h3>
 </div> <%# End container for full width band %>
 <div class="container-fluid explore_band">
 
@@ -57,11 +55,7 @@ images = {
             <div class="col-md-9 col-md-offset-3">
               <div class="inner_content">
                 <h4>
-                  <% if params["locale"] == "es" %>
-                    Conexiones
-                  <% else %>
-                    Connections
-                  <% end %>
+                  <%= t "explore.home.connections", default: "Connections" %>
                 </h4>
               </div>
             </div>
@@ -76,11 +70,7 @@ images = {
             <div class="col-md-9">
               <div class="inner_content">
                 <h4>
-                  <% if params["locale"] == "es" %>
-                    Migraciones
-                  <% else %>
-                    Migrations
-                  <% end %>
+                  <%= t "explore.home.migrations", default: "Migrations" %>
                 </h4>
               </div>
             </div>
@@ -98,11 +88,7 @@ images = {
             <div class="col-md-9 col-md-offset-3">
               <div class="inner_content">
                 <h4>
-                  <% if params["locale"] == "es" %>
-                    Somos más que nuestro trabajo
-                  <% else %>
-                    We are more than our work
-                  <% end %>
+                  <%= t "explore.home.more_than", default: "We are more than our work" %>
                 </h4>
               </div>
             </div>
@@ -117,11 +103,7 @@ images = {
             <div class="col-md-9">
               <div class="inner_content">
                 <h4>
-                  <% if params["locale"] == "es" %>
-                    Lengua y vida
-                  <% else %>
-                    Of language and life
-                  <% end %>
+                  <%= t "explore.home.language_and_life", default: "Of language and life" %>
                 </h4>
               </div>
             </div>
