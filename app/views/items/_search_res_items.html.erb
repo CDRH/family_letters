@@ -1,66 +1,55 @@
+
 <%# OVERRIDE FROM ORCHID %>
 
 <% if @res.count > 0 %>
-  <% @res.items.each do |item| %>
-    <div class="searchResults">
-      <div class="row">
-        <div class="col-md-12 search_results_info">
+  <div class="flex_row">
+    <% @res.items.each do |item| %>
+      <%= link_to item_path(id: item["identifier"]), class: "searchResults flex_col-md" do %>
+        <div class="search_results_image">
           <% if item["image_id"] %>
-            <%= image_tag iiif(item["image_id"]) %>
+            <img src="https://cdrhmedia.unl.edu/iiif/2/family_letters%2F<%= item["image_id"] %>/full/!150,150/0/default.jpg"/>
           <% end %>
-          <% title_display = item["title"].present? ? item["title"] : t("search.results.item.no_title", default: "Untitled") %>
-          <%= link_to title_display, item_path(id: item["identifier"]) %>
-          <ul>
-            <% if item["date_display"] %>
-              <li>
-                <strong><%= t "search.results.item.date", default: "Date" %></strong>:
-                <%= link_to item["date_display"], search_path({ "f[]" => "date|#{item['date']}" }) %>
-              </li>
-            <% end %>
-            <% if item["format"] %>
-              <li>
-                <strong><%= t "search.results.item.format", default: "Format" %></strong>:
-                <%= link_to item["format"], search_path({ "f[]" => "format|#{item['format']}" }) %>
-              </li>
-            <% end %>
-            <% if item["source"] %>
-              <li>
-                <strong><%= t "search.results.item.source", default: "Source" %></strong>:
-                <%= link_to item["source"], search_path({ "f[]" => "source|#{item['source']}" }) %>
-              </li>
-            <% end %>
-          </ul>
         </div>
-        <div class="col-md-8 search_results_text">
-          <% item["highlight"].each do |key, hls| %>
-            <div class="search_results_highlights well">
-              <% hl_label = key == "text_t_es" ?
-                t("search.results.item.hl_es", default: "Spanish Text") :
-                t("search.results.item.hl_en", default: "English Text") %>
-              <strong><%= hl_label %>:</strong>
-              <% hls.each do |hl| %>
-                <p><%= hl.html_safe %></p>
+        <div class="search_results_info">
+          <% title_display = item["title"].present? ? item["title"] : t("search.results.item.no_title", default: "Untitled") %>
+          <span class="link_style"><%= title_display %></span>
+          <div class="search_item_info">
+            <ul class="search_item_metadata">
+              <% if item["date_display"] %>
+                <li>
+                  <strong><%= t "search.results.item.date", default: "Date" %></strong>:
+                  <%= item["date_display"] %>
+                </li>
+              <% end %>
+              <% if item["format"] %>
+                <li>
+                  <strong><%= t "search.results.item.format", default: "Format" %></strong>:
+                  <%= item["format"] %>
+                </li>
               <% end %>
               <% if item["source"] %>
                 <li>
                   <strong><%= t "search.results.item.source", default: "Source" %></strong>:
-                  <%= link_to item["source"], search_path({ "f[]" => "source|#{item['source']}" }) %>
+                  <%= item["source"] %>
                 </li>
               <% end %>
             </ul>
-          </div><!-- /search_results_info -->
-          <div class="search_results_text">
-            <% item["highlight"].each do |key, hls| %>
-              <div class="search_results_highlights well">
-                <strong><%= key.titleize %>:</strong>
-                <% hls.each do |hl| %>
-                  <p><%= hl.html_safe %></p>
+
+            <% if item["highlight"].present? %>
+              <div class="search_results_text">
+                <% item["highlight"].each do |key, hls| %>
+                  <div class="search_results_highlights">
+                    <strong><%= key.titleize %>:</strong>
+                    <% hls.each do |hl| %>
+                      <p><%= hl.html_safe %></p>
+                    <% end %>
+                  </div>
                 <% end %>
-              </div>
-            <% end %>
-          </div><!-- /search_results_text -->
-        </div><!-- /col-md -->
-      </div>
-    </div>
-  <% end %>
-<% end %>
+              </div><%# /search_results_text %>
+            <% end %> <%# /item["highlight"].present? %>
+          </div> <%# /search_item_info %>
+        </div><%# /search_results_info %>
+      <%end%><%# /a searchResults %>
+    <% end %><%# /res.items.each %>
+  </div><%# /flex_row %>
+<% end %><%# /if %>

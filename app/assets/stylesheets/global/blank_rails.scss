@@ -18,15 +18,75 @@ $font-family-serif-heads: 'Vollkorn SC', Georgia, "Times New Roman", Times, seri
 
 $light-base: lighten($greybeige, 17%);
 
+$link-color:            $brightrose !default;
+//** Link hover color set via `darken()` function.
+$link-hover-color:      darken($link-color, 15%) !default;
+
+
+
 
 // temp test code
-.test_color {
-  background-color: red;
+.searchResults {
+  border-bottom: 3px solid $greybeige;
+  // display: block;
+  display: flex;
+  // flex-wrap: wrap;
+  padding: 1em 0 0 0;
+  color: $warmblack; //overwrite link color
 }
 
+.searchResults:hover {
+  background-color: lighten($greybeige, 28%);
+  color: $warmblack; //overwrite link color
+}
 
+.search_results_image {
+  flex-basis: 150px;
+  margin: 0 20px 1em 0;
+  text-align: right;
+}
 
+.search_results_info {
+  flex: 2;
+}
 
+.search_item_metadata {
+  flex:2;
+  margin: .8em .5em 1em 0;
+  padding:0;
+  li {
+    list-style-type: none;
+  }
+}
+
+.search_results_text {
+  flex: 2;
+}
+
+a li {
+  text-decoration: none;
+}
+
+.search_item_info {
+  font-size: .9em;
+  line-height: 1.2em;
+}
+
+@media (min-width: $screen-md-min) { 
+  .search_item_info {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.search_results_text {
+  flex:5;
+  padding-top: .5em;
+}
+
+.search_results_text .search_results_highlights:not(:first-of-type) {
+    border-top: 4px solid lighten($greybeige, 10%);
+}
 
 
 
@@ -42,20 +102,22 @@ body img {
 $link-underline: lighten($light-blue, 15%);
 $link-underline-hover: lighten($blue, 15%);
 
-// Using box-shadow for link so I can set the color and get it close to text
-a {
+// Using box-shadow for link so I can set the color & width
+a, .link_style {
   -webkit-box-shadow: inset 0 -.15em 0 $link-underline;
   box-shadow: inset 0 -.15em 0 $link-underline;
+  color: $link-color; // duplicating bootstrap for .link_style
 }
 
-a:hover {
+a:hover, .link_style:hover {
   -webkit-box-shadow: inset 0 -.15em 0 $link-underline-hover;
   box-shadow: inset 0 -.15em 0 $link-underline-hover;
   text-decoration: none;
+  color: $link-hover-color; // duplicating bootstrap for .link_style
 }
 
 // Remove styles from buttons, etc.
-a.btn, .footer_logo a, .nav a, #site-title a, .pagination a {
+a.btn, .footer_logo a, .nav a, #site-title a, .pagination a, a.searchResults {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -379,15 +441,15 @@ a.content .inner_content {
 // Search
 // ------
 
-.search_results_info {
-  border-bottom: solid #aaa 1px;
-  margin-bottom: .6em
-}
+// .search_results_info {
+//   border-bottom: solid #aaa 1px;
+//   margin-bottom: .6em
+// }
 
-.search_results_info img {
-  clear: right;
-  float: right;
-}
+// .search_results_info img {
+//   clear: right;
+//   float: right;
+// }
 
 // Individual Items
 // ----------------
