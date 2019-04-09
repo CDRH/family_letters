@@ -1,30 +1,430 @@
-// Search
+// I thought these would be available from boostraps _variables but apparently not  
 
-.search_results_info {
-  border-bottom: solid #aaa 1px;
-  margin-bottom: .6em
-}
+$blue: #3c5881;
+$greybeige: #cdcac6;
+$warmbeige: #efe5cc;
+$warmblack: #434444;
+$brightrose: #bd435b;
+$dustyrose: #cf838d;
+$light_blue: #79b1e0; //notebook line              
 
-.search_results_info img {
-  clear: right;
-  float: right;
-}
+$screen-sm-min: 768px !default;
+$screen-md-min: 992px !default;
+$screen-lg-min: 1200px !default;
 
-// Content Page
+$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-serif: 'Cormorant', "Times New Roman", Georgia, Times, serif;
+$font-family-serif-heads: 'Vollkorn SC', Georgia, "Times New Roman", Times, serif;
 
-.main_content img {
+$light-base: lighten($greybeige, 17%);
+
+$link-color:            $brightrose !default;
+$link-hover-color:      darken($link-color, 15%) !default;
+
+// ----------
+// Text/Gen Styles
+// ----------
+
+body img {
   max-width: 100%;
 }
 
-// Page images
+$link-underline: lighten($light-blue, 15%);
+$link-underline-hover: lighten($blue, 15%);
 
+// Using box-shadow for link so I can set the color & width
+a, .link_style {
+  -webkit-box-shadow: inset 0 -.15em 0 $link-underline;
+  box-shadow: inset 0 -.15em 0 $link-underline;
+  color: $link-color; // duplicating bootstrap for .link_style
+}
+
+a:hover, .link_style:hover {
+  -webkit-box-shadow: inset 0 -.15em 0 $link-underline-hover;
+  box-shadow: inset 0 -.15em 0 $link-underline-hover;
+  text-decoration: none;
+  color: $link-hover-color; // duplicating bootstrap for .link_style
+}
+
+// Remove styles from buttons, etc.
+a.btn, .footer_logo a, .nav a, #site-title a, .pagination a, a.searchResults {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.panel-default .panel-heading {
+  background-color: #fff;
+}
+
+// Letter Pre and Postscripts Design Elements
+.letter_top_greeting, .letter_bottom_farewell {
+  border: 2px solid $light_blue;
+  border-left: none;
+  border-right: none;
+  margin-top: 1em;
+}
+
+.letter_top_greeting .container img
+{
+  margin-top: -1.1em;
+}
+.letter_bottom_farewell .container img {
+  margin-top: -1em;
+}
+
+// No media, smallest
+.letter_top_greeting, .letter_bottom_farewell {
+  height: 3.9vw;
+}
+
+@media (min-width: $screen-sm-min) {
+  .letter_top_greeting {
+    height: 1.3em;
+  }
+  .letter_bottom_farewell {
+    height: 1em;
+  }
+  .letter_top_greeting .container img
+  {
+    margin-top: -.9em;
+  }
+  .letter_bottom_farewell .container img {
+    margin-top: -.8em;
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .letter_top_greeting {
+    height: 1.9em;
+  }
+  .letter_bottom_farewell {
+    
+  }
+}
+
+@media (min-width: $screen-lg-min) {
+  .letter_top_greeting {
+    height: 2.5em;
+  }
+  .letter_bottom_farewell {
+    height: 1.4em;
+  }
+}
+
+// Overwriting bootstrap when variables doens't cut it
+
+.modal-footer {
+  text-align: center;
+}
+
+.lead {font-size: 1.2em;}
+
+// ----------
+// Header
+// ----------
+
+#header {
+  margin-top: .5em;
+
+}
+
+// Top Nav
+@media (min-width: $screen-sm-min) {
+  .layouts_cell {text-align: right;}
+}
+
+// Header and Nav
+.title_nav {
+  background: url(../flowers.png) no-repeat left bottom;
+  background-size: 17%; //must go after background
+  font-size: 1em;
+  line-height: 1em;
+  margin: 1em auto 0em auto;
+  text-align: center;
+}
+
+@media (min-width: $screen-md-min) {
+  .title_nav_sub {
+    margin-left: 7em;
+  }
+}
+
+// Site Title
+#site-title a {
+  display: block;
+}
+
+#site-title a, #site-title h1, #site-title h2 {
+  color: $blue;
+  line-height: .8em
+}
+
+#site-title a:hover h1, #site-title a:hover h2 {
+  color: lighten($blue, 20%);
+}
+
+#site-title h2 {
+  font-family: $font-family-serif;
+  font-size: 1.7em;
+  margin-top: -.2em;
+}
+
+//Navbar
+.navbar-main {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.3em;
+  justify-content: center;
+  margin-top: .5em;
+  width: 100%;
+  a {
+    -webkit-box-shadow: inset 0 -.55em 0 $link-underline;
+    box-shadow: inset 0 -.55em 0 $link-underline;
+    background-color: $light-base;  
+    transition: box-shadow .4s;
+    -moz-transition: box-shadow .4s;
+    -o-transition: box-shadow .4s;
+    -webkit-transition: box-shadow .4s;
+  }
+  a:hover {
+    -webkit-box-shadow: inset 0 -1.9em 0 $link-underline;
+    box-shadow: inset 0 -1.9em 0 $link-underline;
+    background-color: $light-base;  
+  }
+}
+
+.navbar-main li {
+  margin: 0 .5em;
+
+}
+
+// ----------
+// Footer
+// ----------
+
+#footer {
+  background-color: lighten($greybeige, 28%);
+  margin: 2em 0;
+  padding: 2em 0 0em 0;
+  text-align: center;
+
+}
+
+.footer_logo {
+  margin: 2em 0 2em 0;
+}
+
+// ----------
+// Dedication
+// ----------
+
+// ----------
+// Page styles
+// ----------
+
+// Explore
+// -------
+
+.explore_index_headers {
+  border-top: solid .5em lighten($greybeige, 28%);
+  padding-top: .5em;
+  margin-top: 2em;
+  text-align: center;
+}
+
+.explore_essay_callout {
+  background-image:url("https://cdrhmedia.unl.edu/iiif/2/family_letters%2Fshan_d.376.jpg/full/!1000,1000/0/default.jpg");
+  background-position:center;
+  background-size:120%;
+  min-height:10em;
+}
+.explore_essay_callout a {
+  background-color: rgba($light-base, .85);
+  display: block;
+  font-size: 1.9em;
+  line-height: 1.2;
+  padding: .5em;
+}
+
+.explore_band {
+  margin-top: -2.5em;
+}
+
+// Set images for Exhibit Callouts
+.explore_callout1 {
+  background-image:url("https://cdrhmedia.unl.edu/iiif/2/family_letters%2Fshan_d.481.jpg/pct:20,15,60,60/!1000,1000/0/default.jpg");
+  border-bottom-width:2px
+}
+.explore_callout2 {
+  background-image:url("https://cdrhmedia.unl.edu/iiif/2/family_letters%2Fshan_p.183.jpg/pct:20,15,60,60/!1000,1000/0/default.jpg");
+  border-bottom-width:2px;
+  border-top-width:2px
+}
+.explore_callout3 {
+  background-image:url("https://cdrhmedia.unl.edu/iiif/2/family_letters%2Fshan_p.087.jpg/pct:20,30,60,70/!1000,1000/0/default.jpg");
+  border-bottom-width:2px;
+  border-top-width:2px
+}
+.explore_callout4 {
+  background-image:url("https://cdrhmedia.unl.edu/iiif/2/family_letters%2Fshan_l.242.jpg/pct:9,0,60,30/!1000,1000/0/default.jpg");
+  border-top-width:2px
+}
+
+@media (min-width: 750px) {
+  .explore_callout1 {
+    border-right-width:2px
+  }
+  .explore_callout2 {
+    border-bottom-width:4px;
+    border-right-width:2px
+  }
+  .explore_callout3 {
+    border-left-width:2px;
+    border-top-width:4px
+  }
+  .explore_callout4 {
+    border-left-width:2px
+  }
+}
+
+.explore_callout {
+  border:4px solid $light-base;
+  display:block;
+  font-size:1.2em;
+  height:10em
+}
+.explore_callout .explore_inner {
+  background-color:rgba($light-base, 0.25);
+  height:100%
+}
+.explore_callout:focus .explore_inner,
+.explore_callout:hover .explore_inner {
+  background-color:transparent
+}
+
+a.content {
+  background-position:center;
+  background-size:100%;
+  display:block;
+  margin-left:-15px;
+  margin-right:-15px;
+  overflow:hidden;
+  padding:0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+a.content:focus,
+a.content:hover {
+  background-position:center;
+  background-size:120%;
+  transition:all 0.5s;
+  -webkit-transition:all 0.5s;
+  -o-transition:all 0.5s;
+  -moz-transition:all 0.5s
+}
+a.content:focus .inner_content,
+a.content:hover .inner_content {
+  border-bottom:10px solid $light-blue;
+  padding-top:1.5em
+}
+a.content .row {
+  margin-left:15px;
+  margin-right:15px
+}
+a.content .inner_content {
+  color: $warmblack;
+  background-color:rgba($light-base,0.85);
+  padding:.5em;
+  transition:padding 0.5s;
+  -moz-transition:padding 0.5s;
+  -o-transition:padding 0.5s;
+  -webkit-transition:padding 0.5s
+}
+
+// Galleries
+
+.exhibit_gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.exhibit_gallery_item {
+  flex-basis: 20%;
+  padding: 10px;
+  line-height: 1.1em;
+  font-size: .9em;
+}
+
+.exhibit_gallery_image {
+  margin-bottom: .3em;
+  img {
+    min-width: 150px;
+  }
+}
+
+.gallery_heading {
+  border-top: solid .5em lighten($greybeige, 28%);
+  padding-top: .5em;
+}
+
+// Search
+// ------
+
+.searchResults {
+  border-bottom: 3px solid $greybeige;
+  display: flex;
+  padding: 1em 0 0 0;
+  color: $warmblack; //overwrite link color
+  &:hover {
+    background-color: lighten($greybeige, 28%);
+    color: $warmblack; //overwrite link color
+  }
+}
+
+.search_results_image {
+  flex-basis: 150px;
+  margin: 0 20px 1em 0;
+  text-align: right;
+}
+
+// .search_results_info
+
+.search_item_info {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: .9em;
+  line-height: 1.2em;
+}
+
+.search_item_metadata {
+  flex: 2;
+  margin: .8em .5em 1em 0;
+  padding: 0;
+  li {
+    list-style-type: none;
+  }
+}
+
+.search_results_text {
+  flex: 5;
+  padding-top: .5em;
+}
+
+.search_results_text .search_results_highlights:not(:first-of-type) {
+    border-top: 4px solid lighten($greybeige, 10%);
+}
+
+// Individual Items
+// ----------------
+
+// Page images
 span.pageimage {
   border-bottom: 2px solid #aaa;
   border-left: 2px solid #aaa;
   border-right: 2px solid #aaa;
   clear: both;
   float: right;
-  margin: 0 0 10px 10px;
   margin: 0;
   padding: 0;
 }
@@ -33,8 +433,51 @@ span.pageimage {
   border-top: 2px solid #aaa; 
   clear: right;
   display: block;
-  height: 0px;
+  height: 0;
   margin: 10px 0 0 0;
   padding: 0px 0 0 0;
   width: 100%;
+}
+
+// Home Page
+// ---------
+
+// Header
+
+.site_home {
+  .home-site-title {
+    // Shadow for when title overlaps flowers
+    text-shadow: 2px 2px 3px $light-base,
+                 -2px 2px 3px $light-base,
+                 -2px -2px 3px $light-base,
+                 2px -2px 3px $light-base,
+                 2px 2px 6px $light-base,
+                 -2px 2px 6px $light-base,
+                 -2px -2px 6px $light-base,
+                 2px -2px 6px $light-base;
+  }
+
+  .title_nav {
+    background-size: 25%;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  // Enlarge primary title for tablet and larger
+  .home-site-title-primary {
+    font-size: 1.4em;
+    margin-bottom: 1.7em;
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .site_home {
+    .title_nav_sub {
+      margin-left: 16em;
+    }
+
+    .title_nav {
+      background-size: contain;
+    }
+  }
 }

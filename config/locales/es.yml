@@ -243,19 +243,24 @@ es:
       general:
         zero: 0 resultados [SB]
         one: 1 resultado [SB]
-        other: "(todo es) %{count} results"
+        other: "%{count} resultados [JD]"
       # labels for individual item descriptions in results
       item:
         # creators of the item
-        creator: Creatdore(s) [SB] 
+        creator: Creadore(s) [SB]
         # the date of the item used for search results
         date: Fecha [SB]
         # the format of the item
-        format: (todo es) Format
+        format: El Formato [JD]
         # label to display if the item itself has no title
         no_title: Sin Título [SB]
         # the source of the item, such as the repository
-        source: (todo es) Source
+        source: La Fuente [JD]
+        # CUSTOM highlight text field identification (spanish)
+        hl_es: El Texto Español [JD]
+        # CUSTOM highlight text field identification (english)
+        hl_en: El Texto Inglés [JD]
+
       # how to display number of results when a search / filter have been applied
       # and therefore the user is browsing a subset of items
       query:
@@ -299,6 +304,22 @@ es:
     title: Buscar [SB]
     # browse items without applying any search / filters
     view_all: Ver Todos Articulos [SB]
+    # CUSTOM language search options
+    language:
+      # CUSTOM label for search text across languages
+      all: Todos los textos [JD]
+      # CUSTOM help text for search text across languages
+      all_help: Buscar todos los campos de texto en todos los idiomas [JD]
+      # CUSTOM label for search spanish text
+      es: Solo texto en español [JD]
+      # CUSTOM help info for search spanish text
+      es_help: Buscar solo texto en español [JD]
+      # CUSTOM label for search english text
+      en: Solo texto en inglés [JD]
+      # CUSTOM help info for search english text
+      en_help: Buscar solo texto en inglés [JD]
+      # CUSTOM screenreader label for more information
+      information: Información
 
   #########
   # TEACH #

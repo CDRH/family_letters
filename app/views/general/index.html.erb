@@ -1,7 +1,6 @@
 <h1><%= t "home.greeting", default: "Welcome" %></h1>
 
-<%# TODO use iiif helper tag %>
-<%= t "home.html", image: image_tag("https://cdrhmedia.unl.edu/iiif/2/family_letters%2Fshan_p.035.jpg/full/!300,300/0/default.jpg", class: "home_image") %>
+<%= t "home.html", image: image_tag(iiif("shan_p.035.jpg", size: "!300,300"), class: "home_image") %>
 
 <%# TODO look at options %>
 <p><strong>Option 2:</strong>  use following photos to illustrate family through time</p>
@@ -25,30 +24,3 @@
   <li>L190 (1939) ZAC to CO</li>
   <li>L192 (1970) MT to CO</li>
 </ul>
-
-<!-- Button trigger modal -->
-<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#dedication">
-  <%= t "general.dedication_button" %>
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="dedication" tabindex="-1" role="dialog" aria-labelledby="<%= t "general.dedication_button" %>" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="<%= t "general.dedication_button" %>"><%= t "general.dedication_button" %></h4>
-      </div>
-      <div class="modal-body">
-        <p><%= t "general.dedication_text" %></p>
-        <%# TODO pull with helper method and style %>
-        <%= image_tag "https://cdrhmedia.unl.edu/iiif/2/family_letters%2Fshan_p.001.jpg/full/!150,150/0/default.jpg", class: "dedication_image" %>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">
-          <%= t "general.close" %>
-        </button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->

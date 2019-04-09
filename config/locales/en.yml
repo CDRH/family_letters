@@ -259,6 +259,10 @@ en:
         no_title: Untitled
         # the source of the item, such as the repository
         source: Source
+        # CUSTOM highlight text field identification (spanish)
+        hl_es: Spanish Text
+        # CUSTOM highlight text field identification (english)
+        hl_en: English Text
       # how to display number of results when a search / filter have been applied
       # and therefore the user is browsing a subset of items
       query:
@@ -302,6 +306,22 @@ en:
     title: Search
     # browse items without applying any search / filters
     view_all: View All Items
+    # CUSTOM language search options
+    language:
+      # CUSTOM label for search text across languages
+      all: All Text
+      # CUSTOM help text for search text across languages
+      all_help: Search all text fields regardless of language
+      # CUSTOM label for search spanish text
+      es: Spanish Text Only
+      # CUSTOM help info for search spanish text
+      es_help: Search Spanish text only
+      # CUSTOM label for search english text
+      en: English Text Only
+      # CUSTOM help info for search english text
+      en_help: Search English text only
+      # CUSTOM screenreader label for more information
+      information: Information
 
   #########
   # TEACH #

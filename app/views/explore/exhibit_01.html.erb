@@ -1,0 +1,10 @@
+<%= render localized_partial("exhibit_01", "explore/locales") do %>
+  <ul>
+  <% @res.items.each do |item| %>
+    <li>
+      <%= link_to item["title"], item_path(params["locale"], item["identifier"]) %><br/>
+      <%= sanitize item["highlight"]["text"].first %>
+    </li>
+  <% end %>
+</ul>
+<% end %>
