@@ -24,7 +24,7 @@
               <% if item["format"] %>
                 <li>
                   <strong><%= t "search.results.item.format", default: "Format" %></strong>:
-                  <%= item["format"] %>
+                  <%= value_label("format", item["format"]) %>
                 </li>
               <% end %>
               <% if item["source"] %>

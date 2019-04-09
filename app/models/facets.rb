@@ -40,7 +40,8 @@ module Facets
     "es" => {
       "category" => {
         "label" => "Categoría",
-        "display" => true
+        "display" => true,
+        "translate" => true
       },
       "date.year" => {
         "label" => "Año",
@@ -56,7 +57,8 @@ module Facets
       },
       "subcategory" => {
         "label" => "Subcategoría",
-        "display" => true
+        "display" => true,
+        "translate" => true
       },
       "creator.name" => {
         "label" => "Autor",
@@ -64,7 +66,8 @@ module Facets
       },
       "format" => {
         "label" => "Formato",
-        "display" => true
+        "display" => true,
+        "translate" => true,
       },
       "places" => {
         "label" => "Sitio",
