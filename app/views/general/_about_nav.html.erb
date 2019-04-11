@@ -1,9 +1,13 @@
 <h2>About</h2>
 
-<%= link_to t("about.team.title"), about_path, class: "btn btn-primary" %>
+<%= link_to t("about.team.title"), about_path,
+    class: "btn #{about_nav_active?(about_path)}" %>
 
-<%= link_to t("about.technical.title"), about_technical_path, class: "btn btn-default" %>
+<%= link_to t("about.technical.title"), about_technical_path,
+    class: "btn #{about_nav_active?(about_technical_path)}" %>
 
-<%= link_to t("about.acknowledgements.title"), about_acknowledgements_path, class: "btn btn-default" %>
+<%= link_to t("about.acknowledgements.title"), about_acknowledgements_path,
+    class: "btn #{about_nav_active?(about_acknowledgements_path)}" %>
 
-<%= link_to t("about.faq.title"), about_faq_path, class: "btn btn-default" %>
+<%= link_to t("about.faq.title"), about_faq_path,
+    class: "btn #{about_nav_active?(about_faq_path)}" %>
