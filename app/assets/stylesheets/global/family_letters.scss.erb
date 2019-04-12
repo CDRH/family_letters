@@ -245,7 +245,7 @@ a.btn, .footer_logo a, .nav a, #site-title a, .pagination a, a.searchResults {
 }
 
 .explore_essay_callout {
-  background-image:url("https://cdrhmedia.unl.edu/iiif/2/family_letters%2Fshan_d.376.jpg/full/!1000,1000/0/default.jpg");
+  background-image: url("<%= iiif("shan_d.376.jpg", size: "!1000,1000") %>");
   background-position:center;
   background-size:120%;
   min-height:10em;
@@ -264,21 +264,21 @@ a.btn, .footer_logo a, .nav a, #site-title a, .pagination a, a.searchResults {
 
 // Set images for Exhibit Callouts
 .explore_callout1 {
-  background-image:url("https://cdrhmedia.unl.edu/iiif/2/family_letters%2Fshan_d.481.jpg/pct:20,15,60,60/!1000,1000/0/default.jpg");
+  background-image: url("<%= iiif("shan_d.481.jpg", region: "pct:20,15,60,60", size: "!1000,1000") %>");
   border-bottom-width:2px
 }
 .explore_callout2 {
-  background-image:url("https://cdrhmedia.unl.edu/iiif/2/family_letters%2Fshan_p.183.jpg/pct:20,15,60,60/!1000,1000/0/default.jpg");
+  background-image: url("<%= iiif("shan_p.183.jpg", region: "pct:20,15,60,60", size: "!1000,1000") %>");
   border-bottom-width:2px;
   border-top-width:2px
 }
 .explore_callout3 {
-  background-image:url("https://cdrhmedia.unl.edu/iiif/2/family_letters%2Fshan_p.087.jpg/pct:20,30,60,70/!1000,1000/0/default.jpg");
+  background-image: url("<%= iiif("shan_p.087.jpg", region: "pct:20,30,60,70", size: "!1000,1000") %>");
   border-bottom-width:2px;
   border-top-width:2px
 }
 .explore_callout4 {
-  background-image:url("https://cdrhmedia.unl.edu/iiif/2/family_letters%2Fshan_l.242.jpg/pct:9,0,60,30/!1000,1000/0/default.jpg");
+  background-image: url("<%= iiif("shan_l.242.jpg", region: "pct:9,0,60,30", size: "!1000,1000") %>");
   border-top-width:2px
 }
 
