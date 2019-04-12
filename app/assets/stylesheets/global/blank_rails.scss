@@ -459,6 +459,19 @@ span.pageimage {
   width: 100%;
 }
 
+// Items populated from spreadsheet
+
+.image_item_display {
+  background-color: #fff;
+  border: solid 3px $greybeige;
+  border-left: 0;
+  border-right: 0;
+  margin-bottom: 1em;
+  padding: 1em;
+  text-align: center;
+}
+
+
 // Home Page
 // ---------
 
@@ -501,168 +514,6 @@ span.pageimage {
     }
   }
 }
-
-
-// Letters from cather
-
-.tei_opener, .tei_closer {
-  font-size: 20px;
-}
-
-.tei_opener {
-  margin-top: 50px; display: block; }
-  
-.tei_closer .tei_signed {
-  text-align: right; display: block;
-}
-
-.tei_closer .tei_salute {
-  text-align: right; display: block; margin-right: 25px;
-}
-
-.tei_add.tei_place_above, .tei_place_above_demo {
-  vertical-align: super;
-}
-
-.tei_text.tei_type_enclosure .tei_div.tei_type_front,
-.tei_text.tei_type_enclosure .tei_div.tei_type_back,
-.tei_text.tei_type_envelope .tei_div.tei_type_front, 
-.tei_text.tei_type_envelope .tei_div.tei_type_back, 
-.tei_type_postcard .tei_type_front, .tei_type_postcard .tei_type_back, 
-.enclosure_front, 
-.enclosure_back {
-  display: block; 
-  background-color: white !important; /* not sure why important is needed */
-  border: 1px solid black; 
-  padding: 25px; 
-  width: 75%; 
-  margin-left: auto; 
-  margin-right: auto; 
-  margin-top: 75px; 
-  min-height: 250px; 
-  border-radius: 0px !important; /* Not sure why this is needed either */
-  overflow:auto; 
-}
-
-.tei_text.tei_type_envelope .tei_type_front, .tei_type_envelope .tei_div.tei_type_back {
-  background-color: #fdfbfa; border:1px solid #000; border-radius: 1em
-}
-
-.tei_type_envelope .tei_type_back .tei_type_return {
-  text-align: center; font-size: .75em;
-}
-
-.tei_type_envelope .tei_div.tei_type_front .tei_type_return {
-  float: left; font-size: .75em; margin-top: 0px;
-}
-
-.tei_type_envelope > .tei_type_front > .tei_ab {
-  display: block;
-}
-
-.tei_type_addressee .tei_address {
-  display: block; margin-left: 40%; margin-right: auto; margin-top: 50px; margin-bottom: 50px;
-}
-
-.tei_addrLine {
-  display: block;
-}
-
-.tei_text.tei_type_envelope .tei_type_front .tei_type_postmark, 
-.postcard_front .tei_type_postmark {
-  margin-top: -190px; 
-}
-
-.tei_type_postmark {
-  float: right; 
-  clear: right;
-  display: inline-block;
-  border: 1px solid #9e9a9a; 
-  padding: 15px; 
-  border-radius: 50px; 
-  color: #9e9a9a;
-}
-
-.tei_text.tei_type_envelope .tei_type_back .tei_type_postmark  {
-  float: right; border: 1px solid #9e9a9a; padding: 15px; border-radius: 50px; margin-top: 0px;color: #9e9a9a;
-}
-
-.tei_type_postcard .tei_type_back .tei_type_postmark {
-  float: right; border: 1px solid #9e9a9a; padding: 15px; border-radius: 50px; margin-top: -60px;
-  clear: none; color: #9e9a9a;
-}
-
-.tei_type_postmark span, .tei_type_postmark a {
-  display: block;
-}
-
-.tei_type_postmark .tei_ab {
-  display: block; text-align: center;
-  font: .7em "Lucida Grande", Lucida, Verdana, sans-serif;
-}
-
-@media (max-width: 850px){
-    .tei_type_envelope .tei_type_front .tei_type_postmark,
-    .tei_type_envelope .tei_type_back .tei_type_postmark, 
-    .tei_type_postcard .tei_type_front .tei_type_postmark, 
-    .tei_type_postcard .tei_type_back .tei_type_postmark   {
-     float: none; margin-top: 0px; font-size: .75em;color: #9e9a9a; width: 130px; margin-left:  auto;
-   display: block;
-
-  }
-}
-
-.tei_text.tei_type_envelope .tei_type_front .tei_type_printed {
-margin-bottom: 15px;
-}
-
-.tei_text.tei_type_greeting_card img {
-  margin-top: 15px;
-}
-
-.tei_type_date_stamp, .tei_type_place_stamp {
-  display: block; font: 15px "Lucida Grande", Lucida, Verdana, sans-serif;color: #9e9a9a; text-indent: 0em;
-}
-
-.tei_roleName {
-  display: block;
-}
-
-.tei_ab.tei_type_printed, .tei_type_printed_demo {
-  font-family: "Lucida Grande", Lucida, Verdana, sans-serif; display: block; font-size: .7em;
-}
-
-/* Left as is, copied over the note template into tei.p5 */
-.place_printed_text, .date_printed_text, .note_printed_text {
-  font-family: "Lucida Grande", Lucida, Verdana, sans-serif; font-size: 1em;
-}
-
-.tei_fw.tei_type_letterhead, .letterhead_2 {
-  text-align: center; margin-left: auto; margin-right: auto; display: block; margin-bottom: 40px;
-  font: .7em "Lucida Grande", Lucida, Verdana, sans-serif;
-  color: gray; text-indent: 0em; line-height: 15px; 
-}
-
-.tei_fw.tei_type_pageNum {
-  display: block;text-align: center; margin-left: auto; margin-right: auto; margin-top: 25px; text-indent: 0em;
-}
-
-.del_strikethrough, .tei_rend_strikethrough, .tei_rend_strikethrough_demo {
-  text-decoration: line-through;
-}
-
-.tei_del.tei_rend_overwrite, .tei_rend_overwrite_demo {
-  background-color: #d4d2d2;
-  text-decoration: none;
-}
-
-.tei_rend_double_underline {
-  border-bottom: 4px double #333;}
-
-  em.tei_rend_double_underline {
-    text-decoration: none;
-    font-style: normal;
-  }
 
 
 
