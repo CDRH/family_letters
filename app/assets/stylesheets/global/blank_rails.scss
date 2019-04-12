@@ -24,6 +24,12 @@ $link-hover-color:      darken($link-color, 15%) !default;
 $link-underline: lighten($light-blue, 15%);
 $link-underline-hover: lighten($blue, 15%);
 
+.main_content > h3 {
+  background: #fff;
+  padding: .3em .3em .2em .3em;
+  text-align: center;
+}
+
 
 // ----------
 // Text/Gen Styles
