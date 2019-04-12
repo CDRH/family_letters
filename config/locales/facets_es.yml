@@ -1,0 +1,21 @@
+# NOTE: no en companion file is required, as these are
+# translations for metadata from the API which is
+# already stored in English
+es:
+  facet_value:
+    format:
+      Photograph: fotografía [JD]
+      frame: cuadro [JD]
+      manuscript: manuscrito [JD]
+    category:
+      Images: imagenes [JD]
+      Writings: escritos [JD]
+    subcategory:
+      document: documentos [JD]
+      envelope: sobre [JD]
+      explore: explora
+      Letters: letras [JD]
+      note: nota [JD]
+      Photograph: fotografía [JD]
+      research: investiga
+      teach: aprende
