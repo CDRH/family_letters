@@ -1,17 +1,18 @@
 <div id="header">
   <div class="container">
     <div class="row">
-      <div class="col-sm-3">
-        <!-- Button trigger modal -->
+      <div class="col-sm-7">
+        <%= link_to t("home.title"), home_path, class: "btn btn-link", role: "button" %>
+        <%= link_to t("browse.title"), browse_path, class: "btn btn-link", role: "button" %>
+        <%= link_to t("search.title"), search_path, class: "btn btn-link", role: "button" %>
+        <%= link_to t("about.title"), about_path, class: "btn btn-link", role: "button" %>
+      </div>
+      <div class="col-sm-5 layouts_cell">
+        <%# Calls modal %>
         <button class="btn btn-link" data-toggle="modal" data-target="#dedication">
           <%= t "general.dedication_button" %>
         </button>
-      </div>
-      <div class="col-sm-7 layouts_cell">
         <%= render "layouts/body/languages" %>
-      </div>
-      <div class="col-sm-2">
-        <%= link_to t("about.title", default: "About"), about_path, class: "btn btn-link" %>
       </div>
     </div>
   </div>
