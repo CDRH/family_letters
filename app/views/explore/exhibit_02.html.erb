@@ -19,11 +19,3 @@ images = {
   <%= render "gallery", photos: images %>
 
 <% end %>
-
-<%# TODO: Adding this here so it only shows up on the pages it's needed for now, ask about best way to handle %>
-<script>
-  $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
-    event.preventDefault();
-    $(this).ekkoLightbox();
-  });
-</script>
