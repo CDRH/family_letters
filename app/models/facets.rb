@@ -15,7 +15,7 @@ module Facets
         "label" => "People",
         "display" => true
       },
-      "languages" => {
+      "language" => {
         "label" => "Language",
         "display" => true
       },
@@ -51,7 +51,7 @@ module Facets
         "label" => "Gente",
         "display" => true
       },
-      "languages" => {
+      "language" => {
         "label" => "Idioma",
         "display" => true
       },
