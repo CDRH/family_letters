@@ -15,6 +15,7 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 Rails.application.config.assets.precompile += %w(
   ekko-lightbox.min.css
   ekko-lightbox.min.js
+  ekko-lightbox-activate.js
 )
 
 # Fix sassc-rails extension processing order

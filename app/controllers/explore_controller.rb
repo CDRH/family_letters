@@ -12,13 +12,7 @@ class ExploreController < ApplicationController
 
   def gallery_lightbox_includes
     @ext_css = %w(ekko-lightbox.min)
-    @ext_js = %w(ekko-lightbox.min)
-    @inline_js = [
-      "$(document).delegate('*[data-toggle=\"lightbox\"]', 'click', function(event) {
-        event.preventDefault();
-        $(this).ekkoLightbox();
-      });"
-    ]
+    @ext_js = %w(ekko-lightbox.min ekko-lightbox-activate)
   end
 
 end
