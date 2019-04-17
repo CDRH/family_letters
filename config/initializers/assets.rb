@@ -12,7 +12,10 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
-Rails.application.config.assets.precompile += %w( load_lightbox.js )
+Rails.application.config.assets.precompile += %w(
+  ekko-lightbox.min.css
+  ekko-lightbox.min.js
+)
 
 # Fix sassc-rails extension processing order
 # https://github.com/sass/sassc-rails/pull/103
