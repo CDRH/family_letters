@@ -1,3 +1,9 @@
+<%
+# necessary javascript for the info span tooltips in this partial
+@inline_js ||= []
+@inline_js = [ "$(function() { $('[data-toggle=\"tooltip\"]').tooltip(); });" ]
+%>
+
 <!-- Search both Spanish and English -->
 <span class="search_options_wrap">
   <span class="radio search_options">

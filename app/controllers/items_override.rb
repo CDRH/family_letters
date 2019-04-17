@@ -6,9 +6,6 @@ ItemsController.class_eval do
     search_language(options)
 
     @res = $api.query(options)
-    @inline_js = [
-      "$(function() { $('[data-toggle=\"tooltip\"]').tooltip(); });"
-      ]
   end
 
   def search_language(options)
