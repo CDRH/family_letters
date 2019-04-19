@@ -17,7 +17,9 @@ default: &default
     #   - subcategory|Writings
     # sorting and response number
     sort:
-      - title|asc
+      # typically use title as sort except that the title
+      # field could be spanish or english, so changing default to date
+      - date|asc
     rows: 50
     # facet info on search page
     facet_limit: 20
