@@ -15,12 +15,12 @@ Rails.application.routes.draw do
 
     # explore / explora
     get '/explore', to: 'explore#index', as: 'explore'
-    get '/explore/1', to: 'explore#exhibit_01', as: 'exhibit_01'
-    get '/explore/2', to: 'explore#exhibit_02', as: 'exhibit_02'
-    get '/explore/3', to: 'explore#exhibit_03', as: 'exhibit_03'
-    get '/explore/4', to: 'explore#exhibit_04', as: 'exhibit_04'
-    get '/explore/5', to: 'explore#essay_01', as: 'essay_01'
-    get '/explore/6', to: 'explore#essay_01_portuguese', as: 'essay_01_port'
+    get '/explore/connections', to: 'explore#connections', as: 'explore_connections'
+    get '/explore/language_and_life', to: 'explore#language_and_life', as: 'explore_language_and_life'
+    get '/explore/migrations', to: 'explore#migrations', as: 'explore_migrations'
+    get '/explore/more_than_work', to: 'explore#more_than_work', as: 'explore_more_than_work'
+    get '/explore/objects', to: 'explore#objects', as: 'explore_objects'
+    get '/explore/objects_pt', to: 'explore#objects_pt', as: 'explore_objects_pt'
 
     # research / investiga
     get '/research', to: 'research#index', as: 'research'

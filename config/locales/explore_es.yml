@@ -2,11 +2,7 @@ es:
   explore:
     gallery: Galería [KD]
     home:
-      connections: Conexiones [KD]
       exhibits: Exhibiciónes [JD]
-      language_and_life: Lengua y vida [KD]
-      migrations: Migraciones [KD]
-      more_than: Somos más que nuestro trabajo [KD]
       objects_html: |-
         [KD] Una cuchara, una sazón, un mundo:
         <br/>La historia que cuentan nuestros objetos cotidianos
@@ -20,7 +16,17 @@ es:
       easter: Pascua de Resurrección [KD]
       mother: Día de la Madre [KD]
       postcards: Tarjetas postales [KD]
+      title: Conexiones [KD]
       valentine: Día de San Valentín [KD]
+    language_and_life:
+      title: Lengua y vida [KD]
+    migrations:
+      title: Migraciones [KD]
+    more_than_work:
+      title: Somos más que nuestro trabajo [KD]
+    objects:
+      title: "Una cuchara [TODO]"
+
     caption:
       # avoiding period in yaml key because of difficulty selecting it from view
       # all of these captions may eventually be pulled from the API or another source
