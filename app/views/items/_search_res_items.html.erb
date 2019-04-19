@@ -11,7 +11,8 @@
           <% end %>
         </div>
         <div class="search_results_info">
-          <% title_display = item["title"].present? ? item["title"] : t("search.results.item.no_title", default: "Untitled") %>
+          <% title_field = locale == :en ? "title" : "title_es_k" %>
+          <% title_display = item[title_field].present? ? item[title_field] : t("search.results.item.no_title", default: "Untitled") %>
           <span class="link_style"><%= title_display %></span>
           <div class="search_item_info">
             <ul class="search_item_metadata">
