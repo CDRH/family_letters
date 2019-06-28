@@ -73,3 +73,5 @@ home:
 Remember that every piece of text should appear in both the english and spanish yaml files. 
 
 If a page is only in one language, you can simply put the text in the template. 
+
+More info on [languages in orchid docs](https://github.com/CDRH/orchid/blob/dev/docs/README.md#languages). 
