@@ -20,7 +20,7 @@ module Facets
         "display" => true
       },
       "subcategory" => {
-        "label" => "Subcategory",
+        "label" => "Type",
         "display" => true
       },
       "creator.name" => {
@@ -32,7 +32,7 @@ module Facets
         "display" => true
       },
       "places" => {
-        "label" => "Places",
+        "label" => "Place",
         "display" => true
       },
     },
@@ -48,7 +48,7 @@ module Facets
         "display" => true
       },
       "person.name" => {
-        "label" => "Gente",
+        "label" => "Persona",
         "display" => true
       },
       "language" => {
@@ -56,7 +56,7 @@ module Facets
         "display" => true
       },
       "subcategory" => {
-        "label" => "Subcategoría",
+        "label" => "Tipo",
         "display" => true,
         "translate" => true
       },
@@ -70,7 +70,7 @@ module Facets
         "translate" => true,
       },
       "places" => {
-        "label" => "Sitio",
+        "label" => "Lugar",
         "display" => true
       }
     }

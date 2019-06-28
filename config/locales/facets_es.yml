@@ -4,18 +4,18 @@
 es:
   facet_value:
     format:
-      Photograph: fotografía [JD]
-      frame: cuadro [JD]
-      manuscript: manuscrito [JD]
+      Photograph: fotografía
+      frame: retrato
+      manuscript: escrito a mano
     category:
-      Images: imagenes [JD]
-      Writings: escritos [JD]
+      Images: imágenes
+      Writings: textos
     subcategory:
-      document: documentos [JD]
-      envelope: sobre [JD]
+      document: documentos
+      envelope: sobres
       explore: explora
-      Letters: letras [JD]
-      note: nota [JD]
-      Photograph: fotografía [JD]
+      Letters: cartas
+      note: notas
+      Photograph: fotografías
       research: investiga
       teach: aprende

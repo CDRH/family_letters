@@ -1,76 +1,75 @@
 es:
   explore:
-    gallery: Galería [KD]
+    gallery: Galería
     home:
-      connections: Conexiones [KD]
-      exhibits: Exhibiciónes [JD]
-      language_and_life: Lengua y vida [KD]
-      migrations: Migraciones [KD]
-      more_than: Somos más que nuestro trabajo [KD]
+      connections: Conexiones
+      exhibits: Una probadita
+      language_and_life: Lengua y vida
+      migrations: Migraciones
+      more_than: Somos más que nuestro trabajo
       objects_html: |-
-        [KD] Una cuchara, una sazón, un mundo:
-        <br/>La historia que cuentan nuestros objetos cotidianos
-      search_adv: Búsqueda avanzada [JD]
-      search_btn: Buscar y refinar [JD]
-      search_label: Buscar materiales [JD]
+        Una cuchara, una sazón, un mundo: La historia que cuentan nuestros objetos cotidianos
+      search_adv: Búsqueda avanzada
+      search_btn: Buscar y refinar
+      search_label: Buscar materiales
     connections:
-      baby: Bienvenido bebé [KD]
-      birthday: Cumpleaños [KD]
-      christmas: Navidad [KD]
-      easter: Pascua de Resurrección [KD]
-      mother: Día de la Madre [KD]
-      postcards: Tarjetas postales [KD]
-      valentine: Día de San Valentín [KD]
+      baby: Bienvenido bebé
+      birthday: Cumpleaños
+      christmas: Navidad y Año Nuevo
+      easter: Pascua
+      mother: Día de las Madres
+      postcards: Tarjetas postales
+      valentine: San Valentín
     caption:
       # avoiding period in yaml key because of difficulty selecting it from view
       # all of these captions may eventually be pulled from the API or another source
 
       # main explore page
-      shan_p_035: Fotografía en blanco y negro de Jesusita Baros Torres con su hijo Jess Jesús Baros vistiendo monos alrededor de 1920 [GO]
-      shan_p_403: Retrato de familia de Jesusita, Jesse y Santos Baros. [GO]
+      shan_p_035: Fotografía en blanco y negro de Jesusita Baros Torres con su hijo Jesús Baros. 1920 (Circa).
+      shan_p_403: Retrato familiar. Jesusita, Jesse y Santos Baros.
 
       # migrations
-      shan_d_103: Ahora tenemos seis razones para hacer la Constitución. [GO]
-      shan_d_056: Examen manuscrito de notas de ciudadanía. La tableta de Jeffersonian. [GO]
-      shan_d_138: Departamento de Trabajo de los Estados Unidos. Permiso de trabajo para Jesusita Baros. [GO]
-      shan_l_019: Carta de Clemente a Maximino Torres, 1927. [GO]
-      shan_p_009: Fotografía en blanco y negro de Maximino Torres vistiendo un abrigo y fumando. [GO]
-      shan_p_183: Jess Jesús Baros con los agricultores [GO]
-      shan_p_304: Freddie Baca, Cookie y Lucy [GO]
+      shan_d_103: Página de manual de estudio para el examen de ciudadanía. Jesusita Baros Torres.
+      shan_d_056: Notas de Jesusita Baros Torres de preparación para el examen de ciudadanía.
+      shan_d_138: Permiso de trabajo para Jesusita Baros. Departamento del Trabajo de los Estados Unidos.
+      shan_l_019: Carta personal de Clemente Tores a su hermano Maximino Torres, 1927.
+      shan_p_009: Fotografía en blanco y negro de Maximino Torres vistiendo un abrigo y fumando.
+      shan_p_183: Jess Baros con trabajadores agrícolas. Basin, Wyoming, 1937.
+      shan_p_304: Fotografía en blanco y negro de Freddie Baca, Cookie y Lucy. Trabajadores en los ferrocarriles, Denver, Colorado.
 
       # more than our work
-      shan_m_047: Letras de canciones de Amar y vivir [GO]
-      shan_p_087: Fotografía de grupo en blanco y negro de once personas posando delante de un árbol [GO]
-      shan_p_117: Fotografía en blanco y negro de Santos Baros Schubert y William F. Schubert en un picnic [GO]
-      shan_p_159: Fotografía en blanco y negro de Santos Baros Schubert y William F. Schubert besándose [GO]
-      shan_p_169: Elizabeth J. Shanahan, Rodney Schubert, Gwendoly Schubert y Robert S. Schubert [JD]
-      shan_p_185: Fotografía en blanco y negro de las mujeres en trajes de China Poblana. [GO]
-      shan_p_455: Fotografía en blanco y negro de lucy en un banco. [GO]
+      shan_m_047: Letras del bolero Amar y vivir. Manuscrito de Santos Baros Schubert.
+      shan_p_087: Fotografía en blanco y negro, once personas posando en un día de campo.
+      shan_p_117: Fotografía en blanco y negro, Santos Baros Schubert y William F. Schubert en un picnic.
+      shan_p_159: Fotografía en blanco y negro, Santos Baros Schubert y William F. Schubert besándose.
+      shan_p_169: Elizabeth J. Shanahan, Rodney Schubert, Gwendoly Schubert y Robert S. Schubert.
+      shan_p_185: Fotografía en blanco y negro, mujer en traje de China Poblana.
+      shan_p_455: Fotografía en blanco y negro, Lucy sentada en un banco.
 
       # connections
       # birthday
-      shan_d_233: Hermoso diseño rosa, escritura en español. [GO]
-      shan_d_503: Muchos años de vida Jane Schubert
+      shan_d_233: Tarjeta de Cumpleaños, rosas.
+      shan_d_503: Muchos años de vida Jane Schubert.
       # christmas
-      shan_d_384: BORDADO EN HILO DE PLATA 'Feliz año nuevo' [GO]
-      shan_d_394: Nido de pájaros obras de arte y escritura en español [GO]
-      shan_d_398: Tarjeta de Navidad y Año Nuevo hecha a mano de E. Jane Shanahan a sus padres (1967) 'Spiritual Bouquet'. [GO]
-      shan_d_469: Tarjeta de Navidad y sobre de Carmen Gutiérez a Santos Baros Schubert. En la parte posterior de la tarjeta, hay una carta escrita a mano en inglés. [GO]
-      shan_d_484: Tarjeta de navidad y año nuevo. Escribiendo en español. [GO]
-      shan_d_538: V-Mail saludos navideños. Escribiendo en español. [GO]
+      shan_d_384: Anverso y reverso, Feliz año nuevo. Bordado en hilo de plata.
+      shan_d_394: Anverso e interior, Feliz año nuevo. Rosas y diamantina.
+      shan_d_398: Anverso e interior, tarjeta de Navidad y Año Nuevo hecha a mano de E. Jane Shanahan a sus padres 'Spiritual Bouquet'.
+      shan_d_469: Interior y reverso, tarjeta de Navidad. Carmen Gutiérez a Santos Baros Schubert. Nota manuscrita.
+      shan_d_484: Interior y reverso, tarjeta de navidad. Santos Baros a Jesusita Baros Torres. Nota manuscrita.
+      shan_d_538: V-Mail saludos navideños. Nota en español.
       # easter
-      shan_d_264: Tarjeta de pascua [GO]
-      shan_d_266: Tarjeta de pascua [GO]
-      shan_d_455: Tarjeta de pascua. Escritura a mano en español [GO]
+      shan_d_264: Anverso y panel interior, tarjeta de pascua. Santos Baros.
+      shan_d_266: Tarjeta de pascua. Happy Easter, Mom. Santos Baros.
+      shan_d_455: Interior y reverso, Tarjeta de pascua. Santos Baros. Nota en español.
       # postcard
-      shan_d_186: Escritura a mano en español [GO]
-      shan_d_549: Tarjeta postal
+      shan_d_186: Anverso, tarjeta postal. Escrita en español.
+      shan_d_549: Anverso, tarjeta postal. William F. Schubert. Escrita en inglés.
       # valentine
-      shan_d_364: Tarjeta de San Valentín 'Para mi amor calentar los berberechos de mi corazón' [GO]
-      shan_d_368: Tarjeta del día de San Valentín 'Un fanático de Tarzán' [GO]
-      shan_d_492: Tarjeta de San Valentín [GO]
-      shan_d_494: Tarjeta de San Valentín (expandible) [GO]
+      shan_d_364: Anverso, tarjeta de San Valentín. To my love.
+      shan_d_368: Anverso y reverso, tarjeta de San Valentín. Tarzan Fan. To Santos Baros from Della Anaya.
+      shan_d_492: Interior, tarjeta de San Valentín. Dos ñinos jugando.
+      shan_d_494: Tarjeta de San Valentín. Expandible. Arte en papel.
       # mothers day
-      shan_d_480: Tarjeta y sobre del día de la madre. [GO]
+      shan_d_480: Anverso e interior, tarjeta Día de las madres. To My Own Dear Mother.
       # welcomebaby
-      shan_d_526: Tarjeta para felicitar a los padres por el nacimiento del bebé. [GO]
+      shan_d_526: Anverso e interior, tarjeta de felicitación por nacimiento de un bebé.
