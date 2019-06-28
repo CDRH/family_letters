@@ -1,0 +1,20 @@
+<%# overriden for purpose of removing the title field, which is at the top of the page %>
+
+<div class="metadata">
+  <ul>
+    <%= metadata @res, t("item.metadata.date", default: "Date"), "date_display" %>
+    <%= metadata @res, t("item.metadata.creators", default: "Author(s)"), "creators" %>
+    <%= metadata @res, t("item.metadata.format", default: "Format"), "format" %>
+    <%= metadata @res, t("item.metadata.category", default: "Category"), "category" %>
+    <%= metadata @res, t("item.metadata.subcategory", default: "Subcategory"), "subcategory" %>
+    <%= metadata @res, t("item.metadata.works", default: "Works"), "works" %>
+    <%= metadata @res, t("item.metadata.places", default: "Place(s)"), "places" %>
+    <%# When copying this template into projects, consider adding rel tag to the source link
+    to note the format and if the link is external %>
+    <% if @res["uri_data"].present? %>
+    <li><strong>Source Document: </strong>
+      <a href="<%= @res["uri_data"] %>"><%= File.basename(@res["uri_data"]) %></a>
+    </li>
+    <% end %>
+  </ul>
+</div>

@@ -2,11 +2,7 @@ en:
   explore:
     gallery: Gallery
     home:
-      connections: Connections
       exhibits: Exhibits
-      language_and_life: Of language and life
-      migrations: Migrations
-      more_than: We are more than our work
       objects_html: |-
         A spoon, a taste, a world:
         <br/>The story that our everyday objects tell
@@ -20,7 +16,17 @@ en:
       easter: Easter
       mother: Mother's Day
       postcards: Postcards
+      title: Connections
       valentine: Valentine's Day
+    language_and_life:
+      title: Of language and life
+    migrations:
+      title: Migrations
+    more_than_work:
+      title: We are more than our work
+    objects:
+      title: "A spoon [TODO]"
+
     caption:
       # avoiding period in yaml key because of difficulty selecting it from view
       # all of these captions may eventually be pulled from the API or another source
