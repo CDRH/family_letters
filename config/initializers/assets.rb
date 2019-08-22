@@ -18,26 +18,6 @@ Rails.application.config.assets.precompile += %w(
   ekko-lightbox-activate.js
 )
 
-# Fix sassc-rails extension processing order
-# https://github.com/sass/sassc-rails/pull/103
-# This will fail once above PR is merged due to frozen EXTENSIONS constant
-module SassC
-  module Rails
-    class Importer < SassC::Importer
-      EXTENSIONS = [
-        CssScssExtension.new,
-        CssSassExtension.new,
-        SassERBExtension.new,
-        ERBExtension.new(".scss.erb"),
-        ERBExtension.new(".css.erb"),
-        Extension.new(".scss"),
-        Extension.new(".sass"),
-        CSSExtension.new
-      ].freeze
-    end
-  end
-end
-
 # Add our helpers to Asset Pipeline context for use in ERB pre-processing
 # https://github.com/rails/sprockets-rails/issues/307#issuecomment-170707886
 Rails.application.config.assets.configure do |env|
