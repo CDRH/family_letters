@@ -24,39 +24,7 @@
   </div>
   <div class="container title_nav">
     <div class="title_nav_sub">
-      <% if current_page? home_path %>
-
-        <div class="site-title-container home-site-title home-site-title-primary">
-          <div class="site-title h1"><%= t "general.project_name" %></div>
-          <div class="site-subtitle h2"><%= t "general.project_subtitle" %></div>
-        </div>
-        
-        <% if I18n.locale == :en %>
-        <%# TODO: I think this could be optimised a bit further still, but leaving it as is for now %>
-
-          <div class="site-title-container home-site-title home-site-title-secondary">
-            <div class="site-title h1"><%= t "general.project_name", locale: :es %></div>
-            <div class="site-subtitle h2"><%= t "general.project_subtitle", locale: :es %></div>
-          </div>
-
-        <% else %>
-
-          <div class="site-title-container home-site-title home-site-title-secondary">
-            <div class="site-title h1"><%= t "general.project_name", locale: :en %></div>
-            <div class="site-subtitle h2"><%= t "general.project_subtitle", locale: :en %></div>
-          </div>
-
-        <% end %>
-
-      <% else %>
-        <%= link_to home_path do %>
-          <div class="site-title-container">
-            <div class="site-title h1"><%= t "general.project_name" %></div>
-            <div class="site-title h2"><%= t "general.project_subtitle" %></div>
-          </div>
-        <% end %>
-      <% end %>
-
+      <%= render "layouts/body/title" %>
       <%= render "layouts/body/navbar" %>
       <%= render "layouts/body/breadcrumbs" %>
     </div> <%# /title_nav_sub %>
