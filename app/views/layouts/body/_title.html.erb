@@ -1,0 +1,30 @@
+<% if current_page? home_path %>
+  <div class="site-title-container home-site-title home-site-title-primary">
+    <div class="h1 site-title"><%= t "general.project_name" %></div>
+    <div class="h2 site-subtitle"><%= t "general.project_subtitle" %></div>
+  </div>
+
+  <div class="site-title-container home-site-title home-site-title-secondary">
+    <div class="h1 site-title">
+      <% if I18n.locale == :en %>
+        <%= t "general.project_name", locale: :es %>
+      <% else %>
+          <%= t "general.project_name", locale: :en %>
+      <% end %>
+    </div>
+    <div class="h2 site-subtitle">
+      <% if I18n.locale == :en %>
+        <%= t "general.project_subtitle", locale: :es %>
+      <% else %>
+        <%= t "general.project_subtitle", locale: :en %>
+      <% end %>
+    </div>
+  </div>
+<% else %>
+  <%= link_to home_path do %>
+    <div class="site-title-container">
+      <div class="h1 site-title"><%= t "general.project_name" %></div>
+      <div class="h2 site-title"><%= t "general.project_subtitle" %></div>
+    </div>
+  <% end %>
+<% end %>

@@ -1,4 +1,4 @@
-<h2><%= t "explore.title", default: "Explore" %></h2>
+<h1><%= t "explore.title", default: "Explore" %></h1>
 
 <%
 images = {
@@ -19,9 +19,9 @@ images = {
 <div class="row">
     <div class="col-sm-6 explore_search_box">
       <%= form_tag search_path, method: "get" do %>
-        <h4>
+        <h2>
           <%= t "explore.home.search_label", default: "Search Materials" %>
-        </h4>
+        </h2>
         <%# TODO figure out an example that would work in spanish as well %>
         <%= text_field_tag "q", nil, placeholder: "(sister OR \"sis\") NOT brother", class: "form-control" %>
         <div class="pull-left">
@@ -41,9 +41,9 @@ images = {
     </div><!-- /col -->
   </div><!-- /row -->
 
-<h3 class="explore_index_headers">
+<h2 class="explore_index_headers">
   <%= t "explore.home.exhibits", default: "Exhibits" %>
-</h3>
+</h2>
 </div> <%# End container for full width band %>
 <div class="container-fluid explore_band">
 
@@ -54,9 +54,9 @@ images = {
           <div class="row">
             <div class="col-md-9 col-md-offset-3">
               <div class="inner_content">
-                <h4>
+                <h3>
                   <%= t "explore.home.connections", default: "Connections" %>
-                </h4>
+                </h3>
               </div>
             </div>
           </div>
@@ -69,9 +69,9 @@ images = {
           <div class="row">
             <div class="col-md-9">
               <div class="inner_content">
-                <h4>
+                <h3>
                   <%= t "explore.home.migrations", default: "Migrations" %>
-                </h4>
+                </h3>
               </div>
             </div>
           </div>
@@ -87,9 +87,9 @@ images = {
           <div class="row">
             <div class="col-md-9 col-md-offset-3">
               <div class="inner_content">
-                <h4>
+                <h3>
                   <%= t "explore.home.more_than", default: "We are more than our work" %>
-                </h4>
+                </h3>
               </div>
             </div>
           </div>
@@ -102,9 +102,9 @@ images = {
           <div class="row">
             <div class="col-md-9">
               <div class="inner_content">
-                <h4>
+                <h3>
                   <%= t "explore.home.language_and_life", default: "Of language and life" %>
-                </h4>
+                </h3>
               </div>
             </div>
           </div>
