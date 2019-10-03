@@ -1,4 +1,4 @@
-<h1><%= t "explore.title", default: "Explore" %></h1>
+<h2><%= t "explore.title", default: "Explore" %></h2>
 
 <%
 images = {
@@ -9,7 +9,7 @@ images = {
 
 <div class="row">
   <div class="col-md-8">
-    <%= render localized_partial("index", "explore/locales") %>
+    <p class="lead"><%= t "explore.home.introduction" %></p>
   </div>
   <div class="col-md-4">
     <%= render "gallery", photos: images %>
@@ -19,9 +19,9 @@ images = {
 <div class="row">
     <div class="col-sm-6 explore_search_box">
       <%= form_tag search_path, method: "get" do %>
-        <h2>
+        <h4>
           <%= t "explore.home.search_label", default: "Search Materials" %>
-        </h2>
+        </h4>
         <%# TODO figure out an example that would work in spanish as well %>
         <%= text_field_tag "q", nil, placeholder: "(sister OR \"sis\") NOT brother", class: "form-control" %>
         <div class="pull-left">
@@ -41,9 +41,9 @@ images = {
     </div><!-- /col -->
   </div><!-- /row -->
 
-<h2 class="explore_index_headers">
+<h3 class="explore_index_headers">
   <%= t "explore.home.exhibits", default: "Exhibits" %>
-</h2>
+</h3>
 </div> <%# End container for full width band %>
 <div class="container-fluid explore_band">
 
@@ -54,9 +54,9 @@ images = {
           <div class="row">
             <div class="col-md-9 col-md-offset-3">
               <div class="inner_content">
-                <h3>
-                  <%= t "explore.connections.title", default: "Connections" %>
-                </h3>
+                <h4>
+                  <%= t "explore.home.connections", default: "Connections" %>
+                </h4>
               </div>
             </div>
           </div>
@@ -69,9 +69,9 @@ images = {
           <div class="row">
             <div class="col-md-9">
               <div class="inner_content">
-                <h3>
-                  <%= t "explore.migrations.title", default: "Migrations" %>
-                </h3>
+                <h4>
+                  <%= t "explore.home.migrations", default: "Migrations" %>
+                </h4>
               </div>
             </div>
           </div>
@@ -87,9 +87,9 @@ images = {
           <div class="row">
             <div class="col-md-9 col-md-offset-3">
               <div class="inner_content">
-                <h3>
-                  <%= t "explore.more_than_work.title", default: "We are more than our work" %>
-                </h3>
+                <h4>
+                  <%= t "explore.home.more_than", default: "We are more than our work" %>
+                </h4>
               </div>
             </div>
           </div>
@@ -102,9 +102,9 @@ images = {
           <div class="row">
             <div class="col-md-9">
               <div class="inner_content">
-                <h3>
-                  <%= t "explore.language_and_life.title", default: "Of language and life" %>
-                </h3>
+                <h4>
+                  <%= t "explore.home.language_and_life", default: "Of language and life" %>
+                </h4>
               </div>
             </div>
           </div>
