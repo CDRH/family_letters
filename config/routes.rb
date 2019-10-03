@@ -27,6 +27,11 @@ Rails.application.routes.draw do
 
     # teach / enseña
     get '/teach', to: 'teach#index', as: 'teach'
+    get '/teach/lesson01', to: 'teach#lesson01', as: 'teach_lesson01'
+    get '/teach/lesson02', to: 'teach#lesson02', as: 'teach_lesson02'
+    get '/teach/lesson03', to: 'teach#lesson03', as: 'teach_lesson03'
+    get '/teach/lesson04', to: 'teach#lesson04', as: 'teach_lesson04'
+    get '/teach/lesson05', to: 'teach#lesson05', as: 'teach_lesson05'
 
     get '/content_pages', to: 'general#content_pages', as: 'content_pages'
   end
