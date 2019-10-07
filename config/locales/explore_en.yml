@@ -29,6 +29,20 @@ en:
       postcards: Postcards
       title: Connections
       valentine: Valentine's Day
+      intro_html: |-
+        <p>The greeting cards in this collection have much to tell us about the
+        time they were made, and about the social experience of the people who
+        sent and received them. The speak about design aesthetics, about
+        representations of femininity and masculinity, about social
+        obligations, about religious beliefs and about ties of kinship and
+        affection. They preserve traces of the contact of Spanish and English,
+        and the features of a social network that changed in shape and
+        membership over the course of several decades.</p>
+        <p>Ornate and elaborate, these fifty one surviving cards were sent to
+        commemorate birthdays, holidays, and other milestones like the birth of
+        a child. They were used to send wishes of health and to update family
+        and friends that were far away. They performed the most important
+        function of maintaining human connection across distances.</p>
     language_and_life:
       title: Of language and life
     migrations:
@@ -91,11 +105,68 @@ en:
       shan_d_480: Mother's Day card and envelope
       # welcomebaby
       shan_d_526: Card to congratulate parents on baby's birth
-
-
+    language_and_life:
+      title: Of language and life
+      intro_html: |-
+        <p>Jesusita Baros Torres lived for half a century in the United States.
+        This collection preserves samples of over three decades of her personal
+        correspondence. These documents offer researchers a unique perspective
+        into the individual results of sustained, intense, and asymmetrical
+        language contact.</p>
+        <p>Linguistic analysis of her correspondence allows us to study the
+        type and intensity of the influence of English over her writing in
+        Spanish over the course of time, as well as writing features,
+        grammatical structures and dialectal features of Mexican American
+        varieties of Spanish in that region of the United States.</p>
+        <p>At the core of this collection are 83 letters, cards and personal
+        notes exchanged between Colorado and Nebraska by Jesusita Baros Torres
+        and her daughter, Santos Baros Schubert, between 1956 and 1971. These
+        letters provide us with environmental, household and individual clues
+        to explain why this intense linguistic contact resulted in
+        non-acquisition, loss or maintenance of Spanish by different members
+        of the same family.</p>
+    migrations:
+      title: Migrations
+      intro_html: |-
+        <p>In many ways, the objects in this collection can be read as a map of
+        the physical movement of three generations of the same family across
+        two countries, and later, across several states within the same
+        country. These digital objects, dated between 1835 and 1986, include
+        personal letters, documents, miscellaneous items, and photographs.
+        Personal letters were sent from ten locations in Mexico and 28
+        locations in the United States, to three locations in Mexico and 11
+        locations in the US.</p>
+        <p>In other ways, this collection also serves as the partial record of
+        the transit between childhood and adulthood, between dependence on the
+        family and economic self-reliance, between one ethnolinguistic
+        community to another, between citizenship of one nation to citizenship 
+        of another, between socioeconomic strata, and between rural and urban
+        identities. Reading these images as one would read a ship’s logbook,
+        we find the account of the many ways in which several members of this
+        family navigated through, around, and often against, racial, gender,
+        ethnic and social expectations of their time.</p>
+    more_than_work:
+      title: We are more than our work
+      intro_html: |-
+        <p>The way in which we earn a living is a very important part of who we
+        are, especially among immigrants; but the description of our work does
+        not capture the whole of our experience. The letters, photographs,
+        lyrics, and other digital objects in this collection highlight the
+        complex dimensions of Mexican American communities.</p>
+        <p>Through these objects we access a story of family struggle,
+        adaptation and resilience. We enter the local parish, and meet a group
+        of friends; we visit school and local businesses. We get news of the
+        death of a baby, and find out about someone’s highway accident. We go
+        to a dance. We know who’s getting married and what gifts they got. We
+        know how many boys in the neighborhood are off to war, and what is the
+        best part of town to buy a house, and whether they’re showing a
+        Spanish-language movie this weekend, and what’s for Christmas Eve
+        dinner.</p>
+        <p>We get a taste of summer picnics, songs, laughter and love stories.
+        We taste the dreams, the plans and aspirations that fuel our work and 
+        bind together a family, a community, a way to see the world.</p>
 # Galería
 # Una cuchara, una sazón, un mundo: <br/>La historia que cuentan nuestros objetos cotidianos
 # Conexiones
-# Migraciones
 # Somos más que nuestro trabajo
 # Lengua y vida

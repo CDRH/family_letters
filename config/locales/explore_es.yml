@@ -29,7 +29,23 @@ es:
       easter: Pascua
       mother: Día de las Madres
       postcards: Tarjetas postales
+      title: Conexiones
       valentine: San Valentín
+      intro_html: |-
+        <p>Las tarjetas de felicitación de esta colección nos dicen mucho sobre
+        la época en que fueron hechas y sobre la experiencia social de quienes
+        las mandaron y las recibieron. Nos hablan de diferentes estéticas de
+        diseño, diferentes representaciones de la femineidad y de la
+        masculinidad, sobre obligaciones sociales, creencias religiosas y sobre
+        lazos familiares y de afecto. Preservan los rastros del contacto entre
+        el español y el inglés y las características de una red social que
+        cambió de estructura con el paso de las décadas.</p>
+        <p>Muy adornadas y de diseño esmerado, estas 51 tarjetas se enviaron
+        para conmemorar cumpleaños, días festivos y otras fechas importantes;
+        para enviar deseos de restablecimiento después de una enfermedad, y
+        para enviar noticias a familiares y amigos que vivían lejos. Estas
+        tarjetas cumplieron la importantísima función de mantener la conexión
+        humana a través de la distancia.</p>
     caption:
       # avoiding period in yaml key because of difficulty selecting it from view
       # all of these captions may eventually be pulled from the API or another source
@@ -83,3 +99,67 @@ es:
       shan_d_480: Anverso e interior, tarjeta Día de las madres. To My Own Dear Mother.
       # welcomebaby
       shan_d_526: Anverso e interior, tarjeta de felicitación por nacimiento de un bebé.
+    language_and_life:
+      title: Lengua y vida
+      intro_html: |-
+        <p>Jesusita Baros Torres vivió medio siglo en los Estados Unidos. Esta
+        colección preserva muestras de su correspondencia personal escritas
+        durante más de tres décadas. Estos documentos le ofrecen a los
+        investigadores una perspectiva única del resultado individual del
+        contacto lingüístico sostenido, intenso y asimétrico.</p>
+        <p>El análisis lingüístico de su correspondencia nos permite estudiar
+        el tipo e intensidad de la influencia del inglés sobre su escritura en
+        español a lo largo del tiempo, así como los rasgos de su escritura, y
+        las estructuras gramaticales y rasgos dialectales de las variedades
+        del español mexicanoamericano de esta región de los Estados Unidos.</p>
+        <p>En el centro de esta colección se encuentran 83 cartas, tarjetas y
+        notas personales intercambiadas entre Colorado y Nebraska por Jesusita
+        Baros Torres y su hija Santos Baros Schubert, entre 1956 y 1971. Estas
+        cartas nos aportan pistas sobre el entorno, la familia y los
+        individuos que nos permiten explicar por qué este contacto lingüístico
+        intenso resultó en la no adquisición, pérdida o mantenimiento del
+        español en diferentes miembros de la misma familia.</p>
+    migrations:
+      title: Migraciones
+      intro_html: |-
+        <p>Los objetos de esta colección pueden leerse como un mapa que traza
+        el movimiento de tres generaciones de la misma familia, primero a
+        través de dos países y más tarde, a través de varios estados del mismo
+        país. Estos objetos digitales, fechados entre 1835 y 1986, incluyen
+        cartas, documentos, textos misceláneos y fotografías. Las cartas
+        fueron enviadas desde diez localidades en México y 28 localidades en
+        los Estados Unidos, hacia tres localidades mexicanas y 11 localidades
+        en los EU.</p>
+        <p>De otras maneras, esta colección también es el registro parcial del
+        tránsito entre la niñez y la vida adulta, entre la dependencia en la
+        familia y la autosuficiencia económica, entre una comunidad
+        etnolingüística y otra, entre ser ciudadano de una nación o ciudadano
+        de otra, entre estratos económicos, entre identidades rurales y
+        urbanas. Al leer estas imágenes como cuaderno de bitácora, nos
+        encontramos con el relato de las muchas maneras en que varios miembros
+        de esta familia navegaron a través, alrededor (y frecuentemente en
+        contra de) las expectativas raciales, de género, étnicas y sociales de
+        su tiempo.</p>
+    more_than_work:
+      title: Somos más que nuestro trabajo
+      intro_html: |-
+        <p>La forma en la que nos ganamos la vida es una parte muy importante
+        de quienes somos, especialmente entre los inmigrantes. Sin embargo, la
+        descripción de nuestro trabajo no captura la totalidad de nuestra
+        experiencia. Las cartas, fotografías, letras de canciones y otros
+        objetos digitales en esta colección resaltan la complejidad de la
+        vida en las comunidades mexicanoamericanas.</p>
+        <p>A través de estos objetos tenemos acceso a la historia de esfuerzo,
+        adaptación y resistencia de muchas familias. Entramos en la parroquia,
+        en los grupos de amigos, en el día día escolar y en los negocios
+        locales. Recibimos noticias de la muerte de un bebé y nos enteramos de
+        quién sufrió un accidente en la carretera. Vamos a un baile, sabemos
+        quién se casa y qué le regalaron. Sabemos cuántos muchachos del barrio
+        se fueron a la guerra, qué parte del pueblo es mejor para comprar una
+        casa, qué fin de semana dan una película en español, y qué hay para la
+        cena de navidad.</p>
+        <p>Sabemos como son los días de campo en el verano, oímos las
+        canciones, las risas y las historias de amor. Experimentamos un poco
+        los sueños, los planes y las aspiraciones que le sirven de combustible
+        a nuestro trabajo y que le dan forma a una familia, a una comunidad y
+        a una forma de ver el mundo.</p>
