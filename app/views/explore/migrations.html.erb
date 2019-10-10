@@ -1,3 +1,7 @@
+<h1><%= t "explore.migrations.title" %></h1>
+
+<%= t "explore.migrations.intro_html" %>
+
 <%
 images = {
   "shan_p.009" => t("explore.caption.shan_p_009"),
@@ -10,15 +14,11 @@ images = {
 }
 %>
 
-<%= render localized_partial("migrations", "explore/locales") do %>
+<h2 class="gallery_heading">
+  <%= t "exhibit.gallery", default: "Gallery" %>
+</h2>
 
-  <h4 class="gallery_heading">
-    <%= t "exhibit.gallery", default: "Gallery" %>
-  </h4>
-
-  <%= render "gallery", photos: images %>
-
-<% end %>
+<%= render "gallery", photos: images %>
 
 <%# TODO: Adding this here so it only shows up on the pages it's needed for now, ask about best way to handle %>
 <script>

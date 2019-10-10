@@ -40,6 +40,77 @@ default: &default
       - 12
       - 31
 
+  facets:
+    en:
+      category:
+        label: Category
+        flags:
+          - search_filter
+      date.year:
+        label: Year
+        flags:
+          - search_filter
+      person.name:
+        label: People
+        flags:
+          - search_filter
+      languages:
+        label: Language
+        flags:
+          - search_filter
+      subcategory:
+        label: Subcategory
+        flags:
+          - search_filter
+      creator.name:
+        label: Creator
+        flags:
+          - search_filter
+      format:
+        label: Format
+        flags:
+          - search_filter
+      places:
+        label: Places
+        flags:
+          - search_filter
+    es:
+      category:
+        label: Categoría
+        flags:
+          - search_filter
+          - translate
+      date.year:
+        label: Año
+        flags:
+          - search_filter
+      person.name:
+        label: Gente
+        flags:
+          - search_filter
+      languages:
+        label: Idioma
+        flags:
+          - search_filter
+      subcategory:
+        label: Subcategoría
+        flags:
+          - search_filter
+          - translate
+      creator.name:
+        label: Autor
+        flags:
+          - search_filter
+      format:
+        label: Formato
+        flags:
+          - search_filter
+          - translate
+      places:
+        label: Sitio
+        flags:
+          - search_filter
+
 test:
   <<: *default
 

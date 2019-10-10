@@ -1,5 +1,8 @@
-<%= render localized_partial("language_and_life", "explore/locales") do %>
-  <ul>
+<h1><%= t "explore.language_and_life.title" %></h1>
+
+<%= t "explore.language_and_life.intro_html" %>
+
+<ul>
   <% @res.items.each do |item| %>
     <li>
       <%= link_to item["title"], item_path(params["locale"], item["identifier"]) %><br/>
@@ -7,4 +10,3 @@
     </li>
   <% end %>
 </ul>
-<% end %>

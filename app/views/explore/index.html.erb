@@ -1,4 +1,4 @@
-<h2><%= t "explore.title", default: "Explore" %></h2>
+<h1><%= t "explore.title", default: "Explore" %></h1>
 
 <%
 images = {
@@ -9,7 +9,7 @@ images = {
 
 <div class="row">
   <div class="col-md-8">
-    <%= render localized_partial("index", "explore/locales") %>
+    <p class="lead"><%= t "explore.home.introduction" %></p>
   </div>
   <div class="col-md-4">
     <%= render "gallery", photos: images %>
@@ -55,7 +55,7 @@ images = {
             <div class="col-md-9 col-md-offset-3">
               <div class="inner_content">
                 <h4>
-                  <%= t "explore.connections.title", default: "Connections" %>
+                  <%= t "explore.home.connections", default: "Connections" %>
                 </h4>
               </div>
             </div>
@@ -70,7 +70,7 @@ images = {
             <div class="col-md-9">
               <div class="inner_content">
                 <h4>
-                  <%= t "explore.migrations.title", default: "Migrations" %>
+                  <%= t "explore.home.migrations", default: "Migrations" %>
                 </h4>
               </div>
             </div>
@@ -88,7 +88,7 @@ images = {
             <div class="col-md-9 col-md-offset-3">
               <div class="inner_content">
                 <h4>
-                  <%= t "explore.more_than_work.title", default: "We are more than our work" %>
+                  <%= t "explore.home.more_than", default: "We are more than our work" %>
                 </h4>
               </div>
             </div>
@@ -103,7 +103,7 @@ images = {
             <div class="col-md-9">
               <div class="inner_content">
                 <h4>
-                  <%= t "explore.language_and_life.title", default: "Of language and life" %>
+                  <%= t "explore.home.language_and_life", default: "Of language and life" %>
                 </h4>
               </div>
             </div>

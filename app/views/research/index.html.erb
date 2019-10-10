@@ -1,6 +1,6 @@
 <h1><%= t "research.title", default: "Research" %></h1>
 
-   <p>Introduction</p>
+<p>Introduction</p>
 
 <div class="row">
   <div class="col-md-6">
@@ -20,7 +20,7 @@
   </div>
   <div class="col-md-6">
     <%= form_tag search_path, method: "get" do %>
-    <h3>Search Materials</h3>
+    <h2>Search Materials</h2>
     <%= text_field_tag "q", nil, placeholder: "(sister OR \"sis\") NOT brother", class: "form-control" %>
     <div class="pull-left">
         <%= link_to "Advanced Search", search_path, class: "btn btn-link color_reverse", role: "button" %>

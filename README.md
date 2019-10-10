@@ -70,8 +70,9 @@ home:
       durante  la primera mitad del siglo XX.</p>
 ```
 
-Remember that every piece of text should appear in both the english and spanish yaml files. 
+Every piece of text should appear in both the english and spanish yaml files. If a page is only in one language, you can simply put the text directly in the template.
 
-If a page is only in one language, you can simply put the text in the template. 
+If you have extensive amounts of text which are not a good fit for the yaml file, then you may create matching templates (or partials) with the naming convention of `filename.lang.html.erb`.  For example, you might have `migrations.es.html.erb` and `migrations.en.html.erb` with the same content but differing languages.
+
 
 More info on [languages in orchid docs](https://github.com/CDRH/orchid/blob/dev/docs/README.md#languages). 

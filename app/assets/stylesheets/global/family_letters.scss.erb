@@ -48,7 +48,7 @@ a:hover, .link_style:hover, .link_style:active {
 }
 
 // Remove styles from buttons, etc.
-a.btn, .footer_logo a, .nav a, #site-title a, .pagination a, a.searchResults {
+a.btn, .footer_logo a, .nav a, .site-title-container a, .pagination a, a.searchResults {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -151,20 +151,20 @@ a.btn, .footer_logo a, .nav a, #site-title a, .pagination a, a.searchResults {
 }
 
 // Site Title
-#site-title a {
+.site-title-container a {
   display: block;
 }
 
-#site-title a, #site-title h1, #site-title h2 {
+.site-title-container a, .site-title-container .h1, .site-title-container .h2 {
   color: $blue;
   line-height: .8em
 }
 
-#site-title a:hover h1, #site-title a:hover h2 {
+.site-title-container a:hover .h1, .site-title-container a:hover .h2 {
   color: lighten($blue, 20%);
 }
 
-#site-title h2 {
+.site-title-container .h2 {
   font-family: $font-family-serif;
   font-size: 1.7em;
   margin-top: -.2em;

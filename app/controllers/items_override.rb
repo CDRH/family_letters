@@ -1,12 +1,22 @@
 ItemsController.class_eval do
+
   def index
     @ext_js = ["orchid/search"]
+
+    if params["sort"].blank? && params["q"].present?
+      params["sort"] = ["relevancy|desc"]
+    end
+
     options = params.permit!.deep_dup
     options, @from, @to = helpers.date_filter(options)
+
+    # index method the same as orchid except for addition of this line
     search_language(options)
 
     @title = t "search.title"
-    @res = $api.query(options)
+    @res = @items_api.query(options)
+
+    render_overridable("items", "index")
   end
 
   def search_language(options)
