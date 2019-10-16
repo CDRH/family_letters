@@ -63,7 +63,7 @@ home:
     greeting: Bienvenidos
     # custom: contents of home page
     html: |-
-      <p>El proyecto <em>Cartas de Familia</em> preserva, digitaliza, analiza y
+      <p>El proyecto <em>Cartas a la Familia</em> preserva, digitaliza, analiza y
       presenta al público una colección de la correspondencia y otros
       documentos personales de una familia mexicoamericana que emigró de
       Zacatecas, México, a los estados de Colorado y Nebraska, Estados Unidos,

@@ -12,7 +12,7 @@ es:
     dedication_button: Dedicatoria
     dedication_text: Este sitio electrónico está dedicado a Jesusita Baros Torres. Su esfuerzo no fue en vano.
     footer_html: |-
-      <em>Cartas de Familia</em> es un proyecto dirigido por Isabel Velázquez,
+      <em>Cartas a la Familia</em> es un proyecto dirigido por Isabel Velázquez,
       y publicado de manera conjunta por el Centro de Investigación Digital en
       las Humanidades y el Departamento de Lenguas Modernas de la Universidad
       de Nebraska, Lincoln, bajo licencia
@@ -108,7 +108,7 @@ es:
     greeting: Bienvenidos
     # custom: contents of home page
     html: |-
-      <p>El proyecto <em>Cartas de Familia</em> preserva, digitaliza, analiza y
+      <p>El proyecto <em>Cartas a la Familia</em> preserva, digitaliza, analiza y
       presenta al público una colección de la correspondencia y otros
       documentos personales de una familia mexicoamericana que emigró de
       Zacatecas, México, a los estados de Colorado y Nebraska, Estados Unidos,
