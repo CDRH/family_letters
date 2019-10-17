@@ -326,4 +326,17 @@ es:
   #########
   teach:
     title: Aprende
-    lesson01: TESTE
+    lesson_general:
+      title: Recursos Para Profesores
+    lesson_plans:
+      title: Planes de Lecciones
+    lesson01:
+      title: Estilo de Vida Diario
+    lesson02:
+      title: Familia
+    lesson03:
+      title: Religión
+    lesson04:
+      title: Trabajo
+    lesson05:
+      title: Identidad

@@ -4,18 +4,19 @@
 es:
   facet_value:
     format:
-      Photograph: fotografía
-      frame: retrato
-      manuscript: escrito a mano
+      Photograph: Fotografía
+      Cardboard_frame: Retrato
+      Manuscript: Escrito a Mano
     category:
-      Images: imágenes
-      Writings: textos
+      Images: Imágenes
+      Writings: Textos
+      Secondary_Source: Fuente Secundaria
     subcategory:
-      document: documentos
-      envelope: sobres
-      explore: explora
-      Letters: cartas
-      note: notas
-      Photograph: fotografías
-      research: investiga
-      teach: aprende
+      Document: Documentos
+      Envelope: Sobres
+      Explore: Explora
+      Letters: Cartas
+      Note: Notas
+      Photograph: Fotografías
+      Research: Investiga
+      Teach: Aprende
