@@ -1,4 +1,5 @@
 ItemsController.class_eval do
+  before_action :set_page_facets, only: [:browse, :browse_facet, :index, :show]
 
   def index
     @ext_js = ["orchid/search"]
