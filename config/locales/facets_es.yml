@@ -4,9 +4,32 @@
 es:
   facet_value:
     format:
-      Photograph: Fotografía
+      Book: Libro
+      # TODO check translation
+      Booklet: Folleto
+      Calendar: Calendario
+      Card: Tarjeta
       Cardboard_frame: Retrato
+      Currency: Moneda
+      Document: Documento
+      Envelope: Sobre
+      Journal: Diario
+      Letter: Carta
+      Lyrics: Letra
       Manuscript: Escrito a Mano
+      # TODO using menú instead of carta because letter
+      # is already using that term
+      Menu: Menú
+      Newspaper: Periódico
+      Notebook: Cuaderno
+      Photograph: Fotografía
+      Postcard: Postal
+      Poster: Afiche
+      Prescription: Prescripción
+      # TODO check if this is correct
+      Receipt: Recibo
+      Religious_artifact: Artefacto Religioso
+      Stamps: Sellos
     category:
       Images: Imágenes
       Writings: Textos
