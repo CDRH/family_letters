@@ -4,34 +4,40 @@
 <% if @res.count > 0 %>
   <div class="flex_row">
     <% @res.items.each do |item| %>
-      <%= link_to item_path(id: item["identifier"]), class: "searchResults flex_col-md" do %>
+      <%= link_to search_item_link(item), class: "searchResults flex_col-md" do %>
         <div class="search_results_image">
           <% if item["image_id"] %>
             <%= image_tag iiif(item["image_id"]) %>
+          <% else %>
+            <%= image_tag "no_image.jpg" %>
           <% end %>
         </div>
         <div class="search_results_info">
-          <% title_field = locale == :en ? "title" : "title_es_k" %>
-          <% title_display = item[title_field].present? ? item[title_field] : t("search.results.item.no_title", default: "Untitled") %>
-          <span class="link_style"><%= title_display %></span>
+          <span class="link_style"><%= title_label(item) %></span>
           <div class="search_item_info">
             <ul class="search_item_metadata">
-              <% if item["date_display"] %>
+              <% if item["date_display"].present? %>
                 <li>
                   <strong><%= t "search.results.item.date", default: "Date" %></strong>:
                   <%= item["date_display"] %>
                 </li>
               <% end %>
-              <% if item["format"] %>
+              <% if item["format"].present? %>
                 <li>
                   <strong><%= t "search.results.item.format", default: "Format" %></strong>:
                   <%= value_label("format", item["format"]) %>
                 </li>
               <% end %>
-              <% if item["source"] %>
+              <% if item["source"].present? %>
                 <li>
                   <strong><%= t "search.results.item.source", default: "Source" %></strong>:
                   <%= item["source"] %>
+                </li>
+              <% end %>
+              <% if item["subcategory"].present? %>
+                <li>
+                  <strong><%= t "search.results.item.subcategory", default: "Subcategory" %></strong>:
+                  <%= value_label("subcategory", item["subcategory"]) %>
                 </li>
               <% end %>
             </ul>

@@ -1,4 +1,5 @@
 ItemsController.class_eval do
+  before_action :set_page_facets, only: [:browse, :browse_facet, :index, :show]
 
   def index
     @ext_js = ["orchid/search"]
@@ -33,14 +34,4 @@ ItemsController.class_eval do
     end
   end
 
-  private
-
-  def item_title
-    title_field = params["locale"] == "en" ? "title" : "title_es_k"
-    if @res[title_field].present?
-      @res[title_field].length > 20 ? "#{@res[title_field][0,20]}..." : @res[title_field]
-    else
-      "Item #{@res["identifier"]}"
-    end
-  end
 end

@@ -1,8 +1,6 @@
 <%# overridden for purpose of toggling the title language %>
 <% if @res %>
-  <% title_field = locale == :en ? "title" : "title_es_k" %>
-  <% title_display = @res[title_field].present? ? @res[title_field] : t("search.results.item.no_title", default: "Untitled") %>
-  <h2><%= title_display %></h2>
+  <h2><%= title_label(@res) %></h2>
 
   <%= render "show_metadata" %>
   <%= render "show_content" %>
