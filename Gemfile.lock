@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/CDRH/orchid
-  revision: c1c70132688e0611f4a22a17054a6595158077ef
-  tag: v3.0.0-beta
+  revision: 34bedb25e2dd22d21ed80fcd2ebc1688c0b5b803
+  ref: 34bedb25e2dd22d21ed80fcd2ebc1688c0b5b803
   specs:
     orchid (2.1.0)
       rails (~> 5.2.0)
