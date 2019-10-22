@@ -6,9 +6,8 @@ GeneralController.class_eval do
       route.path.spec.to_s
     end
     filtered = all_routes.select { |r| r[/explore|research|teach/] }
-    # get the current URL and remove this path from it
-    # because request.base_url will not accommodate sub-uris
-    base_url = request.url.sub("/content_pages", "")
+    # get the current base URL + sub URI if it exists
+    base_url = File.join(request.base_url, config.relative_url_root)
 
     urls = filtered.map do |path|
       # family letters only supports en as an alternate language
