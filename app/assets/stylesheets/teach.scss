@@ -1,0 +1,12 @@
+ol.materials {
+  list-style-type: upper-roman;
+}
+
+ul {
+  &.objectives {
+    list-style-type: square;
+  }
+  &.focus {
+    list-style-type: circle;
+  }
+}
