@@ -1,10 +1,18 @@
 es:
   teach:
     title: Aprende
-    lesson_general:
+    home:
       title: Recursos Para Profesores
     lesson_plans:
+      for_students: Para estudiantes
+      for_teachers: Para profesores
+      instruction_sequence: Secuencia Instruccional
+      learning_objectives: Objetivos de Aprendizaje
+      lesson_focus: En esta lección, nos enfocamos en…
+      materials: Materiales
+      overview: Resumen del Plan de Lección
       title: Planes de Lecciones
+      warning: "Aviso: El contenido es una mezcla de español y inglés"
     lesson01:
       title: Estilo de Vida Diario
     lesson02:
@@ -15,4 +23,3 @@ es:
       title: Trabajo
     lesson05:
       title: Identidad
-    warning: "Aviso: El contenido es una mezcla de español y inglés"

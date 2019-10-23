@@ -1,12 +1,29 @@
-ol.materials {
-  list-style-type: upper-roman;
+@import "bootstrap-variables";
+
+ol {
+  &.alpha {
+    list-style-type: upper-alpha;
+  }
+  &.materials {
+    list-style-type: upper-roman;
+  }
+  &.numbered {
+    list-style-type: decimal;
+  }
+
 }
 
 ul {
-  &.objectives {
-    list-style-type: square;
-  }
   &.focus {
     list-style-type: circle;
   }
+  &.objectives {
+    list-style-type: square;
+  }
+}
+
+.well {
+  background-color: $gray-lighter;
+  margin-bottom: 40px;
+  margin-top: 40px;
 }

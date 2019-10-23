@@ -4,7 +4,15 @@ en:
     lesson_general:
       title: Teacher Resources
     lesson_plans:
+      for_students: For students
+      for_teachers: For teachers
+      instruction_sequence: Instructional Sequence
+      lesson_focus: In this lesson, we focus on…
+      learning_objectives: Learning Objectives
+      materials: Materials
+      overview: Lesson Plan Overview
       title: Lesson Plans
+      warning: "Warning: Content is a mixture of Spanish and English"
     lesson01:
       title: Daily Life
     lesson02:
@@ -15,4 +23,3 @@ en:
       title: Work
     lesson05:
       title: Identity
-    warning: "Warning: Content is a mixture of Spanish and English"
