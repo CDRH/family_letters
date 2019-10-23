@@ -105,6 +105,8 @@ en:
   ###########
   explore:
     title: Explore
+    objects:
+      back: Return to English version
 
   #############
   # HOME PAGE #

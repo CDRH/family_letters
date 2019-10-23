@@ -99,6 +99,8 @@ es:
   ###########
   explore:
     title: Explora
+    objects:
+      back: Volver a la versión en español
 
   #############
   # HOME PAGE #
