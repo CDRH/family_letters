@@ -1,6 +1,6 @@
 <h1><%= t "teach.lesson03.title", default: "Teach and Learn" %></h1>
 
-<%= render "language_warning" %>
+<%= render "teach/lesson_partials/language_warning" %>
 
 <p>In this lesson we reflect on the importance of religious experience for many LatinX in the United States. We also develop our observation skills by analyzing the physical properties of an object and making inferences about its owner.</p>
 
@@ -23,14 +23,12 @@
 
   <h2 class="h4"><%= t "teach.lesson_plans.materials" %></h2>
 
-  <!--TODO insert links to objetcs in every "digital copy". Refer to Google Docs TEXTS FOR LEARN PAGE JUNE 18-2019 -->
-
   <ol class="materials">
-    <li>Digital images of front and back of personal rosary belonging to Jesusita Baros Torres.</li>
-    <li>Digital image of German rosary. 1760-1800. Silver filigree and glass beads. © Victoria and Albert Museum, London.</li>
-    <li>Digital images of front and back of memorial card for Jesusita Baros Torres. </li>
-    <li>Digital image of page one of personal letter from Jesusita Baros Torres to Santos Baros Schubert, dated April 7, 1961.</li>
-    <li>Digital image of page one of personal letter from Jesusita Baros Torres to Santos Baros Schubert, dated March, 11, 1958.</li>
+    <li><%= link_to "Digital images", item_path(id: "shan_m.001") %> of front and back of personal rosary belonging to Jesusita Baros Torres.</li>
+    <li><a href="http://collections.vam.ac.uk/item/O116870/rosary-unknown/" target="_blank" rel="nofollow noreferrer">Digital image of German rosary.</a> 1760-1800. Silver filigree and glass beads. © Victoria and Albert Museum, London.</a></li>
+    <li><%= link_to "Digital images", item_path(id: "shan_d.129") %> of front and back of memorial card for Jesusita Baros Torres.</li>
+    <li><%= link_to "Digital image", item_path(id: "shan_L198.meta") %> of page one of personal letter from Jesusita Baros Torres to Santos Baros Schubert, dated April 7, 1961.</li>
+    <li><%= link_to "Digital image", item_path(id: "shan_L196.meta") %> of page one of personal letter from Jesusita Baros Torres to Santos Baros Schubert, dated March, 11, 1958.</li>
     <li>
       Library of Congress
       <a href="http://www.loc.gov/teachers/usingprimarysources/resources/Analyzing_Books_and_Other_Printed_Texts.pdf"
@@ -91,7 +89,7 @@
 
 <p>For this activity you will need to display side-by-side images of Jesusita Baros Torres’ rosary, and 18th Century silver and glass German rosary that belongs to the collection of the Victoria and Albert Museum in London. Without providing details about the provenance of the second image, invite students to compare both objects and to articulate what they think they know about the function and form of both rosaries. If appropriate, you may consider displaying on the board 3-5 phrases that will help students to make comparisons and express hypotheticals in Spanish.</p>
 
-<p>After every student in class has contributed a comment in Spanish to this comparison, you can let your students know that it is an image of a silver filigree and Murano glass bead rosary made between 1760-1800 in the south of Germany: <em> Fíjense que este de acá es un rosario muy bonito, de filigrana de plata y cuentas de vidrio de Murano, que fue hecho en el sur de Alemania entre 1760 y 1800. Filigrana, ¿conocen esa palabra? Es una palabra que viene del mundo de la joyería. Es una técnica para trabajar el metal así como en esta imagen. </em> Alternatively, you may wish to show the image in the context of the <a href="http://collections.vam.ac.uk/item/O116870/rosary-unknown/" target="_blank" ref="nofollow noreferrer">museum’s website.</a></p>
+<p>After every student in class has contributed a comment in Spanish to this comparison, you can let your students know that it is an image of a silver filigree and Murano glass bead rosary made between 1760-1800 in the south of Germany: <em>Fíjense que este de acá es un rosario muy bonito, de filigrana de plata y cuentas de vidrio de Murano, que fue hecho en el sur de Alemania entre 1760 y 1800. Filigrana, ¿conocen esa palabra? Es una palabra que viene del mundo de la joyería. Es una técnica para trabajar el metal así como en esta imagen. </em> Alternatively, you may wish to show the image in the context of the <a href="http://collections.vam.ac.uk/item/O116870/rosary-unknown/" target="_blank" ref="nofollow noreferrer">museum’s website.</a></p>
 
 <br>
 
@@ -107,7 +105,8 @@
 
 <p>In this activity, students analyze two letters sent by Jesusita Baros Torres to her daughter, Santos Baros Schubert, from Fort Lupton, CO, to Lincoln, NE in 1958 and 1961. These letters, written in Spanish, were the main form of communication between mother and daughter over the course of three decades.</p>
 
-<p>The first letter (L198, dated 1961), highlights Jesusita’s belief in the importance of transmission of the Catholic faith for the wellbeing of her family. The first letter (L196, dated 1958), highlights the importance of religious societies for the wellbeing of ethnic solidarity networks.</p>
+<%# TODO I changed the second line to say "second letter" although it is the first, chronologically, because previously both letters were listed as "first" letter...I decided the order of sentences might matter more than chronological but we should figure that out %>
+<p><%= link_to "The first letter", item_path(id: "shan_L198.meta") %> (L198, dated 1961), highlights Jesusita’s belief in the importance of transmission of the Catholic faith for the wellbeing of her family. <%= link_to "The second letter", item_path(id: "shan_L196") %> (L196, dated 1958), highlights the importance of religious societies for the wellbeing of ethnic solidarity networks.</p>
 
 <p>After a brief introduction to the digital objects they will manipulate, students will be presented with a set of questions that will help them understand these objects and their historical context. Because you are more familiar with the proficiency level, profiles, and developmental needs of your own students, these questions are to be prepared by you, the teacher. A good resource to help you prepare these questions in a time-effective manner is the <a href="http://www.loc.gov/teachers/usingprimarysources/resources/Analyzing_Books_and_Other_Printed_Texts.pdf" target="_blank" rel="nofollow noreferrer">Primary Source Analysis Tool</a>, published by the Library of Congress, and freely available in electronic or pdf formats.</p>
 
@@ -157,9 +156,9 @@
 
 <p><em><%= t "teach.lesson_plans.for_students" %></em></p>
 
-<p>Ahora vamos a practicar nuestras habilidades de lectura y escritura. Santos Baros, de Fort Lupton Colorado, y William F. Schubert, de Lincoln, Nebraska, se casaron en una ceremonia religiosa que se realizó en Denver, Colorado, el nueve de noviembre de 1946, veinte años después de la fundación de la primera parroquia latina de la arquidiócesis de Denver. </p>
+<p>Ahora vamos a practicar nuestras habilidades de lectura y escritura. Santos Baros, de Fort Lupton Colorado, y William F. Schubert, de Lincoln, Nebraska, se casaron en una ceremonia religiosa que se realizó en Denver, Colorado, el nueve de noviembre de 1946, veinte años después de la fundación de la primera parroquia latina de la arquidiócesis de Denver.</p>
 
-<p>Lee este <a href="http://stcajetan.denverparish.com/es/about/historia/" target="_blank">texto breve</a> sobre el papel fundamental que jugaron las mujeres mexicanoamericanas en la fundación de esa parroquia. Después de leer, escribe un texto de una página en el que respondas las siguientes dos preguntas: ¿Por qué crees que era tan importante para ese grupo de mujeres tener una parroquia en la que se ofrecieran misas en español? Hoy en día, independientemente de su denominación religiosa, por qué crees que hay en todo Estados Unidos iglesias, templos y otras comunidades religiosas que ofrecen servicios en español incluso en localidades donde el porcentaje de la población latina es bajo?</p>
+<p>Lee este <a href="http://stcajetan.denverparish.com/es/about/historia/" target="_blank" rel="nofollow noreferrer">texto breve</a> sobre el papel fundamental que jugaron las mujeres mexicanoamericanas en la fundación de esa parroquia. Después de leer, escribe un texto de una página en el que respondas las siguientes dos preguntas: ¿Por qué crees que era tan importante para ese grupo de mujeres tener una parroquia en la que se ofrecieran misas en español? Hoy en día, independientemente de su denominación religiosa, por qué crees que hay en todo Estados Unidos iglesias, templos y otras comunidades religiosas que ofrecen servicios en español incluso en localidades donde el porcentaje de la población latina es bajo?</p>
 
 <p>El escribir, no te olvides de emplear los dos usos del futuro y del condicional que acabamos de revisar: </p>
 
@@ -238,31 +237,12 @@
 
 <br>
 
-<p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
+<!-- RABBIT HOLE INSTRUCTIONS -->
 
-<p> <em> Down the rabbit, whole… </em> is an optional activity designed to be informal, ludic, and open-ended. It involves students going on an internet rabbit hole with the intention of learning more about a seemingly minor detail presented in this lesson. This activity is also intended to reinforce students’ ability to discern between trustworthy and untrustworthy internet sites.</p>
-
-<p>This activity has three rules, which may be modified to suit the type and goals of your class:</p>
-
-<ul>
-  <li>The class or the group of students who will be playing (and not the teacher) agrees on a time limit (e.g. 10 minutes, half an hour, a class period, a week, a month).</li>
-  <li>At the end of the agreed time period, rabbit hole travelers share what they learned with the rest of the group in an informal conversation in Spanish.</li>
-  <li>Rabbit hole travelers show their work: What pages did they visit? What kind of pages were they? How many leaps (jumps from one site to another) took them to find the information they were looking for?</li>
-</ul>
-
-<br>
-
-<p id="rabbit"><strong>Down the rabbit, whole…</strong></p>
+<%= render "teach/lesson_partials/rabbit_hole" %>
 
 <p>¿Qué tienen en común las palabras <em>rosario</em>, <em> misbaha</em>, <em>japa mala</em> y <em>lestovka</em>?</p>
 
 <br>
 
-<h4>More lesson plans</h4>
-
-<div class="pull-left">
-  <%= link_to t("teach.lesson01.title", default: "Daily Life"), teach_lesson01_path, class: "btn btn-primary" %>
-  <%= link_to t("teach.lesson02.title", default: "Family"), teach_lesson02_path, class: "btn btn-primary" %>
-  <%= link_to t("teach.lesson04.title", default: "Work"), teach_lesson04_path, class: "btn btn-primary" %>
-  <%= link_to t("teach.lesson05.title", default: "Identity"), teach_lesson05_path, class: "btn btn-primary" %>
-</div>
+<%= render partial: "teach/lesson_partials/more_plans", locals: { lesson: 3 } %>

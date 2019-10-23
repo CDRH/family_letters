@@ -1,6 +1,6 @@
 <h1><%= t "teach.lesson04.title", default: "Teach and Learn" %></h1>
 
-<%= render "language_warning" %>
+<%= render "teach/lesson_partials/language_warning" %>
 
 <p>In this lesson we will learn about the experiences of Mexican immigrants during the first half of the Twentieth Century, and about the types of work that made survival of their families and communities possible.</p>
 
@@ -26,10 +26,10 @@
   <!--TODO insert links to objetcs in every "digital copy". Refer to Google Docs TEXTS FOR LEARN PAGE JUNE 18-2019 -->
 
   <ol class="materials">
-    <li>Digital copy of photograph of unknown migrant workers, Basin WY, 1937.</li>
-    <li>Digital copy of photograph of Maximino Torres with chickens, 1943.</li>
-    <li>Digital image of letter written by Jesusita Baros Torres to her daughter, Santos Baros Schubert, dated October 29, 1956.</li>
-    <li>Digital image of letter written by Maximino Torres to his uncle, Reynaldo Hurtado, dated February 5, 1923.</li>
+    <li><%= link_to "Digital copy", item_path(id: "shan_p.239") %> of photograph of unknown migrant workers, Basin WY, 1937.</li>
+    <li><%= link_to "Digital copy", item_path(id: "shan_p.207") %> of photograph of Maximino Torres with chickens, 1943.</li>
+    <li><%= link_to "Digital image", item_path(id: "shan_L156.meta") %> of letter written by Jesusita Baros Torres to her daughter, Santos Baros Schubert, dated October 29, 1956.</li>
+    <li><%= link_to "Digital image", item_path(id: "shan_L002.meta") %> of letter written by Maximino Torres to his uncle, Reynaldo Hurtado, dated February 5, 1923.</li>
     <li>
       Library of Congress
       <a href="http://www.loc.gov/teachers/usingprimarysources/resources/Analyzing_Books_and_Other_Printed_Texts.pdf"
@@ -251,21 +251,9 @@
 
 <br>
 
-<p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
+<!-- RABBIT HOLE INSTRUCTIONS -->
 
-<p> <em> Down the rabbit, whole… </em> is an optional activity designed to be informal, ludic, and open-ended. It involves students going on an internet rabbit hole with the intention of learning more about a seemingly minor detail presented in this lesson. This activity is also intended to reinforce students’ ability to discern between trustworthy and untrustworthy internet sites.</p>
-
-<p>This activity has three rules, which may be modified to suit the type and goals of your class:</p>
-
-<ul>
-  <li>The class or the group of students who will be playing (and not the teacher) agrees on a time limit (e.g. 10 minutes, half an hour, a class period, a week, a month).</li>
-  <li>At the end of the agreed time period, rabbit hole travelers share what they learned with the rest of the group in an informal conversation in Spanish.</li>
-  <li>Rabbit hole travelers show their work: What pages did they visit? What kind of pages were they? How many leaps (jumps from one site to another) took them to find the information they were looking for?</li>
-</ul>
-
-<br>
-
-<p id="rabbit"><strong>Down the rabbit, whole…</strong></p>
+<%= render "teach/lesson_partials/rabbit_hole" %>
 
 <p>En 1944, Maximino Torres vivía en Denver, Colorado. El 5 de mayo de ese año su hermano Clemente le envió una carta desde Huapamacato, Michoacán, México. En esa carta, le escribe este pasaje:</p>
 
@@ -281,11 +269,4 @@
 
 <br>
 
-<h4>More lesson plans</h4>
-
-<div class="pull-left">
-  <%= link_to t("teach.lesson01.title", default: "Daily Life"), teach_lesson01_path, class: "btn btn-primary" %>
-  <%= link_to t("teach.lesson02.title", default: "Family"), teach_lesson02_path, class: "btn btn-primary" %>
-  <%= link_to t("teach.lesson03.title", default: "Religion"), teach_lesson03_path, class: "btn btn-primary" %>
-  <%= link_to t("teach.lesson05.title", default: "Identity"), teach_lesson05_path, class: "btn btn-primary" %>
-</div>
+<%= render partial: "teach/lesson_partials/more_plans", locals: { lesson: 4 } %>

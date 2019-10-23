@@ -1,6 +1,6 @@
 <h1><%= t "teach.lesson05.title", default: "Teach and Learn" %></h1>
 
-<%= render "language_warning" %>
+<%= render "teach/lesson_partials/language_warning" %>
 
 <p>In this lesson we reflect on the many layers that make up LatinX identity. After examining a page of Jesusita Baros Torres’ citizenship study guide, we develop and write down our own ideas about the connection between the promises enshrined in the Constitution, and the many ways of being LatinX across the United States. </p>
 
@@ -25,6 +25,7 @@
   <!--TODO insert links to objetcs in every "digital copy". Refer to Google Docs TEXTS FOR LEARN PAGE JUNE 18-2019 -->
 
   <ol class="materials">
+    <%# TODO couldn't find this item from the specific date, anyway %>
     <li>Digital image of cover of citizenship study guide belonging to Mrs. Jesusita Baros, Ft. Lupton CO, 1941.</li>
     <li>Digital image of page 20, citizenship study guide belonging to Mrs. Jesusita Baros, Ft. Lupton CO, 1941.</li>
     <li>
@@ -255,31 +256,12 @@
 
 <br>
 
-<p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
+<!-- RABBIT HOLE INSTRUCTIONS -->
 
-<p> <em> Down the rabbit, whole… </em> is an optional activity designed to be informal, ludic, and open-ended. It involves students going on an internet rabbit hole with the intention of learning more about a seemingly minor detail presented in this lesson. This activity is also intended to reinforce students’ ability to discern between trustworthy and untrustworthy internet sites.</p>
-
-<p>This activity has three rules, which may be modified to suit the type and goals of your class:</p>
-
-<ul>
-  <li>The class or the group of students who will be playing (and not the teacher) agrees on a time limit (e.g. 10 minutes, half an hour, a class period, a week, a month).</li>
-  <li>At the end of the agreed time period, rabbit hole travelers share what they learned with the rest of the group in an informal conversation in Spanish.</li>
-  <li>Rabbit hole travelers show their work: What pages did they visit? What kind of pages were they? How many leaps (jumps from one site to another) took them to find the information they were looking for?</li>
-</ul>
-
-<br>
-
-<p id="rabbit"><strong>Down the rabbit, whole…</strong></p>
+<%= render "teach/lesson_partials/rabbit_hole" %>
 
 <p>El poema que leíste en esta unidad habla de los “caballeros tigre”. Esta es una referencia a los <em>ocēlōpilli</em>, nombre náhuatl de los caballeros jaguar del ejército azteca. Consulta en internet y responde: ¿Quiénes eran los <em>ocēlōpilli</em>? ¿Qué características suyas quiere destacar Alurista en este poema? ¿Por qué crees que Alurista identifica a los jóvenes mexicanoamericanos de su generación con los caballeros tigre, y no con los caballeros águila?</p>
 
 <br>
 
-<h4>More lesson plans</h4>
-
-<div class="pull-left">
-  <%= link_to t("teach.lesson01.title", default: "Daily Life"), teach_lesson01_path, class: "btn btn-primary" %>
-  <%= link_to t("teach.lesson02.title", default: "Family"), teach_lesson02_path, class: "btn btn-primary" %>
-  <%= link_to t("teach.lesson03.title", default: "Religion"), teach_lesson03_path, class: "btn btn-primary" %>
-  <%= link_to t("teach.lesson04.title", default: "Work"), teach_lesson04_path, class: "btn btn-primary" %>
-</div>
+<%= render partial: "teach/lesson_partials/more_plans", locals: { lesson: 5 } %>

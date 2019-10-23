@@ -1,6 +1,6 @@
 <h1><%= t "teach.lesson02.title", default: "Teach and Learn" %></h1>
 
-<%= render "language_warning" %>
+<%= render "teach/lesson_partials/language_warning" %>
 
 <p>In this lesson we examine the patterns of maintenance and loss of Spanish over three generations of one family. We also look at family pictures and practice describing and comparing in Spanish.</p>
 
@@ -25,11 +25,14 @@
 
   <!--TODO insert links to objetcs in every "digital copy". Refer to Google Docs TEXTS FOR LEARN PAGE JUNE 18-2019 -->
 
+  <%# TODO I didn't have access to that document and so I guessed as best I could
+      but we should check these files are what Isabel wants! %>
+
   <ol class="materials">
-    <li>Digital copy of wedding portrait of Helen & Jess Baros.</li>
-    <li>Digital copy of wedding portrait of Esperanza Estrada Quirarte and Jesús Ascensión Samaniego.</li>
-    <li>Digital copy of wedding portrait of Santos Baros and William F. Schubert.</li>
-    <li>Digital copy of personal letter from Jesusita Baros Torres to Santos Baros Schubert, July 25, 1966.</li>
+    <li><%= link_to "Digital copy", item_path(id: "shan_p.257") %> of wedding portrait of Helen & Jess Baros.</li>
+    <li><%= link_to "Digital copy", item_path(id: "shan_p.073") %> of wedding portrait of Esperanza Estrada Quirarte and Jesús Ascensión Samaniego.</li>
+    <li><%= link_to "Digital copy", item_path(id: "shan_p.067") %> of wedding portrait of Santos Baros and William F. Schubert.</li>
+    <li><%= link_to "Digital copy", item_path(id: "shan_L218.meta") %> of personal letter from Jesusita Baros Torres to Santos Baros Schubert, July 25, 1966.</li>
     <li>
       Library of Congress
       <a href="http://www.loc.gov/teachers/usingprimarysources/resources/Analyzing_Books_and_Other_Printed_Texts.pdf"
@@ -108,7 +111,7 @@
 
 <p><em><%= t "teach.lesson_plans.for_students" %></em></p>
 
-<p>Ahora vamos a leer una carta que le envió  Jesusita Baros Torres a su hija Santos Baros Schubert, en 1966. Jesusita vivía en Fort Lupton, Colorado, y Santos vivía en Lincoln, Nebraska. Santos se casó en 1946 con William F. Schubert. Para darles su permiso, Jesusita estableció tres condiciones: El matrimonio debía permanecer en Colorado, sus futuros hijos debían hablar español, y debían ser criados en la fe católica.  Con el paso de los años, solo se cumpliría una de esas tres condiciones.</p>
+<p>Ahora vamos a leer <%= link_to "una carta", item_path(id: "shan_L218.meta") %> que le envió Jesusita Baros Torres a su hija Santos Baros Schubert, en 1966. Jesusita vivía en Fort Lupton, Colorado, y Santos vivía en Lincoln, Nebraska. Santos se casó en 1946 con William F. Schubert. Para darles su permiso, Jesusita estableció tres condiciones: El matrimonio debía permanecer en Colorado, sus futuros hijos debían hablar español, y debían ser criados en la fe católica.  Con el paso de los años, solo se cumpliría una de esas tres condiciones.</p>
 
 <p>Usa las preguntas que te va a presentar tu maestr@ para ayudarte a analizar el texto de esta carta. </p>
 
@@ -265,29 +268,10 @@
 
 <br>
 
-<p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
+<!-- RABBIT HOLE INSTRUCTIONS -->
 
-<p> <em> Down the rabbit, whole… </em> is an optional activity designed to be informal, ludic, and open-ended. It involves students going on an internet rabbit hole with the intention of learning more about a seemingly minor detail presented in this lesson. This activity is also intended to reinforce students’ ability to discern between trustworthy and untrustworthy internet sites.</p>
-
-<p>This activity has three rules, which may be modified to suit the type and goals of your class:</p>
-
-<ul>
-  <li>The class or the group of students who will be playing (and not the teacher) agrees on a time limit (e.g. 10 minutes, half an hour, a class period, a week, a month).</li>
-  <li>At the end of the agreed time period, rabbit hole travelers share what they learned with the rest of the group in an informal conversation in Spanish.</li>
-  <li>Rabbit hole travelers show their work: What pages did they visit? What kind of pages were they? How many leaps (jumps from one site to another) took them to find the information they were looking for?</li>
-</ul>
-
-<br>
-
-<p id="rabbit"><strong>Down the rabbit, whole…</strong></p>
+<%= render "teach/lesson_partials/rabbit_hole" %>
 
 <p>¿Qué tienen en común las palabras <em>boda</em>, <em>voto</em> y <em>votar?</em> ¡Psst! Una pista: Una manera muy fácil de encontrar el significado de una palabra es colocar en tu buscador de internet: etimología + [palabra]</p>
 
-<h4>More lesson plans</h4>
-
-<div class="pull-left">
-  <%= link_to t("teach.lesson01.title", default: "Daily Life"), teach_lesson01_path, class: "btn btn-primary" %>
-  <%= link_to t("teach.lesson03.title", default: "Religion"), teach_lesson03_path, class: "btn btn-primary" %>
-  <%= link_to t("teach.lesson04.title", default: "Work"), teach_lesson04_path, class: "btn btn-primary" %>
-  <%= link_to t("teach.lesson05.title", default: "Identity"), teach_lesson05_path, class: "btn btn-primary" %>
-</div>
+<%= render partial: "teach/lesson_partials/more_plans", locals: { lesson: 2 } %>

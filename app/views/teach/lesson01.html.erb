@@ -1,6 +1,6 @@
 <h1><%= t "teach.lesson01.title", default: "Teach and Learn" %></h1>
 
-<%= render "language_warning" %>
+<%= render "teach/lesson_partials/language_warning" %>
 
 <p>In this lesson we examine a digital object and its context. Students will describe an everyday object to analyze its individual features and its relationship to its historical context. Drawing from their own environment, they will establish connections between their personal experience and that of the owner of the object they are describing.</p>
 
@@ -27,12 +27,12 @@
 
   <h2 class="h4"><%= t "teach.lesson_plans.materials" %></h2>
 
-  <!--TODO insert links to objetcs in every "digital copy" -->
 
   <ol class="materials">
-    <li>Digital copy of black and white photograph of William D. Schubert, Pamela L. Schubert and Robert S. Schubert, Christmas Day 1953, La Grange Illinois.</li>
-    <li>Digital copy of black and white photograph of a television.</li>
-    <li>Digital copy of Mor Valu trading stamps.</li>
+    <li><%= link_to "Digital copy", item_path(id: "shan_p.135") %> of black and white photograph of William D. Schubert, Pamela L. Schubert and Robert S. Schubert, Christmas Day 1953, La Grange Illinois.</li>
+    <li><%= link_to "Digital copy", item_path(id: "shan_p.153") %> of black and white photograph of a television.</li>
+    <li><%= link_to "Digital copy", item_path(id: "shan_m.026") %> of Mor Valu trading stamps.</li>
+    <!-- TODO this letter is not currently in our API! There is only one letter written Nov 13, 1958 and it is not from / to the below people -->
     <li>Digital copy, translation and transcription of letter written by Jesusita B. Torres to her daughter, Mrs. W.F. Schubert, dated November 13, 1958.</li>
     <li>
       Library of Congress
@@ -72,7 +72,7 @@ y experiencia social</h3>
 
 <p>The focus of this instructional sequence is the connection between everyday objects and social experience.</p>
 
-<p><strong>Step 1.</strong><em> In class. Display image Christmas Day, 1953</em> [ID:P67. File: shan_p.135], and allow enough time for students to observe the image without interruptions.</p>
+<p><strong>Step 1.</strong><em> In class. Display image <%= link_to "Christmas Day, 1953", item_path(id: "shan_p.135") %></em>, and allow enough time for students to observe the image without interruptions.</p>
 
 <p><strong>Step 2.</strong> After a few minutes, ask your students what they see. Consider displaying on the board a list of vocabulary and phrases that will help your students make a detailed description in Spanish. </p>
 
@@ -88,7 +88,7 @@ y experiencia social</h3>
 
 <p>In this activity, students will practice making detailed descriptions in Spanish and will make inferences about the social and historical context of an everyday object. By analyzing and describing the image of an everyday object in their own lives, they will also reflect about their own experience. </p>
 
-<p><strong>Step 1.</strong> Display a second image from the same home and the same historical period. This is a black and white photograph of a television with tchotchkes on top [ID: P76. File:shan_p.153]</p>
+<p><strong>Step 1.</strong> Display a second image from the same home and the same historical period. This is a <%= link_to "black and white photograph", item_path(id: "shan_p.153") %> of a television with tchotchkes on top.</p>
 
 <p><strong>Step 2.</strong> Working in pairs, ask students to describe in Spanish the objects they see on top of the television. They must describe at least two characteristics (texture, use, material, volume, etc.) for each item.</p>
 
@@ -98,15 +98,15 @@ y experiencia social</h3>
 
 <br>
 
-<p id="mira"><strong> Mira otra vez, mira más de cerca</strong></p>
+<p id="mira"><strong>Mira otra vez, mira más de cerca</strong></p>
 
 <p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
 
-<p> This activity includes a brief pre-activity reading, and a set of post-analysis questions that will help your students think about the context and features of the digital object with which they are working.</p>
+<p>This activity includes a brief pre-activity reading, and a set of post-analysis questions that will help your students think about the context and features of the digital object with which they are working.</p>
 
 <!-- TODO A link to the pdf document is embedded in the words “Primary Source Analysis Tool” -->
 
-<p>Because you are more familiar with the proficiency level, profiles, and developmental needs of your own students, you may, of course, which to add your own. A good resource to help you prepare in a time-effective manner is the <em>Primary Source Analysis Tool </em>, published by the Library of Congress, and freely available in electronic or pdf formats.</p>
+<p>Because you are more familiar with the proficiency level, profiles, and developmental needs of your own students, you may, of course, which to add your own. A good resource to help you prepare in a time-effective manner is the <em>Primary Source Analysis Tool</em>, published by the Library of Congress, and freely available in electronic or pdf formats.</p>
 
 <br>
 
@@ -128,17 +128,18 @@ y experiencia social</h3>
 
 <p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
 
-<p>Present students with the set of following set of questions. Iff appropriate, add your own. Remember that you can save time and effort by using the <italics> Primary Source Analysis Tool <italics>, published by the Library of Congress.</p>
+<p>Present students with the set of following set of questions. If appropriate, add your own. Remember that you can save time and effort by using the <em>Primary Source Analysis Tool</em>, published by the Library of Congress.</p>
 
+<!-- TODO need a link to this letter -->
 <p>A. Lee la carta [L94] e identifica tres cosas que Jesse Baros, el hijo de Jesusita, compró para su casa nueva. ¿Qué reparaciones se hicieron en casa de Jesse Baros? ¿Qué opinaba Jesusita del plan de su hijo y su nuera de comprar una casa y mudarse lejos de ella?</p>
 
 <p>B. Al leer esta carta, notarás que algunos detalles nos dan pistas sobre la vida de quien la escribió. Por ejemplo, Jesusita no recibió mucha educación formal. Identifica tres palabras que no están escritas como las encontrarías en un libro y escríbelas en su forma estándar. Identifica dos palabras que son evidencia del contacto del inglés y el español en su comunidad.</p>
 
-<p>C. La lengua estándar es la variedad de una lengua que aprendemos en la escuela. Las palabras <em>ayga </em> y <em>dilates</em>, que encontrarás en esta carta, son dos formas muy antiguas que sobreviven en algunas variedades de español mexicano rural. Escribe la forma estándar de estas dos palabras.</p>
+<p>C. La lengua estándar es la variedad de una lengua que aprendemos en la escuela. Las palabras <em>ayga</em> y <em>dilates</em>, que encontrarás en esta carta, son dos formas muy antiguas que sobreviven en algunas variedades de español mexicano rural. Escribe la forma estándar de estas dos palabras.</p>
 
 <p>D. Usa el contexto para ayudarte y escribe qué pueden significar las dos palabras que aparecen resaltadas en estos dos fragmentos:</p>
 <p>“Compraron <strong> una jerga </strong> muy bonita que les costo $400”
-  <br>
+<br>
 “Y al jerry le pusieron su cuarto abajo en <strong>el soterano</strong>”</p>
 
 <!--TODO Description of objects and thumbnails as a linked PDF? Refer to Google Doc "TEXTS FOR LEARN PAGE JUNE 18/2019" -->
@@ -179,32 +180,44 @@ y experiencia social</h3>
 
 <table class="table table-responsive table-striped">
   <tr>
-    <td><p><em>En inglés, los verbos que terminan en -ing pueden significar dos cosas distintas...</em></p></td>
-    <td><p><em>En español usamos una terminación distinta para comunicar estos dos significados</em></p></td>
+    <td>
+      <p><em>En inglés, los verbos que terminan en -ing pueden significar dos cosas distintas...</em></p>
+    </td>
+    <td>
+      <p><em>En español usamos una terminación distinta para comunicar estos dos significados</em></p>
+    </td>
   </tr>
   <tr>
-    <td><strong>infinitivo</strong>
+    <td>
+      <strong>infinitivo</strong>
       <br>
-      <em> Playing is the right of every child </em>
+      <em>Playing is the right of every child </em>
       <br>
-      <p> Cosas que nadie está haciendo, verbos sin conjugar.</p></td>
-    <td><strong>infinitivo</strong>
+      <p>Cosas que nadie está haciendo, verbos sin conjugar.</p>
+    </td>
+    <td>
+      <strong>infinitivo</strong>
       <br>
       <em> Jugar es un derecho de todos los niños.</em>
       <br>
-      <p> Cosas que nadie está haciendo, verbos sin conjugar.</p></td>
+      <p> Cosas que nadie está haciendo, verbos sin conjugar.</p>
+    </td>
   </tr>
   <tr>
-    <td><strong>gerundio</strong>
+    <td>
+      <strong>gerundio</strong>
       <br>
-      <em> Pamela is playing with her doll and watching tv </em>
+      <em>Pamela is playing with her doll and watching tv</em>
       <br>
-      <p> Cosas que ocurren de manera simultánea o que están en proceso.</p></td>
-    <td><strong>gerundio</strong>
+      <p>Cosas que ocurren de manera simultánea o que están en proceso.</p>
+    </td>
+    <td>
+      <strong>gerundio</strong>
       <br>
-      <em> Pamela está jugando con su muñeca y viendo la televisión</em>
+      <em>Pamela está jugando con su muñeca y viendo la televisión</em>
       <br>
-      <p> Cosas que ocurren de manera simultánea o que están en proceso.</p></td>
+      <p>Cosas que ocurren de manera simultánea o que están en proceso.</p>
+    </td>
   </tr>
 </table>
 
@@ -220,15 +233,15 @@ y experiencia social</h3>
 
 <p><em><%= t "teach.lesson_plans.for_students" %></em></p>
 
-<p><strong>Para hablar de lengua: Fenómenos de contacto lingüístico </strong></p>
+<p><strong>Para hablar de lengua: Fenómenos de contacto lingüístico</strong></p>
 
-<p> Cada vez que los hablantes de dos o más lenguas interactúan de manera sostenida se producen fenómenos lingüísticos específicos, que son resultado de la influencia de una lengua sobre otra. Algunos, como el préstamo de palabras, ocurren en todas las lenguas. Otros son el resultado del contacto estrecho e intenso de dos o más grupos de hablantes en un mismo espacio . Por ser parte de la experiencia bilingüe de sus hablantes, los fenómenos de contacto lingüístico son una característica importante del español de los Estados Unidos.</p>
+<p>Cada vez que los hablantes de dos o más lenguas interactúan de manera sostenida se producen fenómenos lingüísticos específicos, que son resultado de la influencia de una lengua sobre otra. Algunos, como el préstamo de palabras, ocurren en todas las lenguas. Otros son el resultado del contacto estrecho e intenso de dos o más grupos de hablantes en un mismo espacio . Por ser parte de la experiencia bilingüe de sus hablantes, los fenómenos de contacto lingüístico son una característica importante del español de los Estados Unidos.</p>
 
 <p>Veámos algunos de ellos:</p>
 
-<p><em> Cambio o alternancia de códigos </em></p>
+<p><em>Cambio o alternancia de códigos</em></p>
 
-<p> Es el uso de dos o más lenguas en un mismo segmento de habla o de escritura. Puede ser interoracional (cuando ocurre entre dos frases distintas), o intraoracional (cuando ocurre dentro de una misma frase).</p>
+<p>Es el uso de dos o más lenguas en un mismo segmento de habla o de escritura. Puede ser interoracional (cuando ocurre entre dos frases distintas), o intraoracional (cuando ocurre dentro de una misma frase).</p>
 
 <p>Contrario a lo que pudiera parecerle a una persona monolingüe, la alternancia de códigos sigue reglas sintácticas y pragmáticas complejas que demuestran un alto nivel de bilingüismo. En la mayoría de lo casos, el cambio de código no sucede porque un hablante olvide o no conozca una palabra, sino porque conoce su dimensión simbólica.
 Otros motivos para la alternancia de código son: Para dar énfasis, para demostrar solidaridad, para citar lo que dijo otra persona en el idioma que lo dijo, porque no existe un concepto equivalente, para jugar con el lenguaje, o para referirse a algo que no existe o no es común en la lengua meta (Potowski, 2010).</p>
@@ -253,7 +266,7 @@ Por ejemplo: Ir al juzgado-> Ir a la casa de corte <-Go to the courthouse</p>
 
 <p><strong>Después de leer</strong></p>
 
-<p> A. ¿Cuál de los fenómenos lingüísticos que se describen en esta lectura ocurre en todas las lenguas del mundo? </p>
+<p>A. ¿Cuál de los fenómenos lingüísticos que se describen en esta lectura ocurre en todas las lenguas del mundo? </p>
 
 <p>B. Vuelve a leer la carta que le envió Jesusita Baros Torres a su hija Santos en noviembre de 1958. Marca tres ejemplos de la influencia del inglés en la escritura en español de Jesusita. Identifica qué tipo de fenómeno lingüístico ilustra cada uno.</p>
 
@@ -281,29 +294,12 @@ Por ejemplo: Ir al juzgado-> Ir a la casa de corte <-Go to the courthouse</p>
 
 <br>
 
-<p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
+<!-- RABBIT HOLE INSTRUCTIONS -->
 
-<p> <em> Down the rabbit, whole… </em> is an optional activity designed to be informal, ludic, and open-ended. It involves students going on an internet rabbit hole with the intention of learning more about a seemingly minor detail presented in this lesson. This activity is also intended to reinforce students’ ability to discern between trustworthy and untrustworthy internet sites.</p>
-
-<p>This activity has three rules, which may be modified to suit the type and goals of your class:</p>
-
-<ul>
-  <li>The class or the group of students who will be playing (and not the teacher) agrees on a time limit (e.g. 10 minutes, half an hour, a class period, a week, a month).</li>
-  <li>At the end of the agreed time period, rabbit hole travelers share what they learned with the rest of the group in an informal conversation in Spanish.</li>
-  <li>Rabbit hole travelers show their work: What pages did they visit? What kind of pages were they? How many leaps (jumps from one site to another) took them to find the information they were looking for?</li>
-</ul>
-
-<br>
-
-<p id="rabbit"><strong>Down the rabbit, whole…</strong></p>
+<%= render "teach/lesson_partials/rabbit_hole" %>
 
 <p>La pintora mexicanoamericana Carmen Lomas Garza nació en Kingsville, Texas en 1948. Sus cuadros, famosos en todo el mundo, reflejan una fuerte influencia del arte popular mexicano. Las pinturas de Lomas Garza retratan escenas de la vida cotidiana en la comunidad mexicanoamericana de Kingsville en la primera mitad del siglo XX. </p>
 
 <p>El cuadro <em>Cakewalk</em> parece, a primera vista, un día de fiesta común y corriente. En realidad, este cuadro retrata un evento para recaudar fondos para la organización American GI Forum. Usa Google Images para ver una copia de cuadro. ¿Qué ves? Mira bien los detalles. ¿Qué te llama la atención? ¿Qué es el American GI Forum? ¿Por qué es importante para la historia de las comunidades mexicanoamericanas?</p>
 
-<div class="pull-left">
-  <%= link_to t("teach.lesson02.title", default: "Family"), teach_lesson02_path, class: "btn btn-primary" %>
-  <%= link_to t("teach.lesson03.title", default: "Religion"), teach_lesson03_path, class: "btn btn-primary" %>
-  <%= link_to t("teach.lesson04.title", default: "Work"), teach_lesson04_path, class: "btn btn-primary" %>
-  <%= link_to t("teach.lesson05.title", default: "Identity"), teach_lesson05_path, class: "btn btn-primary" %>
-</div>
+<%= render partial: "teach/lesson_partials/more_plans", locals: { lesson: 1 } %>
