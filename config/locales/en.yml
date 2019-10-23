@@ -323,24 +323,3 @@ en:
       en_help: Search English text only
       # CUSTOM screenreader label for more information
       information: Information
-
-  #########
-  # TEACH #
-  #########
-  teach:
-    title: Learn
-    lesson_general:
-      title: Teacher Resources
-    lesson_plans:
-      title: Lesson Plans
-    lesson01:
-      title: Daily Life
-    lesson02:
-      title: Family
-    lesson03:
-      title: Religion
-    lesson04:
-      title: Work
-    lesson05:
-      title: Identity 
-

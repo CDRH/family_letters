@@ -1,0 +1,18 @@
+en:
+  teach:
+    title: Learn
+    lesson_general:
+      title: Teacher Resources
+    lesson_plans:
+      title: Lesson Plans
+    lesson01:
+      title: Daily Life
+    lesson02:
+      title: Family
+    lesson03:
+      title: Religion
+    lesson04:
+      title: Work
+    lesson05:
+      title: Identity
+    warning: "Warning: Content is a mixture of Spanish and English"
