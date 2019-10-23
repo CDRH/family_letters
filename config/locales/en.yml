@@ -251,7 +251,7 @@ en:
       # labels for individual item descriptions in results
       item:
         # creators of the item
-        creator: Creator(s)
+        creator: Author(s)
         # the date of the item used for search results
         date: Date
         # the format of the item

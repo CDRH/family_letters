@@ -247,7 +247,7 @@ es:
       # labels for individual item descriptions in results
       item:
         # creators of the item
-        creator: Creador(es)
+        creator: Autor(es)
         # the date of the item used for search results
         date: Fecha
         # the format of the item
