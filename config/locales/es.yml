@@ -276,13 +276,13 @@ es:
     search_text: Buscar Texto
     sort:
       # alphabetically ascending sort
-      alpha_asc: "por orden alfabético (A-Z)" 
+      alpha_asc: "Por orden alfabético (A-Z)"
       # alphabetically descending sort
-      alpha_desc: "por orden alfabético (Z-A)"
+      alpha_desc: "Por orden alfabético (Z-A)"
       # sort by fewest to most items
-      count_asc: "por cantidad (menos objetos)"
+      count_asc: "Por cantidad (menos objetos)"
       # sort by most to fewest items
-      count_desc: "por cantidad (más objetos)"
+      count_desc: "Por cantidad (más objetos)"
       # creator ascending sort
       creator_asc: "Creador (A-Z)"
       # creator descending sort

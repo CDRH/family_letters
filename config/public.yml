@@ -25,7 +25,7 @@ default: &default
     facet_limit: 20
     facet_sort: count|desc
     # facet info on browse page
-    browse_sort: term|asc
+    browse_sort: count|desc
     # highlighting
     hl_fl: text_t_es,text_t_en
     hl_num: 5
