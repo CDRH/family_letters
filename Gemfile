@@ -60,7 +60,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'orchid', git: 'https://github.com/CDRH/orchid', branch: 'dev'
-gem 'sprockets', '~> 3.7'
 
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'jquery-rails', '~> 4.3'
