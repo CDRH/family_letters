@@ -1,4 +1,4 @@
-<h1><%= t "teach.lesson01.title", default: "Teach and Learn" %></h1>
+<h1><%= t "teach.lesson01.title" %></h1>
 
 <%= render "teach/lesson_partials/language_warning" %>
 
@@ -27,7 +27,6 @@
 
   <h2 class="h4"><%= t "teach.lesson_plans.materials" %></h2>
 
-
   <ol class="materials">
     <li><%= link_to "Digital copy", item_path(id: "shan_p.135") %> of black and white photograph of William D. Schubert, Pamela L. Schubert and Robert S. Schubert, Christmas Day 1953, La Grange Illinois.</li>
     <li><%= link_to "Digital copy", item_path(id: "shan_p.153") %> of black and white photograph of a television.</li>
@@ -42,65 +41,54 @@
     </li>
   </ol>
 </div>
-<!-- TODO check alignment, I believe justify is better -->
 
-<h2 class="h4"><%= t "teach.lesson_plans.instruction_sequence" %></h2>
+<h2><%= t "teach.lesson_plans.instruction_sequence" %></h2>
 
-<h3 class="h5">La vida secreta de una cuchara: Objetos domésticos, historia familiar
-y experiencia social</h3>
-
-<br>
-
-<p><strong><%= t "teach.lesson_plans.overview" %></strong></p>
-
-<ol class="numbered">
-  <li><a href="#antes">Antes de empezar</a></li>
-  <li><a href="#continuar">Para continuar la conversación</a></li>
-  <li><a href="#mira">Mira otra vez, mira más de cerca</a></li>
-  <li><a href="#manos">Después de leer: ¡manos a la obra!</a></li>
-  <li><a href="#grammar">Focus on Grammar</a></li>
-  <li><a href="#language">Focus on Language</a></li>
-  <li><a href="#paso">Un paso más: en comunidad</a></li>
-  <li><a href="#rabbit">Down the rabbit, whole...</a></li>
-</ol>
+<p class="lesson_sequence_subtitle h4">
+  La vida secreta de una cuchara: Objetos domésticos, historia familiar y experiencia social
+</p>
 
 <br>
 
-<p id="antes"><strong>Antes de empezar</strong></p>
+<%= render "teach/lesson_partials/table_of_contents" %>
 
-<p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
+<h3 id="antes">Antes de empezar</h3>
+
+<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
 
 <p>The focus of this instructional sequence is the connection between everyday objects and social experience.</p>
 
-<p><strong>Step 1.</strong><em> In class. Display image <%= link_to "Christmas Day, 1953", item_path(id: "shan_p.135") %></em>, and allow enough time for students to observe the image without interruptions.</p>
+<p><strong>Step 1.</strong><em>In class.</em> Display image <%= link_to "Christmas Day, 1953", item_path(id: "shan_p.135") %>, and allow enough time for students to observe the image without interruptions.</p>
 
-<p><strong>Step 2.</strong> After a few minutes, ask your students what they see. Consider displaying on the board a list of vocabulary and phrases that will help your students make a detailed description in Spanish. </p>
+<p><strong>Step 2.</strong> After a few minutes, ask your students what they see. Consider displaying on the board a list of vocabulary and phrases that will help your students make a detailed description in Spanish.</p>
 
-<p><strong>Step 3.</strong> Proceed to frame  topic of class discussion. The following script may be useful: <em>Los objetos de la vida cotidiana nos dicen mucho sobre la experiencia social, cultural y lingüística de las personas. Lo cotidiano se desarrolla en un contexto social específico. El análisis de estos artefactos nos permite identificar características de la vida de quienes los usan. Los objetos que nos rodean en el día a día cuentan historias sobre quiénes somos, qué hacemos, y qué atesoramos.</em></p>
+<p><strong>Step 3.</strong> Proceed to frame  topic of class discussion. The following script may be useful:
+  <blockquote>Los objetos de la vida cotidiana nos dicen mucho sobre la experiencia social, cultural y lingüística de las personas. Lo cotidiano se desarrolla en un contexto social específico. El análisis de estos artefactos nos permite identificar características de la vida de quienes los usan. Los objetos que nos rodean en el día a día cuentan historias sobre quiénes somos, qué hacemos, y qué atesoramos.</blockquote>
+</p>
 
 <p><strong>Step 4.</strong> Ask students what they (think) they know about the people represented in the photo. Who are they? What are they like? Where do they live? What do they treasure? How do you know? After every student has contributed something in Spanish to the conversation, share with your students the information about this image: A black and white photograph of siblings William D. Schubert, Pamela L. Schubert and Robert S. Schubert, taken at home, in LIncoln, Nebraska, on Christmas Day 1953. Consider extending the conversation to help students analyze the relationship between the seer and the seen: Who took the photo (e.g., the parents)? Who is assigning value and meaning to the images we consume?</p>
 
 <br>
 
-<p id="continuar"><strong>Para continuar la conversación</strong></p>
+<h3 id="continuar">Para continuar la conversación</h3>
 
-<p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
+<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
 
-<p>In this activity, students will practice making detailed descriptions in Spanish and will make inferences about the social and historical context of an everyday object. By analyzing and describing the image of an everyday object in their own lives, they will also reflect about their own experience. </p>
+<p>In this activity, students will practice making detailed descriptions in Spanish and will make inferences about the social and historical context of an everyday object. By analyzing and describing the image of an everyday object in their own lives, they will also reflect about their own experience.</p>
 
 <p><strong>Step 1.</strong> Display a second image from the same home and the same historical period. This is a <%= link_to "black and white photograph", item_path(id: "shan_p.153") %> of a television with tchotchkes on top.</p>
 
 <p><strong>Step 2.</strong> Working in pairs, ask students to describe in Spanish the objects they see on top of the television. They must describe at least two characteristics (texture, use, material, volume, etc.) for each item.</p>
 
-<p><strong>Step 3.</strong> Together, each pair of students must answer the following questions: <em>¿Qué les dicen esos objetos acerca de las personas que vivían en esa casa? ¿Por qué creen que  escogieron esos objetos y no otros para colocarlos encima de la televisión?</em></p>
+<p><strong>Step 3.</strong> Together, each pair of students must answer the following questions: <em>¿Qué les dicen esos objetos acerca de las personas que vivían en esa casa? ¿Por qué creen que escogieron esos objetos y no otros para colocarlos encima de la televisión?</em></p>
 
 <p><strong>Step 4.</strong> Ask each student in the pair to look through the photos on their phone and find a photo of a thing. Without context from the owner of the image, their classmate will describe the image in Spanish and will guess why it was important for the owner to take that photo. Tie it back: Who took the photo? Who is assigning value and meaning to the images we consume?</p>
 
 <br>
 
-<p id="mira"><strong>Mira otra vez, mira más de cerca</strong></p>
+<h3 id="mira">Mira otra vez, mira más de cerca</h3>
 
-<p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
+<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
 
 <p>This activity includes a brief pre-activity reading, and a set of post-analysis questions that will help your students think about the context and features of the digital object with which they are working.</p>
 
@@ -110,9 +98,9 @@ y experiencia social</h3>
 
 <br>
 
-<p><em><%= t "teach.lesson_plans.for_students" %></em></p>
+<h4><%= t "teach.lesson_plans.for_students" %></h4>
 
-<h3 class="h5">Para que mandes traer alguna cosa para los muchachos</h3>
+<p><strong>Para que mandes traer alguna cosa para los muchachos</strong></p>
 
 <p>Jesusita Baros Torres nació en Juchipila, Zacatecas, México, y emigró a los Estados Unidos en la década de 1920. Vivió en Fort Lupton, Colorado, casi cuarenta años, hasta que falleció en 1976. Como sucede en muchas familias, uno de sus hijos permaneció en la misma ciudad y los demás vivieron lejos de ella. Al casarse, su hija Santos se fue a vivir a Nebraska, donde crió su propia familia.</p>
 
@@ -126,7 +114,7 @@ y experiencia social</h3>
 
 <br>
 
-<p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
+<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
 
 <p>Present students with the set of following set of questions. If appropriate, add your own. Remember that you can save time and effort by using the <em>Primary Source Analysis Tool</em>, published by the Library of Congress.</p>
 
@@ -154,9 +142,9 @@ y experiencia social</h3>
 
 <br>
 
-<p id="manos"><strong>Después de leer: ¡manos a la obra!</strong></p>
+<h3 id="manos">Después de leer: ¡manos a la obra!</h3>
 
-<p><em><%= t "teach.lesson_plans.for_students" %></em></p>
+<h4><%= t "teach.lesson_plans.for_students" %></h4>
 
 <p> <em>Después de leer.</em> Observa la forma en la que Jesusita empieza y termina su carta. Aunque la ortografía no es estándar, notarás que su estilo es bastante formal. Imagina que tú eres uno de los tres niños que recibió un juguete comprado con estas estampillas. Escríbele una carta en español de entre 5-10 líneas para agradecer el regalo. Incluye una descripción del juguete y de cómo lo estás usando. Por ejemplo: <em> “Muchas gracias. Con las estampillas que nos mandaste mi mamá me compró un avión para armar. Es de plástico rojo y verde y ya lo estoy armando con mis hermanos.”</em> </p>
 
@@ -164,15 +152,15 @@ y experiencia social</h3>
 
 <br>
 
-<h3 class="h5" id="grammar">Focus on grammar: Contrast between infinitive and gerund in Spanish</h3>
+<h3 id="grammar">Focus on grammar: Contrast between infinitive and gerund in Spanish</h3>
 
-<p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
+<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
 
 <p>Before students begin to write their thank you notes, review with them the contrast between infinitive and gerund in Spanish.</p>
 
 <br>
 
-<p><em><%= t "teach.lesson_plans.for_students" %></em></p>
+<h4><%= t "teach.lesson_plans.for_students" %></h4>
 
 <p>Después de leer. Ahora vamos a practicar nuestras habilidades de descripción. Al completar esta actividad verifica que usaste infinitivo (verbos que terminan en -ar, -er, -ir) para hablar de cosas que todavía no ocurren, y gerundio (verbos que terminan en -ando, -iendo) para hablar de cosas que están en proceso, o que están ocurriendo de manera simultánea.</p>
 
@@ -223,15 +211,15 @@ y experiencia social</h3>
 
 <br>
 
-<h3 class="h5" id="language">Focus on language: Language contact phenomena</h3>
+<h3 id="language">Focus on language: Language contact phenomena</h3>
 
-<p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
+<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
 
 <p>In this activity, students practice their reading skills while they learn about language contact phenomena.</p>
 
 <br>
 
-<p><em><%= t "teach.lesson_plans.for_students" %></em></p>
+<h4><%= t "teach.lesson_plans.for_students" %></h4>
 
 <p><strong>Para hablar de lengua: Fenómenos de contacto lingüístico</strong></p>
 
@@ -274,15 +262,15 @@ Por ejemplo: Ir al juzgado-> Ir a la casa de corte <-Go to the courthouse</p>
 
 <br>
 
-<h3 class="h5" id="paso">Un paso más: en comunidad</h3>
+<h3 id="paso">Un paso más: en comunidad</h3>
 
-<p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
+<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
 
 <p>In this extension activity, students establish a link between the topic of this lesson and LatinX experiences in their own community.</p>
 
 <br>
 
-<p><em><%= t "teach.lesson_plans.for_students" %></em></p>
+<h4><%= t "teach.lesson_plans.for_students" %></h4>
 
 <p>En esta lección hemos practicado cómo describir objetos en español. En esta actividad vamos a practicar la descripción de lugares.</p>
 

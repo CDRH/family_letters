@@ -41,32 +41,20 @@
     </li>
   </ol>
 </div>
-<!-- TODO check alignment, I believe justify is better -->
 
-<h2 class="h4"><%= t "teach.lesson_plans.instruction_sequence" %></h2>
+<h2><%= t "teach.lesson_plans.instruction_sequence" %></h2>
 
-<h3 class="h5">Al cabo que sabes leer en español</h3>
-
-<br>
-
-<p><strong><%= t "teach.lesson_plans.overview" %></strong></p>
-
-<ol class="numbered">
-  <li><a href="#antes">Antes de empezar</a></li>
-  <li><a href="#continuar">Para continuar la conversación</a></li>
-  <li><a href="#mira">Mira otra vez, mira más de cerca</a></li>
-  <li><a href="#manos">Después de leer: ¡manos a la obra!</a></li>
-  <li><a href="#grammar">Focus on Grammar</a></li>
-  <li><a href="#language">Focus on Language</a></li>
-  <li><a href="#paso">Un paso más: en comunidad</a></li>
-  <li><a href="#rabbit">Down the rabbit, whole...</a></li>
-</ol>
+<p class="lesson_sequence_subtitle h4">
+  Al cabo que sabes leer en español
+</p>
 
 <br>
 
-<p id="antes"><strong>Antes de empezar</strong></p>
+<%= render "teach/lesson_partials/table_of_contents" %>
 
-<p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
+<h3 id="antes">Antes de empezar</h3>
+
+<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
 
 <p>The focus of this instructional sequence is intergenerational maintenance and loss of Spanish in LatinX families. With your help, students will reflect about what is lost, beyond language, when two or more generations of the same family cannot communicate with each other. As a secondary goal, students will practice making comparisons in Spanish.</p>
 
@@ -78,9 +66,9 @@
 
 <br>
 
-<p id="continuar"><strong>Para continuar la conversación</strong></p>
+<h3 id="continuar">Para continuar la conversación</h3>
 
-<p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
+<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
 
 <p>In this activity, students will analyze a set of three related images and will practice making comparisons in Spanish. Present your students with a set of three related wedding portraits (P128 and P33). Two of them were taken in Colorado, in the 1940s, to commemorate the wedding of Jesusita Baros Torres’ two eldest children. The third one (P36), was taken in Zacatecas, Mexico, in the 1960s to commemorate the wedding of Jesusita Baros Torres’ grandson. Connect this activity to the topic of change that happens in families across time, and location. Present each image individually and then the three images side by side. Explain who is depicted and where were the images taken. Allow students enough time to analyze each image. Ask students to make notes on setting, clothing, stance, facial expression, position of bodies in relation to each other, age, elements that are present in the three images and elements that may be present in one but missing on the others.</p>
 
@@ -88,9 +76,9 @@
 
 <br>
 
-<p id="mira"><strong> Mira otra vez, mira más de cerca</strong></p>
+<h3 id="mira"> Mira otra vez, mira más de cerca</h3>
 
-<p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
+<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
 
 <p> Santos Baros, of Fort Lupton, Colorado, married William F. Schubert, of Lincoln, Nebraska, in 1946. Her mother, Jesusita Baros Torres, set three conditions to grant her blessing: that the couple remain in Colorado, that their future children speak Spanish, and that they be brought up in the Catholic faith. Over the course of the coming decades, only the latter would come to pass.</p>
 
@@ -109,16 +97,15 @@
 
 <br>
 
-<p><em><%= t "teach.lesson_plans.for_students" %></em></p>
+<h4><%= t "teach.lesson_plans.for_students" %></h4>
 
-<p>Ahora vamos a leer <%= link_to "una carta", item_path(id: "shan_L218.meta") %> que le envió Jesusita Baros Torres a su hija Santos Baros Schubert, en 1966. Jesusita vivía en Fort Lupton, Colorado, y Santos vivía en Lincoln, Nebraska. Santos se casó en 1946 con William F. Schubert. Para darles su permiso, Jesusita estableció tres condiciones: El matrimonio debía permanecer en Colorado, sus futuros hijos debían hablar español, y debían ser criados en la fe católica.  Con el paso de los años, solo se cumpliría una de esas tres condiciones.</p>
+<p>Ahora vamos a leer una carta que le envió Jesusita Baros Torres a su hija Santos Baros Schubert, en 1966. Jesusita vivía en Fort Lupton, Colorado, y Santos vivía en Lincoln, Nebraska. Santos se casó en 1946 con William F. Schubert. Para darles su permiso, Jesusita estableció tres condiciones: El matrimonio debía permanecer en Colorado, sus futuros hijos debían hablar español, y debían ser criados en la fe católica.  Con el paso de los años, solo se cumpliría una de esas tres condiciones.</p>
 
 <p>Usa las preguntas que te va a presentar tu maestr@ para ayudarte a analizar el texto de esta carta. </p>
 
-
 <br>
 
-<p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
+<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
 
 <p>Present students with the set of questions you’ve prepared to help them work with these digital objects. Remember that you can save time and effort by using the <em> Primary Source Analysis Tool</em>, published by the Library of Congress.</p>
 
@@ -134,29 +121,27 @@
 
 <br>
 
-<p id="manos"><strong>Después de leer: ¡manos a la obra!</strong></p>
+<h3 id="manos">Después de leer: ¡manos a la obra!</h3>
 
-<p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
+<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
 
 <p>After reading the letter sent by Jesusita Baros Torres to her daughter Santos in 1966, students will write a 1-2 page text in Spanish in which they will compare both women’s linguistic experience. Using the clues embedded in the letter, as well as the information students already possess about being bilingual in the context of the United States, students will compare both women’s perceptions about the benefits and costs of Speaking Spanish both within their own household and in the wider community in which they lived. Remind students that they will use the preterite to describe things that happened once or had a clear beginning and end in the past, and imperfect to describe habitual events or states in the past.</p>
 
 <br>
 
-<h3 class="h5" id="grammar">Focus on grammar: Use of preterite and imperfect to describe past events</h3>
+<h3 id="grammar">Focus on grammar: Use of preterite and imperfect to describe past events</h3>
 
-<p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
+<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
 
 <p>Before students begin to write their texts, review with them the difference in the use of preterite and imperfect to describe past events.</p>
 
 <br>
 
-<p><em><%= t "teach.lesson_plans.for_students" %></em></p>
+<h4><%= t "teach.lesson_plans.for_students" %></h4>
 
 <p>Ahora vamos a practicar nuestras habilidades de lectura y escritura. Después de leer la carta que le escribió Jesusita Baros Torres a su hija Santos en 1966, vas a escribir un texto en español de entre 1-2 páginas en el que vas a comparar la experiencia lingüística de estas dos mujeres. Usa las pistas que aparecen en la carta y lo que ya conoces sobre la experiencia de ser hispanohablante en Estados Unidos para comparar las posibles ideas de madre e hija sobre los beneficios y costos de hablar español tanto en su propio hogar como en la comunidad en donde vivían.</p>
 
 <p>Después de escribir, verifica que usaste el pretérito, para hablar de cosas que ocurrieron una vez en el pasado (o que tienen principio y fin claros), y el imperfecto, para hablar de cosas que ocurrieron muchas veces en el pasado (o que no tienen un principio y un fin claro).</p>
-
-<!--TODO formating and design of this table -->
 
 <table class="table table-responsive table-striped">
   <tr>
@@ -175,15 +160,15 @@
 
 <br>
 
-<h3 class="h5" id="language">Focus on language: Intergenerational maintenance and loss of minority languages</h3>
+<h3 id="language">Focus on language: Intergenerational maintenance and loss of minority languages</h3>
 
-<p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
+<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
 
 <p>In this activity, students learn about patterns of intergenerational maintenance and loss of Spanish in the context of the United States.</p>
 
 <br>
 
-<p><em><%= t "teach.lesson_plans.for_students" %></em></p>
+<h4><%= t "teach.lesson_plans.for_students" %></h4>
 
 <p><strong>Para hablar de lengua: El mantenimiento y la pérdida intergeneracional del español en Estados Unidos</strong></p>
 
@@ -211,13 +196,13 @@
 
 <h3 id="paso" class="h5">Un paso más: en comunidad</h3>
 
-<p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
+<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
 
 <p>In this extension activity, students establish a link between the topic of this lesson and LatinX experiences in their own community.</p>
 
 <br>
 
-<p><em><%= t "teach.lesson_plans.for_students" %></em></p>
+<h4><%= t "teach.lesson_plans.for_students" %></h4>
 
 <p>Santos Baros y William F. Schubert se casaron en Denver, Colorado, en noviembre de 1946. En ese año, Santos trabajaba en Denver, limpiando vagones en los trenes Santa Fe Zephyr, Denver Zephyr y Texas Zephyr. Bill acababa de salir del ejército, y trabajaba en Chicago, Illinois, para una compañía de ferrocarril.</p>
 

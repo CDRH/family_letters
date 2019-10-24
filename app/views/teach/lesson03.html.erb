@@ -26,7 +26,7 @@
   <ol class="materials">
     <li><%= link_to "Digital images", item_path(id: "shan_m.001") %> of front and back of personal rosary belonging to Jesusita Baros Torres.</li>
     <li><a href="http://collections.vam.ac.uk/item/O116870/rosary-unknown/" target="_blank" rel="nofollow noreferrer">Digital image of German rosary.</a> 1760-1800. Silver filigree and glass beads. © Victoria and Albert Museum, London.</a></li>
-    <li><%= link_to "Digital images", item_path(id: "shan_d.129") %> of front and back of memorial card for Jesusita Baros Torres.</li>
+    <li><%= link_to "Digital images", item_path(id: "shan_d.127") %> of front and back of memorial card for Jesusita Baros Torres.</li>
     <li><%= link_to "Digital image", item_path(id: "shan_L198.meta") %> of page one of personal letter from Jesusita Baros Torres to Santos Baros Schubert, dated April 7, 1961.</li>
     <li><%= link_to "Digital image", item_path(id: "shan_L196.meta") %> of page one of personal letter from Jesusita Baros Torres to Santos Baros Schubert, dated March, 11, 1958.</li>
     <li>
@@ -38,32 +38,19 @@
   </ol>
 </div>
 
-<!-- TODO check alignment, I believe justify is better -->
-
 <h2 class="h4"><%= t "teach.lesson_plans.instruction_sequence" %></h2>
 
-<h5>Pido a Dios por ustedes</h5>
+<p class="lesson_sequence_subtitle h4">
+  Pido a Dios por ustedes
+</p>
 
 <br>
 
-<p><strong><%= t "teach.lesson_plans.overview" %></strong></p>
+<%= render "teach/lesson_partials/table_of_contents" %>
 
-<ol class="numbered">
-  <li><a href="#antes">Antes de empezar</a></li>
-  <li><a href="#continuar">Para continuar la conversación</a></li>
-  <li><a href="#mira">Mira otra vez, mira más de cerca</a></li>
-  <li><a href="#manos">Después de leer: ¡manos a la obra!</a></li>
-  <li><a href="#grammar">Focus on Grammar</a></li>
-  <li><a href="#language">Focus on Language</a></li>
-  <li><a href="#paso">Un paso más: en comunidad</a></li>
-  <li><a href="#rabbit">Down the rabbit, whole...</a></li>
-</ol>
+<h3 id="antes">Antes de empezar</h3>
 
-<br>
-
-<p id="antes"><strong>Antes de empezar</strong></p>
-
-<p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
+<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
 
 <p>The focus of this instructional sequence is the importance of religion for many LatinX families and communities. In this lesson, students manipulate a set of digital objects related to the religious practice of one Mexican American woman, and make inferences about her social experience.</p>
 
@@ -81,40 +68,44 @@
 
 <br>
 
-<p id="continuar"><strong>Para continuar la conversación</strong></p>
+<h3 id="continuar">Para continuar la conversación</h3>
 
-<p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
+<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
 
 <p>In this activity, students compare two images of similar objects and make inferences about their use and the identity of their owners. While doing so, they practice making comparisons and expressing hypotheticals in Spanish. </p>
 
 <p>For this activity you will need to display side-by-side images of Jesusita Baros Torres’ rosary, and 18th Century silver and glass German rosary that belongs to the collection of the Victoria and Albert Museum in London. Without providing details about the provenance of the second image, invite students to compare both objects and to articulate what they think they know about the function and form of both rosaries. If appropriate, you may consider displaying on the board 3-5 phrases that will help students to make comparisons and express hypotheticals in Spanish.</p>
 
-<p>After every student in class has contributed a comment in Spanish to this comparison, you can let your students know that it is an image of a silver filigree and Murano glass bead rosary made between 1760-1800 in the south of Germany: <em>Fíjense que este de acá es un rosario muy bonito, de filigrana de plata y cuentas de vidrio de Murano, que fue hecho en el sur de Alemania entre 1760 y 1800. Filigrana, ¿conocen esa palabra? Es una palabra que viene del mundo de la joyería. Es una técnica para trabajar el metal así como en esta imagen. </em> Alternatively, you may wish to show the image in the context of the <a href="http://collections.vam.ac.uk/item/O116870/rosary-unknown/" target="_blank" ref="nofollow noreferrer">museum’s website.</a></p>
+<p>After every student in class has contributed a comment in Spanish to this comparison, you can let your students know that it is an image of a silver filigree and Murano glass bead rosary made between 1760-1800 in the south of Germany:
+  <blockquote>
+    Fíjense que este de acá es un rosario muy bonito, de filigrana de plata y cuentas de vidrio de Murano, que fue hecho en el sur de Alemania entre 1760 y 1800. Filigrana, ¿conocen esa palabra? Es una palabra que viene del mundo de la joyería. Es una técnica para trabajar el metal así como en esta imagen.
+  </blockquote>
+  Alternatively, you may wish to show the image in the context of the <a href="http://collections.vam.ac.uk/item/O116870/rosary-unknown/" target="_blank" ref="nofollow noreferrer">museum’s website.</a>
+</p>
 
 <br>
 
-<p><em><%= t "teach.lesson_plans.for_students" %></em></p>
+<h4><%= t "teach.lesson_plans.for_students" %></h4>
 
 <p>Ahora vamos a comparar la imagen que acabamos de analizar con la de un objeto similar. Cuando observas las dos imágenes juntas, ¿qué sabes sobre esos dos objetos? ¿qué sabes sobre los materiales con los que fueron hechos? ¿para qué fueron hechos? ¿Qué te dicen esos dos objetos acerca de sus dueños? ¿Cómo lo sabes, qué detalles de cada imagen te hacen pensar eso? Comparte tus respuestas con tus compañeros. Si las necesitas, usa las frases que tu maestr@ escribió en el pizarrón para ayudarte.</p>
 
 <br>
 
-<p id="mira"><strong> Mira otra vez, mira más de cerca</strong></p>
+<h3 id="mira"> Mira otra vez, mira más de cerca</h3>
 
-<p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
+<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
 
 <p>In this activity, students analyze two letters sent by Jesusita Baros Torres to her daughter, Santos Baros Schubert, from Fort Lupton, CO, to Lincoln, NE in 1958 and 1961. These letters, written in Spanish, were the main form of communication between mother and daughter over the course of three decades.</p>
 
-<%# TODO I changed the second line to say "second letter" although it is the first, chronologically, because previously both letters were listed as "first" letter...I decided the order of sentences might matter more than chronological but we should figure that out %>
 <p><%= link_to "The first letter", item_path(id: "shan_L198.meta") %> (L198, dated 1961), highlights Jesusita’s belief in the importance of transmission of the Catholic faith for the wellbeing of her family. <%= link_to "The second letter", item_path(id: "shan_L196") %> (L196, dated 1958), highlights the importance of religious societies for the wellbeing of ethnic solidarity networks.</p>
 
 <p>After a brief introduction to the digital objects they will manipulate, students will be presented with a set of questions that will help them understand these objects and their historical context. Because you are more familiar with the proficiency level, profiles, and developmental needs of your own students, these questions are to be prepared by you, the teacher. A good resource to help you prepare these questions in a time-effective manner is the <a href="http://www.loc.gov/teachers/usingprimarysources/resources/Analyzing_Books_and_Other_Printed_Texts.pdf" target="_blank" rel="nofollow noreferrer">Primary Source Analysis Tool</a>, published by the Library of Congress, and freely available in electronic or pdf formats.</p>
 
 <br>
 
-<p><em><%= t "teach.lesson_plans.for_students" %></em></p>
+<h4><%= t "teach.lesson_plans.for_students" %></h4>
 
-<p>Las dos cartas que vas a leer fueron enviadas por Jesusita Baros Torres a su hija Santos Baros Schubert , desde Fort Lupton, Colorado, hasta Lincoln, Nebraska, en 1958 y 1961.</p>
+<p>Las dos cartas que vas a leer fueron enviadas por Jesusita Baros Torres a su hija Santos Baros Schubert, desde Fort Lupton, Colorado, hasta Lincoln, Nebraska, en 1958 y 1961.</p>
 
 <p>En una época en que las llamadas de larga distancia eran muy caras, recibir y enviar cartas era la mejor manera de enterarse de las noticias de la familia, pedir favores, hacer recomendaciones y mantener vivos los lazos afectivos. En los hogares en los que se hablaba una lengua adicional al inglés, también era una manera de mantener viva la lengua de la familia. Estas cartas, escritas en español, fueron la principal forma de comunicación entre madre e hija durante tres décadas.</p>
 
@@ -122,7 +113,7 @@
 
 <br>
 
-<p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
+<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
 
 <p>Present students with the set of questions you’ve prepared to help them work with these digital objects. Remember that you can save time and effort by using the <em> Primary Source Analysis Tool</em>, published by the Library of Congress.</p>
 
@@ -138,31 +129,29 @@
 
 <br>
 
-<p id="manos"><strong>Después de leer: ¡manos a la obra!</strong></p>
+<h3 id="manos">Después de leer: ¡manos a la obra!</h3>
 
-<p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
+<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
 
 <p>After completing the pre-reading activities and working with the digital objects selected for this lesson, students are assigned a short reading about the history of the creation of the first Catholic parish in Denver, CO. After reading, students are asked to complete a one-page writing assignment in which they will use conditional and simple future to speculate about past and present events. Before assigning this text, consider presenting students with a model.</p>
 
 <br>
 
-<h3 id="grammar" class="h5">Focus on grammar: Use of preterite and imperfect to describe past events</h3>
+<h3 id="grammar">Focus on grammar: Use of preterite and imperfect to describe past events</h3>
 
-<p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
+<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
 
 <p>Before students begin to write their texts, review with them the uses of the future and conditional to express probability.</p>
 
 <br>
 
-<p><em><%= t "teach.lesson_plans.for_students" %></em></p>
+<h4><%= t "teach.lesson_plans.for_students" %></h4>
 
 <p>Ahora vamos a practicar nuestras habilidades de lectura y escritura. Santos Baros, de Fort Lupton Colorado, y William F. Schubert, de Lincoln, Nebraska, se casaron en una ceremonia religiosa que se realizó en Denver, Colorado, el nueve de noviembre de 1946, veinte años después de la fundación de la primera parroquia latina de la arquidiócesis de Denver.</p>
 
 <p>Lee este <a href="http://stcajetan.denverparish.com/es/about/historia/" target="_blank" rel="nofollow noreferrer">texto breve</a> sobre el papel fundamental que jugaron las mujeres mexicanoamericanas en la fundación de esa parroquia. Después de leer, escribe un texto de una página en el que respondas las siguientes dos preguntas: ¿Por qué crees que era tan importante para ese grupo de mujeres tener una parroquia en la que se ofrecieran misas en español? Hoy en día, independientemente de su denominación religiosa, por qué crees que hay en todo Estados Unidos iglesias, templos y otras comunidades religiosas que ofrecen servicios en español incluso en localidades donde el porcentaje de la población latina es bajo?</p>
 
 <p>El escribir, no te olvides de emplear los dos usos del futuro y del condicional que acabamos de revisar: </p>
-
-<!--TODO formating and design of these table -->
 
 <table class="table table-responsive table-striped">
   <tr>
@@ -189,15 +178,15 @@
 
 <br>
 
-<h3 id="language" class="h5">Focus on language: Intergenerational maintenance and loss of minority languages</h3>
+<h3 id="language">Focus on language: Intergenerational maintenance and loss of minority languages</h3>
 
-<p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
+<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
 
 <p>In this activity, students learn about the concept of sociolinguistic register and reflect on the ways in which their own speech varies according to context, interlocutor and communicative purpose.</p>
 
 <br>
 
-<p><em><%= t "teach.lesson_plans.for_students" %></em></p>
+<h4><%= t "teach.lesson_plans.for_students" %></h4>
 
 <p><strong>Para hablar de lengua: Interlocutor, contexto, propósito y registro lingüístico</strong></p>
 
@@ -219,15 +208,15 @@
 
 <br>
 
-<h3 id="paso" class="h5">Un paso más: en comunidad</h3>
+<h3 id="paso">Un paso más: en comunidad</h3>
 
-<p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
+<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
 
 <p>In this extension activity, students establish a link between the topic of this lesson and LatinX experiences in their own community.</p>
 
 <br>
 
-<p><em><%= t "teach.lesson_plans.for_students" %></em></p>
+<h4><%= t "teach.lesson_plans.for_students" %></h4>
 
 <p>Para algunas familias latinas la fiesta de quinceaños es un rito de pasaje muy importante, porque marca el tránsito que hace una joven de la niñez a la adolescencia. Dependiendo de sus tradiciones, de sus gustos y de sus posibilidades, en algunas familias la fiesta es sencilla y se celebra en casa. En otras, es un gran baile con muchos invitados. Para otras, la parte más importante de una fiesta de quinceaños es una misa o servicio religioso en donde la joven, su familia y su comunidad le agradecen a Dios haberle permitido llegar a esa etapa de su vida.</p>
 

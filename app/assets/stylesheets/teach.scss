@@ -1,5 +1,9 @@
 @import "bootstrap-variables";
 
+blockquote {
+  font-size: 1em;
+}
+
 ol {
   &.alpha {
     list-style-type: upper-alpha;

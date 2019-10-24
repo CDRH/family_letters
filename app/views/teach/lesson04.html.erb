@@ -39,32 +39,19 @@
   </ol>
 </div>
 
-<!-- TODO check alignment, I believe justify is better -->
-
 <h2 class="h4"><%= t "teach.lesson_plans.instruction_sequence" %></h2>
 
-<h5>Yo me encuentro en este lugar ahora y encontré trabajo</h5>
+<p class="lesson_sequence_subtitle h4">
+  Yo me encuentro en este lugar ahora y encontré trabajo
+</p>
 
 <br>
 
-<p><strong><%= t "teach.lesson_plans.overview" %></strong></p>
+<%= render "teach/lesson_partials/table_of_contents" %>
 
-<ol class="numbered">
-  <li><a href="#antes">Antes de empezar</a></li>
-  <li><a href="#continuar">Para continuar la conversación</a></li>
-  <li><a href="#mira">Mira otra vez, mira más de cerca</a></li>
-  <li><a href="#manos">Después de leer: ¡manos a la obra!</a></li>
-  <li><a href="#grammar">Focus on Grammar</a></li>
-  <li><a href="#language">Focus on Language</a></li>
-  <li><a href="#paso">Un paso más: en comunidad</a></li>
-  <li><a href="#rabbit">Down the rabbit, whole...</a></li>
-</ol>
+<h3 id="antes">Antes de empezar</h3>
 
-<br>
-
-<p id="antes"><strong>Antes de empezar</strong></p>
-
-<p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
+<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
 
 <p>The focus of this instructional sequence is the experience of rural-to-rural Mexican immigrants during the first half of the Twentieth Century. And, more broadly, an exploration of the connection between the food that sustains us, and the work of agricultural workers around the world.</p>
 
@@ -82,9 +69,9 @@
 
 <br>
 
-<p id="continuar"><strong>Para continuar la conversación</strong></p>
+<h3 id="continuar">Para continuar la conversación</h3>
 
-<p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
+<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
 
 <p>In this activity, students analyze a black and white photograph taken in 1939 at a Mexican migrant worker camp in Basin WY (ID: P119, File name: shan_p.239). Begin by telling students what they are looking at, and then allow several minutes for students to see the image without distraction. Afterwards, ask students to describe what they see (number of people, stance, physical conditions of the building, environment, etc.). Ask students if this image reminds them of any old photographs they’ve seen. Possible answers may include Dorothea Lange’s Migrant Mother, photos of African American sharecroppers during Reconstruction, photos of the United Farmworker Movement in California in the seventies. Depending on your student population, students may also mention photographs belonging to their own family.</p>
 
@@ -94,9 +81,9 @@
 
 <br>
 
-<p id="mira"><strong> Mira otra vez, mira más de cerca</strong></p>
+<h3 id="mira">Mira otra vez, mira más de cerca</h3>
 
-<p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
+<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
 
 <p>In this activity, students will analyze two personal letters that describe the gendered experience of two rural-to-rural immigrants to the United States. The first one, dated February 1923, was written by Maximino Torres to his uncle Reynaldo, shortly after his arrival in the United States. The second, dated three decades later, was written by his wife, Jesusita Baros Torres, to her adult daughter Santos.</p>
 
@@ -106,13 +93,13 @@
 
 <br>
 
-<p><em><%= t "teach.lesson_plans.for_students" %></em></p>
+<h4><%= t "teach.lesson_plans.for_students" %></h4>
 
 <p>Ahora vamos a explorar las maneras en las que tanto las mujeres como los hombres contribuyen con su trabajo al bienestar de las familias inmigrantes. Las dos cartas que vas a leer fueron escritas por dos esposos en décadas distintas. La primera carta, fechada en febrero de 1923, se la escribió Maximino Torres a su tío Reynaldo, poco después de llegar a Estados Unidos. La segunda, escrita tres décadas más tarde, se la envió su esposa Jesusita Baros Torres a su hija Santos, que ya era adulta.</p>
 
 <br>
 
-<p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
+<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
 
 <p>Present students with the set of questions you’ve prepared to help them work with these digital objects. Remember that you can save time and effort by using the <em>Primary Source Analysis Tool</em>, published by the Library of Congress.</p>
 
@@ -128,9 +115,9 @@
 
 <br>
 
-<p id="manos"><strong>Después de leer: ¡manos a la obra!</strong></p>
+<h3 id="manos">Después de leer: ¡manos a la obra!</h3>
 
-<p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
+<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
 
 <p>After completing the pre-reading activities and working with the digital objects selected for this lesson, students are assigned a short reflective piece. Before your students begin writing, help them to identify important differences between reflective writing and others types of writing. It may be useful to begin the conversation by dividing the board in two columns, each with the heading: <em> una reflexión es..., una reflexión no es... </em></p>
 
@@ -138,19 +125,17 @@
 
 <br>
 
-<h3 id="grammar" class="h5">Focus on grammar: a, ha, ah</h3>
+<h3 id="grammar">Focus on grammar: a, ha, ah</h3>
 
-<p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
+<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
 
 <p>Before students begin to write their texts, review with them the difference in meaning of homophones <em>a, ha,</em> and <em>ah</em>.</p>
 
 <br>
 
-<p><em><%= t "teach.lesson_plans.for_students" %></em></p>
+<h4><%= t "teach.lesson_plans.for_students" %></h4>
 
 <p>Ahora vamos a practicar nuestras habilidades de lectura y escritura. Después de escribir, no te olvides de revisar tu trabajo para no confundir <em> a, ha, ah </em>. Después de analizar las dos cartas que acabamos de leer, vas a escribir una reflexión de una página (dos páginas máximo). El tema de tu texto es éste: <em> ¿De qué manera está presente en tu vida cotidiana el trabajo de los trabajadores inmigrantes? </em></p>
-
-<!--TODO formating and design of these table -->
 
 <table class="table table-responsive table-striped">
   <tr>
@@ -184,15 +169,15 @@
 
 <br>
 
-<h3 id="language" class="h5">Focus on language: The concepts of dialect and sociolect</h3>
+<h3 id="language">Focus on language: The concepts of dialect and sociolect</h3>
 
-<p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
+<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
 
 <p>In this activity, students learn about the concepts of dialect and sociolect, and reflect upon the ways in which appreciation of linguistic diversity within Spanish-speaking communities can enrich their own experience as multilingual speakers. </p>
 
 <br>
 
-<p><em><%= t "teach.lesson_plans.for_students" %></em></p>
+<h4><%= t "teach.lesson_plans.for_students" %></h4>
 
 <p><strong>Para hablar de lengua: ¿Por qué hablamos de manera diferente? </strong></p>
 
@@ -220,23 +205,23 @@
 
 <br>
 
-<h3 id="paso" class="h5">Un paso más: en comunidad</h3>
+<h3 id="paso">Un paso más: en comunidad</h3>
 
-<p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
+<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
 
 <p>In this extension activity, students establish a link between the topic of this lesson and LatinX experiences in their own community.</p>
 
 <br>
 
-<p><em><%= t "teach.lesson_plans.for_students" %></em></p>
+<h4><%= t "teach.lesson_plans.for_students" %></h4>
 
 <p>En esta actividad vamos a explorar un poco más la riqueza dialectal del español que se habla en nuestra comunidad. Como sabes, el contacto entre personas que hablan diferentes variedades del español es una de las características que hace al español de Estados Unidos tan rico e interesante.</p>
 
-<p>Actividad 1. <em> Si vives en una comunidad donde hay una panadería latina.</em> Visita esta panadería y pregúntale a los clientes o a los panaderos por lo menos dos nombres distintos para nombrar el mismo pan. Pregúntales cuál es el nombre que usan ellos y cómo aprendieron, o quién usa el otro nombre. Beneficio adicional: podrás probar un pan muy sabroso.</p>
+<p>Actividad 1. <em>Si vives en una comunidad donde hay una panadería latina.</em> Visita esta panadería y pregúntale a los clientes o a los panaderos por lo menos dos nombres distintos para nombrar el mismo pan. Pregúntales cuál es el nombre que usan ellos y cómo aprendieron, o quién usa el otro nombre. Beneficio adicional: podrás probar un pan muy sabroso.</p>
 
-<p>Actividad 2. <em> Si vives en una comunidad donde no hay panadería, pero sí hay un mercadito latino. </em> Visita la sección de frutas y verduras. Lee los nombres de los productos. ¿Se llaman igual que como tú los conoces? ¿Hay algún producto que conozcas, pero que tenga un nombre distinto? ¿Hay alguna fruta o verdura que nunca hayas visto? Pregúntale a  algún cliente o a algún empleado cómo se llama, cómo se cocina y en qué tipo de platillos se utiliza. Beneficio adicional: quizá descubras tu nueva fruta favorita.</p>
+<p>Actividad 2. <em>Si vives en una comunidad donde no hay panadería, pero sí hay un mercadito latino.</em> Visita la sección de frutas y verduras. Lee los nombres de los productos. ¿Se llaman igual que como tú los conoces? ¿Hay algún producto que conozcas, pero que tenga un nombre distinto? ¿Hay alguna fruta o verdura que nunca hayas visto? Pregúntale a  algún cliente o a algún empleado cómo se llama, cómo se cocina y en qué tipo de platillos se utiliza. Beneficio adicional: quizá descubras tu nueva fruta favorita.</p>
 
-<p>Actividad 3. <em> Si vives en una comunidad donde no hay ni panadería, ni mercadito latino.</em> Observa la siguiente lista de palabras en inglés y anota cómo las dirías en español. Consulta a alguna persona que hable una variedad de español diferente a la tuya. Pregúntale cómo diría esas palabras en español. Anota sus respuestas y compara las dos listas. ¿Hay alguna diferencia? Si la hay, ¿a qué la atribuyes?</p>
+<p>Actividad 3. <em>Si vives en una comunidad donde no hay ni panadería, ni mercadito latino.</em> Observa la siguiente lista de palabras en inglés y anota cómo las dirías en español. Consulta a alguna persona que hable una variedad de español diferente a la tuya. Pregúntale cómo diría esas palabras en español. Anota sus respuestas y compara las dos listas. ¿Hay alguna diferencia? Si la hay, ¿a qué la atribuyes?</p>
 
 <p>Las palabras son éstas:</p>
 
@@ -257,12 +242,9 @@
 
 <p>En 1944, Maximino Torres vivía en Denver, Colorado. El 5 de mayo de ese año su hermano Clemente le envió una carta desde Huapamacato, Michoacán, México. En esa carta, le escribe este pasaje:</p>
 
-<!--TODO reduce font-size blockquote-->
-
 <blockquote>
-  <small><p>“Estimado Hermano.</p>
-    <p>Despues de saludarte y deseando te encuentre vien como son mis deseos paso a dar contestacion a tu appreciable cartita: Pues de lo que me dices de mi tio que si murio o no mi tio ya fallecio y mi tia Gracia tambien y a Blas Ayala ya lo entreviste y le di tu domicilio , de lo que me dises del volcan, pues siertamente si fue algo prejudicial, pero no perjudico mucho a Zamora lo que si perjudica es algo a las plantas, la arena que arroja el volcán pues es algo espantoso que nos amuela demaciado, que siempre como es natural para tiempo de las aguas se calma poco y por eso es como te había dicho que mis deseos son irme aya contigo […] pero no he logrado la oportunidad de hacerlo, porque nuestro gobierno no nos ha permitido el paso de nuestro estado pues uno de los muchachos de aqui mas o menos le costo como trescientos pesos la salida para los Estados Unidos como renganchista que ya pasando como de contrabando puede costar menos pero lleva mas peligros uno pues por lo pronto e pensado aguantarla hasta que el gobierno nos permita el paso a los Estados Unidos ya que aqui se la pasa uno muy amolado […]”.</p>
-  </small>
+  <p>“Estimado Hermano.</p>
+  <p>Despues de saludarte y deseando te encuentre vien como son mis deseos paso a dar contestacion a tu appreciable cartita: Pues de lo que me dices de mi tio que si murio o no mi tio ya fallecio y mi tia Gracia tambien y a Blas Ayala ya lo entreviste y le di tu domicilio , de lo que me dises del volcan, pues siertamente si fue algo prejudicial, pero no perjudico mucho a Zamora lo que si perjudica es algo a las plantas, la arena que arroja el volcán pues es algo espantoso que nos amuela demaciado, que siempre como es natural para tiempo de las aguas se calma poco y por eso es como te había dicho que mis deseos son irme aya contigo […] pero no he logrado la oportunidad de hacerlo, porque nuestro gobierno no nos ha permitido el paso de nuestro estado pues uno de los muchachos de aqui mas o menos le costo como trescientos pesos la salida para los Estados Unidos como renganchista que ya pasando como de contrabando puede costar menos pero lleva mas peligros uno pues por lo pronto e pensado aguantarla hasta que el gobierno nos permita el paso a los Estados Unidos ya que aqui se la pasa uno muy amolado […]”.</p>
 </blockquote>
 
 <p>¿De qué volcán está hablando Clemente Torres? ¿Por qué crees que ese desastre natural haya sido un detonador (trigger) para que emigraran a Estados Unidos muchas personas de la zona rural de Michoacán? Usa Google y Google Maps para ayudarte a encontrar las respuestas.</p>

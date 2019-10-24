@@ -1,11 +1,42 @@
+# NOTE some of the below content is specified in Isabel's
+# instructions Spanish, NOT English, it is not a mistake in this file
+#
+# Pulling out into a translation file so that if in the future
+# it is translated, the task will be much simplified
+
 en:
   teach:
     title: Learn
-    lesson_general:
+    home:
       title: Teacher Resources
+      subtitle: |-
+        This letter is to greet you: Language, migration and daily life in the
+        experience of one Mexican American family
+      introduction_html: |-
+        <p>The following materials were designed to address the needs of High
+        School and college Spanish learners at the intermediate/advanced
+        levels. Our general goal is to allow students to use the resources of
+        the Shanahan collection to develop their linguistic skills and their
+        cultural competence as they learn about the experience of Mexican
+        American families at the start of the Twentieth Century.</p>
+        <p>The activities presented here were developed to address the needs of
+        two types of students: Those who are speakers of Spanish as a heritage
+        language, and those who are learning it as a second language.</p>
+        <p>Following Beaudrie y Potowski (2014), we believe that speakers of
+        Spanish as a heritage language bring with them linguistic, social and
+        cultural knowledge that must be valued in the classroom. We understand
+        a heritage language learner as a student who grew up in a family  or
+        community environment where a minority language was spoken, and who
+        possesses an affective and cultural connection with that language.</p>
+        <p>We acknowledge the fact that, in the context of the United States,
+        most Spanish classrooms serve both types of students. Each teacher will
+        be free to adapt this material (and the other resources in the
+        collection), to address the specific needs of her students.</p>
+      developmental_targets: Developmental Targets
+      # the complex developmental targets table is loaded from partials
     lesson_plans:
-      for_students: For students
-      for_teachers: For teachers
+      for_students: For Students
+      for_teachers: For Teachers
       instruction_sequence: Instructional Sequence
       lesson_focus: In this lesson, we focus on…
       learning_objectives: Learning Objectives

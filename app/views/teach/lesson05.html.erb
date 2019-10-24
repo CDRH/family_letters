@@ -22,11 +22,9 @@
 
   <h2 class="h4"><%= t "teach.lesson_plans.materials" %></h2>
 
-  <!--TODO insert links to objetcs in every "digital copy". Refer to Google Docs TEXTS FOR LEARN PAGE JUNE 18-2019 -->
-
   <ol class="materials">
+    <li><%= link_to "Digital image", item_path(id: "shan_d.059") %> of cover of citizenship study guide belonging to Mrs. Jesusita Baros, Ft. Lupton CO, 1941.</li>
     <%# TODO couldn't find this item from the specific date, anyway %>
-    <li>Digital image of cover of citizenship study guide belonging to Mrs. Jesusita Baros, Ft. Lupton CO, 1941.</li>
     <li>Digital image of page 20, citizenship study guide belonging to Mrs. Jesusita Baros, Ft. Lupton CO, 1941.</li>
     <li>
       Library of Congress
@@ -37,32 +35,17 @@
   </ol>
 </div>
 
-<!-- TODO check alignment, I believe justify is better -->
-
 <h2 class="h4"><%= t "teach.lesson_plans.instruction_sequence" %></h2>
 
-<h5>De muchos, uno</h5>
+<p class="lesson_sequence_subtitle h4">De muchos, uno</p>
 
 <br>
 
-<p><strong><%= t "teach.lesson_plans.overview" %></strong></p>
+<%= render "teach/lesson_partials/table_of_contents" %>
 
-<ol class="numbered">
-  <li><a href="#antes">Antes de empezar</a></li>
-  <li><a href="#continuar">Para continuar la conversación</a></li>
-  <li><a href="#mira">Mira otra vez, mira más de cerca</a></li>
-  <li><a href="#manos">Después de leer: ¡manos a la obra!</a></li>
-  <li><a href="#grammar">Focus on Grammar</a></li>
-  <li><a href="#language">Focus on Language</a></li>
-  <li><a href="#paso">Un paso más: en comunidad</a></li>
-  <li><a href="#rabbit">Down the rabbit, whole...</a></li>
-</ol>
+<h3 id="antes">Antes de empezar</h3>
 
-<br>
-
-<p id="antes"><strong>Antes de empezar</strong></p>
-
-<p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
+<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
 
 <p>The focus of this instructional sequence is the diversity of LatinX communities, and the right of every member of these communities, regardless of generation of arrival, legal status, linguistic ability, socioeconomic condition, national origin, sexual orientation, physical ability or religious belief, to enjoy the rights enshrined in the constitution of the United States.  </p>
 
@@ -74,9 +57,9 @@
 
 <br>
 
-<p id="continuar"><strong>Para continuar la conversación</strong></p>
+<h3 id="continuar">Para continuar la conversación</h3>
 
-<p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
+<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
 
 <p>In this activity, students read <em> Libertad sin lágrimas </em>, by Chicano poet Alurista. The class discusses the connections that can be traced between the poem and the topic of this lesson. </p>
 
@@ -86,7 +69,7 @@
 
 <br>
 
-<p><em><%= t "teach.lesson_plans.for_students" %></em></p>
+<h4><%= t "teach.lesson_plans.for_students" %></h4>
 
 <p>Alurista (Alberto Baltazar Urista Heredia), es un poeta fundacional de la literatura chicana, activista por los derechos civiles de las comunidades mexicanoamericanas y profesor universitario. El poema <em> Libertad sin lágrimas </em> , que ahora vas a leer, se publicó en 1971 y habla de la importancia de la dignidad, la libertad, y la autodeterminación para cualquier proyecto que tenga como objetivo el avance social, político y económico de estas comunidades.</p>
 
@@ -96,9 +79,9 @@
 
 <p class="text-center">Libertad sin lágrimas</p>
 
-<p id="mira"><strong> Mira otra vez, mira más de cerca</strong></p>
+<h3 id="mira"> Mira otra vez, mira más de cerca</h3>
 
-<p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
+<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
 
 <p>In this activity, students manipulate two digital objects from the Shannanan collection to learn about the experience of a Mexican American woman who lived during the first half of the Twentieth century. Using clues embedded in these images, they will deploy their background knowledge to make inferences about the ways in which historical period, gender, social context, legal status and economic standing helped to shape her aspirations. Students will also learn about the struggle of many immigrant families to integrate into the fabric of the communities in which they live.</p>
 
@@ -106,7 +89,7 @@
 
 <br>
 
-<p><em><%= t "teach.lesson_plans.for_students" %></em></p>
+<h4><%= t "teach.lesson_plans.for_students" %></h4>
 
 <p>Treinta años antes de que Alurista escribiera Libertad sin lágrimas en California, Jesusita Baros Torres estaba estudiando su guía para la ciudadanía en su cocina de Fort Lupton, Colorado. Jesusita Baros Torres nació en 1896 en el pueblo minero de Jalpa, Zacatecas, México, y emigró a Estados Unidos con sus dos hijos más pequeños en la década de 1920. Aunque no tenía papeles y no hablaba inglés cuando llegó, durante más de cuarenta años crió a su familia y fue parte activa de su parroquia, de su barrio, y de la comunidad mexicana de Fort Lupton.</p>
 
@@ -116,7 +99,7 @@
 
 <br>
 
-<p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
+<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
 
 <p>Present students with the set of questions you’ve prepared to help them work with these digital objects. Remember that you can save time and effort by using the <em>Primary Source Analysis Tool</em>, published by the Library of Congress.</p>
 
@@ -132,9 +115,9 @@
 
 <br>
 
-<p id="manos"><strong>Después de leer: ¡manos a la obra!</strong></p>
+<h3 id="manos">Después de leer: ¡manos a la obra!</h3>
 
-<p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
+<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
 
 <p>After completing the pre-reading activities and working with the digital objects selected for this lesson, students are assigned a one-page text in Spanish in which they present their opinion about the multiplicity of LatinX experience as related to the promises enshrined in the Constitution.</p>
 
@@ -144,15 +127,15 @@
 
 <br>
 
-<h3 id="grammar" class="h5">Focus on grammar: Use of imperfect subjunctive to express opinions and desires</h3>
+<h3 id="grammar">Focus on grammar: Use of imperfect subjunctive to express opinions and desires</h3>
 
-<p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
+<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
 
 <p>Before students begin to write their texts, briefly review the use of imperfect subjunctive to express opinions and desires.</p>
 
 <br>
 
-<p><em><%= t "teach.lesson_plans.for_students" %></em></p>
+<h4><%= t "teach.lesson_plans.for_students" %></h4>
 
 <p>Después de conversar sobre el tema de esta unidad, vamos a practicar nuestras habilidades de escritura en español. Regresa al texto del poema y a la página del manual de ciudadanía de Jesusita Baros Torres y piensa qué significan para ti las palabras que aparecen en el preámbulo a la Constitución. ¿Qué tienen que ver con las diferentes maneras de ser latin@ en Estados Unidos? Desarrolla tus ideas sobre este tema en un texto de una página.</p>
 
@@ -189,15 +172,15 @@
 
 <br>
 
-<h3 id="language" class="h5">Focus on language: Communicative functions of codeswitching</h3>
+<h3 id="language">Focus on language: Communicative functions of codeswitching</h3>
 
-<p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
+<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
 
 <p>In this activity, students learn about the communicative functions of codeswitching, as they practice locating information in a text, inference, and interpretation.</p>
 
 <br>
 
-<p><em><%= t "teach.lesson_plans.for_students" %></em></p>
+<h4><%= t "teach.lesson_plans.for_students" %></h4>
 
 <p><strong>Para hablar de lengua: Funciones comunicativas de la alternancia de códigos</strong></p>
 
@@ -221,15 +204,15 @@
 
 <br>
 
-<h3 id="paso" class="h5">Un paso más: en comunidad</h3>
+<h3 id="paso">Un paso más: en comunidad</h3>
 
-<p><em><%= t "teach.lesson_plans.for_teachers" %></em></p>
+<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
 
 <p>In this extension activity, students establish a link between the topic of this lesson and LatinX experiences in their own community.</p>
 
 <br>
 
-<p><em><%= t "teach.lesson_plans.for_students" %></em></p>
+<h4><%= t "teach.lesson_plans.for_students" %></h4>
 
 <p>En esta actividad vamos a conectar el tema de nuestra conversación en clase con la experiencia de algunas personas de nuestra comunidad. Entrevista a dos personas que vivan en tu ciudad, que se identifiquen como latin@s y que pertenezcan a dos generaciones distintas. Antes de comenzar, explícales que estamos platicando en clase sobre las diferentes formas de ser latin@ en los Estados Unidos.</p>
 
@@ -250,7 +233,7 @@
   <li>Libertad</li>
 </ul>
 
-<p>Paso 4. Con el permiso de tu entrevistad@, escribe su nombre, género, ocupación, edad y lugar de nacimiento. También escribe la fecha y lugar de tu entrevista (Recuerda que en español escribimos las fechas así: día, mes, año). </p>
+<p>Paso 4. Con el permiso de tu entrevistad@, escribe su nombre, género, ocupación, edad y lugar de nacimiento. También escribe la fecha y lugar de tu entrevista (Recuerda que en español escribimos las fechas así: día, mes, año).</p>
 
 <p>Paso final. En clase. Trabajando en grupos de tres. Escriban en el pizarrón las respuestas de sus entrevistados, organizadas por edad, género y lugar de nacimiento. Después de eliminar las respuestas que se repiten, observen las palabras que quedan. ¿Qué cosas en común notan? ¿Cuáles son algunas diferencias que les parecen importantes/interesantes? ¿A qué creen que se deban estas diferencias tomando en cuenta la experiencia de las personas que entrevistaron?</p>
 
