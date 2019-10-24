@@ -4,6 +4,11 @@ blockquote {
   font-size: 1em;
 }
 
+/* add some spacing to the top to remove <br> tags */
+h3 {
+  margin-top: 50px;
+}
+
 ol {
   &.alpha {
     list-style-type: upper-alpha;

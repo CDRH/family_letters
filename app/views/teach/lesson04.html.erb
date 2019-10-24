@@ -1,43 +1,10 @@
 <h1><%= t "teach.lesson04.title", default: "Teach and Learn" %></h1>
 
-<%= render "teach/lesson_partials/language_warning" %>
+<%= render "teach/lessons_shared/language_warning" %>
 
 <p>In this lesson we will learn about the experiences of Mexican immigrants during the first half of the Twentieth Century, and about the types of work that made survival of their families and communities possible.</p>
 
-<div class="well">
-  <h2 class="h4"><%= t "teach.lesson_plans.learning_objectives" %></h2>
-
-  <ul class="objectives">
-    <li>Students will learn about the motivations, migratory routes and working conditions of Mexican agricultural workers in the United States during the first half of the Twentieth Century</li>
-    <li>Students will reflect on the gendered dimensions of work, and about the importance of both women and men’s work for the survival of Mexican American families and communities</li>
-    <li>Students will become acquainted with the concepts of dialect and sociolect, and will reflect upon the ways in which appreciation of linguistic diversity within Spanish-speaking communities can enrich their own experience as multilingual speakers</li>
-  </ul>
-
-  <h2 class="h4"><%= t "teach.lesson_plans.lesson_focus" %></h2>
-
-  <ul class="focus">
-    <li>Literacy: Features of good reflective writing</li>
-    <li>Language: The concepts of dialect and sociolect</li>
-    <li>Grammar: The difference between a, ha, ah</li>
-  </ul>
-
-  <h2 class="h4"><%= t "teach.lesson_plans.materials" %></h2>
-
-  <!--TODO insert links to objetcs in every "digital copy". Refer to Google Docs TEXTS FOR LEARN PAGE JUNE 18-2019 -->
-
-  <ol class="materials">
-    <li><%= link_to "Digital copy", item_path(id: "shan_p.239") %> of photograph of unknown migrant workers, Basin WY, 1937.</li>
-    <li><%= link_to "Digital copy", item_path(id: "shan_p.207") %> of photograph of Maximino Torres with chickens, 1943.</li>
-    <li><%= link_to "Digital image", item_path(id: "shan_L156.meta") %> of letter written by Jesusita Baros Torres to her daughter, Santos Baros Schubert, dated October 29, 1956.</li>
-    <li><%= link_to "Digital image", item_path(id: "shan_L002.meta") %> of letter written by Maximino Torres to his uncle, Reynaldo Hurtado, dated February 5, 1923.</li>
-    <li>
-      Library of Congress
-      <a href="http://www.loc.gov/teachers/usingprimarysources/resources/Analyzing_Books_and_Other_Printed_Texts.pdf"
-      target="_blank" rel="nofollow noreferrer">Teacher’s Guide</a>
-      to Analyzing Books & Other Printed Texts (one-page handout) [pdf]
-    </li>
-  </ol>
-</div>
+<%= render "teach/lesson04/1_overview" %>
 
 <h2 class="h4"><%= t "teach.lesson_plans.instruction_sequence" %></h2>
 
@@ -47,208 +14,16 @@
 
 <br>
 
-<%= render "teach/lesson_partials/table_of_contents" %>
-
-<h3 id="antes">Antes de empezar</h3>
-
-<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
-
-<p>The focus of this instructional sequence is the experience of rural-to-rural Mexican immigrants during the first half of the Twentieth Century. And, more broadly, an exploration of the connection between the food that sustains us, and the work of agricultural workers around the world.</p>
-
-<p><strong>Step 1.</strong> In class. Begin the conversation by asking students to name in Spanish what they had for breakfast.</p>
-
-<p><strong>Step 2.</strong> Draw six columns on the board, each with one of the following headings on top: <em> Granos y legumbres, Frutas, Verduras, Carne, Lácteos, Otros </em> </p>
-
-<p><strong>Step 3.</strong> Ask students to stand up and write the elements of their breakfast in Spanish, on the appropriate column. Place your own breakfast on the board as a model. In some instances, you may need to provide vocabulary items to help students that need scaffolding. If they come up, highlight dialectal differences as part of the variety and beauty of speaking Spanish: <em> Ay, qué interesante, tú escribiste aquí que desayunaste aguacate. Alguien de América del Sur, un chileno, por ejemplo, diría que comió palta. Interesante, ¿no?…</em></em></p>
-
-<p><strong>Step 4.</strong> Looking at the foodstuffs on the board, and working in pairs, have students identify, and name in Spanish the ingredients that compose them. A few examples: <em> licuado de proteína: soya, suero de leche; cereal: maíz, azúcar, leche; sándwich de mantequilla de cacahuate y mermelada: harina, levadura, leche, cacahuate, fruta, azúcar.</em></p>
-
-<p><strong>Step 5.</strong> Ask <em> ¿De dónde vino?</em> Have students retrace (in broad terms), the origin of their breakfast, until you arrive, as a group, to the level of the agricultural worker. Begin by asking students to identify, from the board, products produced in our state. Widen the scope to products produced elsewhere in the United States. Widen it yet again to include products that came to their table thanks to the work of agricultural workers in other parts of the world (coffee, chocolate, bananas, are a few examples).</p>
-
-<p><strong>Step 6.</strong> Tie it together. Help your students make the connection: <em> Si desayunaste algo antes de venir a clase hoy, alguien, en algún lugar del mundo, tuvo que cosecharlo o producirlo. </em></p>
-
-<br>
-
-<h3 id="continuar">Para continuar la conversación</h3>
-
-<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
-
-<p>In this activity, students analyze a black and white photograph taken in 1939 at a Mexican migrant worker camp in Basin WY (ID: P119, File name: shan_p.239). Begin by telling students what they are looking at, and then allow several minutes for students to see the image without distraction. Afterwards, ask students to describe what they see (number of people, stance, physical conditions of the building, environment, etc.). Ask students if this image reminds them of any old photographs they’ve seen. Possible answers may include Dorothea Lange’s Migrant Mother, photos of African American sharecroppers during Reconstruction, photos of the United Farmworker Movement in California in the seventies. Depending on your student population, students may also mention photographs belonging to their own family.</p>
-
-<p>Ask students to look at the photograph again and to tell you what they know about the people in the picture: <em> ¿Qué querían? ¿Por qué llegaron ahí? ¿De dónde llegaron? ¿Cómo era su vida? </em> </p>
-
-<p>Tie it together. Help your students make the connection: <em>Vamos a continuar con esta idea de la que hemos estado hablando hasta ahora: Si comiste algo, alguien tuvo que producirlo. Cuando hablamos de los trabajadores agrícolas, frecuentemente pensamos en su trabajo y en lo que produce ese trabajo, pero muy pocas veces nos preguntamos cómo es su experiencia. Hoy vamos a conversar un poco sobre esa parte.</em></p>
-
-<br>
-
-<h3 id="mira">Mira otra vez, mira más de cerca</h3>
-
-<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
-
-<p>In this activity, students will analyze two personal letters that describe the gendered experience of two rural-to-rural immigrants to the United States. The first one, dated February 1923, was written by Maximino Torres to his uncle Reynaldo, shortly after his arrival in the United States. The second, dated three decades later, was written by his wife, Jesusita Baros Torres, to her adult daughter Santos.</p>
-
-<p>After a brief introduction to the digital objects they will manipulate, students will be presented with a set of questions that will help them understand these objects and their historical context. Because you are more familiar with the proficiency level, profiles, and developmental needs of your own students, these questions are to be prepared by you, the teacher. A good resource to help you prepare these questions in a time-effective manner is the <a href="http://www.loc.gov/teachers/usingprimarysources/resources/Analyzing_Books_and_Other_Printed_Texts.pdf" target="_blank" rel="nofollow noreferrer">Primary Source Analysis Tool</a>, published by the Library of Congress, and freely available in electronic or pdf formats.</p>
-
-<p>As you prepare the questions that will help your students analyze these digital objects, you may wish to highlight the motivations, migratory routes and working conditions experienced by Maximino Torres. In the case of Jesusita, who at the time of writing her letter was a homemaker who took care of washing, cleaning, ironing and cooking for six adults, you may wish to highlight how her work helped her family survive both in practical and economic terms. You may also with to highlight the experience of the four male migrant workers boarding in the Torres household: <em> “Le estaba dando de comer a 4 bordantes [...] les hago su lonche, se ban á trabajar en cortar sanoría y selery” </em>. Who were they? Where were their families? Why were they there?</p>
-
-<br>
-
-<h4><%= t "teach.lesson_plans.for_students" %></h4>
-
-<p>Ahora vamos a explorar las maneras en las que tanto las mujeres como los hombres contribuyen con su trabajo al bienestar de las familias inmigrantes. Las dos cartas que vas a leer fueron escritas por dos esposos en décadas distintas. La primera carta, fechada en febrero de 1923, se la escribió Maximino Torres a su tío Reynaldo, poco después de llegar a Estados Unidos. La segunda, escrita tres décadas más tarde, se la envió su esposa Jesusita Baros Torres a su hija Santos, que ya era adulta.</p>
-
-<br>
-
-<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
-
-<p>Present students with the set of questions you’ve prepared to help them work with these digital objects. Remember that you can save time and effort by using the <em>Primary Source Analysis Tool</em>, published by the Library of Congress.</p>
-
-<!--TODO Description of objects and thumbnails as a linked PDF? Refer to Google Doc "TEXTS FOR LEARN PAGE JUNE 18/2019" -->
-
-<!-- TODO any way we can pull Transcript and Translation from TEI? -->
-
-<br>
-
-<h5>Transcript</h5>
-
-<h5>Translation</h5>
-
-<br>
-
-<h3 id="manos">Después de leer: ¡manos a la obra!</h3>
-
-<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
-
-<p>After completing the pre-reading activities and working with the digital objects selected for this lesson, students are assigned a short reflective piece. Before your students begin writing, help them to identify important differences between reflective writing and others types of writing. It may be useful to begin the conversation by dividing the board in two columns, each with the heading: <em> una reflexión es..., una reflexión no es... </em></p>
-
-<p>Help your students identify that reflective writing goes beyond description of an event or idea,  beyond summarizing. Unlike argumentative writing, with which they may be more familiar, its purpose is not to convince the reader of a thesis, but to explore connections between new information and past experiences, knowledge or feelings (Herman, 2000; Zull, 2002 in Schmidt-Wilk, 2009). For reference, consider providing your students with three paragraphs, each an example of description, a thesis statement and a self-reflection.</p>
-
-<br>
-
-<h3 id="grammar">Focus on grammar: a, ha, ah</h3>
-
-<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
-
-<p>Before students begin to write their texts, review with them the difference in meaning of homophones <em>a, ha,</em> and <em>ah</em>.</p>
-
-<br>
-
-<h4><%= t "teach.lesson_plans.for_students" %></h4>
-
-<p>Ahora vamos a practicar nuestras habilidades de lectura y escritura. Después de escribir, no te olvides de revisar tu trabajo para no confundir <em> a, ha, ah </em>. Después de analizar las dos cartas que acabamos de leer, vas a escribir una reflexión de una página (dos páginas máximo). El tema de tu texto es éste: <em> ¿De qué manera está presente en tu vida cotidiana el trabajo de los trabajadores inmigrantes? </em></p>
-
-<table class="table table-responsive table-striped">
-  <tr>
-    <td class="col-md-5">
-      <p><em>a</em></p>
-      <p>Preposición que puede indicar dirección, lugar, objeto, o modo de una acción.</p>
-    </td>
-    <td class="col-md-7">
-      <p>Clemente quería ir a trabajar a Estados Unidos.</p>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <p><em>ha</em></p>
-      <p>Tercera persona singular del verbo haber. Frecuentemente funciona como auxiliar de otros verbos.</p>
-    </td>
-    <td>
-      <p>Maximino le ha escrito a su tío todos estos años.</p>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <p><em>ah</em></p>
-      <p>Interjección que indica sorpresa, admiración o tristeza.</p>
-    </td>
-    <td>
-      <p>¡Ah, cómo extraño a mis hermanos!</p>
-    </td>
-  </tr>
-</table>
-
-<br>
-
-<h3 id="language">Focus on language: The concepts of dialect and sociolect</h3>
-
-<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
-
-<p>In this activity, students learn about the concepts of dialect and sociolect, and reflect upon the ways in which appreciation of linguistic diversity within Spanish-speaking communities can enrich their own experience as multilingual speakers. </p>
-
-<br>
-
-<h4><%= t "teach.lesson_plans.for_students" %></h4>
-
-<p><strong>Para hablar de lengua: ¿Por qué hablamos de manera diferente? </strong></p>
-
-<p>Una característica muy interesante de las comunidades hispanohablantes en los Estados Unidos es el contacto interdialectal. Esto quiere decir que, además del contacto que tenemos con personas que hablan otros idiomas, convivimos, trabajamos, y establecemos relaciones de afecto y de trabajo con hablantes de diferentes variedades de español. </p>
-
-<p>Por ejemplo, en un día normal, una persona que vive en una familia en donde se habla español salvadoreño, comprarle el pan del desayuno a un panadero que habla español mexicano, puede compartir sus notas de clase con alguien que habla español de Nuevo México, puede compartir su turno de trabajo con alguien que habla español guatemalteco, y por la noche jugar un partido de futbol con alguien que habla español argentino. </p>
-
-<p>Un dialecto es una forma de hablar determinada por motivos geográficos. Dicho de otra forma, un dialecto es una variedad regional de una lengua. En realidad, todos hablamos un dialecto. Aunque podemos comunicarnos con los hablantes de español de otras partes del mundo, generalmente la forma en la que hablamos va a variar (a veces mucho, a veces poco), en términos de pronunciación, vocabulario, o gramática.</p>
-
-<p>Aunque compartimos muchas características en nuestra forma de hablar con otras personas que hablan nuestra misma variedad regional, en realidad no hablamos igual que todas las personas que nacieron en nuestra ciudad o región, porque todos hablamos un sociolecto. Un sociolecto es la forma en la que habla un grupo social particular. Esta forma de hablar está condicionada por factores como nuestro género, edad, origen urbano o rural, nivel educativo, ocupación, etc.</p>
-
-<p>Entonces, ¿por qué hablamos español de manera diferente? Porque cuando hablamos usamos variedades regionales diferentes (dialectos), con características determinadas por nuestra identidad y experiencia social (sociolectos), y nuestras características individuales (idiolecto), en contextos, con interlocutores y para propósitos distintos (registros). Y ahí, precisamente es donde está la riqueza y la belleza de todas las formas en las que hablamos español ¿No crees?</p>
-
-<br>
-
-<p><strong>Después de leer</strong></p>
-
-<p>A. ¿Qué es un dialecto?</p>
-
-<p>B. ¿El español mexicano y el español costarricense son dos  dialectos, o dos sociolectos distintos del español?</p>
-
-<p>C. Una diferencia muy característica entre el español que se habla en el centro y norte de España y todas las variedades de español que se hablan en el continente americano es que el español del centro y norte de España incluye la consonante interdental sorda /θ/, representada con la letra c cuando aparece antes de las vocales e, i. Esta consonante no se produce en las variedades de español americano.</p>
-
-<p>D. En su carta, Maximino Torres escribe: <em> “a Mama me hase fabor de desirle que no tenga pena yo boy aserlo posible amandarle algo. Y resiba de su sobrino el mas cresido afecto quien asus ordenes en lo poco que pueda” </em>. Como en el caso de muchas personas que recibieron poca educación formal, la escritura de Maximino Torres nos permite saber algunas cosas sobre cómo hablaba. Al leer este fragmento, por ejemplo, incluso si no supiéramos quién lo escribió, tendríamos muchas pistas de que no lo escribió un hablante del centro/norte de España. Vuelve a leerlo y explica por qué.</p>
-
-<br>
-
-<h3 id="paso">Un paso más: en comunidad</h3>
-
-<h4><%= t "teach.lesson_plans.for_teachers" %></h4>
-
-<p>In this extension activity, students establish a link between the topic of this lesson and LatinX experiences in their own community.</p>
-
-<br>
-
-<h4><%= t "teach.lesson_plans.for_students" %></h4>
-
-<p>En esta actividad vamos a explorar un poco más la riqueza dialectal del español que se habla en nuestra comunidad. Como sabes, el contacto entre personas que hablan diferentes variedades del español es una de las características que hace al español de Estados Unidos tan rico e interesante.</p>
-
-<p>Actividad 1. <em>Si vives en una comunidad donde hay una panadería latina.</em> Visita esta panadería y pregúntale a los clientes o a los panaderos por lo menos dos nombres distintos para nombrar el mismo pan. Pregúntales cuál es el nombre que usan ellos y cómo aprendieron, o quién usa el otro nombre. Beneficio adicional: podrás probar un pan muy sabroso.</p>
-
-<p>Actividad 2. <em>Si vives en una comunidad donde no hay panadería, pero sí hay un mercadito latino.</em> Visita la sección de frutas y verduras. Lee los nombres de los productos. ¿Se llaman igual que como tú los conoces? ¿Hay algún producto que conozcas, pero que tenga un nombre distinto? ¿Hay alguna fruta o verdura que nunca hayas visto? Pregúntale a  algún cliente o a algún empleado cómo se llama, cómo se cocina y en qué tipo de platillos se utiliza. Beneficio adicional: quizá descubras tu nueva fruta favorita.</p>
-
-<p>Actividad 3. <em>Si vives en una comunidad donde no hay ni panadería, ni mercadito latino.</em> Observa la siguiente lista de palabras en inglés y anota cómo las dirías en español. Consulta a alguna persona que hable una variedad de español diferente a la tuya. Pregúntale cómo diría esas palabras en español. Anota sus respuestas y compara las dos listas. ¿Hay alguna diferencia? Si la hay, ¿a qué la atribuyes?</p>
-
-<p>Las palabras son éstas:</p>
-
-<ul class="list-inline">
-  <li>bean</li>
-  <li>money</li>
-  <li>corn</li>
-  <li>child</li>
-  <li>cake</li>
-  <li>banana</li>
-</ul>
-
-<br>
-
-<!-- RABBIT HOLE INSTRUCTIONS -->
-
-<%= render "teach/lesson_partials/rabbit_hole" %>
-
-<p>En 1944, Maximino Torres vivía en Denver, Colorado. El 5 de mayo de ese año su hermano Clemente le envió una carta desde Huapamacato, Michoacán, México. En esa carta, le escribe este pasaje:</p>
-
-<blockquote>
-  <p>“Estimado Hermano.</p>
-  <p>Despues de saludarte y deseando te encuentre vien como son mis deseos paso a dar contestacion a tu appreciable cartita: Pues de lo que me dices de mi tio que si murio o no mi tio ya fallecio y mi tia Gracia tambien y a Blas Ayala ya lo entreviste y le di tu domicilio , de lo que me dises del volcan, pues siertamente si fue algo prejudicial, pero no perjudico mucho a Zamora lo que si perjudica es algo a las plantas, la arena que arroja el volcán pues es algo espantoso que nos amuela demaciado, que siempre como es natural para tiempo de las aguas se calma poco y por eso es como te había dicho que mis deseos son irme aya contigo […] pero no he logrado la oportunidad de hacerlo, porque nuestro gobierno no nos ha permitido el paso de nuestro estado pues uno de los muchachos de aqui mas o menos le costo como trescientos pesos la salida para los Estados Unidos como renganchista que ya pasando como de contrabando puede costar menos pero lleva mas peligros uno pues por lo pronto e pensado aguantarla hasta que el gobierno nos permita el paso a los Estados Unidos ya que aqui se la pasa uno muy amolado […]”.</p>
-</blockquote>
-
-<p>¿De qué volcán está hablando Clemente Torres? ¿Por qué crees que ese desastre natural haya sido un detonador (trigger) para que emigraran a Estados Unidos muchas personas de la zona rural de Michoacán? Usa Google y Google Maps para ayudarte a encontrar las respuestas.</p>
-
-<br>
-
-<%= render partial: "teach/lesson_partials/more_plans", locals: { lesson: 4 } %>
+<%= render "teach/lessons_shared/table_of_contents" %>
+
+<%= render "teach/lesson04/2_antes" %>
+<%= render "teach/lesson04/3_continuar" %>
+<%# mira partially powered by API results %>
+<%= render "teach/lesson04/4_mira" %>
+<%= render "teach/lesson04/5_manos" %>
+<%= render "teach/lesson04/6_grammar" %>
+<%= render "teach/lesson04/7_language" %>
+<%= render "teach/lesson04/8_paso" %>
+<%= render "teach/lesson04/9_rabbit" %>
+
+<%= render partial: "teach/lessons_shared/more_plans", locals: { lesson: 4 } %>
