@@ -1,8 +1,7 @@
 class ExploreController < ApplicationController
 
-  # TODO remove this once we are actually pulling specific
-  # queries for each action instead of a placeholder
-  before_action :load_query
+  before_action :image_gallery,
+                only: [:connections, :index, :migrations, :more_than_work]
 
   def index
     @title = t "explore.title"
@@ -14,6 +13,8 @@ class ExploreController < ApplicationController
 
   def language_and_life
     @title = t "explore.language_and_life.title"
+    # TODO use actual query or sampling that Isabel requests
+    @res = $api.query({"q" => "water", "num" => "5"})
   end
 
   def migrations
@@ -34,8 +35,9 @@ class ExploreController < ApplicationController
 
   private
 
-  def load_query
-    @res = $api.query({"q" => "water", "num" => "5"})
+  def image_gallery
+    # enable lightbox functionality
+    @ext_js = helpers.add_assets(@ext_js, "image_gallery")
   end
 
 end
