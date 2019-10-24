@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/CDRH/orchid
-  revision: b0669430f13c8f68afae76a86e8266c93223ac0d
+  revision: 9fe27b56f3150a030959a91e976386d242f68aa0
   branch: dev
   specs:
     orchid (2.1.0)
@@ -53,14 +53,14 @@ GEM
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
     arel (9.0.0)
-    autoprefixer-rails (9.6.5)
+    autoprefixer-rails (9.7.0)
       execjs
     bindex (0.8.1)
     bootsnap (1.4.5)
       msgpack (~> 1.0)
-    bootstrap-sass (3.3.7)
+    bootstrap-sass (3.4.1)
       autoprefixer-rails (>= 5.2.1)
-      sass (>= 3.3.4)
+      sassc (>= 2.0.0)
     builder (3.2.3)
     byebug (11.0.1)
     capybara (3.29.0)
@@ -150,11 +150,6 @@ GEM
     regexp_parser (1.6.0)
     ruby_dep (1.5.0)
     rubyzip (2.0.0)
-    sass (3.7.4)
-      sass-listen (~> 4.0.0)
-    sass-listen (4.0.0)
-      rb-fsevent (~> 0.9, >= 0.9.4)
-      rb-inotify (~> 0.9, >= 0.9.7)
     sassc (2.2.1)
       ffi (~> 1.9)
     sassc-rails (2.1.2)
@@ -205,7 +200,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap (>= 1.1.0)
-  bootstrap-sass (~> 3.3.6)
+  bootstrap-sass (~> 3.4.1)
   byebug
   capybara (>= 2.15, < 4.0)
   coffee-rails (~> 4.2)
@@ -226,4 +221,4 @@ DEPENDENCIES
   webdrivers
 
 BUNDLED WITH
-   1.17.2
+   1.17.3
