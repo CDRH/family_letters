@@ -1,0 +1,27 @@
+<h1><%= t "learn.lesson02.title", default: "Teach and Learn" %></h1>
+
+<%= render "learn/lessons_shared/language_warning" %>
+
+<p>In this lesson we examine the patterns of maintenance and loss of Spanish over three generations of one family. We also look at family pictures and practice describing and comparing in Spanish.</p>
+
+<%= render "learn/lesson02/1_overview" %>
+
+<h2><%= t "learn.lesson_plans.instruction_sequence" %></h2>
+
+<p class="lesson_sequence_subtitle h4">
+  Al cabo que sabes leer en español
+</p>
+
+<%= render "learn/lessons_shared/table_of_contents" %>
+
+<%= render "learn/lesson02/2_antes" %>
+<%= render "learn/lesson02/3_continuar" %>
+<%# mira partially powered by API results %>
+<%= render "learn/lesson02/4_mira" %>
+<%= render "learn/lesson02/5_manos" %>
+<%= render "learn/lesson02/6_grammar" %>
+<%= render "learn/lesson02/7_language" %>
+<%= render "learn/lesson02/8_paso" %>
+<%= render "learn/lesson02/9_rabbit" %>
+
+<%= render partial: "learn/lessons_shared/more_plans", locals: { lesson: 2 } %>

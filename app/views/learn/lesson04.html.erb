@@ -1,0 +1,29 @@
+<h1><%= t "learn.lesson04.title", default: "Teach and Learn" %></h1>
+
+<%= render "learn/lessons_shared/language_warning" %>
+
+<p>In this lesson we will learn about the experiences of Mexican immigrants during the first half of the Twentieth Century, and about the types of work that made survival of their families and communities possible.</p>
+
+<%= render "learn/lesson04/1_overview" %>
+
+<h2 class="h4"><%= t "learn.lesson_plans.instruction_sequence" %></h2>
+
+<p class="lesson_sequence_subtitle h4">
+  Yo me encuentro en este lugar ahora y encontré trabajo
+</p>
+
+<br>
+
+<%= render "learn/lessons_shared/table_of_contents" %>
+
+<%= render "learn/lesson04/2_antes" %>
+<%= render "learn/lesson04/3_continuar" %>
+<%# mira partially powered by API results %>
+<%= render "learn/lesson04/4_mira" %>
+<%= render "learn/lesson04/5_manos" %>
+<%= render "learn/lesson04/6_grammar" %>
+<%= render "learn/lesson04/7_language" %>
+<%= render "learn/lesson04/8_paso" %>
+<%= render "learn/lesson04/9_rabbit" %>
+
+<%= render partial: "learn/lessons_shared/more_plans", locals: { lesson: 4 } %>

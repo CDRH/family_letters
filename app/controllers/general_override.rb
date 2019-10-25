@@ -5,9 +5,12 @@ GeneralController.class_eval do
     all_routes = Rails.application.routes.routes.map do |route|
       route.path.spec.to_s
     end
-    filtered = all_routes.select { |r| r[/explore|research|teach/] }
+    filtered = all_routes.select { |r| r[/explore|learn|research/] }
     # get the current base URL + sub URI if it exists
-    base_url = File.join(request.base_url, config.relative_url_root)
+    base_url = request.base_url
+    if config.relative_url_root
+      base_url = File.join(base_url, config.relative_url_root)
+    end
 
     urls = filtered.map do |path|
       # family letters only supports en as an alternate language
