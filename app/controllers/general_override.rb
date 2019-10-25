@@ -1,5 +1,21 @@
 GeneralController.class_eval do
 
+  def about_acknowledgements
+    @title = t "about.acknowledgements.title"
+  end
+
+  def about_faq
+    @title = t "about.faq.title"
+  end
+
+  def about_team
+    @title = t "about.team.title"
+  end
+
+  def about_technical
+    @title = t "about.technical.title"
+  end
+
   # returns a list of all the rails views with content that should be searchable
   def content_pages
     all_routes = Rails.application.routes.routes.map do |route|
