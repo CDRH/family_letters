@@ -40,10 +40,25 @@
 <br>
 “Y al jerry le pusieron su cuarto abajo en <strong>el soterano</strong>”</p>
 
-<!--TODO Description of objects and thumbnails as a linked PDF? Refer to Google Doc "TEXTS FOR LEARN PAGE JUNE 18/2019" -->
+<p class="alert alert-danger">This one pulled mostly from API</p>
+<h5>Christmas Day, 1953</h5>
 
-<!-- TODO any way we can pull those from TEI? -->
-
-<h3 class="h5">Transcript</h3>
-
-<h3 class="h5">Translation</h3>
+<div class="row">
+  <div class="col-md-6">
+    <!-- NOTE this title conflicts with Isabel's version -->
+    <!-- Black and white photograph of William D. Schubert, Pamela L. Schubert and Robert S. Schubert, Christmas Day 1953. -->
+    <ul>
+      <li><strong>Title:</strong> <%= @xmas["res"]["title"] %></li>
+      <li><strong>Identifier:</strong> <%= @xmas["res"]["identifier"] %></li>
+      <li><strong>Date:</strong> <%= @xmas["res"]["date_display"] %></li>
+      <li><strong>Format:</strong> <%= @xmas["res"]["format"].join(" | ") %></li>
+      <!-- Not pulling from API at the moment -->
+      <li><strong>Creator:</strong> N/A</li>
+      <li><strong>Held by:</strong> University of Nebraska, Lincoln, Hispanic-Latina/o Heritage Collection</li>
+    </ul>
+    <p><%= @xmas["res"]["text"] %></p>
+  </div>
+  <div class="col-md-6">
+    <%= image_tag iiif(@xmas["res"]["image_id"], size: "!400,400") %>
+  </div>
+</div>

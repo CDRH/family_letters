@@ -7,6 +7,7 @@ class LearnController < ApplicationController
 
   def lesson01
     @title = t "learn.lesson01.title"
+    @xmas = get_item("shan_p.135")
   end
 
   def lesson02
@@ -27,7 +28,18 @@ class LearnController < ApplicationController
 
   private
 
+  def get_item(id)
+    item = {}
+    item["res"] = $api.get_item_by_id(id).first
+    if item["res"]["url_html"]
+      url = item["res"]["uri_html"]
+      item["html"] = Net::HTTP.get(URI.parse(url)) if url
+    end
+    item
+  end
+
   def include_assets
     @ext_css = helpers.add_assets(@ext_css, "learn")
   end
+
 end
