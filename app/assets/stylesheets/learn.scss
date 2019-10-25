@@ -6,7 +6,9 @@ blockquote {
 
 /* add some spacing to the top to remove <br> tags */
 h3 {
+  border-top: $dustyrose solid 4px;
   margin-top: 50px;
+  padding-top: 50px;
 }
 
 ol {
