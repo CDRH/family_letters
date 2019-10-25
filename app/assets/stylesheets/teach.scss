@@ -19,7 +19,6 @@ ol {
   &.numbered {
     list-style-type: decimal;
   }
-
 }
 
 ul {
@@ -28,6 +27,15 @@ ul {
   }
   &.objectives {
     list-style-type: square;
+  }
+}
+
+.poetry {
+  margin-left: 40%;
+  margin-bottom: 40px;
+
+  .indent {
+    text-indent: 40px;
   }
 }
 
