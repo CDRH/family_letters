@@ -9,9 +9,10 @@ es:
     title: Aprende
     home:
       title: Recursos Para Maestros
-      subtitle: |-
-        La presente es para saludarlos: Lengua, migración y vida cotidiana en
-        la experiencia de una familia mexicoamericana
+      subtitle_1: "La presente es para saludarlos:"
+      subtitle_2: |-
+        Lengua, migración y vida cotidiana en la experiencia de una familia
+        mexicoamericana
       introduction_html: |-
         <p>Los siguientes materiales fueron diseñados para estudiantes de
         español intermedio/avanzado de high school y universidad. Nuestro
@@ -45,7 +46,14 @@ es:
       materials: Materials
       overview: Instructional Sequence
       title: Lesson Plans
-      warning: "Aviso: El contenido es una mezcla de español y inglés"
+      warning: |-
+        La descripción de los recursos pedagógicos en esta sección fue escrita
+        en inglés tomando en consideración que, en el contexto de los Estados
+        Unidos, los maestros de español son parte de una comunidad escolar que
+        incluye administradores, colegas y padres de familia que no pueden no
+        leer en español. Las instrucciones para los alumnos fueron escritas en
+        español, por ser ésta la lengua de instrucción y el objeto de estudio
+        de estas unidades pedagógicas.
     lesson01:
       title: Vida cotidiana
     lesson02:

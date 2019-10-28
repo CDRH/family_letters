@@ -2,104 +2,110 @@
 
 <%= render "learn/lessons_shared/language_warning" %>
 
-<h2 class="h3"><%= t "learn.home.subtitle" %></h2>
+<h2 class="h3">
+  <%= t "learn.home.subtitle_1" %>
+  <br/>
+  <%= t "learn.home.subtitle_2" %>
+</h2>
 
 <%= t "learn.home.introduction_html" %>
 
-<h3><%= t "learn.home.developmental_targets" %></h3>
-
-<%= render "developmental_targets" %>
-
-<!--TODO fix the last Lesson 5 square, which is not displaying as it should -->
+<!-- developmental targets button and expander -->
+<button class="btn btn-default" type="button" data-toggle="collapse"
+        data-target="#targets" aria-expanded="false"
+        aria-controls="targets">
+  <h3><%= t "learn.home.developmental_targets" %></h3>
+</button>
+<div class="collapse" id="targets">
+  <div class="well">
+    <%= render "developmental_targets" %>
+  </div>
+</div>
 
 <h3 class="explore_index_headers">
   <%= t "learn.lesson_plans.title" %>
 </h3>
 
-</div> <%# End container for full width band %>
-<div class="container-fluid explore_band">
+<div class="row">
+  <div class="col-sm-6">
+    <%= link_to learn_lesson01_path, class: "content callout_1 callout" do %>
+      <div class="callout_inner">
+        <div class="row">
+          <div class="col-md-9 col-md-offset-3">
+            <div class="inner_content">
+              <h4>
+                <%= t "learn.lesson01.title", default: "Lesson 01" %>
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div><!-- /col -->
+  <div class="col-sm-6">
+    <%= link_to learn_lesson02_path, class: "content callout_2 callout" do %>
+      <div class="callout_inner">
+        <div class="row">
+          <div class="col-md-9">
+            <div class="inner_content">
+              <h4>
+                <%= t "learn.lesson02.title", default: "Lesson 02" %>
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div><!-- /col -->
+</div><!-- /row -->
 
-  <div class="row">
-    <div class="col-sm-6">
-      <%= link_to learn_lesson01_path, class: "content learn_callout1 explore_callout" do %>
-        <div class="explore_inner">
-          <div class="row">
-            <div class="col-md-9 col-md-offset-3">
-              <div class="inner_content">
-                <h4>
-                  <%= t "learn.lesson01.title", default: "Lesson 01" %>
-                </h4>
-              </div>
+<div class="row">
+  <div class="col-sm-6">
+    <%= link_to learn_lesson03_path, class: "content callout_3 callout" do %>
+      <div class="callout_inner">
+        <div class="row">
+          <div class="col-md-9 col-md-offset-3">
+            <div class="inner_content">
+              <h4>
+                <%= t "learn.lesson03.title", default: "Lesson 03" %>
+              </h4>
             </div>
           </div>
         </div>
-      <% end %>
-    </div><!-- /col -->
-    <div class="col-sm-6">
-      <%= link_to learn_lesson02_path, class: "content learn_callout2 explore_callout" do %>
-        <div class="explore_inner">
-          <div class="row">
-            <div class="col-md-9">
-              <div class="inner_content">
-                <h4>
-                  <%= t "learn.lesson02.title", default: "Lesson 02" %>
-                </h4>
-              </div>
+      </div>
+    <% end %>
+  </div><!-- /col -->
+  <div class="col-sm-6">
+    <%= link_to learn_lesson04_path, class: "content callout_4 callout" do %>
+      <div class="callout_inner">
+        <div class="row">
+          <div class="col-md-9">
+            <div class="inner_content">
+              <h4>
+                <%= t "learn.lesson04.title", default: "Lesson 04" %>
+              </h4>
             </div>
           </div>
         </div>
-      <% end %>
-    </div><!-- /col -->
-  </div><!-- /row -->
-
-  <div class="row">
-    <div class="col-sm-6">
-      <%= link_to learn_lesson03_path, class: "content learn_callout3 explore_callout" do %>
-        <div class="explore_inner">
-          <div class="row">
-            <div class="col-md-9 col-md-offset-3">
-              <div class="inner_content">
-                <h4>
-                  <%= t "learn.lesson03.title", default: "Lesson 03" %>
-                </h4>
-              </div>
-            </div>
-          </div>
-        </div>
-      <% end %>
-    </div><!-- /col -->
-    <div class="col-sm-6">
-      <%= link_to learn_lesson04_path, class: "content learn_callout4 explore_callout" do %>
-        <div class="explore_inner">
-          <div class="row">
-            <div class="col-md-9">
-              <div class="inner_content">
-                <h4>
-                  <%= t "learn.lesson04.title", default: "Lesson 04" %>
-                </h4>
-              </div>
-            </div>
-          </div>
-        </div>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
   </div>
+</div>
 
-  <div class="row">
-    <div class="col-sm-6 col-md-offset-3">
-      <%= link_to learn_lesson05_path, class: "content learn_callout5 explore_callout" do %>
-        <div class="explore_inner">
-          <div class="row">
-            <div class="col-md-9 col-md-offset-3">
-              <div class="inner_content">
-                <h4>
-                  <%= t "learn.lesson05.title", default: "Lesson 05" %>
-                </h4>
-              </div>
+<div class="row">
+  <div class="col-sm-6 col-md-offset-3">
+    <%= link_to learn_lesson05_path, class: "content callout_5 callout" do %>
+      <div class="callout_inner">
+        <div class="row">
+          <div class="col-md-9 col-md-offset-3">
+            <div class="inner_content">
+              <h4>
+                <%= t "learn.lesson05.title", default: "Lesson 05" %>
+              </h4>
             </div>
           </div>
         </div>
-      <% end %>
-    </div><!-- /col -->
-  </div><!-- /row -->
-</div>
+      </div>
+    <% end %>
+  </div><!-- /col -->
+</div><!-- /row -->

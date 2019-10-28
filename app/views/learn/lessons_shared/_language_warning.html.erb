@@ -1,3 +1,24 @@
-<div class="alert alert-warning" role="alert">
-  <%= t "learn.lesson_plans.warning" %>
+<!-- TODO use Colorado / Michoacán stamps for logos instead -->
+<button type="button" class="btn btn-primary btn-lg pull-right"
+        data-toggle="modal" data-target="#language_warning">
+  <%= image_tag "no_image.jpg" %>
+  <p>Will be stamps</p>
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="language_warning" tabindex="-1"
+     role="dialog" aria-labelledby="language_warning">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+        <%= t "learn.lesson_plans.warning" %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">X</button>
+      </div>
+    </div>
+  </div>
 </div>

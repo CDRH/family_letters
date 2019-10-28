@@ -9,9 +9,10 @@ en:
     title: Learn
     home:
       title: Teacher Resources
-      subtitle: |-
-        This letter is to greet you: Language, migration and daily life in the
-        experience of one Mexican American family
+      subtitle_1: "This letter is to greet you:"
+      subtitle_2: |-
+        Language, migration and daily life in the experience of one Mexican
+        American family
       introduction_html: |-
         <p>The following materials were designed to address the needs of High
         School and college Spanish learners at the intermediate/advanced
@@ -43,7 +44,14 @@ en:
       materials: Materials
       overview: Lesson Plan Overview
       title: Lesson Plans
-      warning: "Warning: Content is a mixture of Spanish and English"
+      warning: |-
+        The description of the teacher resources in this section was written in
+        English taking into consideration that, in the context of the United
+        States, teachers of Spanish are part of a school community that
+        includes administrators, colleagues and parents that may not know how
+        to read in Spanish. Instructions for students were written in Spanish
+        because this is both the language of instruction and the object of
+        study of these pedagogical units.
     lesson01:
       title: Daily Life
     lesson02:
