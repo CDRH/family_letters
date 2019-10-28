@@ -25,13 +25,13 @@ Rails.application.routes.draw do
     # research / investiga
     get '/research', to: 'research#index', as: 'research'
 
-    # teach / enseña
-    get '/teach', to: 'teach#index', as: 'teach'
-    get '/teach/lesson01', to: 'teach#lesson01', as: 'teach_lesson01'
-    get '/teach/lesson02', to: 'teach#lesson02', as: 'teach_lesson02'
-    get '/teach/lesson03', to: 'teach#lesson03', as: 'teach_lesson03'
-    get '/teach/lesson04', to: 'teach#lesson04', as: 'teach_lesson04'
-    get '/teach/lesson05', to: 'teach#lesson05', as: 'teach_lesson05'
+    # learn / enseña
+    get '/learn', to: 'learn#index', as: 'learn'
+    get '/learn/lesson01', to: 'learn#lesson01', as: 'learn_lesson01'
+    get '/learn/lesson02', to: 'learn#lesson02', as: 'learn_lesson02'
+    get '/learn/lesson03', to: 'learn#lesson03', as: 'learn_lesson03'
+    get '/learn/lesson04', to: 'learn#lesson04', as: 'learn_lesson04'
+    get '/learn/lesson05', to: 'learn#lesson05', as: 'learn_lesson05'
 
     get '/content_pages', to: 'general#content_pages', as: 'content_pages'
   end

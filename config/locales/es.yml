@@ -99,6 +99,8 @@ es:
   ###########
   explore:
     title: Explora
+    objects:
+      back: Volver a la versión en español
 
   #############
   # HOME PAGE #
@@ -247,7 +249,7 @@ es:
       # labels for individual item descriptions in results
       item:
         # creators of the item
-        creator: Creador(es)
+        creator: Autor(es)
         # the date of the item used for search results
         date: Fecha
         # the format of the item
@@ -276,13 +278,13 @@ es:
     search_text: Buscar Texto
     sort:
       # alphabetically ascending sort
-      alpha_asc: "por orden alfabético (A-Z)" 
+      alpha_asc: "Por orden alfabético (A-Z)"
       # alphabetically descending sort
-      alpha_desc: "por orden alfabético (Z-A)"
+      alpha_desc: "Por orden alfabético (Z-A)"
       # sort by fewest to most items
-      count_asc: "por cantidad (menos objetos)"
+      count_asc: "Por cantidad (menos objetos)"
       # sort by most to fewest items
-      count_desc: "por cantidad (más objetos)"
+      count_desc: "Por cantidad (más objetos)"
       # creator ascending sort
       creator_asc: "Creador (A-Z)"
       # creator descending sort
@@ -320,23 +322,3 @@ es:
       en_help: Buscar solamente objetos en inglés
       # CUSTOM screenreader label for more information
       information: Información
-
-  #########
-  # TEACH #
-  #########
-  teach:
-    title: Aprende
-    lesson_general:
-      title: Recursos Para Profesores
-    lesson_plans:
-      title: Planes de Lecciones
-    lesson01:
-      title: Estilo de Vida Diario
-    lesson02:
-      title: Familia
-    lesson03:
-      title: Religión
-    lesson04:
-      title: Trabajo
-    lesson05:
-      title: Identidad

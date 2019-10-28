@@ -1,14 +1,32 @@
 GeneralController.class_eval do
 
+  def about_acknowledgements
+    @title = t "about.acknowledgements.title"
+  end
+
+  def about_faq
+    @title = t "about.faq.title"
+  end
+
+  def about_team
+    @title = t "about.team.title"
+  end
+
+  def about_technical
+    @title = t "about.technical.title"
+  end
+
   # returns a list of all the rails views with content that should be searchable
   def content_pages
     all_routes = Rails.application.routes.routes.map do |route|
       route.path.spec.to_s
     end
-    filtered = all_routes.select { |r| r[/explore|research|teach/] }
-    # get the current URL and remove this path from it
-    # because request.base_url will not accommodate sub-uris
-    base_url = request.url.sub("/content_pages", "")
+    filtered = all_routes.select { |r| r[/explore|learn|research/] }
+    # get the current base URL + sub URI if it exists
+    base_url = request.base_url
+    if config.relative_url_root
+      base_url = File.join(base_url, config.relative_url_root)
+    end
 
     urls = filtered.map do |path|
       # family letters only supports en as an alternate language

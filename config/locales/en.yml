@@ -52,7 +52,7 @@ en:
         greg: Programmer
         jess: Programmer
         karin: Digital Development Manager & Designer
-        kay: Co-director. Chair, Digital Initiatives &amp; Special Collections, UNL Libraries
+        kay: Co-director. Chair, Digital Initiatives & Special Collections, UNL Libraries
         laura: Metadata Encoding Specialist
       grads:
         title: Graduate Research Assistants
@@ -105,6 +105,8 @@ en:
   ###########
   explore:
     title: Explore
+    objects:
+      back: Return to English version
 
   #############
   # HOME PAGE #
@@ -251,7 +253,7 @@ en:
       # labels for individual item descriptions in results
       item:
         # creators of the item
-        creator: Creator(s)
+        creator: Author(s)
         # the date of the item used for search results
         date: Date
         # the format of the item
@@ -323,24 +325,3 @@ en:
       en_help: Search English text only
       # CUSTOM screenreader label for more information
       information: Information
-
-  #########
-  # TEACH #
-  #########
-  teach:
-    title: Learn
-    lesson_general:
-      title: Teacher Resources
-    lesson_plans:
-      title: Lesson Plans
-    lesson01:
-      title: Daily Life
-    lesson02:
-      title: Family
-    lesson03:
-      title: Religion
-    lesson04:
-      title: Work
-    lesson05:
-      title: Identity 
-

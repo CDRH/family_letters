@@ -20,12 +20,12 @@ default: &default
       # typically use title as sort except that the title
       # field could be spanish or english, so changing default to date
       - date|asc
-    rows: 50
+    num: 50
     # facet info on search page
     facet_limit: 20
     facet_sort: count|desc
     # facet info on browse page
-    browse_sort: term|asc
+    browse_sort: count|desc
     # highlighting
     hl_fl: text_t_es,text_t_en
     hl_num: 5

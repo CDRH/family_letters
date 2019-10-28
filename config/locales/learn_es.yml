@@ -1,0 +1,58 @@
+# NOTE some of the below content is specified in Isabel's
+# instructions English, NOT Spanish, it is not a mistake in this file
+#
+# Pulling out into a translation file so that if in the future
+# it is translated, the task will be much simplified
+
+es:
+  learn:
+    title: Aprende
+    home:
+      title: Recursos Para Maestros
+      subtitle: |-
+        La presente es para saludarlos: Lengua, migración y vida cotidiana en
+        la experiencia de una familia mexicoamericana
+      introduction_html: |-
+        <p>Los siguientes materiales fueron diseñados para estudiantes de
+        español intermedio/avanzado de high school y universidad. Nuestro
+        objetivo general es permitir que los estudiantes utilicen los recursos
+        de la colección Shanahan para desarrollar sus habilidades lingüísticas
+        y su competencia cultural mientras aprenden más sobre la experiencia de
+        las familias mexicanoamericanas de principios del siglo XX.</p>
+        <p>Las actividades que aquí se presentan fueron pensadas para responder
+        a las necesidades de dos tipos de estudiantes: los hablantes de español
+        como lengua de herencia y aquellos que están aprendiéndolo como segunda
+        lengua.</p>
+        <p>Siguiendo a Beaudrie y Potowski (2014), consideramos que los
+        hablantes de español como lengua de herencia poseen conocimientos
+        lingüísticos, sociales y culturales previos que deben ser valorados en
+        el salón de clase. Entendemos como hablante de herencia a aquel o
+        aquella estudiante que creció en un entorno familiar o comunitario en
+        donde se habla una lengua minoritaria y que posee una conexión afectiva
+        y cultural con dicha lengua.</p>
+        <p>Reconocemos que, en el contexto de Estados Unidos, la mayoría de las
+        aulas incluye a ambos tipos de estudiantes. Cada maestro podrá adaptar
+        este material (y los demás recursos de la colección), para responder a
+        las necesidades específicas de sus alumnos.</p>
+      developmental_targets: Developmental Targets
+      # the complex developmental targets table is loaded from partials
+    lesson_plans:
+      for_students: For Students
+      for_teachers: For Teachers
+      instruction_sequence: Secuencia Instruccional
+      learning_objectives: Learning Objectives
+      lesson_focus: In this lesson, we focus on…
+      materials: Materials
+      overview: Instructional Sequence
+      title: Lesson Plans
+      warning: "Aviso: El contenido es una mezcla de español y inglés"
+    lesson01:
+      title: Vida cotidiana
+    lesson02:
+      title: Familia
+    lesson03:
+      title: Religión
+    lesson04:
+      title: Trabajo
+    lesson05:
+      title: Identidad

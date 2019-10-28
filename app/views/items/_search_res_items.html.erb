@@ -18,26 +18,22 @@
             <ul class="search_item_metadata">
               <% if item["date_display"].present? %>
                 <li>
-                  <strong><%= t "search.results.item.date", default: "Date" %></strong>:
-                  <%= item["date_display"] %>
+                  <%= metadata(item, t("search.results.item.date", default: "Date"), "date_display", link: false) %>
                 </li>
               <% end %>
               <% if item["format"].present? %>
                 <li>
-                  <strong><%= t "search.results.item.format", default: "Format" %></strong>:
-                  <%= value_label("format", item["format"]) %>
+                  <%= metadata(item, t("search.results.item.format", default: "Format"), "format", link: false) %>
                 </li>
               <% end %>
               <% if item["source"].present? %>
                 <li>
-                  <strong><%= t "search.results.item.source", default: "Source" %></strong>:
-                  <%= item["source"] %>
+                  <%= metadata(item, t("search.results.item.source", default: "Source"), "source", link: false) %>
                 </li>
               <% end %>
               <% if item["subcategory"].present? %>
                 <li>
-                  <strong><%= t "search.results.item.subcategory", default: "Subcategory" %></strong>:
-                  <%= value_label("subcategory", item["subcategory"]) %>
+                  <%= metadata(item, t("search.results.item.subcategory", default: "Subcategory"), "subcategory", link: false) %>
                 </li>
               <% end %>
             </ul>
