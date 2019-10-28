@@ -1,8 +1,6 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.2'
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
 # Use sqlite3 as the database for Active Record
@@ -58,13 +56,10 @@ group :test do
   gem 'webdrivers'
 end
 
-# sprockets locked to < 4.0, which is incompatible with orchid
-gem 'sprockets', '~> 3.7'
-
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'orchid', git: 'https://github.com/CDRH/orchid', ref: '34bedb25e2dd22d21ed80fcd2ebc1688c0b5b803'
+gem 'orchid', git: 'https://github.com/CDRH/orchid', tag: 'v3.0.0'
 
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'jquery-rails', '~> 4.3'
