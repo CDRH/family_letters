@@ -1,11 +1,13 @@
-<h1><%= t "learn.home.title" %></h1>
+<h1 class="h2"><%= t "learn.home.title" %></h1>
 
 <%= render "learn/lessons_shared/language_warning" %>
 
-<h2 class="h3">
-  <%= t "learn.home.subtitle_1" %>
-  <br/>
-  <%= t "learn.home.subtitle_2" %>
+<h2 class="h4">
+  <em>
+    <%= t "learn.home.subtitle_1" %>
+    <br/>
+    <%= t "learn.home.subtitle_2" %>
+  </em>
 </h2>
 
 <%= t "learn.home.introduction_html" %>
@@ -109,3 +111,8 @@
     <% end %>
   </div><!-- /col -->
 </div><!-- /row -->
+
+<!-- TODO this was originally supposed to be a sidebar but I am putting it
+     here because I don't know how that will work with the rest of the
+     contents on this page -->
+<%= render "more" %>
