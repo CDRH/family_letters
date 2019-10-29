@@ -2,7 +2,7 @@ en:
   explore:
     gallery: Gallery
     home:
-      exhibits: Exhibits
+      exhibits: Open a window
       objects_html: |-
         A spoon, a taste, a world:
         <br/>The story that our everyday objects tell
@@ -10,7 +10,7 @@ en:
       search_btn: Search and Refine
       search_label: Search Materials
       introduction: |-
-        This is not just the history of one family. Eighty years after her
+        This is not the history of just one family. Eighty years after her
         grandmother Jesusita arrived in the US, Jane Shanahan arrived at UNL with
         a collection of documents that she wanted to translate. The result of
         that initial effort is this digital archive that brings together the
@@ -23,7 +23,7 @@ en:
     connections:
       baby: Welcome Baby
       birthday: Birthday
-      christmas: Christmas
+      christmas: Christmas & New Years
       easter: Easter
       mother: Mother's Day
       postcards: Postcards
@@ -83,7 +83,7 @@ en:
       shan_d_233: Beautiful rose design, Writing in Spanish
       shan_d_503: Muchos años de vida Jane Schubert
       # christmas
-      shan_d_384: EMBROIDERED IN SILVER THREAD 'Feliz año nuevo'
+      shan_d_384: Embroidered. Silver thread. 'Feliz año nuevo'
       shan_d_394: Birds nest artwork & writing in Spanish
       shan_d_398: Handmade Christmas and New Years Card from E. Jane Shanahan to her parents (1967) 'Spiritual Bouquet'.
       shan_d_469: Christmas card and envelope from Carmen Gutiérez to Santos Baros Schubert. On the back side of the card, there is letter handwritten in English.

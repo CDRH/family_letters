@@ -3,7 +3,7 @@ es:
     gallery: Galería
     home:
       connections: Conexiones
-      exhibits: Una probadita
+      exhibits: Abre una ventana
       language_and_life: Lengua y vida
       migrations: Migraciones
       more_than: Somos más que nuestro trabajo
@@ -13,7 +13,7 @@ es:
       search_btn: Buscar y refinar
       search_label: Buscar materiales
       introduction: |-
-        Esta es más que solo la historia de una familia. Ochenta años después de
+        Esta es más que la historia de solo una familia. Ochenta años después de
         que su abuela Jesusita llegara a EEUU, Jane Shanahan se acercó a UNL con
         una colección de documentos que quería traducir. El resultado de ese
         esfuerzo inicial es este archivo digital que reúne los documentos y
@@ -51,7 +51,9 @@ es:
       # all of these captions may eventually be pulled from the API or another source
 
       # main explore page
-      shan_p_035: Fotografía en blanco y negro de Jesusita Baros Torres con su hijo Jesús Baros. 1920 (Circa).
+      shan_p_035: |-
+        Fotografía en blanco y negro de Jesusita Baros Torres con su hijo Jesús
+        Baros (ca. 1920).
       shan_p_403: Retrato familiar. Jesusita, Jesse y Santos Baros.
 
       # migrations
@@ -156,7 +158,7 @@ es:
         quién sufrió un accidente en la carretera. Vamos a un baile, sabemos
         quién se casa y qué le regalaron. Sabemos cuántos muchachos del barrio
         se fueron a la guerra, qué parte del pueblo es mejor para comprar una
-        casa, qué fin de semana dan una película en español, y qué hay para la
+        casa, qué fin de semana dan una película en español y qué hay para la
         cena de navidad.</p>
         <p>Sabemos como son los días de campo en el verano, oímos las
         canciones, las risas y las historias de amor. Experimentamos un poco

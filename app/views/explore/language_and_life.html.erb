@@ -2,11 +2,9 @@
 
 <%= t "explore.language_and_life.intro_html" %>
 
-<ul>
-  <% @res.items.each do |item| %>
-    <li>
-      <%= link_to item["title"], item_path(params["locale"], item["identifier"]) %><br/>
-      <%= sanitize item["highlight"]["text"].first %>
-    </li>
-  <% end %>
-</ul>
+<%# TODO cleanup and make into gallery %>
+
+<p>Will make this into a nice exhibit / gallery</p>
+<%= image_tag iiif("shan_p.427.jpg") %>
+<%= image_tag iiif("shan_p.029.jpg") %>
+<%= image_tag iiif("shan_d.109.jpg") %>
