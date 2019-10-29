@@ -165,3 +165,7 @@ es:
         los sueños, los planes y las aspiraciones que le sirven de combustible
         a nuestro trabajo y que le dan forma a una familia, a una comunidad y
         a una forma de ver el mundo.</p>
+    objects:
+      # this title appears in the <title> tag
+      # and so is shortened from the full title
+      title: Una Cuchara, Una Sazón, Un Mundo
