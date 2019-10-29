@@ -269,7 +269,7 @@ es:
       # display when a specific filter option is an empty string
       no_label: Sin etiqueta
       # link text to view all the possible filter options
-      see_more: Más opciones de filtro
+      see_more: Más opciones
       # hidden label to expand a filter category
       show: "Mostrar los filtros de %{label}" 
       # hidden label for filter summary boxes
