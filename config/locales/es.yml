@@ -5,12 +5,16 @@ es:
   #################
   general:
     # footer content with link to CDRH site
-    cdrh_link_html: Creado por el <a href="https://cdrh.unl.edu">Centro de Investigación Digital en las Humanidades</a>.
+    cdrh_link_html: |-
+      Creado por el <a href="https://cdrh.unl.edu">Centro de Investigación
+      Digital en las Humanidades</a>.
     # close a popup window
     close: Cerrar
     # custom
     dedication_button: Dedicatoria
-    dedication_text: Este sitio electrónico está dedicado a Jesusita Baros Torres. Su esfuerzo no fue en vano.
+    dedication_text: |-
+      Este sitio electrónico está dedicado a Jesusita Baros Torres. Su esfuerzo
+      no fue en vano.
     footer_html: |-
       <em>Cartas a la Familia</em> es un proyecto dirigido por Isabel Velázquez,
       y publicado de manera conjunta por el Centro de Investigación Digital en
@@ -132,6 +136,10 @@ es:
       se entrelazan con la vida de las personas comunes y corrientes.</p>
     # page title
     title: Inicio
+    # CUSTOM FAMILY LETTERS
+    carousel:
+      to: a
+      unknown: Desconocido
 
   #############
   # ITEM VIEW #
