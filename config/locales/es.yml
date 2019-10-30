@@ -1,4 +1,11 @@
 es:
+  # found a bug in orchid where the t tag is looking at "help.title"
+  # when it should be looking for "search.help.title"
+  # until this is corrected, the below help.title needs to be used
+  help:
+    # section title
+    title: Ayuda
+
 
   #################
   # GENERAL PAGES #
@@ -139,7 +146,7 @@ es:
     # CUSTOM FAMILY LETTERS
     carousel:
       to: a
-      unknown: Desconocido
+      unknown: Remitente desconocido
 
   #############
   # ITEM VIEW #
@@ -167,41 +174,6 @@ es:
     no_item: "No se ha encontrado ningún objeto %{id}!"
     # title for error when item not found
     not_found: No se han encontrado objetos bajo estos criterios
-
-  ############
-  # RESEARCH #
-  ############
-  research:
-    title: Investiga
-    intro_html: |-
-      <p>Los materiales de esta colección se encuentran a disposición de la
-      comunidad académica para propósitos de investigación. Esta colección se
-      compone de 713 objetos digitales fechados entre los años 1835 y 1986.
-      Éstos incluyen 225 cartas, 199 documentos, 19 textos misceláneos y 270
-      fotografías. Ciento cuarenta y nueve cartas de esta colección fueron
-      escritas totalmente en español o incluyen escritura en español. Setenta
-      y tres documentos fueron escritos totalmente en español o incluyen
-      escritura en español. La correspondencia personal incluida en esta
-      colección fue enviada desde diez localidades mexicanas y 28 localidades
-      en los Estados Unidos, a tres localidades en México y once localidades
-      en los Estados Unidos. Esta colección incluye también la transcripción
-      y traducción de cartas y otros documentos escritos parcial o totalmente
-      en español, así como la transcripción y traducción de alguna
-      correspondencia personal escrita originalmente en inglés.</p>
-      <p>Como la principal institución de educación superior del estado de
-      Nebraska, uno de los valores centrales de UNL es que el conocimiento
-      generado por nuestra universidad beneficie a las comunidades de nuestro
-      estado. Con esto en mente, los materiales de esta colección también
-      están a disposición de escuelas y de organizaciones cívicas y culturales
-      interesadas en saber más sobre la experiencia latina en nuestra región.
-      Toda pregunta, comentario o propuesta de colaboración deberá dirigirse
-      por escrito a Isabel Velázquez, directora de este proyecto.</p>
-    citation: Artículos académicos
-    contribute: ¿Cómo puedo colaborar con este proyecto?
-    search:
-      materials: Buscar Materiales
-      advanced: Búsqueda Avanzada
-      refine: Buscar y refinar
 
   ########################
   # SEARCH AND FILTERING #
@@ -252,15 +224,34 @@ es:
       html: |-
         
         <h4>Búsqueda básica</h4>
-        <p>Es posible insertar la palabra que se desee encontrar y el sistema buscará cada una de las veces que parezca la colección. Por ejemplo: Trabajo. Todas las veces que la palabra trabajo aparezca en los materiales se mostrará en los resultados de la búsqueda.</p>
+        <p>Es posible insertar la palabra que se desee encontrar y el sistema
+        buscará cada una de las veces que parezca la colección. Por ejemplo:
+        Trabajo. Todas las veces que la palabra trabajo aparezca en los
+        materiales se mostrará en los resultados de la búsqueda.</p>
         <h4>Búsqueda especial (lematización)</h4>
-        <p>Al utilizar un asterisco (*) usted aumenta las probabilidades de encontrar el resultado que busca. Por ejemplo: Trabajo. Los resultados de esta búsqueda incluirán palabras como trabajo, trabajos, trabajando, etc. También puede utilizar más de un elemento de búsqueda especial. Por ejemplo: *era*. Al buscar así, encontrará la mayoría hera, Heráclito, eran, serán, etc. Al usar el signo de interrogación (?) en lugar del asterisco (*), podrá buscar a partir de una sola letra. Por ejemplo, e?a le permitirá encontrar las formas eta y esa, pero no esta ni ella.</p>
+        <p>Al utilizar un asterisco (*) usted aumenta las probabilidades de
+        encontrar el resultado que busca. Por ejemplo: Trabajo. Los resultados
+        de esta búsqueda incluirán palabras como trabajo, trabajos, trabajando,
+        etc. También puede utilizar más de un elemento de búsqueda especial.
+        Por ejemplo: *era*. Al buscar así, encontrará palabras como hera,
+        Heráclito, eran, serán, etc. Al usar el signo de interrogación (?) en
+        lugar del asterisco (*), podrá buscar a partir de una sola letra. Por
+        ejemplo, e?a le permitirá encontrar las formas eta y esa, pero no esta
+        ni ella.</p>
         <h4>Uso de mayúsculas</h4>
-        <p>El sistema no toma en cuenta las mayúsculas. Por ejemplo: Escribir pedro y Pedro le dará los mismos resultados</p>
+        <p>El sistema no toma en cuenta las mayúsculas. Por ejemplo: Escribir
+        pedro y Pedro le dará los mismos resultados</p>
         <h4>Búsqueda por frase</h4>
-        <p>Buscar por frase limita el número de resultados. No importa la extensión de la frase. Por ejemplo: "Todos los ciudadanos deben tener iguales derechos ante la ley".</p>
+        <p>Buscar por frase limita el número de resultados. No importa la
+        extensión de la frase. Por ejemplo: "Todos los ciudadanos deben tener
+        iguales derechos ante la ley".</p>
         <h4>Búsquedas subsecuentes</h4>
-        <p>La multiplicidad de formas en las que puede estar escrita una palabra hace posible que a veces usted necesite repetir su búsqueda. Por ejemplo: para algunas palabras, es posible que se necesite realizar una búsqueda varias veces. Por ejemplo: *erb?. Los resultados de esta búsqueda incluirían las formas yerba e ierba. Al buscar por ?*erb?, aparecería el resultado hierba.</p>
+        <p>La multiplicidad de formas en las que puede estar escrita una
+        palabra hace posible que a veces usted necesite repetir su búsqueda.
+        Por ejemplo: para algunas palabras, es posible que se necesite realizar
+        una búsqueda varias veces. Por ejemplo: *erb?. Los resultados de esta
+        búsqueda incluirían las formas yerba e ierba. Al buscar por ?*erb?,
+        aparecería el resultado hierba.</p>
     filters:
       # clearing filters (not the text search)
       clear_all: Borrar Filtros
