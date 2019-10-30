@@ -19,8 +19,8 @@
       <!-- Not pulling from API at the moment -->
       <li><strong>Creator:</strong> N/A</li>
       <li><strong>Held by:</strong> University of Nebraska, Lincoln, Hispanic-Latina/o Heritage Collection</li>
-      <li><strong><%= link_to "View All Item Information", item_path(id: item["res"]["identifier"]) %></strong></li>
     </ul>
+    <%= link_to "View more information about #{id}", item_path(id: item["res"]["identifier"]) %>
   </div>
 
   <%# IMAGE PREVIEW %>
@@ -38,7 +38,7 @@
 <% if local_assigns[:transcript] && transcript %>
   <div class="row">
     <button class="btn btn-default btn-block" type="button" data-toggle="collapse" data-target="#collapse-<%= id.parameterize %>" aria-expanded="false" aria-controls="collapse-<%= id.parameterize %>">
-      Item Text
+      Item Text and Translation
     </button>
     <div class="collapse" id="collapse-<%= id.parameterize %>">
       <div class="well">
