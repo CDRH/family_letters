@@ -66,6 +66,9 @@ en:
         title: Undergraduate Research Assistants
     technical:
       title: Technical Information
+      data: Data
+      image: Images
+      website: Website Technologies
     acknowledgements:
       title: Acknowledgements
       html: |-

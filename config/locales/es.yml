@@ -64,6 +64,9 @@ es:
         title: Asistentes de investigación-licenciatura
     technical:
       title: Información técnica
+      data: Datos
+      images: Imágenes
+      website: Tecnologías usadas en este sitio
     acknowledgements:
       title: Agradecimientos
       html: |-
