@@ -13,8 +13,6 @@ class ExploreController < ApplicationController
 
   def language_and_life
     @title = t "explore.language_and_life.title"
-    # TODO use actual query or sampling that Isabel requests
-    @res = $api.query({"q" => "water", "num" => "5"})
   end
 
   def migrations

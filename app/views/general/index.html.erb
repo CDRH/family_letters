@@ -1,16 +1,5 @@
 <h1><%= t "home.greeting", default: "Welcome" %></h1>
 
-<%= t "home.html", image: image_tag(iiif("shan_p.035.jpg", size: "!300,300"), class: "home_image") %>
+<%= t "home.html", image: image_tag(iiif("shan_p.035.jpg", size: "!400,400"), class: "home_image") %>
 
-<%# TODO look at options %>
-
-<p><strong>Isabel has choosen this option with the selected images below. IF POSSIBLE, put these images in a slideshow.</strong>: images of envelopes along the bottom of home page.</p>
-<ul>
-  <li>L13 (1937) NM to WY</li>
-  <li>L54 (1952) MICH to CO</li>
-  <li>L56 (1965) CHIH to CO</li>
-  <li>L160 (1974) AZ to NE</li>
-  <li>L168 (1948) MICH to CO</li>
-</ul>
-
-<%= image_tag iiif("shan_p.443.jpg", size: "!800,800") %>
+<%= render "carousel" %>

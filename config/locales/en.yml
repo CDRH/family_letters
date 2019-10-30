@@ -12,12 +12,16 @@ en:
   #################
   general:
     # footer content with link to CDRH site
-    cdrh_link_html: Created by the <a href="https://cdrh.unl.edu">Center for Digital Research in the Humanities</a>.
+    cdrh_link_html: |-
+      Created by the <a href="https://cdrh.unl.edu">Center for Digital Research
+      in the Humanities</a>.
     # close a popup window
     close: Close
     # custom dedication text
     dedication_button: Dedication
-    dedication_text: This website is dedicated to Jesusita Baros Torres. Her efforts were not in vain.
+    dedication_text: |-
+      This website is dedicated to Jesusita Baros Torres. Her efforts were not
+      in vain.
     # Custom Family Letters field
     footer_html: |-
       <em>Family Letters: On the Migration from Jesusita to Jane </em> is a
@@ -62,6 +66,9 @@ en:
         title: Undergraduate Research Assistants
     technical:
       title: Technical Information
+      data: Data
+      image: Images
+      website: Website Technologies
     acknowledgements:
       title: Acknowledgements
       html: |-
@@ -137,6 +144,10 @@ en:
       ordinary people.</p>
     # page title
     title: Home
+    # CUSTOM FAMILY LETTERS
+    carousel:
+      to: to
+      unknown: Unknown sender
 
   #############
   # ITEM VIEW #
@@ -164,13 +175,7 @@ en:
     no_item: "No item with identifier %{id} found!"
     # title for error when item not found
     not_found: Not Found
-
-  ############
-  # RESEARCH #
-  ############
-  research:
-    title: Research
-
+  
   ########################
   # SEARCH AND FILTERING #
   ########################

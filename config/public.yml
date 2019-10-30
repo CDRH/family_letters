@@ -63,7 +63,7 @@ default: &default
         flags:
           - search_filter
       creator.name:
-        label: Creator
+        label: Author
         flags:
           - search_filter
       format:
@@ -71,7 +71,7 @@ default: &default
         flags:
           - search_filter
       places:
-        label: Places
+        label: Location
         flags:
           - search_filter
     es:
@@ -85,7 +85,7 @@ default: &default
         flags:
           - search_filter
       person.name:
-        label: Gente
+        label: Persona
         flags:
           - search_filter
       language:
@@ -107,7 +107,7 @@ default: &default
           - search_filter
           - translate
       places:
-        label: Sitio
+        label: Localidad
         flags:
           - search_filter
 

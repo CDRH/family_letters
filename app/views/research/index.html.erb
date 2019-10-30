@@ -1,34 +1,29 @@
-<h1><%= t "research.title", default: "Research" %></h1>
-
-<p>Introduction</p>
+<div class="row">
+  <div class="col-md-7">
+    <h1><%= t "research.title", default: "Research" %></h1>
+  </div>
+  <div class="col-md-5">
+    <h2><%= t "research.search.materials" %></h2>
+  </div>
+</div>
 
 <div class="row">
-  <div class="col-md-6">
-
-    <ul>
-      <li><%= link_to t("browse.title", default: "Browse"), browse_path %></li>
-      <li>Scholarship</li>
-      <li>Linguistic Features</li>
-      <li>History of Migration</li>
-      <li>Sociology</li>
-      <li>Encoding Decisions</li>
-      <li>Lives of Everyday People</li>
-      <li>Search Materials</li>
-      <li>Sample Letter</li>
-      <li>Contact</li>
-    </ul>
+  <div class="col-md-7">
+    <%= t "research.intro_html" %>
   </div>
-  <div class="col-md-6">
+  <div class="col-md-5">
     <%= form_tag search_path, method: "get" do %>
-    <h2>Search Materials</h2>
-    <%= text_field_tag "q", nil, placeholder: "(sister OR \"sis\") NOT brother", class: "form-control" %>
-    <div class="pull-left">
-        <%= link_to "Advanced Search", search_path, class: "btn btn-link color_reverse", role: "button" %>
+      <%= text_field_tag "q", nil, placeholder: "(sister OR \"sis\") NOT brother", class: "form-control" %>
+      <div class="pull-left">
+          <%= link_to t("research.search.advanced"), search_path, class: "btn btn-link color_reverse", role: "button" %>
+        </div>
+      <div class="pull-right">
+        <%= submit_tag t("research.search.refine"), class: "btn btn-primary" %>
       </div>
-    <div class="pull-right">
-      <%= submit_tag "Search and Refine", class: "btn btn-primary" %>
-    </div>
     <% end %>
+
+    <%= render "sidebar" %>
+
   </div>
 </div>
 

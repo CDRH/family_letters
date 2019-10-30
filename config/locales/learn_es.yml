@@ -8,32 +8,31 @@ es:
   learn:
     title: Aprende
     home:
-      title: Recursos Para Maestros
-      subtitle: |-
-        La presente es para saludarlos: Lengua, migración y vida cotidiana en
-        la experiencia de una familia mexicoamericana
+      title: Teacher Resources
+      subtitle_1: "La presente es para saludarlos:"
+      subtitle_2: |-
+        Lengua, migración y vida cotidiana en la experiencia de una familia
+        mexicoamericana
       introduction_html: |-
-        <p>Los siguientes materiales fueron diseñados para estudiantes de
-        español intermedio/avanzado de high school y universidad. Nuestro
-        objetivo general es permitir que los estudiantes utilicen los recursos
-        de la colección Shanahan para desarrollar sus habilidades lingüísticas
-        y su competencia cultural mientras aprenden más sobre la experiencia de
-        las familias mexicanoamericanas de principios del siglo XX.</p>
-        <p>Las actividades que aquí se presentan fueron pensadas para responder
-        a las necesidades de dos tipos de estudiantes: los hablantes de español
-        como lengua de herencia y aquellos que están aprendiéndolo como segunda
-        lengua.</p>
-        <p>Siguiendo a Beaudrie y Potowski (2014), consideramos que los
-        hablantes de español como lengua de herencia poseen conocimientos
-        lingüísticos, sociales y culturales previos que deben ser valorados en
-        el salón de clase. Entendemos como hablante de herencia a aquel o
-        aquella estudiante que creció en un entorno familiar o comunitario en
-        donde se habla una lengua minoritaria y que posee una conexión afectiva
-        y cultural con dicha lengua.</p>
-        <p>Reconocemos que, en el contexto de Estados Unidos, la mayoría de las
-        aulas incluye a ambos tipos de estudiantes. Cada maestro podrá adaptar
-        este material (y los demás recursos de la colección), para responder a
-        las necesidades específicas de sus alumnos.</p>
+        <p>The following materials were designed to address the needs of High
+        School and college Spanish learners at the intermediate/advanced
+        levels. Our general goal is to allow students to use the resources of
+        the Shanahan collection to develop their linguistic skills and their
+        cultural competence as they learn about the experience of Mexican
+        American families at the start of the Twentieth Century.</p>
+        <p>The activities presented here were developed for two types of
+        students: Those who are speakers of Spanish as a heritage
+        language, and those who are learning it as a second language.</p>
+        <p>Following Beaudrie y Potowski (2014), we believe that speakers of
+        Spanish as a heritage language bring with them linguistic, social and
+        cultural knowledge that must be valued in the classroom. We understand
+        a heritage language learner as a student who grew up in a family  or
+        community environment where a minority language was spoken, and who
+        possesses an affective and cultural connection with that language.</p>
+        <p>We acknowledge the fact that, in the context of the United States,
+        most Spanish classrooms serve both types of students. Each teacher will
+        be free to adapt this material (and the other resources in the
+        collection), to fit the specific needs of their students.</p>
       developmental_targets: Developmental Targets
       # the complex developmental targets table is loaded from partials
     lesson_plans:
@@ -45,14 +44,21 @@ es:
       materials: Materials
       overview: Instructional Sequence
       title: Lesson Plans
-      warning: "Aviso: El contenido es una mezcla de español y inglés"
+      warning: |-
+        La descripción de los recursos pedagógicos en esta sección fue escrita
+        en inglés tomando en consideración que, en el contexto de los Estados
+        Unidos, los maestros de español son parte de una comunidad escolar que
+        incluye administradores, colegas y padres de familia que no pueden no
+        leer en español. Las instrucciones para los alumnos fueron escritas en
+        español, por ser ésta la lengua de instrucción y el objeto de estudio
+        de estas unidades pedagógicas.
     lesson01:
-      title: Vida cotidiana
+      title: Daily Life / Vida Cotidiana
     lesson02:
-      title: Familia
+      title: Family / Familia
     lesson03:
-      title: Religión
+      title: Religion / Religión
     lesson04:
-      title: Trabajo
+      title: Work / Trabajo
     lesson05:
-      title: Identidad
+      title: Identity / Identidad

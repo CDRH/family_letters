@@ -1,0 +1,74 @@
+<%# TODO will need to translate these strings %>
+<% items = [
+  {
+    id: "shan_L013.meta",
+    image: "shan_l.060.jpg",
+    link_text: "#{t "home.carousel.unknown"}
+                #{t "home.carousel.to"} Jesusita Baros Torres (1937)",
+    location: "New Mexico #{t "home.carousel.to"} Wyoming"
+  },
+  {
+    id: "shan_L054.meta",
+    image: "shan_l.021.jpg",
+    link_text: "Maximino Torres #{t "home.carousel.to"}
+                Victoria Aviña Torres (1952)",
+    location: "Michoacán #{t "home.carousel.to"} Colorado"
+  },
+  {
+    id: "shan_L056.meta",
+    image: "shan_l.048.jpg",
+    link_text: "José Jesús Samaniego #{t "home.carousel.to"}
+                Jesusita Baros Torres (1965)",
+    location: "Chihuahua #{t "home.carousel.to"} Colorado"
+  },
+  {
+    id: "shan_L160.meta",
+    image: "shan_l.588.jpg",
+    link_text: "#{t "home.carousel.unknown"} #{t "home.carousel.to"}
+                Santos Baros Schubert (1974)",
+    location: "Arizona #{t "home.carousel.to"} Nebraska"
+  },
+  {
+    id: "shan_L168.meta",
+    image: "shan_l.623.jpg",
+    link_text: "Clemente Torrez #{t "home.carousel.to"}
+                Maximino Torrez (1948)",
+    location: "Michoacán #{t "home.carousel.to"} Colorado"
+  }
+] %>
+
+<div id="carousel-homepage" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <% items.each_with_index do |item, index| %>
+      <% if index == 0 %>
+        <li data-target="#carousel-homepage" data-slide-to="0" class="active"></li>
+      <% else %>
+        <li data-target="#carousel-homepage" data-slide-to="<%= index %>"></li>
+      <% end %>
+    <% end %>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <% items.each_with_index do |item, index| %>
+      <div class="item <%= 'active' if index == 0 %>">
+        <%= image_tag iiif(item[:image], size: "!500,500") %>
+        <div class="carousel-caption">
+          <%= link_to item[:link_text], item_path(id: item[:id]) %>
+          <p><%= item[:location] %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-homepage" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-homepage" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>

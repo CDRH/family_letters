@@ -263,6 +263,7 @@ a.btn, .footer_logo a, .nav a, .site-title-container a, .pagination a, a.searchR
 }
 
 // Set images for Exhibit Callouts
+
 .explore_callout1 {
   background-image: url("<%= iiif("shan_d.481.jpg", region: "pct:20,15,60,60", size: "!1000,1000") %>");
   border-bottom-width:2px
@@ -303,31 +304,36 @@ a.btn, .footer_logo a, .nav a, .site-title-container a, .pagination a, a.searchR
   }
 }
 
-.explore_callout {
+/* callout code used for explore and learn sections */
+.callout {
   border:4px solid $light-base;
   display:block;
   font-size:1.2em;
-  height:10em
+  height:10em;
 }
-.explore_callout .explore_inner {
+.callout .callout_inner {
   background-color:rgba($light-base, 0.25);
-  height:100%
+  height:100%;
 }
-.explore_callout:focus .explore_inner,
-.explore_callout:hover .explore_inner {
+.callout:focus .callout_inner,
+.callout:hover .callout_inner {
   background-color:transparent
 }
 
 a.content {
   background-position:center;
   background-size:100%;
+  box-shadow: none;
   display:block;
   margin-left:-15px;
   margin-right:-15px;
   overflow:hidden;
   padding:0;
+  transition: all 0.5s;
   -webkit-box-shadow: none;
-  box-shadow: none;
+  -webkit-transition:all 0.5s;
+  -o-transition:all 0.5s;
+  -moz-transition:all 0.5s
 }
 a.content:focus,
 a.content:hover {
@@ -355,35 +361,6 @@ a.content .inner_content {
   -moz-transition:padding 0.5s;
   -o-transition:padding 0.5s;
   -webkit-transition:padding 0.5s
-}
-
-// Learn
-// -------
-
-// TODO check the regions of these images
-
-// Set images for Lesson Plans Callouts
-.learn_callout1 {
-  background-image: url("<%= iiif("shan_p.330.jpg", region: "pct:40,35,90,90", size: "!1000,1000") %>");
-  border-bottom-width:2px
-}
-.learn_callout2 {
-  background-image: url("<%= iiif("shan_p.233.jpg", region: "pct:20,15,60,60", size: "!1000,1000") %>");
-  border-bottom-width:2px;
-  border-top-width:2px
-}
-.learn_callout3 {
-  background-image: url("<%= iiif("shan_d.165.jpg", region: "pct:20,30,60,70", size: "!1000,1000") %>");
-  border-bottom-width:2px;
-  border-top-width:2px
-}
-.learn_callout4 {
-  background-image: url("<%= iiif("shan_p.304.jpg", region: "pct:9,0,60,30", size: "!1000,1000") %>");
-  border-top-width:2px
-}
-.learn_callout5 {
-  background-image: url("<%= iiif("shan_d.059.jpg", region: "pct:20,15,60,60", size: "!1000,1000") %>");
-  border-bottom-width:2px
 }
 
 // Galleries
