@@ -1,12 +1,4 @@
 es:
-  # found a bug in orchid where the t tag is looking at "help.title"
-  # when it should be looking for "search.help.title"
-  # until this is corrected, the below help.title needs to be used
-  help:
-    # section title
-    title: Ayuda
-
-
   #################
   # GENERAL PAGES #
   #################
