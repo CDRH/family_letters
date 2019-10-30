@@ -40,25 +40,29 @@
 <br>
 “Y al jerry le pusieron su cuarto abajo en <strong>el soterano</strong>”</p>
 
-<p class="alert alert-danger">This one pulled mostly from API</p>
-<h5>Christmas Day, 1953</h5>
-
-<div class="row">
-  <div class="col-md-6">
-    <!-- NOTE this title conflicts with Isabel's version -->
-    <!-- Black and white photograph of William D. Schubert, Pamela L. Schubert and Robert S. Schubert, Christmas Day 1953. -->
-    <ul>
-      <li><strong>Title:</strong> <%= @xmas["res"]["title"] %></li>
-      <li><strong>Identifier:</strong> <%= @xmas["res"]["identifier"] %></li>
-      <li><strong>Date:</strong> <%= @xmas["res"]["date_display"] %></li>
-      <li><strong>Format:</strong> <%= @xmas["res"]["format"].join(" | ") %></li>
-      <!-- Not pulling from API at the moment -->
-      <li><strong>Creator:</strong> N/A</li>
-      <li><strong>Held by:</strong> University of Nebraska, Lincoln, Hispanic-Latina/o Heritage Collection</li>
-    </ul>
-    <p><%= @xmas["res"]["text"] %></p>
-  </div>
-  <div class="col-md-6">
-    <%= image_tag iiif(@xmas["res"]["image_id"], size: "!400,400") %>
-  </div>
-</div>
+<%= render partial: "learn/lessons_shared/item", locals: {
+    label: "Christmas Day, 1953",
+    item: @xmas,
+    description: "Black and white photograph of William D. Schubert, Pamela L. Schubert and Robert S. Schubert, Christmas Day 1953.",
+  }
+%>
+<%= render partial: "learn/lessons_shared/item", locals: {
+    label: "Black and white television",
+    item: @tv,
+    description: "Digital copy of black and white photograph of a television. Back of photograph reads: “Taken our home Nov. 23 1956. Jack’s + our kids on T.V.- didn’t show due to flash-” Kodak Velox Paper
+"
+  }
+%>
+<%= render partial: "learn/lessons_shared/item", locals: {
+    label: "Mor Valu trading stamps.",
+    item: @stamps,
+    description: "Set of eight Mor Valu trading stamps printed in red ink. “Value ten Mills”. The code CGX 253, 362  and 253 printed in black ink.",
+  }
+%>
+<%= render partial: "learn/lessons_shared/item", locals: {
+    label: "Que si quieres que te mande los libros de las estampas del Safeway",
+    item: @letter,
+    description: "Personal letter from Jesusita Baros Torres to Santos Baros Schubert. Sent from Fort Lupton. CO., to Lincoln, NE. One envelope and three handwritten pages (1958).",
+    transcript: true
+  }
+%>
