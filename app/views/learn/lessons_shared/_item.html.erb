@@ -3,47 +3,69 @@
   item: variable from controller with a "res" and "html" key
   description: often nil, sometimes displayed below preview image
   transcript: true or false to display the generated HTML
+  image_additional: another image file to be displayed next to preview
+    (used only for lesson 5)
+  yield (block): can pass in a block that will be rendered as HTML
+    this can be used to override the normal generated HTML display
+    NOTE: you will need to use `render layout:` instead of `render partial:`
+      if you are using the yield
 %>
-<% id = item["res"]["identifier"] %>
 
 <h5 class="lesson_item"><%= label %></h5>
 
-<div class="row">
-  <%# METADATA %>
-  <div class="col-md-6">
-    <ul>
-      <li><strong>Title:</strong> <%= item["res"]["title"] %></li>
-      <li><strong>Identifier:</strong> <%= id %></li>
-      <li><strong>Date:</strong> <%= item["res"]["date_display"] %></li>
-      <li><strong>Format:</strong> <%= Array(item["res"]["format"]).join(" | ") %></li>
-      <!-- Not pulling from API at the moment -->
-      <li><strong>Creator:</strong> N/A</li>
-      <li><strong>Held by:</strong> University of Nebraska, Lincoln, Hispanic-Latina/o Heritage Collection</li>
-    </ul>
-    <%= link_to "View more information about #{id}", item_path(id: item["res"]["identifier"]) %>
-  </div>
+<% if item && item["res"].present? %>
+  <% id = item["res"]["identifier"] %>
 
-  <%# IMAGE PREVIEW %>
-  <div class="col-md-6">
-    <%= link_to item_path(id: id) do %>
-      <%= image_tag iiif(item["res"]["image_id"], size: "!400,400") %>
-    <% end %>
-    <% if description.present? %>
-      <p><%= description %></p>
-    <% end %>
-  </div>
-</div>
-
-<%# GENERATED HTML %>
-<% if local_assigns[:transcript] && transcript %>
   <div class="row">
-    <button class="btn btn-default btn-block" type="button" data-toggle="collapse" data-target="#collapse-<%= id.parameterize %>" aria-expanded="false" aria-controls="collapse-<%= id.parameterize %>">
-      Item Text and Translation
-    </button>
-    <div class="collapse" id="collapse-<%= id.parameterize %>">
-      <div class="well">
-        <%= sanitize item["html"] %>
-      </div>
+    <%# METADATA %>
+    <div class="col-md-6">
+      <ul>
+        <li><strong>Title:</strong> <%= item["res"]["title"] %></li>
+        <li><strong>Identifier:</strong> <%= id %></li>
+        <li><strong>Date:</strong> <%= item["res"]["date_display"] %></li>
+        <li><strong>Format:</strong> <%= Array(item["res"]["format"]).join(" | ") %></li>
+        <!-- Not pulling from API at the moment -->
+        <li><strong>Creator:</strong> N/A</li>
+        <li><strong>Held by:</strong> University of Nebraska, Lincoln, Hispanic-Latina/o Heritage Collection</li>
+      </ul>
+      <%= link_to "View more information about #{id}", item_path(id: item["res"]["identifier"]) %>
+    </div>
+
+    <%# IMAGE PREVIEW %>
+    <div class="col-md-6">
+      <%= link_to item_path(id: id) do %>
+        <%= image_tag iiif(item["res"]["image_id"], size: "!400,400") %>
+      <% end %>
+      <% if local_assigns[:image_additional] %>
+        <%= link_to item_path(id: id) do %>
+          <%= image_tag iiif(image_additional, size: "!400,400") %>
+        <% end %>
+      <% end %>
+      <% if description.present? %>
+        <p><%= description %></p>
+      <% end %>
     </div>
   </div>
+
+  <%# PASSED IN HTML BLOCK OR GENERATED HTML %>
+  <% if true %>
+    <div class="row">
+      <div class="well">
+        <%= yield %>
+      </div>
+    </div>
+  <% elsif local_assigns[:transcript] && transcript %>
+    <div class="row">
+      <button class="btn btn-default btn-block" type="button" data-toggle="collapse" data-target="#collapse-<%= id.parameterize %>" aria-expanded="false" aria-controls="collapse-<%= id.parameterize %>">
+        Item Text and Translation
+      </button>
+      <div class="collapse" id="collapse-<%= id.parameterize %>">
+        <div class="well">
+          <%= sanitize item["html"] %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+<% else %>
+  <div class="row">No item found matching this description</div>
 <% end %>

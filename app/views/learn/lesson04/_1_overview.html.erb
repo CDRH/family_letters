@@ -17,13 +17,11 @@
 
   <h2 class="h4"><%= t "learn.lesson_plans.materials" %></h2>
 
-  <!--TODO insert links to objetcs in every "digital copy". Refer to Google Docs TEXTS FOR LEARN PAGE JUNE 18-2019 -->
-
   <ol class="materials">
-    <li><%= link_to "Digital copy", item_path(id: "shan_p.239") %> of photograph of unknown migrant workers, Basin WY, 1937.</li>
-    <li><%= link_to "Digital copy", item_path(id: "shan_p.207") %> of photograph of Maximino Torres with chickens, 1943.</li>
-    <li><%= link_to "Digital image", item_path(id: "shan_L156.meta") %> of letter written by Jesusita Baros Torres to her daughter, Santos Baros Schubert, dated October 29, 1956.</li>
-    <li><%= link_to "Digital image", item_path(id: "shan_L002.meta") %> of letter written by Maximino Torres to his uncle, Reynaldo Hurtado, dated February 5, 1923.</li>
+    <li><%= link_to "Digital copy", item_path(id: @workers["res"]["identifier"]) %> of photograph of unknown migrant workers, Basin WY, 1937.</li>
+    <li><%= link_to "Digital copy", item_path(id: @chickens["res"]["identifier"]) %> of photograph of Maximino Torres with chickens, 1943.</li>
+    <li><%= link_to "Digital image", item_path(id: @let1["res"]["identifier"]) %> of letter written by Jesusita Baros Torres to her daughter, Santos Baros Schubert, dated October 29, 1956.</li>
+    <li><%= link_to "Digital image", item_path(id: @let2["res"]["identifier"]) %> of letter written by Maximino Torres to his uncle, Reynaldo Hurtado, dated February 5, 1923.</li>
     <li>
       Library of Congress
       <a href="http://www.loc.gov/teachers/usingprimarysources/resources/Analyzing_Books_and_Other_Printed_Texts.pdf"

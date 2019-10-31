@@ -17,9 +17,8 @@
   <h2 class="h4"><%= t "learn.lesson_plans.materials" %></h2>
 
   <ol class="materials">
-    <li><%= link_to "Digital image", item_path(id: "shan_d.059") %> of cover of citizenship study guide belonging to Mrs. Jesusita Baros, Ft. Lupton CO, 1941.</li>
-    <%# TODO couldn't find this item from the specific date, anyway %>
-    <li>Digital image of page 20, citizenship study guide belonging to Mrs. Jesusita Baros, Ft. Lupton CO, 1941.</li>
+    <li><%= link_to "Digital image", item_path(id: @const["res"]["identifier"]) %> of cover of citizenship study guide belonging to Mrs. Jesusita Baros, Ft. Lupton CO, 1941.</li>
+    <li><%= link_to "Digital image", item_path(id: @const["res"]["identifier"]) %> of page 20, citizenship study guide belonging to Mrs. Jesusita Baros, Ft. Lupton CO, 1941.</li>
     <li>
       Library of Congress
       <a href="http://www.loc.gov/teachers/usingprimarysources/resources/Analyzing_Books_and_Other_Printed_Texts.pdf"

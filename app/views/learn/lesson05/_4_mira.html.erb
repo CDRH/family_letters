@@ -22,6 +22,50 @@
 
 <p>Present students with the set of questions you’ve prepared to help them work with these digital objects. Remember that you can save time and effort by using the <em><a href="http://www.loc.gov/teachers/usingprimarysources/resources/Analyzing_Books_and_Other_Printed_Texts.pdf" target="_blank" rel="nofollow noreferrer">Primary Source Analysis Tool</a></em>, published by the Library of Congress.</p>
 
-<!--TODO Description of objects and thumbnails as a linked PDF? Refer to Google Doc "TEXTS FOR LEARN PAGE JUNE 18/2019" -->
+<%# NOTE using "layout" instead of "partial" in order to pass the block %>
+<%= render layout: "learn/lessons_shared/item", locals: {
+    label: "The Constitution",
+    item: @const,
+    description: "Cover and page 20 of typewritten and hand-illustrated
+      citizenship study guide belonging to Mrs. Jesusita Baros, Ft. Lupton CO.
+      In English, with handwritten notes in pencil. Lessons for adults (first
+      level). On the preamble to the Constitution of the United States.
+      Prepared by Northern Colorado Teachers of Naturalization of the Adult
+      Education Program (1941).",
+    image_additional: @const_image
+  } do %>
+    <p><strong>Transcript of Cover</strong></p>
+    <p>The Constitution of the United States of America. We the People. Book One. The Preamble.</p>
 
-<!-- TODO any way we can pull Transcript and Translation from TEI? -->
+    <p>[Handwritten in pencil]</p>
+    <p>Mrs. Jesusita Baros. Ft. Lupton, Colo.</p>
+
+    <p><strong>Transcript of page 20</strong></p>
+    <p>
+      Now we have six reasons for making the Constitution. We will give the reasons:
+      <ol>
+        <li>To help the states live like a large family.
+          <br/>
+          Union [Handwritten in pencil]
+        </li>
+        <li>To have the same laws for all people.
+          <br/>Justice [Handwritten in pencil]
+        </li>
+        <li>To keep the peace in our country.
+          <br/>Peace [Handwritten in pencil]
+        </li>
+        <li>To keep our country safe.
+          <br/>Protection [Handwritten in pencil]
+        </li>
+        <li>To help all the people to be happy.
+          <br>Hepipines [Handwritten in pencil]
+        </li>
+        <li>To keep all our people free for all time.
+          <br>Liberty [Handwritten in pencil]
+        </li>
+      </ol>
+    </p>
+  <% end %>
+
+
+

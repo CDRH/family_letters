@@ -31,6 +31,37 @@
 
 <p>Present students with the set of questions you’ve prepared to help them work with these digital objects. Remember that you can save time and effort by using the <em><a href="http://www.loc.gov/teachers/usingprimarysources/resources/Analyzing_Books_and_Other_Printed_Texts.pdf" target="_blank" rel="nofollow noreferrer">Primary Source Analysis Tool</a></em>, published by the Library of Congress.</p>
 
-<!--TODO Description of objects and thumbnails as a linked PDF? Refer to Google Doc "TEXTS FOR LEARN PAGE JUNE 18/2019" -->
+<%= render partial: "learn/lessons_shared/item", locals: {
+    label: "Wedding portrait, Helen and Jess Baros",
+    item: @wed1,
+    description: "Black and white photograph of Helen and Jess Baros on the
+      day of their wedding. Fort Lupton, CO, circa 1940.",
+  }
+%>
 
-<!-- TODO any way we can pull Transcript and Translation from TEI? -->
+<%= render partial: "learn/lessons_shared/item", locals: {
+    label: "Wedding portrait, Esperanza Estrada Quirarte and Jesús
+      Ascensión Samaniego",
+    item: @wed2,
+    description: "Black and white photograph of Esperanza Estrada Quirarte and
+      Jesús Ascensión Samaniego on the day of their wedding. Juchipila,
+      Zacatecas, Mexico, 1961"
+  }
+%>
+
+<%= render partial: "learn/lessons_shared/item", locals: {
+    label: "Wedding portrait, Santos Baros and William F. Schubert",
+    item: @wed3,
+    description: "Black and white photograph of Santos Baros and William F. Schubert on the day of their wedding. Denver, CO, 1946"
+  }
+%>
+
+<%= render partial: "learn/lessons_shared/item", locals: {
+    label: "Al cabo que sabes leer en español",
+    item: @letter,
+    description: "Personal letter from Jesusita Baros Torres to Santos Baros
+      Schubert. Sent from Fort Lupton. CO., to Lincoln, NE. Two handwritten
+      pages (1966).",
+    transcript: true
+  }
+%>

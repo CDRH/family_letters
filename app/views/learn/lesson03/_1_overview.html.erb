@@ -18,11 +18,11 @@
   <h2 class="h4"><%= t "learn.lesson_plans.materials" %></h2>
 
   <ol class="materials">
-    <li><%= link_to "Digital images", item_path(id: "shan_m.001") %> of front and back of personal rosary belonging to Jesusita Baros Torres.</li>
+    <li><%= link_to "Digital images", item_path(id: @rosary["res"]["identifier"]) %> of front and back of personal rosary belonging to Jesusita Baros Torres.</li>
     <li><a href="http://collections.vam.ac.uk/item/O116870/rosary-unknown/" target="_blank" rel="nofollow noreferrer">Digital image of German rosary.</a> 1760-1800. Silver filigree and glass beads. © Victoria and Albert Museum, London.</a></li>
-    <li><%= link_to "Digital images", item_path(id: "shan_d.127") %> of front and back of memorial card for Jesusita Baros Torres.</li>
-    <li><%= link_to "Digital image", item_path(id: "shan_L198.meta") %> of page one of personal letter from Jesusita Baros Torres to Santos Baros Schubert, dated April 7, 1961.</li>
-    <li><%= link_to "Digital image", item_path(id: "shan_L196.meta") %> of page one of personal letter from Jesusita Baros Torres to Santos Baros Schubert, dated March, 11, 1958.</li>
+    <li><%= link_to "Digital images", item_path(id: @card["res"]["identifier"]) %> of front and back of memorial card for Jesusita Baros Torres.</li>
+    <li><%= link_to "Digital image", item_path(id: @let1["res"]["identifier"]) %> of page one of personal letter from Jesusita Baros Torres to Santos Baros Schubert, dated April 7, 1961.</li>
+    <li><%= link_to "Digital image", item_path(id: @let2["res"]["identifier"]) %> of page one of personal letter from Jesusita Baros Torres to Santos Baros Schubert, dated March, 11, 1958.</li>
     <li>
       Library of Congress
       <a href="http://www.loc.gov/teachers/usingprimarysources/resources/Analyzing_Books_and_Other_Printed_Texts.pdf"

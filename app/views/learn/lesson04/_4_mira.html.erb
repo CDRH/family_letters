@@ -20,6 +20,35 @@
 
 <p>Present students with the set of questions you’ve prepared to help them work with these digital objects. Remember that you can save time and effort by using the <em><a href="http://www.loc.gov/teachers/usingprimarysources/resources/Analyzing_Books_and_Other_Printed_Texts.pdf" target="_blank" rel="nofollow noreferrer">Primary Source Analysis Tool</a></em>, published by the Library of Congress.</p>
 
-<!--TODO Description of objects and thumbnails as a linked PDF? Refer to Google Doc "TEXTS FOR LEARN PAGE JUNE 18/2019" -->
+<%= render partial: "learn/lessons_shared/item", locals: {
+    label: "Migrant workers, Basin WY, 1937",
+    item: @workers,
+    description: "Black and white photograph of unidentified group of workers,
+      migrant worker housing, Basin WY, 1937."
+  }
+%>
 
-<!-- TODO any way we can pull Transcript and Translation from TEI? -->
+<%= render partial: "learn/lessons_shared/item", locals: {
+    label: "Maximino Torres, 1943",
+    item: @chickens,
+    description: "Black and white photograph of Maximino Torres with chickens, 1943."
+  }
+%>
+
+<%= render partial: "learn/lessons_shared/item", locals: {
+    label: "Los días tan chiquitos y yo con tanto quehacer",
+    item: @let1,
+    description: "Personal letter from Jesusita Baros Torres to Santos Baros Schubert. Sent from Fort Lupton. CO., to Lincoln, NE. Two handwritten pages (1956).",
+    transcript: true
+  }
+%>
+
+<%= render partial: "learn/lessons_shared/item", locals: {
+    label: "Respetable tío dirijo la presente para saludarlo afectuosamente",
+    item: @let2,
+    description: "Personal letter from Maximino Torres to his uncle, Reynaldo
+      Hurtado, dated February 5, 1923. Sent from Rock Springs, WY, to
+      Michoacán, Mexico. Five handwritten pages (1923).",
+    transcript: true
+  }
+%>

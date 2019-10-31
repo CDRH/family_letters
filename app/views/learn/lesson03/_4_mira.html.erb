@@ -24,6 +24,41 @@
 
 <p>Present students with the set of questions you’ve prepared to help them work with these digital objects. Remember that you can save time and effort by using the <em><a href="http://www.loc.gov/teachers/usingprimarysources/resources/Analyzing_Books_and_Other_Printed_Texts.pdf" target="_blank" rel="nofollow noreferrer">Primary Source Analysis Tool</a></em>, published by the Library of Congress.</p>
 
-<!--TODO Description of objects and thumbnails as a linked PDF? Refer to Google Doc "TEXTS FOR LEARN PAGE JUNE 18/2019" -->
+<%= render partial: "learn/lessons_shared/item", locals: {
+    label: "Rosary",
+    item: @rosary,
+    description: "Front and back of personal rosary beads belonging to Jesusita
+      Baros Torres, Fort Lupton, CO. Twine and aluminum. Printed on verso:
+      \"I’m a Catholic. Please call a priest\" (ND).",
+    transcript: true
+  }
+%>
 
-<!-- TODO any way we can pull Transcript and Translation from TEI? -->
+<%= render partial: "learn/lessons_shared/item", locals: {
+    label: "Memorial card",
+    item: @card,
+    description: "Memorial card for Jesusita Baros Torres. Rice Funeral Chapel,
+      Brighton, CO (1976). Recto: Image of Christ with thorns.",
+    transcript: true
+  }
+%>
+
+<%= render partial: "learn/lessons_shared/item", locals: {
+    label: "Que le enseñes a tus hijos la religión",
+    item: @let1,
+    description: "Personal letter from Jesusita Baros Torres to Santos Baros
+      Schubert. Sent from Fort Lupton. CO., to Lincoln, NE. One postmarked
+      envelope  and three handwritten pages (1961).",
+    transcript: true
+  }
+%>
+
+<%= render partial: "learn/lessons_shared/item", locals: {
+    label: "Sociedad de la Sagrada Familia",
+    item: @let2,
+    description: "Personal letter from Jesusita Baros Torres to Santos Baros
+      Schubert. Sent from Fort Lupton. CO., to Lincoln, NE. Three handwritten
+      pages (1958).",
+    transcript: true
+  }
+%>
