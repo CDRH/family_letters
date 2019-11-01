@@ -5,40 +5,28 @@ es:
   facet_value:
     format:
       Book: Libreta
-      Booklet: Manual de ciudadanía
-      Calendar: Calendario
       Card: Tarjeta
-      Cardboard_frame: Retrato
       Currency: Moneda
       Document: Documento
-      Envelope: Sobre
       Journal: Diario
       Letter: Carta
-      Lyrics: Letra de canción
       Manuscript: Escrito a Mano
       # TODO using menú instead of carta because letter
       # is already using that term
-      Menu: Menú
+      Miscellaneous: Miscelánea
       Newspaper: Periódico
-      Notebook: Cuaderno
       Photograph: Fotografía
       Postcard: Postal
-      Poster: Cartel
-      Prescription: Receta médica
-      # TODO check if this is correct
+      Rationing_booklet: Libreta
       Receipt: Recibo
-      Religious_artifact: Artefacto Religioso
-      Stamps: Estampillas
     category:
-      Images: Imágenes
-      Writings: Textos
-      Secondary_Source: Fuente Secundaria
+      Image: Imagen
+      Writing: Texto
+      Site_Section: Secciones de Este Sitio
     subcategory:
-      Document: Documentos
+      Document: Documento
       Envelope: Sobres
-      Explore: Explora
-      Learn: Aprende
-      Letters: Cartas
-      Note: Notas Manuscritas
-      Photograph: Fotografías
-      Research: Investiga
+      Letter: Carta
+      Note: Nota Manuscrita
+      Photograph: Fotografía
+      Site_Section: Secciones de Este Sitio
