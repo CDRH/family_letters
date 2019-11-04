@@ -3,30 +3,25 @@
 # already stored in English
 es:
   facet_value:
+    category:
+      Image: Imagen
+      Writing: Texto
+      Site_Section: Secciones de este sitio
     format:
-      Book: Libreta
       Card: Tarjeta
       Currency: Moneda
       Document: Documento
-      Journal: Diario
-      Letter: Carta
-      Manuscript: Escrito a Mano
-      # TODO using menú instead of carta because letter
-      # is already using that term
+      Manuscript: Escrito a mano
       Miscellaneous: Miscelánea
       Newspaper: Periódico
       Photograph: Fotografía
       Postcard: Postal
-      Rationing_booklet: Libreta
+      Rationing_booklet: Libreta de racionamiento
       Receipt: Recibo
-    category:
-      Image: Imagen
-      Writing: Texto
-      Site_Section: Secciones de Este Sitio
     subcategory:
       Document: Documento
-      Envelope: Sobres
+      Envelope: Sobre
       Letter: Carta
       Note: Nota Manuscrita
       Photograph: Fotografía
-      Site_Section: Secciones de Este Sitio
+      Site_Section: Secciones de este sitio
