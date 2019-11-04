@@ -30,3 +30,6 @@
 // Note: require_directory won't include .js files from framework subdirectories
 // They are declared for auto and precompilation by link_tree above though
 //= require_directory ./global
+
+// include ekko-lightbox from vendor
+//= require ekko-lightbox.min
