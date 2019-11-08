@@ -58,6 +58,10 @@ a.btn, .footer_logo a, .nav a, .site-title-container a, .pagination a, a.searchR
   background-color: #fff;
 }
 
+.btn {
+  white-space: normal;
+}
+
 // Letter Pre and Postscripts Design Elements
 .letter_top_greeting, .letter_bottom_farewell {
   border: 2px solid $light_blue;
@@ -476,6 +480,19 @@ span.pageimage {
   text-align: center;
 }
 
+// Research
+// --------
+
+.research_image {
+  margin: auto;
+  display: block;
+  box-shadow: none;
+
+  &:hover {
+    box-shadow: none;
+  }
+}
+
 
 // Teach/Learn Page
 // ---------
@@ -543,6 +560,26 @@ span.pageimage {
   }
 }
 
-.btn {
-  white-space: normal;
+.home_image {
+  float: right;
+  margin: 0 0 10px 10px;
 }
+
+#carousel-homepage {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#carousel-homepage .carousel-inner {
+  max-height: 462px;
+}
+
+.carousel-caption {
+  background-color: rgba(255,255,255,.8)
+}
+
+.carousel-indicators {
+  display:none;
+}
+
+
