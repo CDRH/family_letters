@@ -468,6 +468,22 @@ span.pageimage {
   width: 100%;
 }
 
+@media (min-width: $screen-sm) { 
+  .metadata {
+    columns: 2;
+    border: $gray-light solid 1px;
+    background: white;
+    padding: .5em 1em;
+    border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
 // Items populated from spreadsheet
 
 .image_item_display {
@@ -582,4 +598,21 @@ span.pageimage {
   display:none;
 }
 
+// TEI Styling
 
+.tei_opener,
+.tei_salute,
+.tei_signed,
+.tei_label,
+.tei_dateline,
+.tei_closer {
+  display: block;
+}
+
+.tei_del {
+  text-decoration: line-through;
+}
+
+.underline { 
+  text-decoration: underline; 
+}
