@@ -1,0 +1,121 @@
+@media print {
+
+  body {
+    font-size: 14px;
+  }
+
+  //stuff to hide
+
+  .letter_top_greeting,
+  .letter_bottom_farewell,
+  .top-navigation,
+  .surround-lang,
+  #footer,
+  .more_lesson_plans,
+  .btn-lesson-expand {
+    display: none;
+  }
+
+  // Overwrite default link writing behavior (from bootstrap print)
+
+  a[href]:after {
+    content: "";
+  }
+
+  // Print external links that are not to cdrhmedia 
+
+  a[href^="http"]:not([href*="cdrhmedia.unl.edu"]):after {
+    content: " (" attr(href) ")";
+    word-wrap: break-word;
+  }
+
+  //tighten up margins
+
+  h1, h2, h3, h4, h5, h6, 
+  .h1, .h2, .h3, .h4, .h5, .h6, 
+   {
+    padding: 0 !important;
+    margin: 0 !important;
+    margin-top: .5em !important;
+    margin-bottom: .5em !important;
+  }
+
+  .well {
+    overflow: auto;
+    break-inside: auto !important;
+    padding: .2em .6em;
+  }
+
+  .lesson_section, .lesson_item {
+    padding-top: .5em !important;
+    padding-bottom: .5em !important;
+  }
+
+  // dsplay collapsed items
+
+  .collapse {
+    display:block;
+  }
+
+  // change border color to gray
+
+  h3.lesson_section, .lesson_item {
+    border-color: #aaa !important;
+  }
+
+  // Duplicating bootstrap grid functionality so items will appear side by side
+
+  .row {
+    // margin-right: -15px;
+    // margin-left: -15px;
+  }
+
+  .row:before, .row:after {
+    display: table;
+    content: " ";
+  }
+
+  .row:after {
+    clear: both;
+  }
+
+  // We are only using col-md-6 in lessons
+
+  .col-md-6 {
+    width: 50%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  //copied from bootstrap 
+  //.col-md-6, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+  //    float: left;
+  //  }
+
+  //.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  //  position: relative;
+  //  min-height: 1px;
+  //  padding-right: 15px;
+  //  padding-left: 15px;
+  //}
+
+  .title_nav {
+    text-align: left;
+  }
+
+  .title_nav_sub {
+    margin-left: 0;
+  }
+  
+  .h1.site-title,
+  .h2.site-title {
+    display: inline-block;
+    text-align: left;
+  }
+
+  .glyphicon {display: none;}
+
+}

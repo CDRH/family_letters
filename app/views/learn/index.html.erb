@@ -1,6 +1,6 @@
-<h1 class="h2"><%= t "learn.home.title" %></h1>
-
 <%= render "learn/lessons_shared/language_warning" %>
+
+<h1 class="h2"><%= t "learn.home.title" %></h1>
 
 <h2 class="h4">
   <em>
@@ -10,23 +10,23 @@
   </em>
 </h2>
 
-<div class="learn-introduction buffer-bottom-lg">
-  <%= t "learn.home.introduction_html" %>
+<div class="row">
+  <div class="col-md-8">
+    <div class="learn-introduction buffer-bottom-lg">
+      <%= t "learn.home.introduction_html" %>
+    </div>
+  </div><!-- /left -->
+  <div class="col-md-4">
+    <h3 class="h4">Sections</h3>
+    <a href="#lesson_plans" type="button" class="btn btn-primary btn-lg btn-block">Lesson Plans</a>
+    <a href="#more_teaching" type="button" class="btn btn-primary btn-lg btn-block">More teaching ideas / Más ideas para el salón de clase </a>
+    <a href="#developmental_targets" type="button" class="btn btn-primary btn-lg btn-block">Developmental Targets</a>
+    <a href="#are_you_a_teacher" type="button" class="btn btn-primary btn-lg btn-block">Are you a teacher? / ¿Eres maestr@?</a>
+    <a href="#note_on_nomenclature" type="button" class="btn btn-primary btn-lg btn-block">A note on nomenclature</a>
+  </div><!-- /right -->
 </div>
 
-<!-- developmental targets button and expander -->
-<button class="btn btn-info btn-block" type="button" data-toggle="collapse"
-        data-target="#targets" aria-expanded="false"
-        aria-controls="targets">
-  <h3><%= t "learn.home.developmental_targets" %></h3>
-</button>
-<div class="collapse" id="targets">
-  <div class="well">
-    <%= render "developmental_targets" %>
-  </div>
-</div>
-
-<h3 class="explore_index_headers">
+<h3 class="lesson_section" id="lesson_plans">
   <%= t "learn.lesson_plans.title" %>
 </h3>
 
@@ -113,6 +113,37 @@
     <% end %>
   </div><!-- /col -->
 </div><!-- /row -->
+
+<h3 class="lesson_section" id="more_teaching">More teaching ideas / Más ideas para el salón de clase </h3>
+
+<p>The following lesson plans were developed as part of a university course on Heritage Speaker Pedagogy, offered in the Department of Modern Languages and Literatures at the University of Nebraska, Lincoln, during the spring of 2018. The students who prepared them generously share them with other Spanish instructors. The use of these materials is permitted exclusively for non-commercial use and only with attribution to their author.</p>
+
+<div class="row">
+  <div class="col-md-6">
+    <button type="button" class="btn btn-primary btn-lg btn-block">Conociendo el mundo por la vida privada</button>
+    <button type="button" class="btn btn-primary btn-lg btn-block">¡Nos casamos!</button>
+  </div>
+  <div class="col-md-6">
+    <button type="button" class="btn btn-primary btn-lg btn-block">Dos cartas</button>
+    <button type="button" class="btn btn-primary btn-lg btn-block">Tarjeta de cumpleaños</button>
+  </div>
+</div>
+
+<h4>Non UNL Resources</h4>
+
+<div class="row">
+  <div class="col-md-12">
+    <a href="https://ohiostate.pressbooks.pub/idiomacomunidad/" target="_blank" rel="nofollow noreferrer" type="button" class="btn btn-success btn-lg btn-block">OSU: Mi idioma, mi comunidad: español para bilingües  <span class="glyphicon glyphicon-share" aria-hidden="true"></span>
+    </a>
+  </div>
+</div>
+
+<!-- developmental targets button and expander -->
+<h3 class="lesson_section" id="developmental_targets">
+  <%= t "learn.home.developmental_targets" %>
+</h3>
+
+<%= render "developmental_targets" %>
 
 <!-- TODO this was originally supposed to be a sidebar but I am putting it
      here because I don't know how that will work with the rest of the
