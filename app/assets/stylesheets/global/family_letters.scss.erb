@@ -100,7 +100,9 @@ a.btn, .footer_logo a, .nav a, .site-title-container a, .pagination a, a.searchR
   text-align: center;
 }
 
-.lead {font-size: 1.2em;}
+.lead {
+  font-size: 1.2em;
+}
 
 // ----------
 // Header
@@ -113,7 +115,9 @@ a.btn, .footer_logo a, .nav a, .site-title-container a, .pagination a, a.searchR
 
 // Top Nav
 @media (min-width: $screen-sm-min) {
-  .layouts_cell {text-align: right;}
+  .layouts_cell {
+    text-align: right;
+  }
 }
 
 // Header and Nav
@@ -189,7 +193,6 @@ a.btn, .footer_logo a, .nav a, .site-title-container a, .pagination a, a.searchR
 
 .navbar-main li {
   margin: 0 .5em;
-
 }
 
 // ----------
@@ -201,7 +204,6 @@ a.btn, .footer_logo a, .nav a, .site-title-container a, .pagination a, a.searchR
   margin: 2em 0;
   padding: 2em 0 0em 0;
   text-align: center;
-
 }
 
 .footer_logo {
@@ -228,9 +230,9 @@ a.btn, .footer_logo a, .nav a, .site-title-container a, .pagination a, a.searchR
 
 .explore_essay_callout {
   background-image: url("<%= iiif("shan_d.376.jpg", size: "!1000,1000") %>");
-  background-position:center;
-  background-size:120%;
-  min-height:10em;
+  background-position: center;
+  background-size: 120%;
+  min-height: 10em;
 }
 .explore_essay_callout a {
   background-color: rgba($light-base, .85);
@@ -248,101 +250,101 @@ a.btn, .footer_logo a, .nav a, .site-title-container a, .pagination a, a.searchR
 
 .explore_callout1 {
   background-image: url("<%= iiif("shan_d.481.jpg", region: "pct:20,15,60,60", size: "!1000,1000") %>");
-  border-bottom-width:2px
+  border-bottom-width: 2px;
 }
 .explore_callout2 {
   background-image: url("<%= iiif("shan_p.183.jpg", region: "pct:20,15,60,60", size: "!1000,1000") %>");
   border-bottom-width:2px;
-  border-top-width:2px
+  border-top-width: 2px;
 }
 .explore_callout3 {
   background-image: url("<%= iiif("shan_p.087.jpg", region: "pct:20,30,60,70", size: "!1000,1000") %>");
-  border-bottom-width:2px;
-  border-top-width:2px
+  border-bottom-width: 2px;
+  border-top-width: 2px;
 }
 .explore_callout4 {
   background-image: url("<%= iiif("shan_l.242.jpg", region: "pct:9,0,60,30", size: "!1000,1000") %>");
-  border-top-width:2px
+  border-top-width: 2px;
 }
 .explore_callout5 {
   background-image: url("<%= iiif("shan_d.481.jpg", region: "pct:20,15,60,60", size: "!1000,1000") %>");
-  border-bottom-width:2px
+  border-bottom-width: 2px;
 }
 
 @media (min-width: 750px) {
   .explore_callout1 {
-    border-right-width:2px
+    border-right-width: 2px;
   }
   .explore_callout2 {
-    border-bottom-width:4px;
-    border-right-width:2px
+    border-bottom-width: 4px;
+    border-right-width: 2px;
   }
   .explore_callout3 {
-    border-left-width:2px;
-    border-top-width:4px
+    border-left-width: 2px;
+    border-top-width: 4px;
   }
   .explore_callout4 {
-    border-left-width:2px
+    border-left-width: 2px;
   }
 }
 
 /* callout code used for explore and learn sections */
 .callout {
-  border:4px solid $light-base;
-  display:block;
-  font-size:1.2em;
-  height:10em;
+  border: 4px solid $light-base;
+  display: block;
+  font-size: 1.2em;
+  height: 10em;
 }
 .callout .callout_inner {
-  background-color:rgba($light-base, 0.25);
-  height:100%;
+  background-color: rgba($light-base, 0.25);
+  height: 100%;
 }
 .callout:focus .callout_inner,
 .callout:hover .callout_inner {
-  background-color:transparent
+  background-color: transparent
 }
 
 a.content {
-  background-position:center;
-  background-size:100%;
+  background-position: center;
+  background-size: 100%;
   box-shadow: none;
-  display:block;
-  margin-left:-15px;
-  margin-right:-15px;
-  overflow:hidden;
-  padding:0;
+  display: block;
+  margin-left: -15px;
+  margin-right: -15px;
+  overflow: hidden;
+  padding: 0;
   transition: all 0.5s;
   -webkit-box-shadow: none;
-  -webkit-transition:all 0.5s;
-  -o-transition:all 0.5s;
-  -moz-transition:all 0.5s
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -moz-transition: all 0.5s
 }
 a.content:focus,
 a.content:hover {
-  background-position:center;
-  background-size:120%;
-  transition:all 0.5s;
-  -webkit-transition:all 0.5s;
-  -o-transition:all 0.5s;
-  -moz-transition:all 0.5s
+  background-position: center;
+  background-size: 120%;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -moz-transition: all 0.5s
 }
 a.content:focus .inner_content,
 a.content:hover .inner_content {
-  border-bottom:10px solid $light-blue;
-  padding-top:1.5em
+  border-bottom: 10px solid $light-blue;
+  padding-top: 1.5em;
 }
 a.content .row {
-  margin-left:15px;
-  margin-right:15px
+  margin-left: 15px;
+  margin-right: 15px
 }
 a.content .inner_content {
   color: $warmblack;
-  background-color:rgba($light-base,0.85);
+  background-color: rgba($light-base,0.85);
   padding:.5em;
-  transition:padding 0.5s;
-  -moz-transition:padding 0.5s;
-  -o-transition:padding 0.5s;
-  -webkit-transition:padding 0.5s
+  transition: padding 0.5s;
+  -moz-transition: padding 0.5s;
+  -o-transition: padding 0.5s;
+  -webkit-transition: padding 0.5s
 }
 
 // Galleries
@@ -355,9 +357,9 @@ a.content .inner_content {
 
 .exhibit_gallery_item {
   flex-basis: 20%;
-  padding: 10px;
-  line-height: 1.1em;
   font-size: .9em;
+  line-height: 1.1em;
+  padding: 10px;
 }
 
 .exhibit_gallery_image {
@@ -377,9 +379,9 @@ a.content .inner_content {
 
 .searchResults {
   border-bottom: 3px solid $greybeige;
+  color: $warmblack; //overwrite link color
   display: flex;
   padding: 1em 0 0 0;
-  color: $warmblack; //overwrite link color
   &:hover {
     background-color: lighten($greybeige, 28%);
     color: $warmblack; //overwrite link color
@@ -447,12 +449,12 @@ span.pageimage {
 
 @media (min-width: $screen-sm) { 
   .metadata {
-    columns: 2;
-    border: $gray-light solid 1px;
     background: white;
-    padding: .5em 1em;
     border-radius: 4px;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    border: $gray-light solid 1px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    columns: 2;
+    padding: .5em 1em;
     ul {
       list-style-type: none;
       margin: 0;
@@ -465,9 +467,9 @@ span.pageimage {
 
 .image_item_display {
   background-color: #fff;
-  border: solid 3px $greybeige;
   border-left: 0;
   border-right: 0;
+  border: solid 3px $greybeige;
   margin-bottom: 1em;
   padding: 1em;
   text-align: center;
@@ -477,9 +479,9 @@ span.pageimage {
 // --------
 
 .research_image {
-  margin: auto;
-  display: block;
   box-shadow: none;
+  display: block;
+  margin: auto;
 
   &:hover {
     box-shadow: none;
