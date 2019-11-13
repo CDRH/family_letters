@@ -2,9 +2,14 @@
 
 <%= t "explore.language_and_life.intro_html" %>
 
-<%# TODO cleanup and make into gallery %>
+<% images = {
+  "shan_p.427" => "",
+  "shan_p.029" => "",
+  "shan_d.109" => ""
+} %>
 
-<p>Will make this into a nice exhibit / gallery</p>
-<%= image_tag iiif("shan_p.427.jpg") %>
-<%= image_tag iiif("shan_p.029.jpg") %>
-<%= image_tag iiif("shan_d.109.jpg") %>
+<h2 class="gallery_heading">
+  <%= t "explore.gallery", default: "Gallery" %>
+</h2>
+
+<%= render "gallery", photos: images %>
