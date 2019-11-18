@@ -1,0 +1,105 @@
+@media print {
+
+  body {
+    font-size: 14px;
+  }
+
+  //stuff to hide
+
+  .letter_top_greeting,
+  .letter_bottom_farewell,
+  .top-navigation,
+  .surround-lang,
+  #footer,
+  .more_lesson_plans,
+  .btn-lesson-expand {
+    display: none;
+  }
+
+  // Overwrite default link writing behavior (from bootstrap print)
+
+  a[href]:after {
+    content: "";
+  }
+
+  // Print external links that are not to cdrhmedia 
+
+  a[href^="http"]:not([href*="cdrhmedia.unl.edu"]):after {
+    content: " (" attr(href) ")";
+    word-wrap: break-word;
+  }
+
+  //tighten up margins
+
+  h1, h2, h3, h4, h5, h6, 
+  .h1, .h2, .h3, .h4, .h5, .h6, 
+   {
+    margin: 0 !important;
+    margin-top: .5em !important;
+    margin-bottom: .5em !important;
+    padding: 0 !important;
+  }
+
+  .well {
+    break-inside: auto !important;
+    overflow: auto;
+    padding: .2em .6em;
+  }
+
+  .lesson_section, .lesson_item {
+    padding-bottom: .5em !important;
+    padding-top: .5em !important;
+  }
+
+  // display collapsed items
+
+  .collapse {
+    display: block;
+  }
+
+  // change border color to gray
+
+  h3.lesson_section, .lesson_item {
+    border-color: #aaa !important;
+  }
+
+  // Duplicating bootstrap grid functionality so items will appear side by side
+
+  .row:before, .row:after {
+    content: " ";
+    display: table;
+  }
+
+  .row:after {
+    clear: both;
+  }
+
+  // We are only using col-md-6 in lessons
+
+  .col-md-6 {
+    float: left;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    width: 50%;
+  }
+
+  .title_nav {
+    text-align: left;
+  }
+
+  .title_nav_sub {
+    margin-left: 0;
+  }
+  
+  .h1.site-title,
+  .h2.site-title {
+    display: inline-block;
+    text-align: left;
+  }
+
+  .glyphicon {
+    display: none;
+  }
+}
