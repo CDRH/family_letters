@@ -34,27 +34,27 @@
   h1, h2, h3, h4, h5, h6, 
   .h1, .h2, .h3, .h4, .h5, .h6, 
    {
-    padding: 0 !important;
     margin: 0 !important;
     margin-top: .5em !important;
     margin-bottom: .5em !important;
+    padding: 0 !important;
   }
 
   .well {
-    overflow: auto;
     break-inside: auto !important;
+    overflow: auto;
     padding: .2em .6em;
   }
 
   .lesson_section, .lesson_item {
-    padding-top: .5em !important;
     padding-bottom: .5em !important;
+    padding-top: .5em !important;
   }
 
   // display collapsed items
 
   .collapse {
-    display:block;
+    display: block;
   }
 
   // change border color to gray
@@ -66,8 +66,8 @@
   // Duplicating bootstrap grid functionality so items will appear side by side
 
   .row:before, .row:after {
-    display: table;
     content: " ";
+    display: table;
   }
 
   .row:after {
@@ -77,12 +77,12 @@
   // We are only using col-md-6 in lessons
 
   .col-md-6 {
-    width: 50%;
     float: left;
-    position: relative;
     min-height: 1px;
-    padding-right: 15px;
     padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    width: 50%;
   }
 
   .title_nav {
@@ -99,5 +99,7 @@
     text-align: left;
   }
 
-  .glyphicon {display: none;}
+  .glyphicon {
+    display: none;
+  }
 }
