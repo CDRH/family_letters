@@ -3,11 +3,7 @@
   <% if @ext_css.present? || @inline_css.present? %>
   <!-- Conditional -->
   <% end %>
-  <!-- TODO: Discuss better place to put this - kmd -->
   <link href="https://fonts.googleapis.com/css?family=Vollkorn+SC:400,600|Cormorant" rel="stylesheet">
-  <!-- TODO: download and include these locally. I was having trouble getting css to load. - kmd -->
-  <link href="http://hopewell.unl.edu/stylesheets/ekko-lightbox.min.css" rel="stylesheet" /> 
-  <script src="http://hopewell.unl.edu/javascripts/ekko-lightbox.min.js"></script>
   <% if @ext_css.present?
     Array.wrap(@ext_css).each do |css| %>
   <%= stylesheet_link_tag css, media: nil %>

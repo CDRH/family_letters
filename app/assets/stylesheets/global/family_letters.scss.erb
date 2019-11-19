@@ -210,6 +210,10 @@ a.btn, .footer_logo a, .nav a, .site-title-container a, .pagination a, a.searchR
   margin: 2em 0 2em 0;
 }
 
+.print_url_container {
+  display: none; //this is overwritten in the print stylesheet
+}
+
 // ----------
 // Dedication
 // ----------
@@ -421,6 +425,10 @@ a.content .inner_content {
 
 .search_results_text .search_results_highlights:not(:first-of-type) {
     border-top: 4px solid lighten($greybeige, 10%);
+}
+
+.index_spacer a {
+  box-shadow: none;
 }
 
 // Individual Items

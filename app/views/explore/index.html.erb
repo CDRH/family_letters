@@ -22,7 +22,6 @@ images = {
         <h4>
           <%= t "explore.home.search_label", default: "Search Materials" %>
         </h4>
-        <%# TODO figure out an example that would work in spanish as well %>
         <%= text_field_tag "q", nil, placeholder: "(sister OR \"sis\") NOT brother", class: "form-control" %>
         <div class="pull-left">
             <%= link_to t("explore.home.search_adv", default: "Advanced Search"),
