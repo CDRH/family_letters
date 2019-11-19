@@ -3,7 +3,6 @@
   <% if @ext_css.present? || @inline_css.present? %>
   <!-- Conditional -->
   <% end %>
-  <!-- TODO: Discuss better place to put this - kmd -->
   <link href="https://fonts.googleapis.com/css?family=Vollkorn+SC:400,600|Cormorant" rel="stylesheet">
   <% if @ext_css.present?
     Array.wrap(@ext_css).each do |css| %>
