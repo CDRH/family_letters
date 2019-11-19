@@ -42,7 +42,7 @@ default: &default
 
   facets:
     en:
-      category:
+      subcategory:
         label: Category
         flags:
           - search_filter
@@ -58,10 +58,6 @@ default: &default
         label: Primary Language
         flags:
           - search_filter
-      subcategory:
-        label: Subcategory
-        flags:
-          - search_filter
       creator.name:
         label: Author
         flags:
@@ -75,7 +71,7 @@ default: &default
         flags:
           - search_filter
     es:
-      category:
+      subcategory:
         label: Categoría
         flags:
           - search_filter
@@ -92,11 +88,6 @@ default: &default
         label: Idioma Original
         flags:
           - search_filter
-      subcategory:
-        label: Subcategoría
-        flags:
-          - search_filter
-          - translate
       creator.name:
         label: Autor
         flags:
