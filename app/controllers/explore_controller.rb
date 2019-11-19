@@ -1,7 +1,13 @@
 class ExploreController < ApplicationController
 
   before_action :image_gallery,
-                only: [:connections, :index, :migrations, :more_than_work]
+                only: [
+                  :connections,
+                  :language_and_life,
+                  :index,
+                  :migrations,
+                  :more_than_work
+                ]
 
   def index
     @title = t "explore.title"

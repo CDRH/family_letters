@@ -101,6 +101,12 @@ es:
       shan_d_480: Anverso e interior, tarjeta Día de las madres. To My Own Dear Mother.
       # welcomebaby
       shan_d_526: Anverso e interior, tarjeta de felicitación por nacimiento de un bebé.
+
+      # language and life
+      shan_l_098: Carta de Jesusita Baros Torres a Santos B Schubert 7/10/1964
+      shan_p_013: Retrato de Santos Baros Schubert
+      shan_p_227: Retrato de Jesusita Baros Torres
+
     language_and_life:
       title: Lengua y vida
       intro_html: |-

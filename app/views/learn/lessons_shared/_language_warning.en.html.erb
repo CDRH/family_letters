@@ -1,9 +1,13 @@
-<!-- TODO use Colorado / Michoacán stamps for logos instead -->
-<button type="button" class="btn btn-primary btn-lg pull-right"
-        data-toggle="modal" data-target="#language_warning">
-  <%= image_tag "no_image.jpg" %>
-  <p>Will be postmarks (round)</p>
-</button>
+<span 
+  class="surround-lang" 
+  data-toggle="modal" 
+  data-target="#language_warning" 
+  style="
+    background: url(<%= image_path 'postmark_colo.png' %>) no-repeat center center;
+    background-size: contain; ">
+  <span class="span-lang">In English?</span>
+</span>
+
 
 <!-- Modal -->
 <div class="modal fade" id="language_warning" tabindex="-1"

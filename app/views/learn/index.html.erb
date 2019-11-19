@@ -1,6 +1,6 @@
-<h1 class="h2"><%= t "learn.home.title" %></h1>
-
 <%= render "learn/lessons_shared/language_warning" %>
+
+<h1 class="h2"><%= t "learn.home.title" %></h1>
 
 <h2 class="h4">
   <em>
@@ -10,23 +10,31 @@
   </em>
 </h2>
 
-<div class="learn-introduction buffer-bottom-lg">
-  <%= t "learn.home.introduction_html" %>
+<%# --------
+Introduction and in Page Links
+---------- %>
+
+<div class="row">
+  <div class="col-md-8">
+    <div class="learn-introduction buffer-bottom-lg">
+      <%= t "learn.home.introduction_html" %>
+    </div>
+  </div><!-- /left -->
+  <div class="col-md-4">
+    <h3 class="h4">Sections</h3>
+    <a href="#lesson_plans" type="button" class="btn btn-primary btn-lg btn-block">Lesson Plans</a>
+    <a href="#more_teaching" type="button" class="btn btn-primary btn-lg btn-block">More teaching ideas<br/>Más ideas para el salón de clase </a>
+    <a href="#developmental_targets" type="button" class="btn btn-primary btn-lg btn-block">Developmental Targets</a>
+    <a href="#are_you_a_teacher" type="button" class="btn btn-primary btn-lg btn-block">Are you a teacher?<br/>¿Eres maestr@?</a>
+    <a href="#note_on_nomenclature" type="button" class="btn btn-primary btn-lg btn-block">A note on nomenclature</a>
+  </div><!-- /right -->
 </div>
 
-<!-- developmental targets button and expander -->
-<button class="btn btn-info btn-block" type="button" data-toggle="collapse"
-        data-target="#targets" aria-expanded="false"
-        aria-controls="targets">
-  <h3><%= t "learn.home.developmental_targets" %></h3>
-</button>
-<div class="collapse" id="targets">
-  <div class="well">
-    <%= render "developmental_targets" %>
-  </div>
-</div>
+<%# --------
+Lesson Plans
+---------- %>
 
-<h3 class="explore_index_headers">
+<h3 class="lesson_section" id="lesson_plans">
   <%= t "learn.lesson_plans.title" %>
 </h3>
 
@@ -114,7 +122,123 @@
   </div><!-- /col -->
 </div><!-- /row -->
 
-<!-- TODO this was originally supposed to be a sidebar but I am putting it
-     here because I don't know how that will work with the rest of the
-     contents on this page -->
-<%= render "more" %>
+<%# --------
+More Teaching Ideas
+---------- %>
+
+<h3 class="lesson_section" id="more_teaching">More teaching ideas / Más ideas para el salón de clase </h3>
+
+<p>The following lesson plans were developed as part of a university course on Heritage Speaker Pedagogy, offered in the Department of Modern Languages and Literatures at the University of Nebraska, Lincoln, during the spring of 2018. The students who prepared them generously share them with other Spanish instructors. The use of these materials is permitted exclusively for non-commercial use and only with attribution to their author.</p>
+
+<div class="row">
+  <div class="col-md-6">
+    <a href="https://cdrhmedia.unl.edu/data/family_letters/source/pdf/lesson_plan_01.pdf" role="button" class="btn btn-primary btn-lg btn-block">
+      Conociendo el mundo por la vida privada 
+      <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+    </a>
+    <a href="https://cdrhmedia.unl.edu/data/family_letters/source/pdf/lesson_plan_02.pdf" role="button" class="btn btn-primary btn-lg btn-block">
+      ¡Nos casamos! 
+      <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="col-md-6">
+    <a href="https://cdrhmedia.unl.edu/data/family_letters/source/pdf/lesson_plan_03.pdf" role="button" class="btn btn-primary btn-lg btn-block">
+      Dos cartas
+      <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+    </a>
+    <a href="https://cdrhmedia.unl.edu/data/family_letters/source/pdf/lesson_plan_04.pdf" role="button" class="btn btn-primary btn-lg btn-block">
+      Tarjeta de cumpleaños
+      <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+    </a>
+  </div>
+</div>
+
+<h4>External Resources</h4>
+
+<div class="row">
+  <div class="col-md-12">
+    <a href="https://ohiostate.pressbooks.pub/idiomacomunidad/" target="_blank" rel="nofollow noreferrer" type="button" class="btn btn-success btn-lg btn-block">OSU: Mi idioma, mi comunidad: español para bilingües  <span class="glyphicon glyphicon-share" aria-hidden="true"></span>
+    </a>
+  </div>
+</div>
+
+<%# --------
+Developmental Targets
+---------- %>
+
+<h3 class="lesson_section" id="developmental_targets">
+  <%= t "learn.home.developmental_targets" %>
+</h3>
+
+<table class="table table-striped">
+  <tr>
+    <th class="col-md-3">
+      <strong>Heritage Language Learners</strong>
+      <br>
+      <em>Beaudrie & Potowski, 2014</em>
+    </th>
+    <th class="col-md-3">
+      <strong>Second Language Learners, K-12</strong>
+      <br>
+      <em>Nebraska K-12 Foreign Language Frameworks</em>
+    </th>
+    <th class="col-md-4">
+      <strong>HL & L2 Advanced-Mid level learners, young adult and beyond</strong>
+      <br>
+      <em>ACTFL Writing Proficiency Guidelines, 2012</em>
+    </th>
+  </tr>
+  <tr>
+    <td>Development of reading and writing skills in Spanish</td>
+    <td>Communicate in Languages Other than English (Goal 1)</td>
+    <td rowspan="5">
+      “[...] They demonstrate the ability to narrate and describe with detail in all major time frames with good control of aspect. They are able to write straightforward summaries on topics of general interest. Their writing exhibits a variety of cohesive devices in texts up to several paragraphs in length. There is good control of the most frequently used target-language syntactic structures and a range of general vocabulary. Most often, thoughts are expressed clearly and supported by some elaboration. This writing incorporates organizational features both of the target language and the writer’s first language and may at times resemble oral discourse. Writing at the Advanced Mid sublevel is understood readily by natives not used to the writing of non-natives. When called on to perform functions or to treat issues at the Superior level, Advanced Mid writers will manifest a decline in the quality and/or quantity of their writing.”
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Development of cohesive devices characteristic of formal varieties of written Spanish
+    </td>
+    <td>Gain Knowledge and Understanding of Other Cultures (Goal 2)</td>
+  </tr>
+  <tr>
+    <td>Transfer of academic skills</td>
+    <td>
+      Connect with Other Disciplines and Acquire Information (Goal 3)
+    </td>
+  </tr>
+  <tr>
+    <td>Expansion of bilingual range</td>
+    <td>
+      Develop Insight into the Nature of Language and Culture (Goal 4)
+    </td>
+  </tr>
+  <tr>
+    <td>Awareness and appreciation of different varieties of Spanish</td>
+    <td>
+      Participate in Multilingual Communities at Home & Around the World (Goal 5)
+    </td>
+  </tr>
+  <tr>
+    <td>Awareness and appreciation of cultural diversity within and beyond Latinx communities</td>
+  </tr>
+</table>
+
+<%# --------
+Are you a teacher?
+---------- %>
+
+<h3 class="lesson_section" id="are_you_a_teacher">
+  Are you a teacher? / ¿Eres maestr@?
+</h3>
+<p>Have you used the materials in this collection in your own classroom? Have a great teaching idea? Share your work! Your ideas can help us improve the quality of teaching in and about U.S. Spanish.</p>
+
+<%# --------
+A Note on Nomenclature
+---------- %>
+
+<h3 class="lesson_section" id="note_on_nomenclature">A note on nomenclature</h5>
+
+<p>The word Latinx has been used in all teaching materials written in English as a way to recognize the diversity of gender experiences within our communities. Used as a noun, this gender-neutral form is employed in this site to designate a person of Latin American descent from, or living in, the United States.</p>
+
+<p>Owing to the fact that Spanish requires agreement between nouns, adjectives, and determiners, and that all nouns in Spanish are marked for grammatical gender, the alternative latin@ was employed in materials written in Spanish.</p>
