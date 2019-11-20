@@ -2,7 +2,7 @@ module ItemsHelper
   include Orchid::ItemsHelper
 
   def search_item_link(item)
-    if item["category"] != "Secondary Source"
+    if item["category"] != "Site Section"
       # default behavior for majority of items
       prefix_path("item_path", id: item["identifier"])
     else
