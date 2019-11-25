@@ -257,6 +257,8 @@ en:
         other: "%{count} results"
       # labels for individual item descriptions in results
       item:
+        # category of the items
+        category: Category
         # creators of the item
         creator: Author(s)
         # the date of the item used for search results

@@ -31,9 +31,10 @@
                   <%= metadata(item, t("search.results.item.source", default: "Source"), "source", link: false) %>
                 </li>
               <% end %>
+              <%# subcategory is displayed to the user as "category" %>
               <% if item["subcategory"].present? %>
                 <li>
-                  <%= metadata(item, t("search.results.item.subcategory", default: "Subcategory"), "subcategory", link: false) %>
+                  <%= metadata(item, t("search.results.item.category", default: "Category"), "subcategory", link: false) %>
                 </li>
               <% end %>
             </ul>
