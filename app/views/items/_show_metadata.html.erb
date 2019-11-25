@@ -20,15 +20,10 @@
                      "format") %>
       </li>
     <% end %>
-    <% if @res["category"].present? %>
-      <li>
-        <%= metadata(@res, t("item.metadata.category", default: "Category"),
-                     "category") %>
-      </li>
-    <% end %>
+    <%# subcategory is displayed to the user as "category" %>
     <% if @res["subcategory"].present? %>
       <li>
-        <%= metadata(@res, t("item.metadata.subcategory", default: "Subcategory"),
+        <%= metadata(@res, t("item.metadata.category", default: "Category"),
                      "subcategory") %>
       </li>
     <% end %>
