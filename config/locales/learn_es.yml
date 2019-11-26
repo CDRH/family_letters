@@ -10,9 +10,8 @@ es:
     home:
       title: Teacher Resources / Recursos para Maestros
       subtitle_1: "This letter is to greet you:"
-      subtitle_2: |-
-        Language, migration and daily life in the experience of one Mexican
-        American family
+      subtitle_2: Language, migration and daily life in the experience of one
+      subtitle_3: Mexican American family
       introduction_html: |-
         <p>The following materials were designed to address the needs of High
         School and college Spanish learners at the intermediate/advanced
@@ -23,7 +22,7 @@ es:
         <p>The activities presented here were developed for two types of
         students: Those who are speakers of Spanish as a heritage
         language, and those who are learning it as a second language.</p>
-        <p>Following Beaudrie y Potowski (2014), we believe that speakers of
+        <p>Following Beaudrie & Potowski (2014), we believe that speakers of
         Spanish as a heritage language bring with them linguistic, social and
         cultural knowledge that must be valued in the classroom. We understand
         a heritage language learner as a student who grew up in a family  or
@@ -38,7 +37,6 @@ es:
     lesson_plans:
       for_students: For Students
       for_teachers: For Teachers
-      instruction_sequence: Secuencia Instruccional
       learning_objectives: Learning Objectives
       lesson_focus: In this lesson, we focus on…
       materials: Materials
