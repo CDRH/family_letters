@@ -26,7 +26,7 @@
         <li><strong>Format:</strong> <%= Array(item["res"]["format"]).join(" | ") %></li>
         <!-- Not pulling from API at the moment -->
         <li><strong>Creator:</strong> N/A</li>
-        <li><strong>Held by:</strong> University of Nebraska, Lincoln, Hispanic-Latina/o Heritage Collection</li>
+        <li><strong>Held by:</strong> <%= item["res"]["source"] %></li>
       </ul>
       <%= link_to "View more information about #{id}", item_path(id: item["res"]["identifier"]) %>
     </div>
