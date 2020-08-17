@@ -71,8 +71,8 @@
     html += "<li>"+props["date_display"]+"</li>";
     html += "</ul>";
     if (props["image_id"]) {
-      img = "<%= IIIF_PATH %>"+"<%= APP_OPTS["media_server_dir"] %>&2F"+props["image_id"]+"full/!150,150/0/default.jpg";
-      html += img;
+      img = "<%= IIIF_PATH %>"+"/<%= APP_OPTS["media_server_dir"] %>%2F"+props["image_id"]+"/full/!150,150/0/default.jpg";
+      html += "<img src=\""+img+"\">";
     }
     html += "</div>";
     layer.bindPopup(html);
