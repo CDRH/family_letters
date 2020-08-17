@@ -1,0 +1,74 @@
+<% @ext_js = add_assets(@ext_js, ["leaflet"] ) %>
+<% @ext_css = add_assets(@ext_css, ["leaflet"] ) %>
+
+<style>
+  #map {
+    border: 1px solid black;
+    height: 400px;
+  }
+</style>
+
+<div id="map"></div>
+
+<%# @res.to_json %>
+
+<script>
+  var geojson = <%= sanitize @map.to_json %>;
+  var lang = "<%= locale %>";
+</script>
+
+<script>
+  // CREATE LAYER FOR MAP TILES
+  var osmLayer = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ext}', {
+    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    subdomains: 'abcd',
+    minZoom: 0,
+    maxZoom: 20,
+    ext: 'png'
+  });
+
+  // ADD MAP
+  var map = L.map('map', {
+      center: new L.LatLng(36, -90),
+      zoom: 4,
+      layers: [osmLayer]
+  });
+
+  features = L.geoJSON(geojson, {
+    onEachFeature: onEachFeature,
+    pointToLayer: function(feature, latlng) {
+      props = feature.properties;
+      if (props["subcategory"] == "Photograph") {
+        color = "green"
+      } else {
+        color = "orange"
+      }
+      icon = L.icon({
+        iconUrl: "<%= image_path("camera.svg") %>",
+        iconSize: [38, 95],
+        iconAnchor: [22, 94],
+        popupAnchor: [-3, -76],
+    });
+      return L.marker(latlng, { icon: icon })
+    },
+    style: function(feature) {
+      return { color: "blue", weight: 3 }
+    }
+  });
+
+  features.addTo(map);
+  map.fitBounds(features.getBounds());
+
+  // BIND POPUP TO DESTINATION
+  function onEachFeature(feature, layer) {
+    props = feature.properties;
+    lang = "<%= locale %>";
+    title = (lang == "en") ? props["item_title"] : props["item_title_es"];
+    html = "<div class='mapFeature'>";
+    html += "<h3>" + title + "</h3>";
+    html += "<p>Testing: "+JSON.stringify(props)+"</p>";
+    html += "</div>";
+    layer.bindPopup(html);
+  };
+
+</script>
