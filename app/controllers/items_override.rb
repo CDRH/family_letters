@@ -18,6 +18,8 @@ ItemsController.class_eval do
     if params["map"].present?
       fields = %w[
         identifier
+        image_id
+        date_display
         spatial.title
         spatial.type
         spatial.coordinates
@@ -58,11 +60,15 @@ ItemsController.class_eval do
     features = []
     api_res.each do |item|
       next if !item["spatial"]
+      # TODO no date and translation in locales
       properties = {
         "id" => item["identifier"],
+        "date_display" => item["date_display"] || "No Date",
+        "image_id" => item["image_id"],
         "item_title" => item["title"],
         "item_title_es" => item["title_es_k"],
-        "subcategory" => item["subcategory"]
+        "subcategory" => item["subcategory"],
+        "location" => geojson_location(item["spatial"])
       }
       feature = {
         "type" => "Feature",
@@ -101,6 +107,14 @@ ItemsController.class_eval do
         "coordinates" => coords
       }
     end
+  end
+
+  def geojson_location(spatial)
+    # there should only ever be one or two of these
+    # so it is safe to add " to " or " a " between them
+    locs = spatial.map { |s| s["title"] }
+    separator = " #{t("search.results.map.to")} "
+    locs.join(separator)
   end
 
 end

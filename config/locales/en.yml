@@ -282,6 +282,9 @@ en:
       # summary box of selected search / filters
       summary:
         query: Search
+      # FAMILY LETTERS SPECIFIC
+      map:
+        to: to
     # title text that appears when search / filters have been applied
     search_results: Search Results
     # hidden label for the text search input

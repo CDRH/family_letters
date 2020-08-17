@@ -65,8 +65,15 @@
     lang = "<%= locale %>";
     title = (lang == "en") ? props["item_title"] : props["item_title_es"];
     html = "<div class='mapFeature'>";
-    html += "<h3>" + title + "</h3>";
-    html += "<p>Testing: "+JSON.stringify(props)+"</p>";
+    html += "<strong>" + title + "</strong>";
+    html += "<ul>";
+    html += "<li>"+props["location"]+"</li>";
+    html += "<li>"+props["date_display"]+"</li>";
+    html += "</ul>";
+    if (props["image_id"]) {
+      img = "<%= IIIF_PATH %>"+"<%= APP_OPTS["media_server_dir"] %>&2F"+props["image_id"]+"full/!50,50/0/default.jpg";
+      html += props["image_id"];
+    }
     html += "</div>";
     layer.bindPopup(html);
   };

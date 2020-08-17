@@ -297,6 +297,9 @@ es:
       # summary box of selected search / filters
       summary:
         query: Buscar
+      # FAMILY LETTERS SPECIFIC
+      map:
+        to: a
     # title text that appears when search / filters have been applied
     search_results: Resultados
     # hidden label for the text search input
