@@ -1,0 +1,72 @@
+<%= render "research/maps/setup" %>
+<%# render "research/maps/#{id}" %>
+
+<script>
+
+  // ADD MAP
+  var map = L.map('map', {
+      center: new L.LatLng(36, -90),
+      zoom: 4,
+      layers: [osmLayer]
+  });
+
+  features = L.geoJSON(geojson, {
+    onEachFeature: onEachFeature,
+    pointToLayer: function(feature, latlng) {
+      return L.circleMarker(latlng, markerOptions(feature));
+    },
+    // style: function(feature) {
+    //   return { color: "blue", weight: 3 }
+    // }
+  });
+
+  features.addTo(map);
+  map.fitBounds(features.getBounds());
+
+  // BIND POPUP TO DESTINATION
+  function onEachFeature(feature, layer) {
+    props = feature.properties;
+    lang = "<%= locale %>";
+    console.log(JSON.stringify(props));
+    title = props["location"]
+    html = "<div class='mapFeature'>";
+    html += "<strong>" + title + "</strong>";
+    html += "<p>"+props["count"]+" outgoing letters</p>";
+    html += "<ul>";
+    props["letters"].forEach(function(letter) {
+      if (lang == "es") {
+        html += "<li>"+letter["title"]+"</li>";
+      } else {
+        html += "<li>"+letter["title_es"]+"</li>";
+      }
+    });
+    html += "</ul>";
+    html += "</div>";
+    layer.bindPopup(html);
+  };
+
+  // STYLE DESTINATION CIRCLES
+  function markerOptions(feature) {
+    count = feature.properties.count;
+    // console.log(JSON.stringify(feature.properties));
+    // one location has 81, the others much fewer
+    // so using less than half the biggest to give
+    // the others some size to work with
+    percent = count/30;
+    // scale up just a bit
+    size = percent*15;
+    // some simply too small to see / interact with
+    if (size < 3) size = 4;
+    // it's just too big!
+    if (size > 30) size = 20;
+    return {
+      radius: size,
+      color: "black",
+      opacity: 1,
+      weight: 0.2,
+      fillColor: "orange",
+      fillOpacity: 0.8
+    }
+  };
+
+</script>

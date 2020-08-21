@@ -1,17 +1,9 @@
 
 <%# OVERRIDE FROM ORCHID %>
-<%# includes custom search results listing and map %>
+<%# includes custom search results listing %>
 
 <% if @res.count && @res.count > 0 %>
   <div class="flex_row buffer-bottom-sm">
-
-    <% if @map && @map[:features] && @map[:features].length > 0 %>
-
-      <%= render "items/map" %>
-
-    <% end %>
-
-    <%# traditional orchid override begins here %>
     <% @res.items.each do |item| %>
       <%= link_to search_item_link(item), class: "searchResults flex_col-md" do %>
         <div class="search_results_image">

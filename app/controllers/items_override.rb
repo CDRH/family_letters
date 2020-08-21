@@ -15,28 +15,8 @@ ItemsController.class_eval do
 
     @title = t "search.title"
 
-    if params["map"].present?
-      fields = %w[
-        identifier
-        image_id
-        date_display
-        spatial.title
-        spatial.type
-        spatial.coordinates
-        subcategory
-        title
-        title_es_k
-      ]
-      options["num"] = 800
-      options["fl"] = fields.join(",")
-      # TODO restrict query to only photographs / letters
-      @res = @items_api.query(options)
-      @map = convert_geojson(@res.items)
-    else
-      @res = @items_api.query(options)
-    end
+    @res = @items_api.query(options)
     render_overridable("items", "index")
-
   end
 
   def search_language(options)
@@ -51,70 +31,6 @@ ItemsController.class_eval do
       end
       options
     end
-  end
-
-  private
-
-  # expects array of items
-  def convert_geojson(api_res)
-    features = []
-    api_res.each do |item|
-      next if !item["spatial"]
-      # TODO no date and translation in locales
-      properties = {
-        "id" => item["identifier"],
-        "date_display" => item["date_display"] || "No Date",
-        "image_id" => item["image_id"],
-        "item_title" => item["title"],
-        "item_title_es" => item["title_es_k"],
-        "subcategory" => item["subcategory"],
-        "location" => geojson_location(item["spatial"])
-      }
-      feature = {
-        "type" => "Feature",
-        "properties" => properties,
-        "geometry" => geojson_geometry(item["spatial"])
-      }
-      features << feature
-    end
-    {
-      "type": "FeatureCollection",
-      "features": features
-    }
-  end
-
-  def geojson_geometry(spatial)
-    puts "spatial: #{spatial}"
-    if spatial.length == 1
-      {
-        "type" => "Point",
-        "coordinates" => [
-          spatial.first["coordinates"]["lon"],
-          spatial.first["coordinates"]["lat"]
-        ]
-      }
-    else
-      puts "looking here for spatial"
-      puts spatial
-      coords = spatial.map do |s|
-        [
-          s["coordinates"]["lon"],
-          s["coordinates"]["lat"]
-        ]
-      end
-      {
-        "type" => "LineString",
-        "coordinates" => coords
-      }
-    end
-  end
-
-  def geojson_location(spatial)
-    # there should only ever be one or two of these
-    # so it is safe to add " to " or " a " between them
-    locs = spatial.map { |s| s["title"] }
-    separator = " #{t("search.results.map.to")} "
-    locs.join(separator)
   end
 
 end

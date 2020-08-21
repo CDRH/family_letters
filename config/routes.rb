@@ -24,6 +24,8 @@ Rails.application.routes.draw do
 
     # research / investiga
     get '/research', to: 'research#index', as: 'research'
+    get '/research/maps', to: 'research#maps', as: 'research_maps'
+    get '/research/maps/:id', to: 'research#map', as: 'research_map'
 
     # learn / enseña
     get '/learn', to: 'learn#index', as: 'learn'
