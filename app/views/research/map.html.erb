@@ -1,3 +1,17 @@
+<ul>
+  <li><%= link_to "All Letters", research_map_path(id: "routes_all") %></li>
+  <li><%= link_to "Origin Cities", research_map_path(id: "city_from") %></li>
+  <li><%= link_to "Destination Cities", research_map_path(id: "city_to") %></li>
+  <!-- <li><%# link_to "Photographs", research_map_path(id: "photographs") %></li> -->
+</ul>
+
+<p>Key:</p>
+<ul>
+  <li>Blue: Majority Spanish (>75% spanish)</li>
+  <li>Green: Spanish / English</li>
+  <li>Yellow: Majority English (<25% spanish)</li>
+</ul>
+
 <%= render "research/maps/setup" %>
 <%# render "research/maps/#{id}" %>
 
@@ -15,13 +29,32 @@
     pointToLayer: function(feature, latlng) {
       return L.circleMarker(latlng, markerOptions(feature));
     },
-    // style: function(feature) {
-    //   return { color: "blue", weight: 3 }
-    // }
+    style: function(feature) {
+      color = degreeOfSpanish(feature.properties);
+      return { color: color, weight: 3 }
+    }
   });
 
   features.addTo(map);
   map.fitBounds(features.getBounds());
+
+  function degreeOfSpanish(props) {
+    // calculate percent in spanish
+    es = Number(props.es) || 0;
+    en = Number(props.en) || 0;
+
+    perc_es = es/(es+en);
+
+    color = "grey";
+    if (perc_es >= .75) {
+      color = "blue";
+    } else if (perc_es <= .25) {
+      color = "yellow"
+    } else if (perc_es) {
+      color = "green"
+    }
+    return color;
+  }
 
   // BIND POPUP TO DESTINATION
   function onEachFeature(feature, layer) {
@@ -33,13 +66,15 @@
     html += "<strong>" + title + "</strong>";
     html += "<p>"+props["count"]+" outgoing letters</p>";
     html += "<ul>";
-    props["letters"].forEach(function(letter) {
-      if (lang == "es") {
-        html += "<li>"+letter["title"]+"</li>";
-      } else {
-        html += "<li>"+letter["title_es"]+"</li>";
-      }
-    });
+    if (props["letters"]) {
+      props["letters"].forEach(function(letter) {
+        if (lang == "es") {
+          html += "<li>"+letter["title"]+"</li>";
+        } else {
+          html += "<li>"+letter["title_es"]+"</li>";
+        }
+      });
+    }
     html += "</ul>";
     html += "</div>";
     layer.bindPopup(html);
@@ -47,7 +82,8 @@
 
   // STYLE DESTINATION CIRCLES
   function markerOptions(feature) {
-    count = feature.properties.count;
+    props = feature.properties;
+    count = props.count;
     // console.log(JSON.stringify(feature.properties));
     // one location has 81, the others much fewer
     // so using less than half the biggest to give
@@ -59,13 +95,16 @@
     if (size < 3) size = 4;
     // it's just too big!
     if (size > 30) size = 20;
+
+    color = degreeOfSpanish(props)
+
     return {
       radius: size,
       color: "black",
       opacity: 1,
       weight: 0.2,
-      fillColor: "orange",
-      fillOpacity: 0.8
+      fillColor: color,
+      fillOpacity: 0.6
     }
   };
 

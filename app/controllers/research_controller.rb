@@ -20,7 +20,7 @@ class ResearchController < ApplicationController
     url = "http://localhost:5000/output/development/geojson/#{id}.json"
     geojson = open(url)
     if geojson.status
-      @geojson = geojson.read.force_encoding('UTF-8')
+      @geojson = geojson.read.force_encoding(Encoding::UTF_8)
     end
   end
 
