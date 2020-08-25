@@ -1,20 +1,45 @@
 <% @ext_js = add_assets(@ext_js, ["leaflet"] ) %>
 <% @ext_css = add_assets(@ext_css, ["leaflet"] ) %>
 
-<style>
-  #map {
-    border: 1px solid black;
-    height: 400px;
-  }
+</div><%# closing container for full screen %>
 
-  .mapFeature {
-    /* TODO better height?? */
-    height: 150px;
-    overflow: scroll;
-  }
-</style>
+<div class="map_container">
+  <div class="map_container_main">
+    <div class="map_container_map">
+      <div id="map"></div>
+    </div><%# map_container_map %>
+    <div class="map_container_bottom">
+      <div class="btn-group btn-group-justified" role="group" aria-label="">
+        <a class="btn btn-default btn-sm" href="#">All</a>
+        <a class="btn btn-default btn-sm" href="#">Pre 1930</a>
+        <a class="btn btn-default btn-sm" href="#">1930s</a>
+        <a class="btn btn-default btn-sm" href="#">1940s</a>
+        <a class="btn btn-default btn-sm" href="#">1950s</a>
+        <a class="btn btn-default btn-sm" href="#">1960s</a>
+        <a class="btn btn-default btn-sm" href="#">1970s</a>
+        <a class="btn btn-default btn-sm" href="#">1980s</a>
+        <a class="btn btn-default btn-sm" href="#">Post 1989</a>
+      </div>
+    </div>
+  </div>
 
-<div id="map"></div>
+  <div class="map_container_sidebar">
+    <div id="map_container_key">
+      <p>Key:</p>
+      <ul class="map_key">
+        <li class="map_key_spanish"><span></span> Blue: Majority Spanish (>75% spanish)</li>
+        <li class="map_key_mix"><span></span> Green: Spanish / English</li>
+        <li class="map_key_english"><span></span> Yellow: Majority English (<25% spanish)</li>
+      </ul>
+    </div>
+    <div id="map_container_info">
+     <p>Map Sidebar Info</p>
+
+    </div>
+  </div> <%# /key_container_key %>
+</div> <%# /map_container %>
+
+<div class="container"><%# reopening container %>
 
 <script>
   // CREATE LAYER FOR MAP TILES

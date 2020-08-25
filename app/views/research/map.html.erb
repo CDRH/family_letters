@@ -1,16 +1,10 @@
-<ul>
-  <li><%= link_to "All Letters", research_map_path(id: "routes_all") %></li>
-  <li><%= link_to "Origin Cities", research_map_path(id: "city_from") %></li>
-  <li><%= link_to "Destination Cities", research_map_path(id: "city_to") %></li>
+<div class="btn-group map-btn-group btn-group-justified" role="group" aria-label="...">
+  <%= link_to "All Letters", research_map_path(id: "routes_all"), class: "btn btn-default" %>
+  <%= link_to "Origin Cities", research_map_path(id: "city_from"), class: "btn btn-default" %>
+  <%= link_to "Destination Cities", research_map_path(id: "city_to"), class: "btn btn-primary" %>
   <!-- <li><%# link_to "Photographs", research_map_path(id: "photographs") %></li> -->
-</ul>
+</div>
 
-<p>Key:</p>
-<ul>
-  <li>Blue: Majority Spanish (>75% spanish)</li>
-  <li>Green: Spanish / English</li>
-  <li>Yellow: Majority English (<25% spanish)</li>
-</ul>
 
 <%= render "research/maps/setup" %>
 <%# render "research/maps/#{id}" %>
