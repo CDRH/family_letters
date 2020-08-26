@@ -5,38 +5,31 @@
   height: 79vh;
 }
 
-  .map_container_main {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-  }
+.map_container_main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
 
-    .map_container_map {
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-    }
+.map_container_map {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
 
-      #map {
-        flex-grow: 1;
-      }
+#map {
+  flex-grow: 1;
+}
 
-    .map_container_bottom {
-      
-    }
+.map_container_sidebar {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+}
 
-  .map_container_sidebar {
-    display: flex;
-    flex-direction: column;
-    min-width: 300px;
-  }
-
-    #map_container_key {
-    }
-
-    #map_container_info {
-      flex-grow: 1;
-    }
+#map_container_info {
+  flex-grow: 1;
+}
 
 // Design
 
@@ -68,6 +61,12 @@
   overflow: auto;
 }
 
+.map_feature {
+  /* TODO this needs to be looked at */
+  height: 150px;
+  overflow: auto;
+}
+
 .map_key {
   margin: 0;
   padding: 0;
@@ -95,15 +94,15 @@
 }
 
 .map_key_spanish span {
-background: blue;
+  background: blue;
 }
 
 .map_key_mix span {
-background: green;
+  background: green;
 }
 
 .map_key_english span {
-background: yellow;
+  background: yellow;
 }
 
 // queries
@@ -121,5 +120,3 @@ background: yellow;
   // TODO Fix mobile view
 
 }
-
-
