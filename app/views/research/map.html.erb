@@ -1,22 +1,7 @@
-<div class="btn-group map-btn-group btn-group-justified" role="group" aria-label="...">
-  <%= link_to "All Letters", research_map_path(id: "routes_all"), class: "btn btn-default" %>
-  <%= link_to "Origin Cities", research_map_path(id: "city_from"), class: "btn btn-default" %>
-  <%= link_to "Destination Cities", research_map_path(id: "city_to"), class: "btn btn-primary" %>
-  <!-- <li><%# link_to "Photographs", research_map_path(id: "photographs") %></li> -->
-</div>
-
-
 <%= render "research/maps/setup" %>
-<%# render "research/maps/#{id}" %>
+<%= render "research/maps/#{id}" %>
 
 <script>
-
-  // ADD MAP
-  var map = L.map('map', {
-      center: new L.LatLng(36, -90),
-      zoom: 4,
-      layers: [osmLayer]
-  });
 
   features = L.geoJSON(geojson, {
     onEachFeature: onEachFeature,
