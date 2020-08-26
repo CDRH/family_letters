@@ -52,7 +52,8 @@
       },
       style: function(feature) {
         color = degreeOfSpanish(feature.properties);
-        return { color: color, weight: 3 }
+        size = sizeCount(feature.properties);
+        return { color: color, weight: size/2, opacity: 0.5 }
       }
     });
   }
@@ -84,19 +85,7 @@
   // STYLE DESTINATION CIRCLES
   function markerOptions(feature) {
     props = feature.properties;
-    count = props.count;
-    // console.log(JSON.stringify(feature.properties));
-    // one location has 81, the others much fewer
-    // so using less than half the biggest to give
-    // the others some size to work with
-    percent = count/30;
-    // scale up just a bit
-    size = percent*15;
-    // some simply too small to see / interact with
-    if (size < 3) size = 4;
-    // it's just too big!
-    if (size > 30) size = 20;
-
+    size = sizeCount(props);
     color = degreeOfSpanish(props)
 
     return {
@@ -108,5 +97,20 @@
       fillOpacity: 0.6
     }
   };
+
+  function sizeCount(props) {
+    count = props.count;
+    // one location has 81, the others much fewer
+    // so using less than half the biggest to give
+    // the others some size to work with
+    percent = count/30;
+    // scale up just a bit
+    size = percent*15;
+    // some simply too small to see / interact with
+    if (size < 3) size = 4;
+    // it's just too big!
+    if (size > 30) size = 20;
+    return size;
+  }
 
 </script>
