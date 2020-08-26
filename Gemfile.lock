@@ -1,5 +1,7 @@
-PATH
-  remote: /Users/jdussault2/Desktop/repos/orchid
+GIT
+  remote: https://github.com/CDRH/orchid
+  revision: 107f473c6204046d3b81f184d4298162f0752fbf
+  tag: v3.1.0
   specs:
     orchid (3.1.0)
       rails (~> 5.2.0)

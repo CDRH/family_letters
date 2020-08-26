@@ -10,6 +10,3 @@
 // Vender assets
 //= link leaflet.css
 //= link leaflet.js
-//= link leaflet.polylineDecorator.js
-//= link leaflet.textPath.js
-//= link swoopy.min.js

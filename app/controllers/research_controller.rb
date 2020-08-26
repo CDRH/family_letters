@@ -33,7 +33,8 @@ class ResearchController < ApplicationController
 
   def get_json(id)
     # TODO make configurable
-    url = "http://localhost:5000/output/development/geojson/#{id}.json"
+    # url = "http://localhost:5000/output/development/geojson/#{id}.json"
+    url = "https://cdrhdev1.unl.edu/media/data/family_letters/output/development/geojson/#{id}.json"
     # TODO set up error handling
     geojson = open(url)
     if geojson.status
