@@ -12,7 +12,7 @@
       <div class="btn-group btn-group-justified" role="group" aria-label="">
         <%= link_to "All", research_map_decade_path, class: "btn btn-default, btn-sm" %>
         <% [1910, 1920, 1930, 1940, 1950, 1960, 1970, 1980].each do |decade| %>
-          <%= link_to "#{decade}s", research_map_decade_path(id: decade), class: "btn btn-default btn-sm" %>
+          <%= link_to "#{decade}s", research_map_decade_path(id: decade, anchor: "map"), class: "btn btn-default btn-sm" %>
         <% end %>
       </div>
     </div>
