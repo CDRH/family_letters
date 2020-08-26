@@ -1,13 +1,6 @@
 <% @ext_js = add_assets(@ext_js, ["leaflet"] ) %>
 <% @ext_css = add_assets(@ext_css, ["leaflet"] ) %>
 
-<div class="btn-group map-btn-group btn-group-justified" role="group" aria-label="...">
-  <%= link_to "All Letters", research_map_path(id: "routes_all"), class: "btn btn-default" %>
-  <%= link_to "Origin Cities", research_map_path(id: "city_from"), class: "btn btn-default" %>
-  <%= link_to "Destination Cities", research_map_path(id: "city_to"), class: "btn btn-primary" %>
-  <!-- <li><%# link_to "Photographs", research_map_path(id: "photographs") %></li> -->
-</div>
-
 </div><%# closing container for full screen %>
 
 <div class="map_container">
@@ -17,15 +10,10 @@
     </div><%# map_container_map %>
     <div class="map_container_bottom">
       <div class="btn-group btn-group-justified" role="group" aria-label="">
-        <a class="btn btn-default btn-sm" href="#">All</a>
-        <a class="btn btn-default btn-sm" href="#">Pre 1930</a>
-        <a class="btn btn-default btn-sm" href="#">1930s</a>
-        <a class="btn btn-default btn-sm" href="#">1940s</a>
-        <a class="btn btn-default btn-sm" href="#">1950s</a>
-        <a class="btn btn-default btn-sm" href="#">1960s</a>
-        <a class="btn btn-default btn-sm" href="#">1970s</a>
-        <a class="btn btn-default btn-sm" href="#">1980s</a>
-        <a class="btn btn-default btn-sm" href="#">Post 1989</a>
+        <%= link_to "All", research_map_decade_path, class: "btn btn-default, btn-sm" %>
+        <% [1910, 1920, 1930, 1940, 1950, 1960, 1970, 1980].each do |decade| %>
+          <%= link_to "#{decade}s", research_map_decade_path(id: decade), class: "btn btn-default btn-sm" %>
+        <% end %>
       </div>
     </div>
   </div>
@@ -59,7 +47,6 @@
   });
 
   var lang = "<%= locale %>";
-  var geojson = <%= sanitize @geojson %>;
 
   // ADD MAP
   var map = L.map('map', {

@@ -1,21 +1,29 @@
 <%= render "research/maps/setup" %>
-<%= render "research/maps/#{id}" %>
 
 <script>
 
-  features = L.geoJSON(geojson, {
-    onEachFeature: onEachFeature,
-    pointToLayer: function(feature, latlng) {
-      return L.circleMarker(latlng, markerOptions(feature));
-    },
-    style: function(feature) {
-      color = degreeOfSpanish(feature.properties);
-      return { color: color, weight: 3 }
-    }
-  });
+  var origin_json = <%= sanitize @geojson["origin"] %>;
+  var dest_json = <%= sanitize @geojson["destination"] %>;
+  var routes_json = <%= sanitize @geojson["routes"] %>;
 
-  features.addTo(map);
-  map.fitBounds(features.getBounds());
+  origin = geoJsonLayer(origin_json);
+  destination = geoJsonLayer(dest_json);
+  routes = geoJsonLayer(routes_json);
+
+  // only adding the routes and origin first
+  routes.addTo(map);
+  origin.addTo(map);
+  map.fitBounds(routes.getBounds());
+
+  var overlays = {
+    <%= t "research.maps.legend.origin", default: "Origin" %>: origin,
+    <%= t "research.maps.legend.destination", default: "Destination" %>: destination
+  };
+  L.control.layers(
+    overlays,
+    {},
+    { "collapsed" : false }
+  ).addTo(map);
 
   function degreeOfSpanish(props) {
     // calculate percent in spanish
@@ -35,13 +43,27 @@
     return color;
   }
 
+  // candidate for generalizing
+  function geoJsonLayer(json) {
+    return L.geoJSON(json, {
+      onEachFeature: onEachFeature,
+      pointToLayer: function(feature, latlng) {
+        return L.circleMarker(latlng, markerOptions(feature));
+      },
+      style: function(feature) {
+        color = degreeOfSpanish(feature.properties);
+        return { color: color, weight: 3 }
+      }
+    });
+  }
+
   // BIND POPUP TO DESTINATION
   function onEachFeature(feature, layer) {
     props = feature.properties;
     lang = "<%= locale %>";
     console.log(JSON.stringify(props));
     title = props["location"]
-    html = "<div class='mapFeature'>";
+    html = "<div class='map_feature'>";
     html += "<strong>" + title + "</strong>";
     html += "<p>"+props["count"]+" outgoing letters</p>";
     html += "<ul>";

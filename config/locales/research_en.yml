@@ -32,6 +32,13 @@ en:
       collection? Please send us an email, we would love to learn about your
       project. The information you share with us will help us to make this
       site more useful for the academic community.
+    maps:
+      title: Maps
+      legend:
+        destination: Destination
+        origin: Origin
+      decades:
+        title: Letters by Decade
     more_resources: More resources
     other_projects: Other projects of interest
     search:

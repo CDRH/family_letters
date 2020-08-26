@@ -30,6 +30,13 @@ es:
       colección? Por favor envíenos un email, queremos saber sobre su proyecto.
       Su información nos ayudará a hacer que esta página sea de mayor utilidad
       para la comunidad académica.
+    maps:
+      title:
+      legend:
+        destination:
+        origin:
+      decades:
+        title:
     more_resources: Más recursos
     other_projects: Otros proyectos de interés
     search:
