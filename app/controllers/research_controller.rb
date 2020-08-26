@@ -29,6 +29,10 @@ class ResearchController < ApplicationController
     end
   end
 
+  def map_photographs
+    @geojson = get_json("photographs")
+  end
+
   private
 
   def get_json(id)

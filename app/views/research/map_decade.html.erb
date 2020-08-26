@@ -51,9 +51,12 @@
         return L.circleMarker(latlng, markerOptions(feature));
       },
       style: function(feature) {
-        color = degreeOfSpanish(feature.properties);
-        size = sizeCount(feature.properties);
-        return { color: color, weight: size/2, opacity: 0.5 }
+        // only draw for the lines
+        if (feature.geometry.type == "LineString") {
+          color = degreeOfSpanish(feature.properties);
+          size = sizeCount(feature.properties);
+          return { color: color, weight: size, opacity: 0.5 }
+        }
       }
     });
   }
@@ -61,12 +64,11 @@
   // BIND POPUP TO DESTINATION
   function onEachFeature(feature, layer) {
     props = feature.properties;
-    lang = "<%= locale %>";
     console.log(JSON.stringify(props));
     title = props["location"]
     html = "<div class='map_feature'>";
     html += "<strong>" + title + "</strong>";
-    html += "<p>"+props["count"]+" outgoing letters</p>";
+    html += "<p>"+props["count"]+" letters</p>";
     html += "<ul>";
     if (props["letters"]) {
       props["letters"].forEach(function(letter) {

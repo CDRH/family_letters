@@ -2,6 +2,10 @@
 <% @ext_css = add_assets(@ext_css, ["leaflet", "map"] ) %>
 
 <div class="btn-group map-btn-group btn-group-justified" role="group" aria-label="...">
+  <%# TODO translations %>
+  <%= link_to "Letters", research_map_decade_path, class: "btn btn-default" %>
+  <%= link_to "Photographs", research_map_photographs_path, class: "btn btn-default" %>
+</div>
 
 </div><%# closing container for full screen %>
 
