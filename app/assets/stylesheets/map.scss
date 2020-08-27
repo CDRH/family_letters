@@ -1,16 +1,73 @@
 // Flex Layout
 
-.map_container {
-  display: flex;
-  height: 79vh;
-}
+// Ken on Sidebar
+// .map_container {
+//   display: flex;
+//   flex-direction: row-reverse;
+//   width: 100vw;
+//   height: 79vh;
+// }
 
-.map_container_main {
+// .map_container_main {
+//   display: flex;
+//   flex-direction: column;
+//   flex-grow: 1;
+// }
+
+// .map_container_map {
+//   display: flex;
+//   flex-direction: column;
+//   flex-grow: 1;
+// }
+
+// #map {
+//   flex-grow: 1;
+//   width: 100%;
+//   height: 79vh;
+// }
+
+// .map_container_sidebar {
+//   display: flex;
+//   flex-direction: column;
+//   min-width: 300px;
+// }
+
+// #map_container_info {
+//   flex-grow: 1;
+// }
+
+// Key on Top
+
+#map_complete_container {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  height: 100vh;
 }
 
+#map_container_key {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  p {
+    padding: .3em .3em 0 .3em;
+
+  }
+  ul {
+    border: none;
+    display: flex;
+    flex-direction: row;
+    li {
+      margin: 0 .7em;
+    }
+  }
+}
+
+#map_container_info {
+  display: none;
+}
+
+.map_container,
+.map_container_main,
 .map_container_map {
   display: flex;
   flex-direction: column;
@@ -19,16 +76,8 @@
 
 #map {
   flex-grow: 1;
-}
-
-.map_container_sidebar {
-  display: flex;
-  flex-direction: column;
-  min-width: 300px;
-}
-
-#map_container_info {
-  flex-grow: 1;
+  height: 100%;
+  min-height: 200px;
 }
 
 // Design
@@ -45,8 +94,8 @@
 
 #map_container_key {
   p {
-    background: #aaa;
-    color: white;
+    // background: #aaa;
+    // color: white;
     margin: 0;
     font-size: 1em;
     text-align: center;
@@ -108,15 +157,18 @@
 // queries
 
 @media only screen and (max-width: 699px) {
-  .map_container {
-    display:block;
-  }
+  // .map_container {
+  //   display:block;
+  // }
 
-  #map {
-    width: 100%;
-    height: 79vh;
-  }
+  // #map {
+  //   width: 100%;
+  //   height: 79vh;
+  // }
 
-  // TODO Fix mobile view
+  #map_buttons .btn {
+    font-size: .7em;
+    line-height: 1em
+  }
 
 }

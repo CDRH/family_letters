@@ -1,65 +1,68 @@
 <% @ext_js = add_assets(@ext_js, ["leaflet"] ) %>
 <% @ext_css = add_assets(@ext_css, ["leaflet", "map"] ) %>
 
-<%# TODO translations of everything on this page %>
-
-<div class="btn-group map-btn-group btn-group-justified" role="group" aria-label="...">
-  <%= link_to "Letters by Decade", research_map_decade_path,
-      class: "btn btn-default #{"active" if current_page?(action: "map_decade")}" %>
-  <%= link_to "Letters by Location",
-    research_map_place_path(id: "Mexico"),
-      class: "btn btn-default #{"active" if current_page?(action: "map_place")}" %>
-  <%= link_to "Photographs", research_map_photographs_path,
-      class: "btn btn-default #{"active" if current_page?(action: "map_photographs")}" %>
-</div>
-
-<% if current_page?(action: "map_place") %>
-  <div class="btn-group map-btn-group btn-group-justified" role="group" aria-label="Locations">
-    <%= link_to "From México", research_map_place_path(id: "Mexico"),
-      class: "btn btn-default #{place_active("Mexico", "origin")}" %>
-    <%= link_to "From Colorado", research_map_place_path(id: "Colorado"),
-      class: "btn btn-default #{place_active("Colorado", "origin")}" %>
-    <%= link_to "To Colorado", research_map_place_path(id: "Colorado", type: "destination"),
-      class: "btn btn-default #{place_active("Colorado", "destination")}" %>
-    <%= link_to "From Nebraska", research_map_place_path(id: "Nebraska"),
-      class: "btn btn-default #{place_active("Nebraska", "origin")}" %>
-    <%= link_to "To Nebraska", research_map_place_path(id: "Nebraska", type: "destination"),
-      class: "btn btn-default #{place_active("Nebraska", "destination")}" %>
-  </div>
-<% elsif current_page?(action: "map_decade") %>
-  <div class="btn-group map-btn-group btn-group-justified" role="group" aria-label="Decades">
-    <%= link_to "All", research_map_decade_path, class: "btn btn-default btn-sm #{"active" if !params["id"]}" %>
-    <% [1910, 1920, 1930, 1940, 1950, 1960, 1970, 1980].each do |decade| %>
-      <%= link_to "#{decade}s", research_map_decade_path(id: decade),
-        class: "btn btn-default btn-sm #{decade_active(decade)}" %>
-    <% end %>
-  </div>
-<% end %>
-
 </div><%# closing container for full screen %>
 
-<div class="map_container">
-  <div class="map_container_main">
-    <div class="map_container_map">
-      <div id="map"></div>
-    </div><%# map_container_map %>
-  </div>
-
-  <div class="map_container_sidebar">
-    <div id="map_container_key">
-      <p>Key:</p>
-      <ul class="map_key">
-        <li class="map_key_spanish"><span></span> Blue: Majority Spanish (>75% spanish)</li>
-        <li class="map_key_mix"><span></span> Green: Spanish / English</li>
-        <li class="map_key_english"><span></span> Yellow: Majority English (<25% spanish)</li>
-      </ul>
+<%# TODO translations of everything on this page %>
+<div id="map_complete_container">
+  <div id="map_buttons" class="container">
+    <div class="btn-group map-btn-group btn-group-justified" role="group" aria-label="...">
+      <%= link_to "Letters by Decade", research_map_decade_path + "#map_complete_container",
+          class: "btn btn-default #{"active" if current_page?(action: "map_decade")}" %>
+      <%= link_to "Letters by Location",
+        research_map_place_path(id: "Mexico") + "#map_complete_container",
+          class: "btn btn-default #{"active" if current_page?(action: "map_place")}" %>
+      <%= link_to "Photographs", research_map_photographs_path + "#map_complete_container",
+          class: "btn btn-default #{"active" if current_page?(action: "map_photographs")}" %>
     </div>
-    <div id="map_container_info">
-     <p>Map Sidebar Info</p>
 
+    <% if current_page?(action: "map_place") %>
+      <div class="btn-group map-btn-group btn-group-justified" role="group" aria-label="Locations">
+        <%= link_to "From México", research_map_place_path(id: "Mexico") + "#map_complete_container",
+          class: "btn btn-default #{place_active("Mexico", "origin")}" %>
+        <%= link_to "From Colorado", research_map_place_path(id: "Colorado") + "#map_complete_container",
+          class: "btn btn-default #{place_active("Colorado", "origin")}" %>
+        <%= link_to "To Colorado", research_map_place_path(id: "Colorado", type: "destination") + "#map_complete_container",
+          class: "btn btn-default #{place_active("Colorado", "destination")}" %>
+        <%= link_to "From Nebraska", research_map_place_path(id: "Nebraska") + "#map_complete_container",
+          class: "btn btn-default #{place_active("Nebraska", "origin")}" %>
+        <%= link_to "To Nebraska", research_map_place_path(id: "Nebraska", type: "destination") + "#map_complete_container",
+          class: "btn btn-default #{place_active("Nebraska", "destination")}" %>
+      </div>
+    <% elsif current_page?(action: "map_decade") %>
+      <div class="btn-group map-btn-group btn-group-justified" role="group" aria-label="Decades">
+        <%= link_to "All", research_map_decade_path + "#map_complete_container", class: "btn btn-default btn-sm #{"active" if !params["id"]}" %>
+        <% [1910, 1920, 1930, 1940, 1950, 1960, 1970, 1980].each do |decade| %>
+          <%= link_to "#{decade}s", research_map_decade_path(id: decade) + "#map_complete_container",
+            class: "btn btn-default btn-sm #{decade_active(decade)}" %>
+        <% end %>
+      </div>
+    <% end %>
+  </div><%# /map_buttons %>
+
+  <div class="map_container">
+    <div class="map_container_sidebar">
+      <div id="map_container_key">
+        <p>Key:</p>
+        <ul class="map_key">
+          <li class="map_key_spanish"><span></span> Blue: Majority Spanish (>75% spanish)</li>
+          <li class="map_key_mix"><span></span> Green: Spanish / English</li>
+          <li class="map_key_english"><span></span> Yellow: Majority English (<25% spanish)</li>
+        </ul>
+      </div>
+      <div id="map_container_info">
+       <p>Map Sidebar Info</p>
+
+      </div>
+    </div> <%# /key_container_key %>
+
+    <div class="map_container_main">
+      <div class="map_container_map">
+        <div id="map"></div>
+      </div><%# map_container_map %>
     </div>
-  </div> <%# /key_container_key %>
-</div> <%# /map_container %>
+  </div> <%# /map_container %>
+</div> <%# /map_complete_container %>
 
 <div class="container"><%# reopening container %>
 
