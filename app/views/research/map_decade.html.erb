@@ -1,4 +1,5 @@
 <%= render "research/maps/setup" %>
+<%= render "research/maps/shared_letter_options" %>
 
 <script>
 
@@ -24,95 +25,5 @@
     {},
     { "collapsed" : false }
   ).addTo(map);
-
-  function degreeOfSpanish(props) {
-    // calculate percent in spanish
-    es = Number(props.es) || 0;
-    en = Number(props.en) || 0;
-
-    perc_es = es/(es+en);
-
-    color = "grey";
-    if (perc_es >= .75) {
-      color = "blue";
-    } else if (perc_es <= .25) {
-      color = "yellow"
-    } else if (perc_es) {
-      color = "green"
-    }
-    return color;
-  }
-
-  // candidate for generalizing
-  function geoJsonLayer(json) {
-    return L.geoJSON(json, {
-      onEachFeature: onEachFeature,
-      pointToLayer: function(feature, latlng) {
-        return L.circleMarker(latlng, markerOptions(feature));
-      },
-      style: function(feature) {
-        // only draw for the lines
-        if (feature.geometry.type == "LineString") {
-          color = degreeOfSpanish(feature.properties);
-          size = sizeCount(feature.properties);
-          return { color: color, weight: size, opacity: 0.5 }
-        }
-      }
-    });
-  }
-
-  // BIND POPUP TO DESTINATION
-  function onEachFeature(feature, layer) {
-    props = feature.properties;
-    console.log(JSON.stringify(props));
-    title = props["location"]
-    html = "<div class='map_feature'>";
-    html += "<strong>" + title + "</strong>";
-    html += "<p>"+props["count"]+" letters</p>";
-    html += "<ul>";
-    if (props["letters"]) {
-      props["letters"].forEach(function(letter) {
-        if (lang == "es") {
-          html += "<li>"+letter["title"]+"</li>";
-        } else {
-          html += "<li>"+letter["title_es"]+"</li>";
-        }
-      });
-    }
-    html += "</ul>";
-    html += "</div>";
-    layer.bindPopup(html);
-  };
-
-  // STYLE DESTINATION CIRCLES
-  function markerOptions(feature) {
-    props = feature.properties;
-    size = sizeCount(props);
-    color = degreeOfSpanish(props)
-
-    return {
-      radius: size,
-      color: "black",
-      opacity: 1,
-      weight: 0.2,
-      fillColor: color,
-      fillOpacity: 0.6
-    }
-  };
-
-  function sizeCount(props) {
-    count = props.count;
-    // one location has 81, the others much fewer
-    // so using less than half the biggest to give
-    // the others some size to work with
-    percent = count/30;
-    // scale up just a bit
-    size = percent*15;
-    // some simply too small to see / interact with
-    if (size < 3) size = 4;
-    // it's just too big!
-    if (size > 30) size = 20;
-    return size;
-  }
 
 </script>

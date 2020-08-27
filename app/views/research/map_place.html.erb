@@ -1,0 +1,11 @@
+<%= render "research/maps/setup" %>
+<%= render "research/maps/shared_letter_options" %>
+
+<script>
+  var json = <%= sanitize @geojson %>;
+
+  routes = geoJsonLayer(json);
+  routes.addTo(map);
+  map.fitBounds(routes.getBounds());
+</script>
+

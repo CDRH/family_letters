@@ -3,9 +3,23 @@
 
 <div class="btn-group map-btn-group btn-group-justified" role="group" aria-label="...">
   <%# TODO translations %>
-  <%= link_to "Letters", research_map_decade_path, class: "btn btn-default" %>
+  <%= link_to "Letters by Decade", research_map_decade_path, class: "btn btn-default" %>
+  <%= link_to "Letters by Location",
+    research_map_place_path(id: "Mexico"), class: "btn btn-default" %>
   <%= link_to "Photographs", research_map_photographs_path, class: "btn btn-default" %>
 </div>
+
+<% if current_page?(action: "map_place") %>
+  <div class="btn-group map-btn-group btn-group-justified" role="group" aria-label="...">
+    <%= link_to "From México", research_map_place_path(id: "Mexico"), class: "btn btn-default" %>
+    <%= link_to "From Colorado", research_map_place_path(id: "Colorado"), class: "btn btn-default" %>
+    <%= link_to "To Colorado", research_map_place_path(id: "Colorado", type: "destination"), class: "btn btn-default" %>
+    <%= link_to "From Nebraska", research_map_place_path(id: "Nebraska"), class: "btn btn-default" %>
+    <%= link_to "To Nebraska", research_map_place_path(id: "Nebraska", type: "destination"), class: "btn btn-default" %>
+  </div>
+  <% else %>
+  Apparently not a place
+<% end %>
 
 </div><%# closing container for full screen %>
 

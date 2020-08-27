@@ -33,6 +33,14 @@ class ResearchController < ApplicationController
     @geojson = get_json("photographs")
   end
 
+  def map_place
+    place = params["id"]
+    type = params["type"].present? ? params["type"] : "origin"
+
+    @title = "#{place} #{type}"
+    @geojson = get_json("#{place}_#{type}_routes")
+  end
+
   private
 
   def get_json(id)
