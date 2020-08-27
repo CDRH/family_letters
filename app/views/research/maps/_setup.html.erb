@@ -1,24 +1,39 @@
 <% @ext_js = add_assets(@ext_js, ["leaflet"] ) %>
 <% @ext_css = add_assets(@ext_css, ["leaflet", "map"] ) %>
 
+<%# TODO translations of everything on this page %>
+
 <div class="btn-group map-btn-group btn-group-justified" role="group" aria-label="...">
-  <%# TODO translations %>
-  <%= link_to "Letters by Decade", research_map_decade_path, class: "btn btn-default" %>
+  <%= link_to "Letters by Decade", research_map_decade_path,
+      class: "btn btn-default #{"active" if current_page?(action: "map_decade")}" %>
   <%= link_to "Letters by Location",
-    research_map_place_path(id: "Mexico"), class: "btn btn-default" %>
-  <%= link_to "Photographs", research_map_photographs_path, class: "btn btn-default" %>
+    research_map_place_path(id: "Mexico"),
+      class: "btn btn-default #{"active" if current_page?(action: "map_place")}" %>
+  <%= link_to "Photographs", research_map_photographs_path,
+      class: "btn btn-default #{"active" if current_page?(action: "map_photographs")}" %>
 </div>
 
 <% if current_page?(action: "map_place") %>
-  <div class="btn-group map-btn-group btn-group-justified" role="group" aria-label="...">
-    <%= link_to "From México", research_map_place_path(id: "Mexico"), class: "btn btn-default" %>
-    <%= link_to "From Colorado", research_map_place_path(id: "Colorado"), class: "btn btn-default" %>
-    <%= link_to "To Colorado", research_map_place_path(id: "Colorado", type: "destination"), class: "btn btn-default" %>
-    <%= link_to "From Nebraska", research_map_place_path(id: "Nebraska"), class: "btn btn-default" %>
-    <%= link_to "To Nebraska", research_map_place_path(id: "Nebraska", type: "destination"), class: "btn btn-default" %>
+  <div class="btn-group map-btn-group btn-group-justified" role="group" aria-label="Locations">
+    <%= link_to "From México", research_map_place_path(id: "Mexico"),
+      class: "btn btn-default #{place_active("Mexico", "origin")}" %>
+    <%= link_to "From Colorado", research_map_place_path(id: "Colorado"),
+      class: "btn btn-default #{place_active("Colorado", "origin")}" %>
+    <%= link_to "To Colorado", research_map_place_path(id: "Colorado", type: "destination"),
+      class: "btn btn-default #{place_active("Colorado", "destination")}" %>
+    <%= link_to "From Nebraska", research_map_place_path(id: "Nebraska"),
+      class: "btn btn-default #{place_active("Nebraska", "origin")}" %>
+    <%= link_to "To Nebraska", research_map_place_path(id: "Nebraska", type: "destination"),
+      class: "btn btn-default #{place_active("Nebraska", "destination")}" %>
   </div>
-  <% else %>
-  Apparently not a place
+<% elsif current_page?(action: "map_decade") %>
+  <div class="btn-group map-btn-group btn-group-justified" role="group" aria-label="Decades">
+    <%= link_to "All", research_map_decade_path, class: "btn btn-default btn-sm #{"active" if !params["id"]}" %>
+    <% [1910, 1920, 1930, 1940, 1950, 1960, 1970, 1980].each do |decade| %>
+      <%= link_to "#{decade}s", research_map_decade_path(id: decade),
+        class: "btn btn-default btn-sm #{decade_active(decade)}" %>
+    <% end %>
+  </div>
 <% end %>
 
 </div><%# closing container for full screen %>
@@ -28,14 +43,6 @@
     <div class="map_container_map">
       <div id="map"></div>
     </div><%# map_container_map %>
-    <div class="map_container_bottom">
-      <div class="btn-group btn-group-justified" role="group" aria-label="">
-        <%= link_to "All", research_map_decade_path, class: "btn btn-default, btn-sm" %>
-        <% [1910, 1920, 1930, 1940, 1950, 1960, 1970, 1980].each do |decade| %>
-          <%= link_to "#{decade}s", research_map_decade_path(id: decade, anchor: "map"), class: "btn btn-default btn-sm" %>
-        <% end %>
-      </div>
-    </div>
   </div>
 
   <div class="map_container_sidebar">
