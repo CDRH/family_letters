@@ -17,8 +17,8 @@
   map.fitBounds(routes.getBounds());
 
   var overlays = {
-    <%= t "research.maps.legend.origin", default: "Origin" %>: origin,
-    <%= t "research.maps.legend.destination", default: "Destination" %>: destination
+    <%= t "research.maps.key.origin" %>: origin,
+    <%= t "research.maps.key.destination" %>: destination
   };
   L.control.layers(
     overlays,

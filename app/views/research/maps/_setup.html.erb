@@ -9,7 +9,7 @@
 <div id="map_complete_container">
   <div id="map_buttons" class="container">
     <div class="btn-group map-btn-group btn-group-justified" role="group" aria-label="...">
-      <%= map_nav("research.maps.decade.title", research_map_decade_path, "map_decade") %>
+      <%= map_nav("research.maps.decade.title", research_map_decade_path(anchor: "map_complete_container"), "map_decade") %>
       <%= map_nav("research.maps.place.title",
         research_map_place_path(id: "Michoacan", anchor: "map_complete_container"), "map_place") %>
       <%= map_nav("research.maps.photos.title",
