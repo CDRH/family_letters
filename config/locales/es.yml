@@ -9,6 +9,8 @@ es:
       Digital en las Humanidades</a>.
     # close a popup window
     close: Cerrar
+    # language for "scroll to top" button
+    top: arriba
     # custom
     dedication_button: Dedicatoria
     dedication_text: |-

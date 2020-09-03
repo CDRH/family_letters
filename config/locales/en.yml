@@ -17,6 +17,8 @@ en:
       in the Humanities</a>.
     # close a popup window
     close: Close
+    # language for "scroll to top" button
+    top: top
     # custom dedication text
     dedication_button: Dedication
     dedication_text: |-
