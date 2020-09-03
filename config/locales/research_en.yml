@@ -34,11 +34,21 @@ en:
       site more useful for the academic community.
     maps:
       title: Maps
-      legend:
-        destination: Destination
-        origin: Origin
-      decades:
+      to: To
+      from: From
+      decade:
         title: Letters by Decade
+        all: All Letters
+      key:
+        both: Spanish / English
+        destination: Destination
+        es: Most written in Spanish
+        en: Most written in English
+        origin: Origin
+      photos:
+        title: Photograph
+      place:
+        title: Letters by Location
     more_resources: More resources
     other_projects: Other projects of interest
     search:

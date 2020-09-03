@@ -1,60 +1,59 @@
 <% @ext_js = add_assets(@ext_js, ["leaflet"] ) %>
 <% @ext_css = add_assets(@ext_css, ["leaflet", "map"] ) %>
 
+<h1><%= @title %></h1>
+
 </div><%# closing container for full screen %>
 
 <%# TODO translations of everything on this page %>
 <div id="map_complete_container">
   <div id="map_buttons" class="container">
     <div class="btn-group map-btn-group btn-group-justified" role="group" aria-label="...">
-      <%= link_to "Letters by Decade", research_map_decade_path + "#map_complete_container",
-          class: "btn btn-default #{"active" if current_page?(action: "map_decade")}" %>
-      <%= link_to "Letters by Location",
-        research_map_place_path(id: "Mexico") + "#map_complete_container",
-          class: "btn btn-default #{"active" if current_page?(action: "map_place")}" %>
-      <%= link_to "Photographs", research_map_photographs_path + "#map_complete_container",
-          class: "btn btn-default #{"active" if current_page?(action: "map_photographs")}" %>
+      <%= map_nav("research.maps.decade.title", research_map_decade_path, "map_decade") %>
+      <%= map_nav("research.maps.place.title",
+        research_map_place_path(id: "Michoacan", anchor: "map_complete_container"), "map_place") %>
+      <%= map_nav("research.maps.photos.title",
+        research_map_photographs_path(anchor: "map_complete_container"), "map_photographs") %>
     </div>
 
     <% if current_page?(action: "map_place") %>
       <div class="btn-group map-btn-group btn-group-justified" role="group" aria-label="Locations">
-        <%= link_to "From México", research_map_place_path(id: "Mexico") + "#map_complete_container",
-          class: "btn btn-default #{place_active("Mexico", "origin")}" %>
-        <%= link_to "From Colorado", research_map_place_path(id: "Colorado") + "#map_complete_container",
-          class: "btn btn-default #{place_active("Colorado", "origin")}" %>
-        <%= link_to "To Colorado", research_map_place_path(id: "Colorado", type: "destination") + "#map_complete_container",
-          class: "btn btn-default #{place_active("Colorado", "destination")}" %>
-        <%= link_to "From Nebraska", research_map_place_path(id: "Nebraska") + "#map_complete_container",
-          class: "btn btn-default #{place_active("Nebraska", "origin")}" %>
-        <%= link_to "To Nebraska", research_map_place_path(id: "Nebraska", type: "destination") + "#map_complete_container",
-          class: "btn btn-default #{place_active("Nebraska", "destination")}" %>
+        <%= place_link_from("Michoacan", "Michoacán") %>
+        <%= place_link_to("Michoacan", "Michoacán") %>
+        <%= place_link_from("Zacatecas") %>
+        <%= place_link_to("Zacatecas") %>
+        <%= place_link_from("Colorado") %>
+        <%= place_link_to("Colorado") %>
+        <%= place_link_from("Nebraska") %>
+        <%= place_link_to("Nebraska") %>
       </div>
     <% elsif current_page?(action: "map_decade") %>
       <div class="btn-group map-btn-group btn-group-justified" role="group" aria-label="Decades">
         <%= link_to "All", research_map_decade_path + "#map_complete_container", class: "btn btn-default btn-sm #{"active" if !params["id"]}" %>
         <% [1910, 1920, 1930, 1940, 1950, 1960, 1970, 1980].each do |decade| %>
-          <%= link_to "#{decade}s", research_map_decade_path(id: decade) + "#map_complete_container",
-            class: "btn btn-default btn-sm #{decade_active(decade)}" %>
+          <%= decade_link(decade) %>
         <% end %>
       </div>
     <% end %>
   </div><%# /map_buttons %>
 
   <div class="map_container">
-    <div class="map_container_sidebar">
-      <div id="map_container_key">
-        <p>Key:</p>
-        <ul class="map_key">
-          <li class="map_key_spanish"><span></span> Blue: Majority Spanish (>75% spanish)</li>
-          <li class="map_key_mix"><span></span> Green: Spanish / English</li>
-          <li class="map_key_english"><span></span> Yellow: Majority English (<25% spanish)</li>
-        </ul>
-      </div>
-      <div id="map_container_info">
-       <p>Map Sidebar Info</p>
+    <% if !current_page?(action: "map_photographs") %>
+      <div class="map_container_sidebar">
+        <div id="map_container_key">
+          <p>Key:</p>
+          <ul class="map_key">
+            <li class="map_key_spanish"><span></span> Blue: <%= t "research.maps.key.es" %></li>
+            <li class="map_key_mix"><span></span> <%= t "research.maps.key.both" %></li>
+            <li class="map_key_english"><span></span> <%= t "research.maps.key.en" %></li>
+          </ul>
+        </div>
+        <div id="map_container_info">
+         <p>Map Sidebar Info</p>
 
-      </div>
-    </div> <%# /key_container_key %>
+        </div>
+      </div> <%# /key_container_key %>
+    <% end %>
 
     <div class="map_container_main">
       <div class="map_container_map">
@@ -68,12 +67,9 @@
 
 <script>
   // CREATE LAYER FOR MAP TILES
-  var osmLayer = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ext}', {
-    attributionControl: false,
-    subdomains: 'abcd',
-    minZoom: 0,
-    maxZoom: 20,
-    ext: 'png'
+  var baseLayer = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attributionControl: false
   });
 
   var lang = "<%= locale %>";
@@ -81,16 +77,15 @@
   // ADD MAP
   var map = L.map('map', {
       center: new L.LatLng(36, -90),
-      zoom: 4,
-      layers: [osmLayer]
+      zoom: 6,
+      layers: [baseLayer]
   });
 
   var attribution = L.control.attribution({
     position: 'bottomleft',
-    prefix: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    prefix: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
+     
   });
-
   attribution.addTo(map);
 
 </script>
-

@@ -20,7 +20,7 @@ class ResearchController < ApplicationController
         "origin" => get_json("#{year}_origin"),
       }
     else
-      @title = t "research.maps.all.title"
+      @title = t "research.maps.decade.all"
       @geojson = {
         "routes" => get_json("routes"),
         "destination" => get_json("destination"),
@@ -31,13 +31,14 @@ class ResearchController < ApplicationController
 
   def map_photographs
     @geojson = get_json("photographs")
+    @title = t "research.maps.photos.title"
   end
 
   def map_place
     place = params["id"]
     type = params["type"].present? ? params["type"] : "origin"
 
-    @title = "#{place} #{type}"
+    @title = "#{place}: #{t "research.maps.key.#{type.downcase}"}"
     @geojson = get_json("#{place}_#{type}_routes")
   end
 

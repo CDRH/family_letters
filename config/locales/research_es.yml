@@ -32,11 +32,21 @@ es:
       para la comunidad académica.
     maps:
       title:
-      legend:
-        destination:
-        origin:
-      decades:
-        title:
+      to: Á
+      from: De
+      decade:
+        title: Cartas por Década
+        all: Todas las Cartas
+      key:
+        both: español / inglés
+        destination: Destino
+        es: Más escrita en español
+        en: Más escrita en inglés
+        origin: Origen
+      photos:
+        title: Fotografías
+      place:
+        title: Cartas por Localidad
     more_resources: Más recursos
     other_projects: Otros proyectos de interés
     search:
