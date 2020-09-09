@@ -26,7 +26,12 @@ a:hover, .link_style:hover, .link_style:active {
 }
 
 // Remove styles from buttons, etc.
-a.btn, .footer_logo a, .nav a, .site-title-container a, .pagination a, a.searchResults {
+a.btn, .footer_logo a, 
+.nav a, 
+.site-title-container a, 
+.pagination a, 
+a.searchResults,
+#map_complete_container a {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -614,7 +619,7 @@ span.pageimage {
   border: solid 1px $gray-light;
   bottom: 0;
   box-shadow: 0px 0px 5px 3px rgba($gray-dark,0.3);
-  padding: .1em .5em .3em .5em;
+  padding: .1em 1em .3em 1em;
   position: fixed;
   right: 20px;
   z-index: 1000;

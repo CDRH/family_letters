@@ -144,15 +144,19 @@
 }
 
 .map_key_spanish span {
-  background: blue;
+  background: #2CB3E6;
 }
 
 .map_key_mix span {
-  background: green;
+  background: #861994;
 }
 
 .map_key_english span {
-  background: yellow;
+  background: #E74E64;
+}
+
+#map_complete_container #map_buttons .btn {
+  line-height: 1.1em;
 }
 
 // queries
