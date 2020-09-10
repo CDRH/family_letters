@@ -48,4 +48,28 @@
   });
   attribution.addTo(map);
 
+  function buildLink(items) {
+    var count = items.length;
+    var ids = []
+    for (var i=0; i<count; i++) {
+      ids.push(items[i]["identifier"])
+    }
+    return searchPath+"?q=identifier:("+ids.join(" OR ")+")";
+  }
+
+  function sizeCount(props) {
+    count = props.count;
+    // one location has 81, the others much fewer
+    // so using less than half the biggest to give
+    // the others some size to work with
+    percent = count/30;
+    // scale up just a bit
+    size = percent*15;
+    // some simply too small to see / interact with
+    if (size < 3) size = 4;
+    // it's just too big!
+    if (size > 30) size = 20;
+    return size;
+  }
+
 </script>

@@ -4,19 +4,25 @@
 
   var geojson = <%= sanitize @geojson %>;
 
-  var markerStyle = {
-    radius: 4,
-    color: "white",
-    opacity: 1,
-    weight: 0.3,
-    fillColor: "#861994",
-    fillOpacity: 1
-  }
+  function markerOptions(feature) {
+    props = feature.properties;
+    size = sizeCount(props);
+    color = "#861994";
+
+    return {
+      radius: size,
+      color: "black",
+      opacity: 1,
+      weight: 0.2,
+      fillColor: color,
+      fillOpacity: 1
+    }
+  };
 
   var photos = L.geoJSON(geojson, {
     onEachFeature: onEachFeature,
     pointToLayer: function(feature, latlng) {
-      return L.circleMarker(latlng, markerStyle);
+      return L.circleMarker(latlng, markerOptions(feature));
     }
   });
 
@@ -26,9 +32,10 @@
   function onEachFeature(feature, layer) {
     props = feature.properties;
     html = "<div class='map_feature'>";
-    html += "<strong>"+props["title"]+"</strong>";
-    html += "<p>Could put link here or potentially image, although that's a lot of images to load on a page</p>";
-    html += "<p>"+props["location"]+"</p>";
+    html += "<strong>"+props["location"]+"</strong>";
+    label = props["count"] + " photo(s)";
+    searchLink = buildLink(props["photos"]);
+    html += "<p><a href=\""+searchLink+"\">View "+label+"</a></p>";
     html += "</div>";
     layer.bindPopup(html);
   }
