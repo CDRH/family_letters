@@ -31,13 +31,14 @@ es:
       Su información nos ayudará a hacer que esta página sea de mayor utilidad
       para la comunidad académica.
     maps:
-      title:
+      title: Mapas
       to: Á
       from: De
       decade:
         title: Cartas por Década
         all: Todas las Cartas
       key:
+        title: Leyenda
         both: español / inglés
         destination: Destino
         es: Más escrita en español
@@ -47,6 +48,10 @@ es:
         title: Fotografías
       place:
         title: Cartas por Localidad
+      popup:
+        # note: cannot use one / other count abilities
+        # because this is being requested via javascript
+        letters: carta(s)
     more_resources: Más recursos
     other_projects: Otros proyectos de interés
     search:

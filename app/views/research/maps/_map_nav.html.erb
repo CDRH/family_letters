@@ -1,0 +1,29 @@
+<div id="map_buttons" class="container">
+  <div class="btn-group map-btn-group btn-group-justified" role="group" aria-label="...">
+    <%= map_nav("research.maps.decade.title", research_map_decade_path, "map_decade") %>
+    <%= map_nav("research.maps.place.title",
+      research_map_place_path(id: "Michoacan", anchor: "map_complete_container"), "map_place") %>
+    <%= map_nav("research.maps.photos.title",
+      research_map_photographs_path(anchor: "map_complete_container"), "map_photographs") %>
+  </div>
+
+  <% if current_page?(action: "map_place") %>
+    <div class="btn-group map-btn-group btn-group-justified" role="group" aria-label="Locations">
+      <%= place_link_from("Michoacan", "Michoacán") %>
+      <%= place_link_to("Michoacan", "Michoacán") %>
+      <%= place_link_from("Zacatecas") %>
+      <%# no letters going to Zacatecas %>
+      <%= place_link_from("Colorado") %>
+      <%= place_link_to("Colorado") %>
+      <%= place_link_from("Nebraska") %>
+      <%= place_link_to("Nebraska") %>
+    </div>
+  <% elsif current_page?(action: "map_decade") %>
+    <div class="btn-group map-btn-group btn-group-justified" role="group" aria-label="Decades">
+      <%= link_to "All", research_map_decade_path + "#map_complete_container", class: "btn btn-default btn-sm #{"active" if !params["id"]}" %>
+      <% [1910, 1920, 1930, 1940, 1950, 1960, 1970, 1980].each do |decade| %>
+        <%= decade_link(decade) %>
+      <% end %>
+    </div>
+  <% end %>
+</div><%# /map_buttons %>

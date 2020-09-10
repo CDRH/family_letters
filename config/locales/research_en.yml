@@ -40,15 +40,20 @@ en:
         title: Letters by Decade
         all: All Letters
       key:
+        title: Key
         both: Spanish / English
         destination: Destination
         es: Most written in Spanish
         en: Most written in English
         origin: Origin
       photos:
-        title: Photograph
+        title: Photographs
       place:
         title: Letters by Location
+      popup:
+        # note: cannot use one / other count abilities
+        # because this is being requested via javascript
+        letters: letter(s)
     more_resources: More resources
     other_projects: Other projects of interest
     search:

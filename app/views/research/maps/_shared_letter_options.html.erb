@@ -1,4 +1,22 @@
 <script>
+
+  function buildLink(letters) {
+    var count = letters.length;
+    var ids = []
+    for (var i=0; i<count; i++) {
+      ids.push(letters[i]["identifier"])
+    }
+    return "?q=identifier:("+ids.join(" OR ")+")";
+  }
+
+  function buildTitle(locations) {
+    // "to" or "á" depending on the language
+    var joiner = " <%= t("research.maps.to").downcase %> ";
+    // location is always an array but may only have one item
+    // so just join if multiple
+    return props["locations"].join(joiner);
+  }
+
   function degreeOfSpanish(props) {
     // calculate percent in spanish
     es = Number(props.es) || 0;
@@ -38,22 +56,12 @@
   // BIND POPUP TO DESTINATION
   function onEachFeature(feature, layer) {
     props = feature.properties;
-    console.log(JSON.stringify(props));
-    title = props["location"]
+    title = buildTitle(props["locations"])
     html = "<div class='map_feature'>";
     html += "<strong>" + title + "</strong>";
-    html += "<p>"+props["count"]+" letters</p>";
-    html += "<ul>";
-    if (props["letters"]) {
-      props["letters"].forEach(function(letter) {
-        if (lang == "es") {
-          html += "<li>"+letter["title"]+"</li>";
-        } else {
-          html += "<li>"+letter["title_es"]+"</li>";
-        }
-      });
-    }
-    html += "</ul>";
+    label = props["count"]+" <%= t "research.maps.popup.letters", default: "carta(s)" %>";
+    link_params = buildLink(props["letters"]);
+    html += "<p><a href=\""+searchPath+link_params+"\">View "+label+"</a></p>";
     html += "</div>";
     layer.bindPopup(html);
   };

@@ -20,7 +20,9 @@ ItemsController.class_eval do
   end
 
   def search_language(options)
-    if options.has_key?("q") && options["q"].present?
+    # you only need to search the language if there is a query
+    # and if the query is not only using the identifiers
+    if options.has_key?("q") && options["q"].present? && !options["q"].include?("identifier:")
       query = options["q"]
       type = params["text_typex"]
 
@@ -29,7 +31,6 @@ ItemsController.class_eval do
       else
         options["q"] = "(text_t_es:#{query}) OR (text_t_en:#{query})"
       end
-      options
     end
   end
 
