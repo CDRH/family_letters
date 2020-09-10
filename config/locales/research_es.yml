@@ -52,6 +52,7 @@ es:
         # note: cannot use one / other count abilities
         # because this is being requested via javascript
         letters: carta(s)
+        photos: foto(s)
     more_resources: Más recursos
     other_projects: Otros proyectos de interés
     search:

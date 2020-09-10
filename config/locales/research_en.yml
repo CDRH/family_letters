@@ -54,6 +54,7 @@ en:
         # note: cannot use one / other count abilities
         # because this is being requested via javascript
         letters: letter(s)
+        photos: photo(s)
     more_resources: More resources
     other_projects: Other projects of interest
     search:

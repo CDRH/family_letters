@@ -1,43 +1,7 @@
 <%= render "research/maps/setup" %>
 
 <script>
-
   var geojson = <%= sanitize @geojson %>;
-
-  function markerOptions(feature) {
-    props = feature.properties;
-    size = sizeCount(props);
-    color = "#861994";
-
-    return {
-      radius: size,
-      color: "black",
-      opacity: 1,
-      weight: 0.2,
-      fillColor: color,
-      fillOpacity: 1
-    }
-  };
-
-  var photos = L.geoJSON(geojson, {
-    onEachFeature: onEachFeature,
-    pointToLayer: function(feature, latlng) {
-      return L.circleMarker(latlng, markerOptions(feature));
-    }
-  });
-
-  photos.addTo(map);
-  map.fitBounds(photos.getBounds());
-
-  function onEachFeature(feature, layer) {
-    props = feature.properties;
-    html = "<div class='map_feature'>";
-    html += "<strong>"+props["location"]+"</strong>";
-    label = props["count"] + " photo(s)";
-    searchLink = buildLink(props["photos"]);
-    html += "<p><a href=\""+searchLink+"\">View "+label+"</a></p>";
-    html += "</div>";
-    layer.bindPopup(html);
-  }
-
 </script>
+
+<%= javascript_include_tag("map_photos") %>
