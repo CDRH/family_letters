@@ -5,7 +5,7 @@ module ResearchHelper
   end
 
   def decade_link(decade)
-    link_to "#{decade}s",
+    link_to decade,
       research_map_decade_path(id: decade, anchor: "map_complete_container"),
       class: "btn btn-default btn-sm #{decade_active(decade)}"
   end

@@ -3,6 +3,8 @@
 
 <h1><%= @title %></h1>
 
+<%= t "research.maps.text_html" %>
+
 </div><%# closing container for full screen %>
 
 <div id="map_complete_container">
@@ -22,6 +24,16 @@
 </div> <%# /map_complete_container %>
 
 <div class="container"><%# reopening container %>
+
+<p>
+  <strong><%= t "about.faq.cite_map_q" %></strong>
+  <%= t "about.faq.cite_map_a_html" %>
+</p>
+
+<p>
+  <%= t "research.maps.contribute" %>
+  <%= link_to t("research.maps.contribute_link"), about_faq_path(anchor: "contribute") %>
+</p>
 
 <script>
   // prep some variables that the map will need in JavaScript

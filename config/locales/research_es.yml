@@ -30,29 +30,44 @@ es:
       colección? Por favor envíenos un email, queremos saber sobre su proyecto.
       Su información nos ayudará a hacer que esta página sea de mayor utilidad
       para la comunidad académica.
+    map_link: Mapa interactivo
     maps:
       title: Mapas
-      to: Á
+      # see faq translations file for citation
+      contribute: ¿Le gustaría contribuir una foto o documento a esta colección? ¿Encontró algún error?
+      contribute_link: Por favor envíenos un mensaje. Queremos saber de usted.
+      to: A
       from: De
       decade:
-        title: Cartas por Década
-        all: Todas las Cartas
+        title: Por década
+        all: Todas
       key:
-        title: Leyenda
+        title: Clave
         both: español / inglés
         destination: Destino
-        es: Más escrita en español
-        en: Más escrita en inglés
+        es: Mayormente escrita en español
+        en: Mayormente escrita en inglés
         origin: Origen
       photos:
         title: Fotografías
       place:
-        title: Cartas por Localidad
+        title: Por localidad
       popup:
         # note: cannot use one / other count abilities
         # because this is being requested via javascript
         letters: carta(s)
         photos: foto(s)
+      text_html: |-
+        <p>Este mapa reconstruye la trayectoria de todas las cartas, documentos
+        y fotografías de esta colección. A nivel individual, estudiar la
+        distribución espacial y temporal de estos documentos nos permite
+        distinguir las redes sociales y patrones de desplazamiento lingüístico
+        en varias generaciones de la misma familia.</p>
+        <p>A nivel colectivo, estos patrones describen rutas de migración
+        transnacional y migración interna que dieron origen a muchas
+        comunidades mexicoamericanas en los Estados Unidos y que sobreviven
+        hasta el día de hoy. Para ver cada objeto en contexto, pase el cursor
+        por encima de cualquier punto en el mapa y haga click.</p>
     more_resources: Más recursos
     other_projects: Otros proyectos de interés
     search:
