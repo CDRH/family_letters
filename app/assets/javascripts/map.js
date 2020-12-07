@@ -41,7 +41,7 @@ function onEachFeatureBuilder(feature, layer, type, label) {
   html += "<strong>" + title + "</strong>";
   linkLabel = props["count"]+" "+label;
   searchLink = buildLink(props[type]);
-  html += "<p><a href=\""+searchLink+"\">View "+linkLabel+"</a></p>";
+  html += "<p><a href=\""+searchLink+"\">"+linkLabel+"</a></p>";
   html += "</div>";
   layer.bindPopup(html);
 };
