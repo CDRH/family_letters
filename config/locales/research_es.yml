@@ -33,14 +33,20 @@ es:
     map_link: Mapa interactivo
     maps:
       title: Mapas
-      # see faq translations file for citation
+      cite_map_q: ¿Cómo citar este mapa?
+      cite_map_a_html: |-
+        Jessica Dussault, Karin Dalziel e Isabel Velázquez. "Mapa
+        Interactivo". Mapa. <em>Cartas a la familia: De la migración de
+        Jesusita a Jane.</em>, 28 Nov. 2019, familyletters.unl.edu. Accesado
+        el 10 de mayo, 2020.
       contribute: ¿Le gustaría contribuir una foto o documento a esta colección? ¿Encontró algún error?
       contribute_link: Por favor envíenos un mensaje. Queremos saber de usted.
       to: A
       from: De
       decade:
+        nav_all: Todas
         title: Por década
-        all: Todas
+        title_all: Todas las cartas en contexto
       key:
         title: Clave
         both: español / inglés

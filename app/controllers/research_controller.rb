@@ -6,10 +6,6 @@ class ResearchController < ApplicationController
     @title = t "research.title"
   end
 
-  def maps
-    @title = t "research.maps.title"
-  end
-
   def map_decade
     year = params["id"]
     if year.present? && year[/\d{4}/]
@@ -20,7 +16,7 @@ class ResearchController < ApplicationController
         "origin" => get_json("#{year}_origin"),
       }
     else
-      @title = t "research.maps.decade.all"
+      @title = t "research.maps.decade.title_all"
       @geojson = {
         "routes" => get_json("routes"),
         "destination" => get_json("destination"),

@@ -20,7 +20,7 @@
     </div>
   <% elsif current_page?(action: "map_decade") %>
     <div class="btn-group map-btn-group btn-group-justified" role="group" aria-label="Decades">
-      <%= link_to t("research.maps.decade.all"), research_map_decade_path + "#map_complete_container", class: "btn btn-default btn-sm #{"active" if !params["id"]}" %>
+      <%= link_to t("research.maps.decade.nav_all"), research_map_decade_path + "#map_complete_container", class: "btn btn-default btn-sm #{"active" if !params["id"]}" %>
       <% [1910, 1920, 1930, 1940, 1950, 1960, 1970, 1980].each do |decade| %>
         <%= decade_link(decade) %>
       <% end %>
