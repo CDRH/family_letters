@@ -32,6 +32,48 @@ en:
       collection? Please send us an email, we would love to learn about your
       project. The information you share with us will help us to make this
       site more useful for the academic community.
+    map_link: Interactive map
+    maps:
+      title: Maps
+      cite_map_q: How to cite this map?
+      cite_map_a_html: |-
+        Jessica Dussault, Karin Dalziel and Isabel Velázquez. "Interactive Map."
+        Map. Family Letters: On the Migration from Jesusita to Jane, 28 Nov.
+        2019, familyletters.unl.edu. Accessed May 10, 2020.
+      contribute: Would you like to contribute a photograph or document to this collection? Did you find an error?
+      contribute_link: Please send us a message. We want to hear from you.
+      to: To
+      from: From
+      decade:
+        nav_all: All
+        title: By Decade
+        title_all: All Letters in Context
+      key:
+        title: Key
+        both: Spanish / English
+        destination: Destination
+        es: Most written in Spanish
+        en: Most written in English
+        origin: Origin
+      photos:
+        title: Photographs
+      place:
+        title: By Location
+      popup:
+        # note: cannot use one / other count abilities
+        # because this is being requested via javascript
+        letters: letter(s)
+        photos: photo(s)
+      text_html: |-
+        <p>This map reconstructs the trajectory of each letter, document and
+        photograph in this collection. At an individual level, examining the
+        spatial and temporal distribution of these documents allows us to see
+        the social networks and linguistic shift in three generations of the
+        same family.</p>
+        <p>At a collective level, these patterns describe translational and
+        internal migratory routes that are the origin of many Mexican American
+        communities in the United States, and that exist today. To see each
+        item in context, you can hover over any point in this map and click.</p>
     more_resources: More resources
     other_projects: Other projects of interest
     search:

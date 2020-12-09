@@ -1,0 +1,7 @@
+<%= render "research/maps/setup" %>
+
+<script>
+  var geojson = <%= sanitize @geojson %>;
+</script>
+
+<%= javascript_include_tag("map_photos") %>

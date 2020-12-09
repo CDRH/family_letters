@@ -1,7 +1,8 @@
 
 <%# OVERRIDE FROM ORCHID %>
+<%# includes custom search results listing %>
 
-<% if @res.count > 0 %>
+<% if @res.count && @res.count > 0 %>
   <div class="flex_row buffer-bottom-sm">
     <% @res.items.each do |item| %>
       <%= link_to search_item_link(item), class: "searchResults flex_col-md" do %>

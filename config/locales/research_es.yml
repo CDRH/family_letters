@@ -30,6 +30,50 @@ es:
       colección? Por favor envíenos un email, queremos saber sobre su proyecto.
       Su información nos ayudará a hacer que esta página sea de mayor utilidad
       para la comunidad académica.
+    map_link: Mapa interactivo
+    maps:
+      title: Mapas
+      cite_map_q: ¿Cómo citar este mapa?
+      cite_map_a_html: |-
+        Jessica Dussault, Karin Dalziel e Isabel Velázquez. "Mapa
+        Interactivo". Mapa. <em>Cartas a la familia: De la migración de
+        Jesusita a Jane.</em>, 28 Nov. 2019, familyletters.unl.edu. Accesado
+        el 10 de mayo, 2020.
+      contribute: ¿Le gustaría contribuir una foto o documento a esta colección? ¿Encontró algún error?
+      contribute_link: Por favor envíenos un mensaje. Queremos saber de usted.
+      to: A
+      from: De
+      decade:
+        nav_all: Todas
+        title: Por década
+        title_all: Todas las cartas en contexto
+      key:
+        title: Clave
+        both: español / inglés
+        destination: Destino
+        es: Mayormente escrita en español
+        en: Mayormente escrita en inglés
+        origin: Origen
+      photos:
+        title: Fotografías
+      place:
+        title: Por localidad
+      popup:
+        # note: cannot use one / other count abilities
+        # because this is being requested via javascript
+        letters: carta(s)
+        photos: foto(s)
+      text_html: |-
+        <p>Este mapa reconstruye la trayectoria de todas las cartas, documentos
+        y fotografías de esta colección. A nivel individual, estudiar la
+        distribución espacial y temporal de estos documentos nos permite
+        distinguir las redes sociales y patrones de desplazamiento lingüístico
+        en varias generaciones de la misma familia.</p>
+        <p>A nivel colectivo, estos patrones describen rutas de migración
+        transnacional y migración interna que dieron origen a muchas
+        comunidades mexicoamericanas en los Estados Unidos y que sobreviven
+        hasta el día de hoy. Para ver cada objeto en contexto, pase el cursor
+        por encima de cualquier punto en el mapa y haga click.</p>
     more_resources: Más recursos
     other_projects: Otros proyectos de interés
     search:

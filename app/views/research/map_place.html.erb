@@ -1,0 +1,11 @@
+<%= render "research/maps/setup" %>
+<%= javascript_include_tag("map_letters") %>
+
+<script>
+  var json = <%= sanitize @geojson %>;
+
+  routes = geoJsonLayer(json);
+  routes.addTo(map);
+  map.fitBounds(routes.getBounds());
+</script>
+

@@ -1,11 +1,4 @@
-<div class="row">
-  <div class="col-md-7">
-    <h1><%= t "research.title", default: "Research" %></h1>
-  </div>
-  <div class="col-md-5">
-    <h2><%= t "research.search.materials" %></h2>
-  </div>
-</div>
+<h1><%= t "research.title", default: "Research" %></h1>
 
 <div class="row">
   <div class="col-md-7">
@@ -14,9 +7,25 @@
     <%= link_to item_path(id: "shan.P091") do %>
       <%= image_tag iiif("shan_p.183.jpg/", size: "!800,800"), class: "research_image" %>
     <% end %>
-
   </div>
   <div class="col-md-5">
+    <%# map %>
+    <%= link_to research_map_decade_path, class: "content research_callout1 callout" do %>
+      <div class="callout_inner">
+        <div class="row">
+          <div class="col-md-9 col-md-offset-3">
+            <div class="inner_content">
+              <h2 class="h4">
+                <%= t "research.map_link" %>
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
+    <%# research materials %>
+    <h2><%= t "research.search.materials" %></h2>
     <%= form_tag search_path, method: "get" do %>
       <%= text_field_tag "q", nil, placeholder: "(sister OR \"sis\") NOT brother", class: "form-control" %>
       <div class="pull-left">
@@ -28,9 +37,5 @@
     <% end %>
 
     <%= render "sidebar" %>
-
   </div>
 </div>
-
-
-

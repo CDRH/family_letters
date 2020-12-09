@@ -1,0 +1,29 @@
+<%= render "research/maps/setup" %>
+<%= javascript_include_tag("map_letters") %>
+
+<script>
+
+  var origin_json = <%= sanitize @geojson["origin"] %>;
+  var dest_json = <%= sanitize @geojson["destination"] %>;
+  var routes_json = <%= sanitize @geojson["routes"] %>;
+
+  origin = geoJsonLayer(origin_json);
+  destination = geoJsonLayer(dest_json);
+  routes = geoJsonLayer(routes_json);
+
+  // only adding the routes and origin first
+  routes.addTo(map);
+  origin.addTo(map);
+  map.fitBounds(routes.getBounds());
+
+  var overlays = {
+    <%= t "research.maps.key.origin" %>: origin,
+    <%= t "research.maps.key.destination" %>: destination
+  };
+  L.control.layers(
+    overlays,
+    {},
+    { "collapsed" : false }
+  ).addTo(map);
+
+</script>
