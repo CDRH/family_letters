@@ -52,7 +52,9 @@ class ResearchController < ApplicationController
   def geojson_url(id)
     File.join(
       PRIVATE["data_path"],
-      "output/development/geojson",
+      "output",
+      Rails.env,
+      "geojson",
       "#{id}.json"
     )
   end
