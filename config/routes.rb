@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     get '/about/technical', to: 'general#about_technical', as: 'about_technical'
     get '/about/acknowledgements', to: 'general#about_acknowledgements', as: 'about_acknowledgements'
     get '/about/faq', to: 'general#about_faq', as: 'about_faq'
+    get '/about/proto', to: 'general#about_proto', as: 'about_proto' 
 
     # explore / explora
     get '/explore', to: 'explore#index', as: 'explore'

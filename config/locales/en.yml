@@ -79,6 +79,8 @@ en:
         UNL Undergraduate Creative Activities and Research Experience Program.
         The UNL Center for Digital Research in the Humanities has contributed
         considerable technical and financial resources to this project.</p>
+    proto: 
+      title: proto1
     # faq is in its own file
 
   ##########
