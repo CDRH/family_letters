@@ -1,1 +1,7 @@
-
+en:
+  ourwork:
+    index:
+      title: Thi is the index page
+      section1: this is the text for section one
+    crete:
+      title: this is the crete page
