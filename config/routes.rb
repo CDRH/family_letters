@@ -21,6 +21,8 @@ Rails.application.routes.draw do
     get '/explore/more_than_work', to: 'explore#more_than_work', as: 'explore_more_than_work'
     get '/explore/objects', to: 'explore#objects', as: 'explore_objects'
     get '/explore/objects_pt', to: 'explore#objects_pt', as: 'explore_objects_pt'
+    get '/explore/ourwork', to: 'explore#ourwork', as: 'explore_ourwork'
+    get '/explore/ourwork_crete', to: 'explore#ourwork_crete', as: 'explore_ourwork_crete'
 
     # research / investiga
     get '/research', to: 'research#index', as: 'research'
