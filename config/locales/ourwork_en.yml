@@ -1,0 +1,27 @@
+en:
+  ourwork:
+    index: 
+      title: More Than Our Work
+      section1: Menu 
+      1_html: |-
+        <p>here's the intro text</p>
+      section2: Interviewers 
+      2_html: |-
+        <p>each interviewer is supposed to get their own section i think. still not sure if we'd be dividing by place or by interviewer</p>
+      section3: Introduction 
+      3_html: |-
+        <p>intro the person?</p>
+      section4: Work Clothes 
+      4_html: |-
+        <p>not sure if this section has text or just photos</p>
+      section5: Food
+      5_html: |-
+        <p>there will be photos everywhere i gather</p> 
+      section6: Most Treasured Object
+      6_html: |-
+        <p>feels like this isn't supposed to be here ngl. not the section subject but the html portion?</p>
+      section7: Footer 
+      7_html: |-
+        <p>not sure the footer needs to be with the other sections. probs needs its own space. it did have this text tho</p>
+        <p><i>Even though Mexican immigrants started to arrive in the Midwest at the end of the nineteenth century, their experience and their writing have remained mostly forgotten. This site outlines the trajectory of a family whose members exchanged personal letters written in Spanish and English over the span of several decades. These documents allow us to observe the ways in which broader historical events intertwine with the lives of ordinary people.</i></p>
+        <p>not sure they wanna keep it tho i'm just adding stuff here</p>  
