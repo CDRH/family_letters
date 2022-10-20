@@ -72,6 +72,10 @@ es:
         Experience Program, de la Universidad de Nebraska. El Centro de
         Investigación Digital en las Humanidades ha contribuido considerables
         recursos técnicos y financieros a este esfuerzo.</p>
+    proto:
+      title: proto
+      html: |-
+        <p>aqui va el texto. con faltas de ortografia porque no hay tildes en esta computadora.</p>    
     # faq is in its own file
     
   ##########

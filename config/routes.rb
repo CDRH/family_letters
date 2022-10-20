@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     get '/about/technical', to: 'general#about_technical', as: 'about_technical'
     get '/about/acknowledgements', to: 'general#about_acknowledgements', as: 'about_acknowledgements'
     get '/about/faq', to: 'general#about_faq', as: 'about_faq'
+    get '/about/proto', to: 'general#about_proto', as: 'about_proto' 
 
     # explore / explora
     get '/explore', to: 'explore#index', as: 'explore'
@@ -21,6 +22,7 @@ Rails.application.routes.draw do
     get '/explore/more_than_work', to: 'explore#more_than_work', as: 'explore_more_than_work'
     get '/explore/objects', to: 'explore#objects', as: 'explore_objects'
     get '/explore/objects_pt', to: 'explore#objects_pt', as: 'explore_objects_pt'
+    get '/explore/ourwork', to: 'explore#ourwork', as: 'explore_ourwork'
 
     # research / investiga
     get '/research', to: 'research#index', as: 'research'
@@ -35,6 +37,9 @@ Rails.application.routes.draw do
     get '/learn/lesson03', to: 'learn#lesson03', as: 'learn_lesson03'
     get '/learn/lesson04', to: 'learn#lesson04', as: 'learn_lesson04'
     get '/learn/lesson05', to: 'learn#lesson05', as: 'learn_lesson05'
+
+    # skeleton / esqueleto
+    get '/proto', to: 'proto#index', as: 'proto'
 
     get '/content_pages', to: 'general#content_pages', as: 'content_pages'
   end

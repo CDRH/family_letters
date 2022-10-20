@@ -78,7 +78,12 @@ en:
         research experience in this project was possible with support from the
         UNL Undergraduate Creative Activities and Research Experience Program.
         The UNL Center for Digital Research in the Humanities has contributed
-        considerable technical and financial resources to this project.</p>
+        considerable technical and financial resources to this project.</p>    
+    proto:
+      title: proto
+      html: |-
+        <p>here goes the text. with grammar mistakes because there are no tildes in this computer.</p>    
+  
     # faq is in its own file
 
   ##########
