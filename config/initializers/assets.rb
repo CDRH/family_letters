@@ -13,7 +13,7 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
 
-# Suggestions from ChatGPT
+# Make sure that scss erb files can call Rails
 Rails.application.config.assets.configure do |env|
     env.context_class.class_eval do
       include Orchid::ApplicationHelper
