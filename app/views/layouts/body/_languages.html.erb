@@ -1,6 +1,6 @@
-<% if APP_OPTS["languages"].present? && APP_OPTS["languages"][/\|/] %>
+<% if APP_OPTS["all_languages"].present? && APP_OPTS["all_languages"][/\|/] %>
   <div class="language_link btn-group" role="group" aria-label="language choice">
-    <% APP_OPTS["languages"].split("|").each do |lang_code| %>
+    <% APP_OPTS["all_languages"].split("|").each do |lang_code| %>
       <%# create link to switch languages that keeps current parameters %>
       <%# TODO a11y / ARIA markup for full language names? %>
       <% if lang_code == I18n.locale.to_s %>
