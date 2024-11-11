@@ -13,3 +13,4 @@
 
 // Include all Rails app assets from directories inside /vendor/assets
 //= link_tree ../../../vendor/assets
+//= link leaflet.css
