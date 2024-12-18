@@ -15,8 +15,7 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 
 # Make sure that scss erb files can call Rails
 Rails.application.config.assets.configure do |env|
-    env.context_class.class_eval do
-      include Orchid::ApplicationHelper
-    end
+  env.context_class.class_eval do
+    include Orchid::ApplicationHelper
   end
-  
+end
