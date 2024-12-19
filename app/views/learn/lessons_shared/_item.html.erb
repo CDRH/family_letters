@@ -26,7 +26,7 @@
         <li><strong>Format:</strong> <%= Array(item["res"]["format"]).join(" | ") %></li>
         <!-- Not pulling from API at the moment -->
         <li><strong>Creator:</strong> N/A</li>
-        <li><strong>Held by:</strong> <%= item["res"]["source"] %></li>
+        <li><strong>Held by:</strong> <%= item["res"]["has_source"]["title"] %></li>
       </ul>
       <%= link_to "View more information about #{id}", item_path(id: item["res"]["identifier"]) %>
     </div>
@@ -34,7 +34,7 @@
     <%# IMAGE PREVIEW %>
     <div class="col-md-6">
       <%= link_to item_path(id: id) do %>
-        <%= image_tag iiif(item["res"]["image_id"], size: "!400,400") %>
+        <%= image_tag iiif(item["res"]["cover_image"], size: "!400,400") %>
       <% end %>
       <% if local_assigns[:image_additional] %>
         <%= link_to item_path(id: id) do %>

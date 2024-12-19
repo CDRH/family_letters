@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  langs = APP_OPTS["languages"]
+  langs = APP_OPTS["all_languages"]
   locales = langs ? Regexp.new(langs) : /en/
 
   # make sure all new routes can be english or spanish

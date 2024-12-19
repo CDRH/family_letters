@@ -7,8 +7,8 @@
     <% @res.items.each do |item| %>
       <%= link_to search_item_link(item), class: "searchResults flex_col-md" do %>
         <div class="search_results_image">
-          <% if item["image_id"] %>
-            <%= image_tag iiif(item["image_id"]) %>
+          <% if item["cover_image"] %>
+            <%= image_tag iiif(item["cover_image"]) %>
           <% else %>
             <%= image_tag "no_image.jpg" %>
           <% end %>
@@ -27,15 +27,15 @@
                   <%= metadata(item, t("search.results.item.format", default: "Format"), "format", link: false) %>
                 </li>
               <% end %>
-              <% if item["source"].present? %>
+              <% if item["has_source"].present? && item["has_source"]["title"].present?  %>
                 <li>
-                  <%= metadata(item, t("search.results.item.source", default: "Source"), "source", link: false) %>
+                  <%= metadata(item, t("search.results.item.has_source.title", default: "Source"), "has_source.title", link: false) %>
                 </li>
               <% end %>
               <%# subcategory is displayed to the user as "category" %>
-              <% if item["subcategory"].present? %>
+              <% if item["category2"].present? %>
                 <li>
-                  <%= metadata(item, t("search.results.item.category", default: "Category"), "subcategory", link: false) %>
+                  <%= metadata(item, t("search.results.item.category", default: "Category"), "category2", link: false) %>
                 </li>
               <% end %>
             </ul>

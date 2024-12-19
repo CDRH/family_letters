@@ -5,7 +5,7 @@ default: &default
     # defaults to "en" (english) if no default language set
     language_default: es
     # pipe delineated codes for all languages, e.g. "en|es|cz"
-    languages: es|en
+    all_languages: es|en
     # iiif thumbnail default size
     thumbnail_size: "!150,150"
     # iiif project directory
@@ -14,7 +14,7 @@ default: &default
   api_options:
     # example of default filter for all queries
     # f:
-    #   - subcategory|Writings
+    #   - category2|Writings
     # sorting and response number
     sort:
       # typically use title as sort except that the title
@@ -42,7 +42,7 @@ default: &default
 
   facets:
     en:
-      subcategory:
+      category2:
         label: Category
         flags:
           - search_filter
@@ -66,12 +66,12 @@ default: &default
         label: Format
         flags:
           - search_filter
-      places:
+      spatial.name:
         label: Location
         flags:
           - search_filter
     es:
-      subcategory:
+      category2:
         label: Categoría
         flags:
           - search_filter
@@ -97,7 +97,7 @@ default: &default
         flags:
           - search_filter
           - translate
-      places:
+      spatial.name:
         label: Localidad
         flags:
           - search_filter

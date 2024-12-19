@@ -13,11 +13,9 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
 
-# Add our helpers to Asset Pipeline context for use in ERB pre-processing
-# https://github.com/rails/sprockets-rails/issues/307#issuecomment-170707886
+# Make sure that scss erb files can call Rails
 Rails.application.config.assets.configure do |env|
   env.context_class.class_eval do
-    include ApplicationHelper
+    include Orchid::ApplicationHelper
   end
 end
-

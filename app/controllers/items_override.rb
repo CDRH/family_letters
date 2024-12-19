@@ -16,6 +16,8 @@ ItemsController.class_eval do
     @title = t "search.title"
 
     @res = @items_api.query(options)
+    @facet_limit = @section.present? ? SECTIONS[@section]["api_options"]["facet_limit"] : PUBLIC["api_options"]["facet_limit"]
+
     render_overridable("items", "index")
   end
 

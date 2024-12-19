@@ -43,7 +43,7 @@ class ResearchController < ApplicationController
   def get_json(id)
     url = geojson_url(id)
     # TODO set up error handling
-    geojson = open(url)
+    geojson = URI.open(url)
     if geojson.status
       geojson.read.force_encoding(Encoding::UTF_8)
     end
