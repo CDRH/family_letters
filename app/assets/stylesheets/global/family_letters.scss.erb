@@ -397,6 +397,7 @@ a.content .inner_content {
   color: $warmblack; //overwrite link color
   display: flex;
   padding: 1em 0 0 0;
+  text-decoration: none !important;
   &:hover {
     background-color: lighten($greybeige, 28%);
     color: $warmblack; //overwrite link color
@@ -426,6 +427,13 @@ a.content .inner_content {
   padding: 0;
   li {
     list-style-type: none;
+    ul {
+      display: inline;
+      padding-left: 0;
+      li {
+        display: inline;
+      }
+    }
   }
 }
 
@@ -472,6 +480,16 @@ span.pageimage {
   padding: 0px 0 0 0;
   width: 100%;
 }
+
+.metadata {
+  ul > li {
+    ul > li > a,
+    a {
+      text-decoration: none;
+    }
+  } 
+}
+  
 
 @media (min-width: $screen-sm) { 
   .metadata {
