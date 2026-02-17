@@ -7,7 +7,7 @@
           <div class="col-md-12">
             <div class="search_main_text input-group">
                 <!-- search box -->
-                <%= text_field_tag "q", params["q"], placeholder: "Search for...", class: "form-control" %>
+                <%= text_field_tag "q", params["q"], placeholder: "Search for...", class: "form-control", aria: { label: "Search" } %>
                 <!-- add existing search parameters to query -->
                 <%= render "hidden_fields" %>
                 <!-- submit -->
