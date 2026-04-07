@@ -117,14 +117,24 @@ a.searchResults,
 
 #header {
   margin-top: .5em;
+}
 
+.navbar-nav {
+  display: flex;
+  flex-direction: row !important;
+  flex-wrap: wrap;
 }
 
 // Top Nav
-@media (min-width: $screen-sm-min) {
-  .layouts_cell {
-    text-align: right;
-  }
+.layouts_cell {
+  column-gap: 10px;
+  display: flex;
+  justify-content: end;
+}
+
+.dedication-button {
+  margin-left: auto;
+  padding-top: 1rem;
 }
 
 // Header and Nav
