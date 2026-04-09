@@ -14,6 +14,7 @@ es:
     dedication_text: |-
       Este sitio electrónico está dedicado a Jesusita Baros Torres. Su esfuerzo
       no fue en vano.
+    header_image_alt: "Texto manuscrito de una carta de Jesusita Baros Torres: 'Querida hija, la precente es para saludarlos.'"
     footer_html: |-
       <em>Cartas a la Familia</em> es un proyecto dirigido por Isabel Velázquez
       y publicado de manera conjunta por el Centro de Investigación Digital en
@@ -21,6 +22,7 @@ es:
       de Nebraska, Lincoln, bajo licencia
       <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/deed.es_ES">Creative
       Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.
+    footer_image_alt: "Texto manuscrito de una carta de Jesusita Baros Torres: 'todo tu mamá que quisiera estar estar sequitas de Uds.'"
     # Header <1>
     project_name: Cartas a la familia
     # <title>, meta application-name
@@ -139,7 +141,11 @@ es:
     # page title
     title: Inicio
     # CUSTOM FAMILY LETTERS
+    caption:
+      shan_p_035: Fotografía en blanco y negro de Jesusita Baros Torres con su hijo Jesús
+        Baros (ca. 1920).
     carousel:
+      title: Sobres destacados
       to: a
       unknown: Remitente desconocido
 

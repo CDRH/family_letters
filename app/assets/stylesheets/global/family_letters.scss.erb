@@ -119,23 +119,130 @@ a.searchResults,
   margin-top: .5em;
 }
 
-.navbar-nav {
-  display: flex;
-  flex-direction: row !important;
-  flex-wrap: wrap;
-}
-
 // Top Nav
-.layouts_cell {
-  column-gap: 10px;
+
+.top-navigation {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: end;
+
+
+  // menu and language choice
+  .navbar-nav {
+    display: flex;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+  }
+
+  .language-choice {
+    margin: 0 0 8px auto;
+
+    .language_link {
+      margin: 0;
+      padding: 0;
+
+      li {
+        a.btn {
+          border-radius: 0px;
+
+          &:hover {
+            background: $link-hover-color;
+            color: white;
+          }
+        }
+
+        &:first-child a.btn {
+          border-top-left-radius: $btn-border-radius-base;
+          border-bottom-left-radius: $btn-border-radius-base;
+        }
+
+        &:last-child a.btn {
+          border-top-right-radius: $btn-border-radius-base;
+          border-bottom-right-radius: $btn-border-radius-base;
+        }
+      }
+    }
+  }
+
+  .main-menu {
+    width: 100%;
+
+    .navbar-nav {
+      justify-content: center;
+    }
+  }
+
+  .dedication-button {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+  }
 }
 
-.dedication-button {
-  margin-left: auto;
-  padding-top: 1rem;
+// .dedication-button {
+//   margin-left: auto;
+//   padding-top: 1rem;
+// }
+
+@media screen and (min-width: 480px) {
+  .top-navigation {
+    align-items: center;
+    justify-content: space-between;
+
+    .language-choice {
+      width: 100%;
+
+      .language_link {
+        justify-content: end;
+      }
+    }
+
+    .main-menu {
+      margin-right: auto;
+      padding-left: 15px;
+      width: initial;
+    }
+
+    .dedication-button {
+      width: initial;
+
+      button {
+        min-height: initial;
+      }
+    }
+  }
 }
+
+@media screen and (min-width: 768px) {
+  .top-navigation {
+    padding-left: 0;
+
+    .language-choice {
+      margin-left: 8px;
+      order: 3;
+      width: initial;
+    }
+
+    .main-menu {
+      margin-right: auto;
+      padding-left: 15px;
+      width: initial;
+    }
+
+    .dedication-button {
+      width: initial;
+
+      button {
+        min-height: initial;
+      }
+    }
+  }
+}
+
+
+
 
 // Header and Nav
 .title_nav {

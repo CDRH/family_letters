@@ -5,18 +5,18 @@
   </div>
 
   <div class="site-title-container home-site-title home-site-title-secondary">
-    <div class="h1 site-title">
+    <div class="h1 site-title"
       <% if I18n.locale == :en %>
-        <%= t "general.project_name", locale: :es %>
+        lang="es"><%= t "general.project_name", locale: :es %>
       <% else %>
-          <%= t "general.project_name", locale: :en %>
+        lang="en"><%= t "general.project_name", locale: :en %>
       <% end %>
     </div>
-    <div class="h2 site-subtitle">
+    <div class="h2 site-subtitle" 
       <% if I18n.locale == :en %>
-        <%= t "general.project_subtitle", locale: :es %>
+        lang="es"><%= t "general.project_subtitle", locale: :es %>
       <% else %>
-        <%= t "general.project_subtitle", locale: :en %>
+        lang="en"><%= t "general.project_subtitle", locale: :en %>
       <% end %>
     </div>
   </div>
