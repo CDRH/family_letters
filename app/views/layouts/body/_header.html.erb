@@ -1,19 +1,33 @@
-<div id="header">
+<header id="header">
   <div class="container top-navigation">
     <div class="row">
       <div class="col-sm-7">
-        <%= link_to t("home.title"), home_path, class: "btn btn-link", role: "button" %>
-        <%= link_to t("browse.title"), browse_path, class: "btn btn-link", role: "button" %>
-        <%= link_to t("search.title"), search_path, class: "btn btn-link", role: "button" %>
-        <%= link_to t("about.title"), about_path, class: "btn btn-link", role: "button" %>
-      </div>
-      <div class="col-sm-5 layouts_cell">
-        <%# Calls modal %>
+        <nav aria-label="Main Menu">
+          <ul class="nav navbar-nav">
+            <li class="<%= active?(home_path) %>">
+              <%= link_to t("home.title", default: "Home"), home_path, 'aria-current': (current_page?(home_path) ? 'page' : nil) %>
+            </li>
+            <li class="<%= active?(/^#{config.relative_url_root}\/browse/,
+              request.path) %>">
+              <%= link_to t("browse.title", default: "Browse"), browse_path, 'aria-current': (current_page?(browse_path) ? 'page' : nil) %>
+            </li>
+            <li class="<%= active?(search_path) %>">
+              <%= link_to t("search.title", default: "Search"), search_path, rel: "search", 'aria-current': (current_page?(search_path) ? 'page' : nil) %>
+            </li>
+            <li class="<%= active?(about_path) %>">
+              <%= link_to t("about.title", default: "About"), about_path, 'aria-current': (current_page?(about_path) ? 'page' : nil) %>
+            </li>
+          </ul>
+        </nav>
+    </div><%# /navbar %>
+    <div class="col-sm-5 layouts_cell">
+      <%# Calls modal %>
+      <div class="dedication-button">
         <button class="btn btn-link" data-toggle="modal" data-target="#dedication">
           <%= t "general.dedication_button" %>
         </button>
-        <%= render "layouts/body/languages" %>
       </div>
+      <%= render "layouts/body/languages" %>
     </div>
   </div>
 
@@ -29,4 +43,4 @@
       <%= render "layouts/body/breadcrumbs" %>
     </div> <%# /title_nav_sub %>
   </div> <%# /container %>
-</div> <%# /header %>
+</header> <%# /header %>

@@ -249,6 +249,7 @@ es:
         aparecería el resultado hierba.</p>
     filters:
       # clearing filters (not the text search)
+      clear: Borraro Filtro
       clear_all: Borrar Filtros
       # label above the filters
       filter_by: Filtrar por
@@ -263,6 +264,11 @@ es:
     # placeholder for the text search field
     placeholder: Buscar...
     results:
+      # for calling these labels without numerical values
+      singular: resultado
+      plural: resultados
+      # display for number of results when API response is error
+      error: Unable to display results
       # how to display number of results when no search / filters have been applied
       # and therefore user is browsing all items
       general:
@@ -291,9 +297,9 @@ es:
       # how to display number of results when a search / filter have been applied
       # and therefore the user is browsing a subset of items
       query:
-        zero: No se han encontrado objetos para su búsqueda
-        one: 1 objeto
-        other: "%{count} objetos"
+        zero: No se han encontrado resultados para su búsqueda
+        one: 1 resultado
+        other: "%{count} resultados"
       # summary box of selected search / filters
       summary:
         query: Buscar

@@ -1,16 +1,19 @@
 <% if APP_OPTS["all_languages"].present? && APP_OPTS["all_languages"][/\|/] %>
-  <div class="language_link btn-group" role="group" aria-label="language choice">
+  <nav class="navbar" aria-label="Language choice">
+  <ul class="language_link nav navbar-nav" role="group">
     <% APP_OPTS["all_languages"].split("|").each do |lang_code| %>
+      <li>
       <%# create link to switch languages that keeps current parameters %>
       <%# TODO a11y / ARIA markup for full language names? %>
       <% if lang_code == I18n.locale.to_s %>
-        <%= link_to lang_code.upcase, "#", class: "btn btn-primary disabled notranslate",
-          hreflang: lang_code, rel: "alternate", tabindex: -1 %>
+        <%= link_to lang_code.upcase, "#", class: "btn btn-primary notranslate",
+          hreflang: lang_code, rel: "alternate", tabindex: -1, aria: { disabled: "true", selected: "true" } %>
       <% else %>
         <%# a11y / ARIA markup for full language name? %>
         <%= link_to lang_code.upcase, locale_link(lang_code),
           class: "btn btn-default notranslate", hreflang: lang_code, rel: "alternate" %>
       <% end %>
+      </li>
     <% end %>
-  </div>
+  </ul>
 <% end %>
