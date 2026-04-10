@@ -143,21 +143,23 @@ a.searchResults,
       padding: 0;
 
       li {
-        a.btn {
+        .btn-primary {
           border-radius: 0px;
 
+          &:active, 
+          &:focus,
           &:hover {
             background: $link-hover-color;
             color: white;
           }
         }
 
-        &:first-child a.btn {
+        &:first-child .btn-primary {
           border-top-left-radius: $btn-border-radius-base;
           border-bottom-left-radius: $btn-border-radius-base;
         }
 
-        &:last-child a.btn {
+        &:last-child .btn-primary {
           border-top-right-radius: $btn-border-radius-base;
           border-bottom-right-radius: $btn-border-radius-base;
         }

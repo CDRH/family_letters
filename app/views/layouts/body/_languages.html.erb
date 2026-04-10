@@ -9,29 +9,19 @@
           <a href="#" class="btn btn-primary notranslate"
             hreflang="<%= lang_code %>"
             rel="alternate" 
-            <% if lang_code == "en" %>
-              aria-label="English"
-            <% elsif lang_code == "es" %>
-              aria-label="Español"
-              <% end %>
             aria-disabled="true" 
-            aria-current="true" %>
-            <%= lang_code.upcase %>
+            aria-current="true">
+            <span class="sr-only"><% if lang_code == "en" %>English<% elsif lang_code == "es" %>Español<% end %>
+            ></span>
+            <span aria-hidden="true"><%= lang_code.upcase %></span>
           </a>
         <% else %>
-          <%# a11y / ARIA markup for full language name? %>
             <a href="<%= locale_link(lang_code) %>" 
             class="btn btn-default notranslate"
             hreflang="<%= lang_code %>"
-              rel="alternate" 
-              <% if lang_code == "en" %>
-                aria-label="Inglés"
-              <% elsif lang_code == "es" %>
-                aria-label="Spanish"
-              <% end %>
-              aria-disabled="true" 
-              aria-current="true" %>
-              <%= lang_code.upcase %>
+            rel="alternate"
+            aria-label="<% if lang_code == "en" %>Inglés<% elsif lang_code == "es" %>Spanish<% end %>
+            <%= lang_code.upcase %>
             </a>
         <% end %>
         </li>
