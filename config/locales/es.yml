@@ -9,6 +9,10 @@ es:
       Digital en las Humanidades</a>.
     # close a popup window
     close: Cerrar
+    # Top navigation <nav> label
+    top_navigation_label: Menú principal
+    # Body navigation <nav> label
+    title_navigation_label: Menú de secciones
     # custom
     dedication_button: Dedicatoria
     dedication_text: |-

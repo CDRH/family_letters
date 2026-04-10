@@ -17,6 +17,10 @@ en:
       in the Humanities</a>.
     # close a popup window
     close: Close
+    # Top navigation <nav> label
+    top_navigation_label: Main Menu
+    # Body navigation <nav> label
+    title_navigation_label: Sections Menu
     # custom dedication text
     dedication_button: Dedication
     dedication_text: |-

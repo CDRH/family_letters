@@ -1,7 +1,7 @@
 <header id="header">
   <div class="container top-navigation">
     <%= render "layouts/body/languages" %>
-    <nav class="main-menu" aria-label="Main Menu">
+    <nav class="main-menu" aria-label="<%= t("general.top_navigation_label") %>">
       <ul class="nav navbar-nav">
         <li class="<%= active?(home_path) %>">
           <%= link_to t("home.title", default: "Home"), home_path, 'aria-current': (current_page?(home_path) ? 'page' : nil) %>
