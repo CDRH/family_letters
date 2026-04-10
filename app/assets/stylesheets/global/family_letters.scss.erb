@@ -516,6 +516,23 @@ a.content .inner_content {
 // Search
 // ------
 
+.searchbox .form-inline {
+  padding-top: 0.5em;
+  width: 100%;
+
+  .search_options {
+    margin-right: 0.75em;
+
+    > * {
+      display: inline;
+    }
+    
+    &.radio input[type="radio"] {
+      margin-left: 0;
+    }
+  }
+}
+
 .searchResults {
   border-bottom: 3px solid $greybeige;
   color: $warmblack; //overwrite link color
