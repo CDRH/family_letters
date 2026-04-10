@@ -1,6 +1,6 @@
 <% if APP_OPTS["all_languages"].present? && APP_OPTS["all_languages"][/\|/] %>
   <nav class="navbar language-choice" aria-label="Language choice">
-    <ul class="language_link nav navbar-nav" role="group">
+    <ul class="language_link nav navbar-nav">
       <% APP_OPTS["all_languages"].split("|").each do |lang_code| %>
         <li>
         <%# create link to switch languages that keeps current parameters %>
