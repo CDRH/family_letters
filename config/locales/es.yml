@@ -228,12 +228,12 @@ es:
       # instead of translated literally due to differences with stemming and grammar
       html: |-
         
-        <h4>Búsqueda básica</h4>
+        <h3>Búsqueda básica</h3>
         <p>Es posible insertar la palabra que se desee encontrar y el sistema
         buscará cada una de las veces que parezca la colección. Por ejemplo:
         Trabajo. Todas las veces que la palabra trabajo aparezca en los
         materiales se mostrará en los resultados de la búsqueda.</p>
-        <h4>Búsqueda especial (lematización)</h4>
+        <h3>Búsqueda especial (lematización)</h3>
         <p>Al utilizar un asterisco (*) usted aumenta las probabilidades de
         encontrar el resultado que busca. Por ejemplo: Trabajo. Los resultados
         de esta búsqueda incluirán palabras como trabajo, trabajos, trabajando,
@@ -243,14 +243,14 @@ es:
         lugar del asterisco (*), podrá buscar a partir de una sola letra. Por
         ejemplo, e?a le permitirá encontrar las formas eta y esa, pero no esta
         ni ella.</p>
-        <h4>Uso de mayúsculas</h4>
+        <h3>Uso de mayúsculas</h3>
         <p>El sistema no toma en cuenta las mayúsculas. Por ejemplo: Escribir
-        pedro y Pedro le dará los mismos resultados</p>
-        <h4>Búsqueda por frase</h4>
+        pedro y Pedro le dará los mismos resultados.</p>
+        <h3>Búsqueda por frase</h3>
         <p>Buscar por frase limita el número de resultados. No importa la
         extensión de la frase. Por ejemplo: "Todos los ciudadanos deben tener
         iguales derechos ante la ley".</p>
-        <h4>Búsquedas subsecuentes</h4>
+        <h3>Búsquedas subsecuentes</h3>
         <p>La multiplicidad de formas en las que puede estar escrita una
         palabra hace posible que a veces usted necesite repetir su búsqueda.
         Por ejemplo: para algunas palabras, es posible que se necesite realizar
