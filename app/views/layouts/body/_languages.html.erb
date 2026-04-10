@@ -6,22 +6,28 @@
         <%# create link to switch languages that keeps current parameters %>
         <%# TODO a11y / ARIA markup for full language names? %>
         <% if lang_code == I18n.locale.to_s %>
-          <a href="#" class="btn btn-primary notranslate"
-            hreflang="<%= lang_code %>"
-            rel="alternate" 
-            aria-disabled="true" 
-            aria-current="true">
-            <span class="sr-only"><% if lang_code == "en" %>English<% elsif lang_code == "es" %>Español<% end %>
-            ></span>
+          <a href="#" class="btn btn-primary notranslate" hreflang="<%= lang_code %>" rel="alternate" aria-disabled="true" aria-current="true">
+            <span class="sr-only">
+              <% if lang_code == "en" %>
+                English
+              <% elsif lang_code == "es" %>
+                Español
+              <% end %>
+            </span>
             <span aria-hidden="true"><%= lang_code.upcase %></span>
           </a>
         <% else %>
-            <a href="<%= locale_link(lang_code) %>" 
-            class="btn btn-default notranslate"
-            hreflang="<%= lang_code %>"
-            rel="alternate"
-            aria-label="<% if lang_code == "en" %>Inglés<% elsif lang_code == "es" %>Spanish<% end %>
-            <%= lang_code.upcase %>
+            <a href="<%= locale_link(lang_code) %>" class="btn btn-default notranslate" hreflang="<%= lang_code %>" rel="alternate">
+              <span class="sr-only">
+                <% if lang_code == "en" %>
+                  Inglés
+                <% elsif lang_code == "es" %>
+                  Spanish
+                <% end %>
+              </span>
+              <span aria-hidden="true">
+                <%= lang_code.upcase %>
+              </span>
             </a>
         <% end %>
         </li>
