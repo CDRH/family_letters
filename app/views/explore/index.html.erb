@@ -39,13 +39,11 @@ images = {
       <% end %>  
     </div><!-- /col -->
   </div><!-- /row -->
-
-<h3 class="explore_index_headers">
-  <%= t "explore.home.exhibits", default: "Exhibits" %>
-</h3>
 </div> <%# End container for full width band %>
 <div class="container-fluid explore_band">
-
+  <h2 class="explore_index_headers">
+    <%= t "explore.home.exhibits", default: "Exhibits" %>
+  </h2>
   <div class="row">
     <div class="col-sm-6">
       <%= link_to explore_connections_path, class: "content explore_callout1 callout" do %>
