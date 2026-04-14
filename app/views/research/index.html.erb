@@ -27,7 +27,7 @@
     <%# research materials %>
     <h2><%= t "research.search.materials" %></h2>
     <%= form_tag search_path, method: "get" do %>
-      <%= text_field_tag "q", nil, placeholder: "Search for...", class: "form-control" %>
+      <%= text_field_tag "q", nil, placeholder: t("search.placeholder", default: "Search for..."),  class: "form-control" %>
       <div class="pull-left">
           <%= link_to t("research.search.advanced"), search_path, class: "btn btn-link color_reverse", role: "button" %>
         </div>

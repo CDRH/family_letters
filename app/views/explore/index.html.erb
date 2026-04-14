@@ -22,7 +22,7 @@ images = {
         <h4>
           <%= t "explore.home.search_label", default: "Search Materials" %>
         </h4>
-        <%= text_field_tag "q", nil, placeholder: "Buscar...", class: "form-control" %>
+        <%= text_field_tag "q", nil, placeholder: t("search.placeholder", default: "Search for..."), class: "form-control" %>
         <div class="pull-left">
             <%= link_to t("explore.home.search_adv", default: "Advanced Search"),
               search_path, class: "btn btn-link color_reverse", role: "button" %>
