@@ -259,9 +259,10 @@ es:
         aparecería el resultado hierba.</p>
     filters:
       # clearing filters (not the text search)
-      clear: Borraro Filtro
+      clear: Borrar
       clear_all: Borrar Filtros
       # label above the filters
+      filter: Filtro
       filter_by: Filtrar por
       # display when a specific filter option is an empty string
       no_label: Sin etiqueta

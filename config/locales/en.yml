@@ -244,9 +244,10 @@ en:
         <p>Because of the creative spellings used by the journalists, it may be necessary to try your search multiple times. For example: P?ro*. This search brings up numerous variant spellings of the French word pirogue, "a large dugout canoe or open boat." Searching for P?*r*og?* will bring up other variant spellings. Searching for canoe or boat also may be helpful.</p>
     filters:
       # clearing filters (not the text search)
-      clear: Clear Filter
+      clear: Clear
       clear_all: Clear Filters
       # label above the filters
+      filter: Filter
       filter_by: Filter by
       # display when a specific filter option is an empty string
       no_label: No Label
