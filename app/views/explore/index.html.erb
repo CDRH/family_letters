@@ -22,7 +22,7 @@ images = {
         <h4>
           <%= t "explore.home.search_label", default: "Search Materials" %>
         </h4>
-        <%= text_field_tag "q", nil, placeholder: "(sister OR \"sis\") NOT brother", class: "form-control" %>
+        <%= text_field_tag "q", nil, placeholder: t("search.placeholder", default: "Search for..."), class: "form-control" %>
         <div class="pull-left">
             <%= link_to t("explore.home.search_adv", default: "Advanced Search"),
               search_path, class: "btn btn-link color_reverse", role: "button" %>
@@ -39,13 +39,11 @@ images = {
       <% end %>  
     </div><!-- /col -->
   </div><!-- /row -->
-
-<h3 class="explore_index_headers">
-  <%= t "explore.home.exhibits", default: "Exhibits" %>
-</h3>
 </div> <%# End container for full width band %>
 <div class="container-fluid explore_band">
-
+  <h2 class="explore_index_headers">
+    <%= t "explore.home.exhibits", default: "Exhibits" %>
+  </h2>
   <div class="row">
     <div class="col-sm-6">
       <%= link_to explore_connections_path, class: "content explore_callout1 callout" do %>

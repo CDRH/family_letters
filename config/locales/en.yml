@@ -17,11 +17,16 @@ en:
       in the Humanities</a>.
     # close a popup window
     close: Close
+    # Top navigation <nav> label
+    top_navigation_label: Main Menu
+    # Body navigation <nav> label
+    title_navigation_label: Sections Menu
     # custom dedication text
     dedication_button: Dedication
     dedication_text: |-
       This website is dedicated to Jesusita Baros Torres. Her efforts were not
       in vain.
+    header_image_alt: Handwritten text from one of Jesusita Baros Torres' letters that says, in Spanish, 'Dear daughter, this letter is to greet you'
     # Custom Family Letters field
     footer_html: |-
       <em>Family Letters: On the Migration from Jesusita to Jane </em> is a
@@ -30,6 +35,7 @@ en:
       Languages and Literatures at the University of Nebraska, Lincoln, under a
       <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/">Creative
       Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.
+    footer_image_alt: Handwritten text from one of Jesusita Baros Torres' letters that says, in Spanish, 'everything your mom who wishes she could be closer to you all'
     # Header <1>
     project_name: Family Letters
     # <title>, meta application-name
@@ -145,7 +151,10 @@ en:
     # page title
     title: Home
     # CUSTOM FAMILY LETTERS
+    caption:
+      shan_p_035: Black and white photograph of Jesusita Baros Torres with her son Jess Jesús Baros wearing overalls around 1920s.
     carousel:
+      title: Featured envelopes
       to: to
       unknown: Unknown sender
 
@@ -223,21 +232,22 @@ en:
       # search help html, this may need to be recreated per language
       # instead of translated literally due to differences with stemming and grammar
       html: |-
-        <h4>Basic Search</h4>
+        <h3>Basic Search</h3>
         <p>Simply enter the word you wish to find and the search engine will search for every instance of the word in the journals. For example: Fight. All instances of the use of the word fight will show up on the results page.</p>
-        <h4>Wildcard Searches</h4>
+        <h3>Wildcard Searches</h3>
         <p>Using an asterisk (*) will increase the odds of finding the results you are seeking. For example: Fight*. The search results will display every instance of fight, fights, fighting, etc. More than one wildcard may be used. For example: *ricar*. This search will return most references to the Aricara tribe, including Ricara, Ricares, Aricaris, Ricaries, Ricaree, Ricareis, and Ricarra. Using a question mark (?) instead of an asterisk (*) will allow you to search for a single character. For example, r?n will find all instances of ran and run, but will not find rain or ruin.</p>
-        <h4>Capitalization</h4>
+        <h3>Capitalization</h3>
         <p>Searches are not case sensitive. For example: george will come up with the same results as George.</p>
-        <h4>Phrase Search</h4>
+        <h3>Phrase Search</h3>
         <p>Searching for a specific phrase may help narrow down the results. Rather long phrases are no problem. For example: "This white pudding we all esteem".</p>
-        <h4>Subsequent Searches</h4>
+        <h3>Subsequent Searches</h3>
         <p>Because of the creative spellings used by the journalists, it may be necessary to try your search multiple times. For example: P?ro*. This search brings up numerous variant spellings of the French word pirogue, "a large dugout canoe or open boat." Searching for P?*r*og?* will bring up other variant spellings. Searching for canoe or boat also may be helpful.</p>
     filters:
       # clearing filters (not the text search)
-      clear: Clear Filter
+      clear: Clear
       clear_all: Clear Filters
       # label above the filters
+      filter: Filter
       filter_by: Filter by
       # display when a specific filter option is an empty string
       no_label: No Label

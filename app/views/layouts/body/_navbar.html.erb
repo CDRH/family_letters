@@ -1,14 +1,14 @@
-<nav class="navbar navbar-default" aria-label="Main Menu">
+<nav class="navbar navbar-default" aria-label="<%= t("general.title_navigation_label") %>">
 
   <ul class="nav navbar-nav navbar-main">
     <li class="<%= active?(/\/explore\/?.*/, request.path) %>">
-      <%= link_to t("explore.title", default: "Explore"), explore_path %>
+      <%= link_to t("explore.title", default: "Explore"), explore_path, 'aria-current': (current_page?(explore_path) ? 'page' : nil) %>
     </li>
     <li class="<%= active?(/\/research\/?.*/, request.path) %>">
-      <%= link_to t("research.title", default: "Research"), research_path %>
+      <%= link_to t("research.title", default: "Research"), research_path, 'aria-current': (current_page?(research_path) ? 'page' : nil) %>
     </li>
     <li class="<%= active?(/\/teach\/?.*/, request.path) %>">
-      <%= link_to t("learn.title", default: "Teach and Learn"), learn_path %>
+      <%= link_to t("learn.title", default: "Teach and Learn"), learn_path, 'aria-current': (current_page?(learn_path) ? 'page' : nil) %>
     </li>
   </ul>
 

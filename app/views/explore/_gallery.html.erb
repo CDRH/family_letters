@@ -4,10 +4,10 @@
       <%= link_to iiif("#{key}.jpg", size: "!700,700"), "data-footer": value,
         "data-toggle": "lightbox", "data-gallery": "exhibit_gallery" do %>
         <div class="exhibit_gallery_image">
-          <%= image_tag iiif("#{key}.jpg", size: "!200,200") %>
+          <%= image_tag iiif("#{key}.jpg", size: "!200,200"), alt: value  %>
         </div>
       <% end %>
-      <p class="exhibit_gallery_caption">
+      <p class="exhibit_gallery_caption" aria-hidden="true">
         <%= value %>
       </p>
     </div>
