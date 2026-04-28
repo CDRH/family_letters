@@ -4,7 +4,6 @@
       <% APP_OPTS["all_languages"].split("|").each do |lang_code| %>
         <li>
         <%# create link to switch languages that keeps current parameters %>
-        <%# TODO a11y / ARIA markup for full language names? %>
         <% if lang_code == I18n.locale.to_s %>
           <a href="#" class="btn btn-primary notranslate" hreflang="<%= lang_code %>" rel="alternate" aria-disabled="true" aria-current="true">
             <span class="sr-only">
