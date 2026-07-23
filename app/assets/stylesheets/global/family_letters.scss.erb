@@ -710,15 +710,23 @@ span.pageimage {
   height: 150px;
   text-align: center;
   width: 150px;
-  &:hover {
-    border: solid 4px $dustyrose;
-  }
+
   .span-lang {
     box-shadow: inset 0 -.15em 0 $link-underline;
     color: $link-color;
     display: inline-block;
     font-size: .9em;
-    margin: 61px auto 0 auto;
+    margin: 5px auto 0 auto;
+  }
+
+
+  &:hover {
+    border: solid 4px $dustyrose;
+
+    .span-lang {
+      box-shadow: inset 0 -.3em 0 $link-underline;
+      color: $link-hover-color;
+    }
   }
 }
 
