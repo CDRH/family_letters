@@ -17,6 +17,11 @@ body img {
   color: $link-color; // duplicating bootstrap for .link_style
 }
 
+.link_style:hover,
+.link_style:focus {
+  color: $link-hover-color; // duplicating bootstrap for .link_style
+}
+
 .link_style,
 .main-content a, // overriding Orchid specificity
 #footer p a {
@@ -31,7 +36,6 @@ body img {
 
   &:hover,
   &:focus {
-    color: $link-hover-color; // duplicating bootstrap for .link_style
     text-decoration-color: $link-underline-hover;
   }
 }
