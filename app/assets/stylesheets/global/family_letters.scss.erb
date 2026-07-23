@@ -13,10 +13,13 @@ body img {
   max-width: 100%;
 }
 
+.link_style {
+  color: $link-color; // duplicating bootstrap for .link_style
+}
+
 .link_style,
 .main-content a, // overriding Orchid specificity
 #footer p a {
-  color: $link-color; // duplicating bootstrap for .link_style
   text-decoration: underline;
   text-decoration-color: $link-underline;
   text-decoration-thickness: 3px;
@@ -31,7 +34,6 @@ body img {
     color: $link-hover-color; // duplicating bootstrap for .link_style
     text-decoration-color: $link-underline-hover;
   }
-
 }
 
 // Remove styles from buttons, etc.
