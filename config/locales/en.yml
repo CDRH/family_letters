@@ -11,6 +11,10 @@ en:
   # GENERAL PAGES #
   #################
   general:
+    # Skip to main content link text
+    skip_link: Skip to main content
+    # Back to Top link text
+    back_to_top: Back to top
     # footer content with link to CDRH site
     cdrh_link_html: |-
       Created by the <a href="https://cdrh.unl.edu">Center for Digital Research
@@ -106,6 +110,8 @@ en:
   # ERRORS #
   ##########
   errors:
+    # unable to contact the API
+    api: Some contents of the site are unavailable at this time, please check back later.
     # general consolation message to the user on an error
     apology: We're sorry for the inconvenience.
     # page not found (404) explanation
