@@ -351,6 +351,7 @@ es:
       # relevancy (descending), how likely the search results are to be valuable
       relevancy: "Relevancia"
       # label for sorting
+      sort_by: Clasificar
     # label for applying text search options ("Go!", "Search", etc)
     submit: Buscar
     # page title
