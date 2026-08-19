@@ -10,12 +10,22 @@ ItemsController.class_eval do
     options = params.permit!.deep_dup
     options, @from, @to = helpers.date_filter(options)
 
+    # OVERRIDE FROM ORCHID
     # index method the same as orchid except for addition of this line
     search_language(options)
 
-    @title = t "search.title"
+    if params["f"].present? && params["q"].present?
+      @title = "#{t "search.search_results"}: \"#{params["q"]}\" - #{display_filters(params)}"
+    elsif params["q"].present?
+      @title = "#{t "search.search_results"}: \"#{params["q"]}\""
+    elsif params["f"].present?
+      @title = "#{t "search.search_results"}: #{display_filters(params)}"
+    else
+      @title = t "search.title"
+    end
 
     @res = @items_api.query(options)
+    check_response
     @facet_limit = @section.present? ? SECTIONS[@section]["api_options"]["facet_limit"] : PUBLIC["api_options"]["facet_limit"]
 
     render_overridable("items", "index")
