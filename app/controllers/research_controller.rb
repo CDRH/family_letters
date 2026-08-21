@@ -41,11 +41,15 @@ class ResearchController < ApplicationController
   private
 
   def get_json(id)
-    url = geojson_url(id)
-    # TODO set up error handling
-    geojson = URI.open(url)
-    if geojson.status
-      geojson.read.force_encoding(Encoding::UTF_8)
+    begin
+      url = geojson_url(id)
+      # TODO set up error handling
+      geojson = URI.open(url)
+      if geojson.status
+        geojson.read.force_encoding(Encoding::UTF_8)
+      end
+    rescue => e
+      flash[:error] = "Error loading map data"
     end
   end
 
