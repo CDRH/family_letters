@@ -1,3 +1,7 @@
+<% @ext_css = add_assets(@ext_css, ["fancybox.min"]) %>
+<% @ext_js = add_assets(@ext_js, ["fancybox-3.5.7"]) %>
+<% @inline_js = ['$(function() {$(".exhibit_gallery_item a").fancybox();});'] %>
+
 <div class="exhibit_gallery">
   <% photos.each do |key, value| %>
     <div class="exhibit_gallery_item">
@@ -13,7 +17,3 @@
     </div>
   <% end %>
 </div>
-
-
-
-
