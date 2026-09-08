@@ -1,14 +1,5 @@
 class ExploreController < ApplicationController
 
-  before_action :image_gallery,
-                only: [
-                  :connections,
-                  :language_and_life,
-                  :index,
-                  :migrations,
-                  :more_than_work
-                ]
-
   def index
     @title = t "explore.title"
   end
@@ -35,13 +26,6 @@ class ExploreController < ApplicationController
 
   def objects_pt
     @title = t "explore.objects.title"
-  end
-
-  private
-
-  def image_gallery
-    # enable lightbox functionality
-    @ext_js = helpers.add_assets(@ext_js, "image_gallery")
   end
 
 end
