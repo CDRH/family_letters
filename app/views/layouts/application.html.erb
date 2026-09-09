@@ -2,21 +2,11 @@
 <html lang="<%= I18n.locale %>" <%= site_section %>>
   <%= render "layouts/head/head" %>
   <body class="<%= "language_#{I18n.locale}" %>">
-    <a href="#main-content" class="sr-only sr-only-focusable">
-      Skip to main content
-    </a>
     <div id="body-wrapper">
+      <%= render "layouts/body/skip_to_main" %>
       <%= render "layouts/body/header" %>
       <%= render "layouts/body/contents" %>
       <%= render "layouts/body/footer" %>
-      <div class="letter_bottom_farewell">
-        <div class="container">
-          <%= image_tag "letter_bottom_farewell.png" %>
-        </div>
-      </div>
-    </div>
-    <div class="back_to_top">
-      <a href="#body-wrapper">↑</a>
     </div>
   </body>
 </html>

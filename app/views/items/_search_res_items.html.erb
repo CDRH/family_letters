@@ -2,15 +2,15 @@
 <%# OVERRIDE FROM ORCHID %>
 <%# includes custom search results listing %>
 
-<% if @res.count && @res.count > 0 %>
+<% if @res.present? && @res.count && @res.count > 0 %>
   <div class="flex_row buffer-bottom-sm">
     <% @res.items.each do |item| %>
       <%= link_to search_item_link(item), class: "searchResults flex_col-md" do %>
         <div class="search_results_image">
           <% if item["cover_image"] %>
-            <%= image_tag iiif(item["cover_image"]) %>
+            <%= image_tag iiif(item["cover_image"]), alt: "", role: "presentation" %>
           <% else %>
-            <%= image_tag "no_image.jpg" %>
+            <%= image_tag "no_image.jpg", alt: "", role: "presentation" %>
           <% end %>
         </div>
         <div class="search_results_info">

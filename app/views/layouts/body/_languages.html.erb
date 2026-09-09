@@ -1,16 +1,36 @@
 <% if APP_OPTS["all_languages"].present? && APP_OPTS["all_languages"][/\|/] %>
-  <div class="language_link btn-group" role="group" aria-label="language choice">
-    <% APP_OPTS["all_languages"].split("|").each do |lang_code| %>
-      <%# create link to switch languages that keeps current parameters %>
-      <%# TODO a11y / ARIA markup for full language names? %>
-      <% if lang_code == I18n.locale.to_s %>
-        <%= link_to lang_code.upcase, "#", class: "btn btn-primary disabled notranslate",
-          hreflang: lang_code, rel: "alternate", tabindex: -1 %>
-      <% else %>
-        <%# a11y / ARIA markup for full language name? %>
-        <%= link_to lang_code.upcase, locale_link(lang_code),
-          class: "btn btn-default notranslate", hreflang: lang_code, rel: "alternate" %>
+  <nav class="navbar language-choice" aria-label="Language choice">
+    <ul class="language_link nav navbar-nav">
+      <% APP_OPTS["all_languages"].split("|").each do |lang_code| %>
+        <li>
+        <%# create link to switch languages that keeps current parameters %>
+        <% if lang_code == I18n.locale.to_s %>
+          <a href="#" class="btn btn-primary notranslate" hreflang="<%= lang_code %>" rel="alternate" aria-disabled="true" aria-current="true">
+            <span class="sr-only">
+              <% if lang_code == "en" %>
+                English
+              <% elsif lang_code == "es" %>
+                Español
+              <% end %>
+            </span>
+            <span aria-hidden="true"><%= lang_code.upcase %></span>
+          </a>
+        <% else %>
+            <a href="<%= locale_link(lang_code) %>" class="btn btn-default notranslate" hreflang="<%= lang_code %>" rel="alternate">
+              <span class="sr-only">
+                <% if lang_code == "en" %>
+                  Inglés
+                <% elsif lang_code == "es" %>
+                  Spanish
+                <% end %>
+              </span>
+              <span aria-hidden="true">
+                <%= lang_code.upcase %>
+              </span>
+            </a>
+        <% end %>
+        </li>
       <% end %>
-    <% end %>
-  </div>
+    </ul>
+  </nav>
 <% end %>

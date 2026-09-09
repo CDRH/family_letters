@@ -13,18 +13,31 @@ body img {
   max-width: 100%;
 }
 
-// Using box-shadow for link so I can set the color & width
-a, .link_style {
-  -webkit-box-shadow: inset 0 -.15em 0 $link-underline;
-  box-shadow: inset 0 -.15em 0 $link-underline;
+.link_style {
   color: $link-color; // duplicating bootstrap for .link_style
 }
 
-a:hover, .link_style:hover, .link_style:active {
-  -webkit-box-shadow: inset 0 -.15em 0 $link-underline-hover;
-  box-shadow: inset 0 -.15em 0 $link-underline-hover;
-  text-decoration: none;
+.link_style:hover,
+.link_style:focus {
   color: $link-hover-color; // duplicating bootstrap for .link_style
+}
+
+.link_style,
+.main-content a, // overriding Orchid specificity
+#footer p a {
+  text-decoration: underline;
+  text-decoration-color: $link-underline;
+  text-decoration-thickness: 3px;
+}
+
+.link_style,
+.main-content a,
+#footer p a {
+
+  &:hover,
+  &:focus {
+    text-decoration-color: $link-underline-hover;
+  }
 }
 
 // Remove styles from buttons, etc.
@@ -117,15 +130,145 @@ a.searchResults,
 
 #header {
   margin-top: .5em;
-
 }
 
 // Top Nav
-@media (min-width: $screen-sm-min) {
-  .layouts_cell {
-    text-align: right;
+
+.top-navigation {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: end;
+
+
+  // menu and language choice
+  .navbar-nav {
+    display: flex;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+  }
+
+  .language-choice {
+    margin: 0 0 8px auto;
+
+    .language_link {
+      margin: 0;
+      padding: 0;
+
+      li {
+        .btn-primary {
+          border-radius: 0px;
+
+          &:active, 
+          &:focus,
+          &:hover {
+            background: $link-hover-color;
+            color: white;
+          }
+        }
+
+        .btn-default {
+          &:active,
+          &:focus,
+          &:hover {
+            background: #e6e6e6;
+          }
+        }
+
+        &:first-child .btn-primary {
+          border-top-left-radius: $btn-border-radius-base;
+          border-bottom-left-radius: $btn-border-radius-base;
+        }
+
+        &:last-child .btn-primary {
+          border-top-right-radius: $btn-border-radius-base;
+          border-bottom-right-radius: $btn-border-radius-base;
+        }
+      }
+    }
+  }
+
+  .main-menu {
+    width: 100%;
+
+    .navbar-nav {
+      justify-content: center;
+
+      > li > a {
+        &:hover,
+        &:focus {
+          background-color: initial;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .dedication-button {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
   }
 }
+
+@media screen and (min-width: 480px) {
+  .top-navigation {
+    align-items: center;
+    justify-content: space-between;
+
+    .language-choice {
+      width: 100%;
+
+      .language_link {
+        justify-content: end;
+      }
+    }
+
+    .main-menu {
+      margin-right: auto;
+      padding-left: 15px;
+      width: initial;
+    }
+
+    .dedication-button {
+      width: initial;
+
+      button {
+        min-height: initial;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .top-navigation {
+    padding-left: 0;
+
+    .language-choice {
+      margin-left: 8px;
+      order: 3;
+      width: initial;
+    }
+
+    .main-menu {
+      margin-right: auto;
+      padding-left: 15px;
+      width: initial;
+    }
+
+    .dedication-button {
+      width: initial;
+
+      button {
+        min-height: initial;
+      }
+    }
+  }
+}
+
+
+
 
 // Header and Nav
 .title_nav {
@@ -208,13 +351,18 @@ a.searchResults,
 
 #footer {
   background-color: lighten($greybeige, 28%);
-  margin: 2em 0;
-  padding: 2em 0 0em 0;
+  margin: 2em 0 0 0;
+  padding: 2em 0 0 0;
   text-align: center;
 }
 
 .footer_logo {
   margin: 2em 0 2em 0;
+}
+
+.farewell_wrapper {
+  background: $light-base;
+  padding: 1.25em 0 2em 0;
 }
 
 .print_url_container {
@@ -392,11 +540,29 @@ a.content .inner_content {
 // Search
 // ------
 
+.searchbox .form-inline {
+  padding-top: 0.5em;
+  width: 100%;
+
+  .search_options {
+    margin-right: 0.75em;
+
+    > * {
+      display: inline;
+    }
+    
+    &.radio input[type="radio"] {
+      margin-left: 0;
+    }
+  }
+}
+
 .searchResults {
   border-bottom: 3px solid $greybeige;
   color: $warmblack; //overwrite link color
   display: flex;
   padding: 1em 0 0 0;
+  text-decoration: none !important;
   &:hover {
     background-color: lighten($greybeige, 28%);
     color: $warmblack; //overwrite link color
@@ -426,6 +592,13 @@ a.content .inner_content {
   padding: 0;
   li {
     list-style-type: none;
+    ul {
+      display: inline;
+      padding-left: 0;
+      li {
+        display: inline;
+      }
+    }
   }
 }
 
@@ -472,6 +645,7 @@ span.pageimage {
   padding: 0px 0 0 0;
   width: 100%;
 }
+  
 
 @media (min-width: $screen-sm) { 
   .metadata {
@@ -481,10 +655,15 @@ span.pageimage {
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
     columns: 2;
     padding: .5em 1em;
+
     ul {
       list-style-type: none;
       margin: 0;
       padding: 0;
+    }
+
+    > ul > li > a {
+      margin-left: 5px;
     }
   }
 }
@@ -531,15 +710,23 @@ span.pageimage {
   height: 150px;
   text-align: center;
   width: 150px;
-  &:hover {
-    border: solid 4px $dustyrose;
-  }
+
   .span-lang {
     box-shadow: inset 0 -.15em 0 $link-underline;
     color: $link-color;
     display: inline-block;
     font-size: .9em;
-    margin: 61px auto 0 auto;
+    margin: 5px auto 0 auto;
+  }
+
+
+  &:hover {
+    border: solid 4px $dustyrose;
+
+    .span-lang {
+      box-shadow: inset 0 -.3em 0 $link-underline;
+      color: $link-hover-color;
+    }
   }
 }
 
@@ -631,6 +818,8 @@ span.pageimage {
 
 .back_to_top a {
   background: #fff;
+  text-decoration: none;
+  font-weight: 500;
   border: solid 1px $gray-light;
   bottom: 0;
   box-shadow: 0px 0px 5px 3px rgba($gray-dark,0.3);
@@ -643,4 +832,27 @@ span.pageimage {
  .back_to_top a:hover {
   background-color: $link-color;
   color: #fff;
+}
+
+// Managing underline conflicts
+
+// Browse by __ facet links
+
+.action_browse_facet .browse-results ul li a {
+  box-shadow: none;
+}
+
+// Search page facet links
+
+.action_browse_facet .browse-results ul li a {
+  box-shadow: none;
+}
+
+.panel-filter .facet-list li:not(.selected) a {
+  box-shadow: none;
+}
+
+// Fancybox multipage view selection
+.fancybox-thumbs > .fancybox-thumbs__list a::before {
+  border: 4px solid $brand-primary;
 }

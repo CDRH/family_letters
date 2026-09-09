@@ -1,19 +1,19 @@
+<% @ext_css = add_assets(@ext_css, ["fancybox.min"]) %>
+<% @ext_js = add_assets(@ext_js, ["fancybox-3.5.7"]) %>
+<% @inline_js = ['$(function() {$(".exhibit_gallery_item a").fancybox();});'] %>
+
 <div class="exhibit_gallery">
   <% photos.each do |key, value| %>
     <div class="exhibit_gallery_item">
-      <%= link_to iiif("#{key}.jpg", size: "!700,700"), "data-footer": value,
-        "data-toggle": "lightbox", "data-gallery": "exhibit_gallery" do %>
+      <%= link_to iiif("#{key}.jpg", size: "!1280,1280"),
+        "data-caption": value, "data-fancybox": "gallery" do %>
         <div class="exhibit_gallery_image">
-          <%= image_tag iiif("#{key}.jpg", size: "!200,200") %>
+          <%= image_tag iiif("#{key}.jpg", size: "!200,200"), alt: value  %>
         </div>
       <% end %>
-      <p class="exhibit_gallery_caption">
+      <p class="exhibit_gallery_caption" aria-hidden="true">
         <%= value %>
       </p>
     </div>
   <% end %>
 </div>
-
-
-
-

@@ -82,4 +82,6 @@ Rails.application.configure do
       1, 32.megabytes
     )
   )
+
+  config.hosts << ENV.fetch("RAILS_DEV_HOST") { "localhost" }
 end

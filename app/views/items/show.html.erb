@@ -1,3 +1,7 @@
+<% @ext_css = add_assets(@ext_css, ["fancybox.min"]) %>
+<% @ext_js = add_assets(@ext_js, ["fancybox-3.5.7"]) %>
+<% @inline_js = ['$(function() {$(".pageimage a").attr("data-fancybox", "gallery").fancybox();});'] %>
+
 <%# overridden for purpose of toggling the title language %>
 <% if @res %>
   <h2><%= title_label(@res) %></h2>
